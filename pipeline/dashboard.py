@@ -110,11 +110,20 @@ def _flatten_clusters(clusters: dict[str, dict[str, list[str]]]) -> list[dict]:
 
 
 def _domain_rows(report_payloads: list[dict]) -> list[dict]:
+    def primary_capture(payload: dict) -> dict:
+        captures = payload.get("captures") or []
+        successful = [capture for capture in captures if not capture.get("error") and capture.get("http_status") is not None]
+        for capture in successful:
+            if capture.get("profile") == "desktop":
+                return capture
+        if successful:
+            return successful[0]
+        return captures[0] if captures else {}
+
     rows = []
     for payload in report_payloads:
         dns_a = payload.get("dns_records", {}).get("A") or []
-        capture_list = payload.get("captures") or []
-        primary_capture = capture_list[0] if capture_list else {}
+        chosen_capture = primary_capture(payload)
         row = {
             "domain": payload["domain"],
             "severity": payload.get("ai_analysis", {}).get("severity", "UNKNOWN"),
@@ -123,7 +132,7 @@ def _domain_rows(report_payloads: list[dict]) -> list[dict]:
             "vt_score": f"{payload.get('threat_intel', {}).get('vt_malicious', 0)}/{payload.get('threat_intel', {}).get('vt_total', 0)}",
             "vt_malicious": payload.get("threat_intel", {}).get("vt_malicious", 0),
             "registered": payload.get("registration", {}).get("registered"),
-            "status": "DOWN" if primary_capture.get("http_status") is None else "ACTIVE",
+            "status": "DOWN" if chosen_capture.get("http_status") is None else "ACTIVE",
             "hosting_country": payload.get("registration", {}).get("country") or payload.get("threat_intel", {}).get("abuseipdb_country") or "Unknown",
             "registrar": payload.get("registration", {}).get("registrar") or "Unknown",
             "ip": dns_a[0] if dns_a else None,

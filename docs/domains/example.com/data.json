@@ -11,11 +11,11 @@
     "threat_category": "BENIGN",
     "victim_profile": "No specific victim group identified."
   },
-  "analysis_ts_utc": "2026-04-11T19:23:15Z",
-  "batch_id": "local-smoke-20260411T192302Z",
+  "analysis_ts_utc": "2026-04-11T20:21:13Z",
+  "batch_id": "local-smoke-20260411T202053Z",
   "captures": [
     {
-      "capture_ts_utc": "20260411T192309Z",
+      "capture_ts_utc": "20260411T202107Z",
       "cloaking_suspected": false,
       "error": null,
       "final_url": "https://www.example.com/",
@@ -24,13 +24,13 @@
       "page_text": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
       "profile": "desktop",
       "screenshot_full_hash": "1cfe77e476efaa82e671d5f15705c27c258fe058e6c2cb3ec42e6e09ae06abbe",
-      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T192309Z_fullpage.png",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T202107Z_fullpage.png",
       "screenshot_viewport_hash": "1cfe77e476efaa82e671d5f15705c27c258fe058e6c2cb3ec42e6e09ae06abbe",
-      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T192309Z_viewport.png",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T202107Z_viewport.png",
       "title": "Example Domain"
     },
     {
-      "capture_ts_utc": "20260411T192314Z",
+      "capture_ts_utc": "20260411T202113Z",
       "cloaking_suspected": false,
       "error": null,
       "final_url": "https://www.example.com/",
@@ -39,17 +39,33 @@
       "page_text": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
       "profile": "mobile_android",
       "screenshot_full_hash": "04d708a92fa3fcdc3e67f87ffcd5c671d590a1aff25a14e81e131ee987f430bc",
-      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T192314Z_fullpage.png",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T202113Z_fullpage.png",
       "screenshot_viewport_hash": "04d708a92fa3fcdc3e67f87ffcd5c671d590a1aff25a14e81e131ee987f430bc",
-      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T192314Z_viewport.png",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T202113Z_viewport.png",
       "title": "Example Domain"
     }
   ],
-  "cert_transparency": [],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing ECC CA 1",
+      "name": "*.example.com",
+      "not_before": "2026-04-02T21:18:57"
+    },
+    {
+      "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing ECC CA 1",
+      "name": "example.com",
+      "not_before": "2026-04-02T21:18:57"
+    },
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36",
+      "name": "www.example.com",
+      "not_before": "2025-12-02T00:00:00"
+    }
+  ],
   "dns_records": {
     "A": [
-      "104.20.23.154",
-      "172.66.147.243"
+      "172.66.147.243",
+      "104.20.23.154"
     ],
     "MX": [
       "0 "
@@ -64,7 +80,7 @@
     ]
   },
   "domain": "example.com",
-  "evidence_manifest_hash": "454794fa80eb8f00a4dff52a81a3396a7a0ba4a0cefbfd8f218b8ffb62348f2a",
+  "evidence_manifest_hash": "c804f044d4fb0b9e701bf94d0933c9676840f8e06eba9041becd7231716e502a",
   "input_url": "https://www.example.com",
   "linked_domains": [],
   "network_requests": {
@@ -90,13 +106,13 @@
     "status": []
   },
   "response_headers": {
-    "age": "3461",
+    "age": "6939",
     "allow": "GET, HEAD",
     "cf-cache-status": "HIT",
-    "cf-ray": "9eac5d1d2bb2d34e-FRA",
+    "cf-ray": "9eacb2059a3ed3bd-FRA",
     "content-encoding": "br",
     "content-type": "text/html",
-    "date": "Sat, 11 Apr 2026 19:23:05 GMT",
+    "date": "Sat, 11 Apr 2026 20:21:02 GMT",
     "last-modified": "Fri, 10 Apr 2026 01:29:17 GMT",
     "server": "cloudflare"
   },
@@ -119,8 +135,8 @@
     "vt_total": 0
   },
   "wayback_snapshot": {
-    "available": "true",
-    "timestamp": "20260411070208",
-    "url": "http://web.archive.org/web/20260411070208/http://example.com/"
+    "available": "false",
+    "timestamp": null,
+    "url": null
   }
 }

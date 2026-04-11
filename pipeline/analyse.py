@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 from typing import Any
 
 import google.generativeai as genai
@@ -100,6 +101,14 @@ def _law_entry(statute: str, offence: str, evidence: str, confidence: str = "PRO
     }
 
 
+def _has_phrase(text: str, phrases: tuple[str, ...]) -> bool:
+    return any(phrase in text for phrase in phrases)
+
+
+def _has_word(text: str, words: tuple[str, ...]) -> bool:
+    return any(re.search(rf"\b{re.escape(word)}\b", text) for word in words)
+
+
 def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
     result = _default_response()
     text = " ".join(
@@ -121,6 +130,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
     otx_pulses = int(domain_data.get("otx_pulse_count", 0) or 0)
     abuse_score = int(domain_data.get("abuseipdb_score", 0) or 0)
     http_status = domain_data.get("http_status")
+    urlscan_verdict = str(domain_data.get("urlscan_verdict") or "").lower()
 
     if http_status is None:
         result["severity"] = "INACTIVE"
@@ -130,7 +140,49 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
     laws: list[dict[str, str]] = []
     brand = None
 
-    if any(keyword in text for keyword in ("bank", "otp", "account", "verify", "aadhaar", "paytm", "sbi", "hdfc", "icici")) or phishtank_verified:
+    threat_intel_confirmed = any(
+        [
+            phishtank_verified,
+            urlhaus_listed,
+            vt_hits >= 2,
+            "SOCIAL_ENGINEERING" in gsb_threats,
+            "MALWARE" in gsb_threats,
+            otx_pulses >= 2,
+            abuse_score >= 75,
+            urlscan_verdict == "malicious",
+        ]
+    )
+    brand_terms = ("sbi", "hdfc", "icici", "paytm", "aadhaar", "epfo", "upi", "bank", "gov", "government")
+    credential_terms = ("otp", "login", "signin", "sign in", "verify", "verification", "password", "account", "kyc")
+    phishing_page = (
+        phishtank_verified
+        or "SOCIAL_ENGINEERING" in gsb_threats
+        or (_has_word(text, brand_terms) and _has_word(text, credential_terms))
+    )
+    malware_page = (
+        urlhaus_listed
+        or "MALWARE" in gsb_threats
+        or (
+            threat_intel_confirmed
+            and (
+                _has_phrase(text, ("download apk", "install apk", "update your browser", "download for android"))
+                or (_has_word(text, ("apk", "exe")) and _has_word(text, ("download", "install", "update")))
+            )
+        )
+    )
+    betting_page = threat_intel_confirmed and (
+        _has_word(text, ("casino", "sportsbook", "rummy", "teen", "patti"))
+        or _has_phrase(text, ("ipl betting", "bet now", "live odds", "sports betting", "teen patti"))
+    )
+    investment_page = threat_intel_confirmed and (
+        _has_phrase(text, ("guaranteed return", "double your money", "daily profit", "trading signal", "crypto signal"))
+        or (
+            _has_word(text, ("invest", "investment", "crypto", "trading", "profit"))
+            and _has_word(text, ("guaranteed", "assured", "daily", "return", "returns"))
+        )
+    )
+
+    if phishing_page:
         category = "PHISHING"
         brand = next((brand_name for brand_name in ("SBI", "HDFC", "ICICI", "Paytm", "Aadhaar", "EPFO") if brand_name.lower() in text), None)
         laws = [
@@ -141,7 +193,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
         result["victim_profile"] = "Indian consumers and account holders targeted through digital impersonation."
         result["illegal_activity_description"] = "The collected evidence is consistent with a phishing workflow that impersonates a legitimate service and induces victims to submit sensitive information. Such conduct supports digital personation and deception-based cheating provisions under Indian cybercrime law."
         result["recommended_action"] = "Immediate blocking review under IT Act S.69A and referral for takedown/IOC dissemination."
-    elif urlhaus_listed or "MALWARE" in gsb_threats or any(keyword in text for keyword in ("apk", "download app", "install app", "update your browser")):
+    elif malware_page:
         category = "MALWARE_DISTRIBUTION"
         laws = [
             _law_entry("IT Act 2000, Section 43(c)", "Introducing computer contaminant/virus", "The site appears to distribute or prompt execution of potentially malicious software.", "CLEAR"),
@@ -151,7 +203,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
         result["victim_profile"] = "General internet users, often mobile users persuaded to install software."
         result["illegal_activity_description"] = "The available evidence indicates malicious software delivery or staged malware download behaviour. This is consistent with computer contaminant distribution and other dishonest cyber acts under the IT Act."
         result["recommended_action"] = "Immediate IOC dissemination and blocking escalation under IT Act S.69A."
-    elif any(keyword in text for keyword in ("bet", "casino", "rummy", "teen patti", "sportsbook", "ipl")):
+    elif betting_page:
         category = "ILLEGAL_BETTING"
         laws = [
             _law_entry("Public Gambling Act 1867", "Operating an online betting platform", "The site content advertises wagering or games of chance to Indian users.", "CLEAR"),
@@ -161,7 +213,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
         result["victim_profile"] = "Indian bettors targeted through online gambling promotions."
         result["illegal_activity_description"] = "The evidence suggests the website promotes or enables online betting activity directed at Indian users. Depending on payment flows and hosting model, associated foreign exchange and laundering offences may also arise."
         result["recommended_action"] = "Escalate for gambling-law review and blocking consideration."
-    elif any(keyword in text for keyword in ("invest", "guaranteed return", "profit", "crypto", "trading signal")):
+    elif investment_page:
         category = "INVESTMENT_FRAUD" if "crypto" not in text else "CRYPTO_FRAUD"
         laws = [
             _law_entry("BNS 2023, Section 318", "Cheating by deception", "The site appears to induce victims to transfer funds on false assurances of returns.", "PROBABLE"),
@@ -172,7 +224,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
         result["illegal_activity_description"] = "The website content indicates an investment-style fraud mechanism promising returns or trading gains without credible regulatory or operational indicators. This is consistent with deception-based inducement to transfer property."
         result["recommended_action"] = "Preserve evidence, trace payment rails, and consider blocking after legal review."
     else:
-        if vt_hits or otx_pulses or abuse_score >= 50:
+        if threat_intel_confirmed or vt_hits or otx_pulses or abuse_score >= 50:
             category = "UNKNOWN"
             result["severity"] = "MEDIUM"
             result["recommended_action"] = "Preserve evidence and prioritise manual analyst review."

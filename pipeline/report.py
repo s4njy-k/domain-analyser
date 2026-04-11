@@ -207,14 +207,25 @@ def _capture_cards(report: DomainReport) -> list[dict[str, Any]]:
     return cards
 
 
+def _primary_capture(captures: list[CaptureData]) -> CaptureData | None:
+    successful = [capture for capture in captures if not capture.error and capture.http_status is not None]
+    for capture in successful:
+        if capture.profile == "desktop":
+            return capture
+    if successful:
+        return successful[0]
+    return captures[0] if captures else None
+
+
 def _linked_domains_from_existing(report: DomainReport, current_json_path: Path | None = None) -> list[str]:
     linked: set[str] = set()
     current_ip = (report.dns_records.get("A") or [None])[0]
     current_registrar = report.registration.registrar
     current_nameserver = (report.registration.nameservers or [None])[0]
     current_phash = None
-    if report.captures:
-        current_phash = perceptual_hash(report.captures[0].screenshot_viewport_path) if report.captures[0].screenshot_viewport_path else None
+    current_capture = _primary_capture(report.captures)
+    if current_capture and current_capture.screenshot_viewport_path:
+        current_phash = perceptual_hash(current_capture.screenshot_viewport_path)
 
     for json_file in sorted(DATA_DIR.glob("*.json")):
         if current_json_path and json_file.resolve() == current_json_path.resolve():
@@ -229,8 +240,9 @@ def _linked_domains_from_existing(report: DomainReport, current_json_path: Path 
         other_registrar = other.registration.registrar
         other_nameserver = (other.registration.nameservers or [None])[0]
         other_phash = None
-        if other.captures and other.captures[0].screenshot_viewport_path:
-            other_phash = perceptual_hash(other.captures[0].screenshot_viewport_path)
+        other_capture = _primary_capture(other.captures)
+        if other_capture and other_capture.screenshot_viewport_path:
+            other_phash = perceptual_hash(other_capture.screenshot_viewport_path)
         shared = False
         if current_ip and other_ip and current_ip == other_ip:
             shared = True
@@ -256,7 +268,7 @@ def render_domain_report(
     template = env.get_template("domain_report.html.j2")
     style_css = (TEMPLATES_DIR / "assets" / "style.css").read_text(encoding="utf-8")
     report = DomainReport.model_validate(report_dict)
-    primary_capture = report.captures[0] if report.captures else None
+    primary_capture = _primary_capture(report.captures)
     return template.render(
         report=report,
         style_css=style_css,

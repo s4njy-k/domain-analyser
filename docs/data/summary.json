@@ -1,19 +1,16 @@
 {
-  "batch_id": "local-smoke-20260411T192302Z",
-  "generated_at_utc": "2026-04-11T19:25:25Z",
+  "batch_id": "local-smoke-20260411T202053Z",
+  "generated_at_utc": "2026-04-11T20:23:31Z",
   "total_domains": 5,
-  "active_malicious": 2,
-  "inactive_down": 1,
+  "active_malicious": 0,
+  "inactive_down": 0,
   "unique_ips": 5,
   "unique_registrars": 0,
   "severity_counts": {
-    "LOW": 3,
-    "MEDIUM": 2
+    "LOW": 5
   },
   "category_counts": {
-    "BENIGN": 3,
-    "ILLEGAL_BETTING": 1,
-    "INVESTMENT_FRAUD": 1
+    "BENIGN": 5
   },
   "top_impersonated_brands": [],
   "top_hosting_countries": [

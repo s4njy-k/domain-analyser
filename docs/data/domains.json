@@ -10,7 +10,7 @@
     "status": "ACTIVE",
     "hosting_country": "Unknown",
     "registrar": "Unknown",
-    "ip": "104.20.23.154",
+    "ip": "172.66.147.243",
     "report_link": "domains/example.com/report.html",
     "raw_json_link": "domains/example.com/data.json",
     "evidence_link": "evidence/example.com_evidence.zip",
@@ -18,8 +18,8 @@
   },
   {
     "domain": "github.com",
-    "severity": "MEDIUM",
-    "category": "ILLEGAL_BETTING",
+    "severity": "LOW",
+    "category": "BENIGN",
     "brand_impersonated": null,
     "vt_score": "0/0",
     "vt_malicious": 0,
@@ -31,7 +31,7 @@
     "report_link": "domains/github.com/report.html",
     "raw_json_link": "domains/github.com/data.json",
     "evidence_link": "evidence/github.com_evidence.zip",
-    "priority_score": 0
+    "priority_score": 5
   },
   {
     "domain": "openstreetmap.org",
@@ -44,7 +44,7 @@
     "status": "ACTIVE",
     "hosting_country": "Unknown",
     "registrar": "Unknown",
-    "ip": "151.101.129.55",
+    "ip": "151.101.193.55",
     "report_link": "domains/openstreetmap.org/report.html",
     "raw_json_link": "domains/openstreetmap.org/data.json",
     "evidence_link": "evidence/openstreetmap.org_evidence.zip",
@@ -58,7 +58,7 @@
     "vt_score": "0/0",
     "vt_malicious": 0,
     "registered": null,
-    "status": "DOWN",
+    "status": "ACTIVE",
     "hosting_country": "Unknown",
     "registrar": "Unknown",
     "ip": "151.101.128.223",
@@ -69,8 +69,8 @@
   },
   {
     "domain": "wikipedia.org",
-    "severity": "MEDIUM",
-    "category": "INVESTMENT_FRAUD",
+    "severity": "LOW",
+    "category": "BENIGN",
     "brand_impersonated": null,
     "vt_score": "0/0",
     "vt_malicious": 0,
@@ -82,6 +82,6 @@
     "report_link": "domains/wikipedia.org/report.html",
     "raw_json_link": "domains/wikipedia.org/data.json",
     "evidence_link": "evidence/wikipedia.org_evidence.zip",
-    "priority_score": 0
+    "priority_score": 5
   }
 ]

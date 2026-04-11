@@ -288,7 +288,10 @@
       renderClusters(safeArray(summary.clusters));
       populateSelect("severity-filter", Object.keys(safeObject(summary.severity_counts)));
       populateSelect("category-filter", Object.keys(safeObject(summary.category_counts)));
-      populateSelect("country-filter", safeArray(summary.top_hosting_countries).map((item) => item.country));
+      populateSelect(
+        "country-filter",
+        Array.from(new Set(state.domains.map((row) => row.hosting_country).filter(Boolean))).sort()
+      );
       bindFilters();
       renderDomainRows();
     } catch (error) {
