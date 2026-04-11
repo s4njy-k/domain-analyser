@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malicious Domain Dashboard - {{ batch_id }}</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-shell">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">TAU / I4C Investigation Dashboard</p>
+        <h1>Malicious Domain Analysis Dashboard</h1>
+        <p class="header-copy">Batch <strong>{{ batch_id }}</strong> · Generated <strong>{{ generated_at_utc }}</strong> · Total domains <strong>{{ total_domains }}</strong></p>
+      </div>
+      <div class="header-actions">
+        <a class="button secondary" href="{{ domains_csv_path }}">Download Full CSV</a>
+        <a class="button primary" href="{{ all_evidence_zip_path }}">Download Evidence Package</a>
+      </div>
+    </header>
+
+    <section class="stats-grid" id="summary-cards">
+      <article class="stats-card"><span class="label">Total Domains</span><strong id="stat-total">0</strong></article>
+      <article class="stats-card"><span class="label">Active Malicious</span><strong id="stat-active">0</strong></article>
+      <article class="stats-card"><span class="label">Inactive / Down</span><strong id="stat-inactive">0</strong></article>
+      <article class="stats-card"><span class="label">Unique IPs</span><strong id="stat-ips">0</strong></article>
+      <article class="stats-card"><span class="label">Unique Registrars</span><strong id="stat-registrars">0</strong></article>
+      <article class="stats-card"><span class="label">Category Breakdown</span><strong id="stat-categories">0</strong></article>
+    </section>
+
+    <section class="panel-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Severity Distribution</h2>
+        </div>
+        <canvas id="severity-chart" aria-label="Severity distribution chart"></canvas>
+      </article>
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Threat Category Breakdown</h2>
+        </div>
+        <canvas id="category-chart" aria-label="Threat category chart"></canvas>
+      </article>
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Top Hosting Countries</h2>
+        </div>
+        <canvas id="country-chart" aria-label="Hosting country chart"></canvas>
+      </article>
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Top Impersonated Brands</h2>
+        </div>
+        <table class="dashboard-table compact">
+          <thead>
+            <tr><th>Brand</th><th>Count</th></tr>
+          </thead>
+          <tbody id="brands-table-body"></tbody>
+        </table>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Infrastructure Clusters</h2>
+      </div>
+      <table class="dashboard-table compact">
+        <thead>
+          <tr>
+            <th>Shared Indicator</th>
+            <th>Type</th>
+            <th>Cluster Size</th>
+            <th>Domains</th>
+          </tr>
+        </thead>
+        <tbody id="cluster-table-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Domain Table</h2>
+      </div>
+      <div class="filter-bar">
+        <input type="search" id="search-input" placeholder="Search domain, brand, registrar">
+        <select id="severity-filter">
+          <option value="">All severities</option>
+        </select>
+        <select id="category-filter">
+          <option value="">All categories</option>
+        </select>
+        <select id="country-filter">
+          <option value="">All countries</option>
+        </select>
+        <input type="date" id="date-from-filter">
+        <input type="date" id="date-to-filter">
+      </div>
+      <div class="table-wrap">
+        <table class="dashboard-table" id="domains-table">
+          <thead>
+            <tr>
+              <th><button type="button" class="sort-button" data-sort="domain">Domain</button></th>
+              <th><button type="button" class="sort-button" data-sort="severity">Severity</button></th>
+              <th><button type="button" class="sort-button" data-sort="category">Category</button></th>
+              <th><button type="button" class="sort-button" data-sort="vt_malicious">VT Score</button></th>
+              <th><button type="button" class="sort-button" data-sort="registered">Reg Date</button></th>
+              <th><button type="button" class="sort-button" data-sort="status">Status</button></th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="domains-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    window.DOMAIN_ANALYSER_CONFIG = {
+      summaryJsonPath: "{{ summary_json_path }}",
+      domainsJsonPath: "{{ domains_json_path }}",
+      domainsCsvPath: "{{ domains_csv_path }}",
+      allEvidenceZipPath: "{{ all_evidence_zip_path }}"
+    };
+  </script>
+  <script src="{{ chart_js_url }}" onerror="var s=document.createElement('script');s.src='assets/chart.min.js';document.head.appendChild(s);"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-11T19:25:24Z",
+  "batch_id": "local-smoke-20260411T192302Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260411T192516Z",
+      "cloaking_suspected": true,
+      "error": null,
+      "final_url": "https://www.openstreetmap.org/#map=5/21.84/82.79",
+      "http_status": 200,
+      "meta_desc": "OpenStreetMap is a map of the world, created by people like you and free to use under an open license.",
+      "page_text": "OpenStreetMap\nEdit\nHistory\nExport\nGPS Traces\nUser Diaries\nCommunities\nCopyright\nHelp\nDonate\nAbout\nLog In\nSign Up\nWhere is this?\nWelcome to OpenStreetMap!\n\nOpenStreetMap is a map of the world, created by people like you and free to use under an open license.\n\nHosting is supported by Fastly, OSMF corporate members, and other partners.\n\nBy using this website or other infrastructure provided by the OpenStreetMap Foundation, you agree to the Terms of Use.\n\nLearn More\nStart Mapping\n300 km\n200 mi\n© OpenStreetMap contributors ♥️ Make a Donation. Website and API terms",
+      "profile": "desktop",
+      "screenshot_full_hash": "364aa4dc9a9f0201ebe2be146c8fe7c86719377b696100ace20b3956947ef4e1",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/openstreetmap.org_desktop_20260411T192516Z_fullpage.png",
+      "screenshot_viewport_hash": "364aa4dc9a9f0201ebe2be146c8fe7c86719377b696100ace20b3956947ef4e1",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/openstreetmap.org_desktop_20260411T192516Z_viewport.png",
+      "title": "OpenStreetMap"
+    },
+    {
+      "capture_ts_utc": "20260411T192524Z",
+      "cloaking_suspected": true,
+      "error": null,
+      "final_url": "https://www.openstreetmap.org/#map=4/21.84/82.79",
+      "http_status": 200,
+      "meta_desc": "OpenStreetMap is a map of the world, created by people like you and free to use under an open license.",
+      "page_text": "OpenStreetMap\n500 km\n500 mi\n© OpenStreetMap contributors ♥️ Make a Donation. Website and API terms",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "72dcc9e8259cb1c13c2e399bdebd7d63e4f73bec1a0d20d396a613437f79db75",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/openstreetmap.org_mobile_android_20260411T192524Z_fullpage.png",
+      "screenshot_viewport_hash": "72dcc9e8259cb1c13c2e399bdebd7d63e4f73bec1a0d20d396a613437f79db75",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/openstreetmap.org_mobile_android_20260411T192524Z_viewport.png",
+      "title": "OpenStreetMap"
+    }
+  ],
+  "cert_transparency": [],
+  "dns_records": {
+    "A": [
+      "151.101.129.55",
+      "151.101.65.55",
+      "151.101.1.55",
+      "151.101.193.55"
+    ],
+    "MX": [
+      "10 a.mx.openstreetmap.org"
+    ],
+    "NS": [
+      "rajeev.ns.cloudflare.com",
+      "daisy.ns.cloudflare.com"
+    ],
+    "TXT": [
+      "_globalsign-domain-verification=W0buKB5ZmL-VwwHw2oQyQImk3I1q3hSemf2qmB1hjP",
+      "_globalsign-domain-verification=ps00GlW1BzY9c2_cwH_pFqRkvzZyaCVZ-3RLssRG6S",
+      "facebook-domain-verification=j5hix5i8r0kortfugqf2p9wx9x9by0",
+      "v=spf1 ip4:184.104.226.98 ip6:2001:470:1:b3b::2 ip4:87.252.214.98 ip6:2001:4d78:fe03:1c::2 ip4:193.60.236.0/24 ip4:82.199.86.96/27 ip6:2001:4d78:500:5e3::/64 ip4:87.252.214.96/27 ip6:2001:4d78:fe03:1c::/64 ip4:184.104.179.128/27 ip6:2001:470:1:fa1::/64 ip4:184.104.226.96/27 ip6:2001:470:1:b3b::/64 mx -all"
+    ]
+  },
+  "domain": "openstreetmap.org",
+  "evidence_manifest_hash": "60c268a2f1456ccea2c162a6f706c1068930d31ba47f479e77044df72d1a1df5",
+  "input_url": "https://www.openstreetmap.org",
+  "linked_domains": [],
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://www.openstreetmap.org/panes/layers"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://www.openstreetmap.org/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.openstreetmap.org/assets/index-e3ac32a59914bec0aac759b752393239d44d5f9baf1cc067af403f1f03b77e14.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.openstreetmap.org/assets/turbo-ddc44468c3f2a177272c2635e622ef6a909e2fa74c250a9f98a31a94a87d1d29.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.openstreetmap.org/assets/application-c54179f4131c35c0bda3948cb81c345c2da4a81d7ed270b94c70dc2ae7a1dda8.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.openstreetmap.org/assets/i18n/en-dd1b503e1e8daf7760ea43a9cfa0866825e87e455d6f6a0d661aad6536be460d.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://www.openstreetmap.org/assets/screen-auto-ltr-46573c72fca1195477837776bb421b53339db3f9a4345c51a3589b4a29185ce4.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://www.openstreetmap.org/assets/print-ltr-97dee1ca487394c852f28c2906a930316ab6d2cacf7f73e47c1c31fad8919051.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://www.openstreetmap.org/assets/leaflet-all-d3e8505f47e0f0615d3daf2619f2267c086cbe9e17e276f393ee686dca54e0d3.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://www.openstreetmap.org/assets/maplibre-gl-all-671191c247be2831d2737d30b396112dc1041453bd6291863062bbaea52a940a.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://www.openstreetmap.org/assets/osm_logo-cc7d94392992162133be3baa21a37eb84f19f9b91178f704005378fbeecabb4e.svg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.openstreetmap.org/assets/make-plural/cardinals-cbbf892e6bf25f4dbbcf7776eee157ce78502c06a15a02ad32ca39aecfc50867.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://www.openstreetmap.org/assets/leaflet/dist/images/marker-shadow-a2d94406ba198f61f68a71ed8f9f9c701122c0c33b775d990edceae4aece567f.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://www.openstreetmap.org/assets/bootstrap-icons/font/fonts/bootstrap-icons-d58dbdc0232480708b000373bb9f5be99101ea5a95df6a9ef080912f10588790.woff2?24e3eb84d0bcaf83d77f904c78ac1f47"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://matomo.openstreetmap.org/matomo.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/23/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/23/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/22/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/24/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/22/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/24/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/23/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/23/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/22/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/24/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/22/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/24/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/21/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/25/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/21/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/25/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/21/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/25/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/21/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/25/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/20/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/26/13.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/20/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/26/14.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/20/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/26/12.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/20/15.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://tile.openstreetmap.org/5/26/15.png"
+      },
+      {
+        "method": "POST",
+        "resource_type": "ping",
+        "url": "https://matomo.openstreetmap.org/matomo.php?action_name=OpenStreetMap&idsite=1&rec=1&r=992696&h=0&m=55&s=11&url=https%3A%2F%2Fwww.openstreetmap.org%2F%23map%3D5%2F21.84%2F82.79&_id=6c0d762c40bffe3e&_idn=1&send_image=0&_refts=0&pv_id=Gj7U0N&webgl=0&pf_net=429&pf_srv=515&pf_tfr=2&pf_dm1=258&uadata=%7B%22formFactors%22%3A%5B%5D%2C%22fullVersionList%22%3A%5B%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22125.0.6422.26%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22125.0.6422.26%22%7D%2C%7B%22brand%22%3A%22Not.A%2FBrand%22%2C%22version%22%3A%2224.0.0.0%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%7D&pdf=1&qt=0&realp=0&wma=0&fla=0&java=0&ag=0&cookie=1&res=1366x768"
+      },
+      {
+        "method": "POST",
+        "resource_type": "ping",
+        "url": "https://matomo.openstreetmap.org/matomo.php?idgoal=3&idsite=1&rec=1&r=782415&h=0&m=55&s=11&url=https%3A%2F%2Fwww.openstreetmap.org%2F%23map%3D5%2F21.84%2F82.79&_id=6c0d762c40bffe3e&_idn=0&send_image=0&_refts=0&pv_id=Gj7U0N&uadata=%7B%22formFactors%22%3A%5B%5D%2C%22fullVersionList%22%3A%5B%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22125.0.6422.26%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22125.0.6422.26%22%7D%2C%7B%22brand%22%3A%22Not.A%2FBrand%22%2C%22version%22%3A%2224.0.0.0%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%7D&pdf=1&qt=0&realp=0&wma=0&fla=0&java=0&ag=0&cookie=1&res=1366x768"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://www.openstreetmap.org/c1ebf425-bbe8-451c-ada4-7c4216d6eed0"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://www.openstreetmap.org/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "response_headers": {
+    "accept-ranges": "bytes",
+    "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "content-encoding": "br",
+    "content-language": "en",
+    "content-length": "6168",
+    "content-security-policy": "default-src 'self'; child-src 'self'; font-src 'self'; frame-ancestors 'self'; frame-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'self'; worker-src blob:; connect-src 'self' tile.openstreetmap.org api.thunderforest.com tile.tracestrack.com *.openstreetmap.fr vector.openstreetmap.org api.maptiler.com matomo.openstreetmap.org http://127.0.0.1:8111 https://vector.openstreetmap.org https://api.maptiler.com https://tile.thunderforest.com https://render.openstreetmap.org https://nominatim.openstreetmap.org/ https://query.openstreetmap.org/query-features https://routing.openstreetmap.de/ https://graphhopper.com/api/1/route https://valhalla1.openstreetmap.de/route https://www.wikidata.org/w/api.php; form-action 'self' render.openstreetmap.org tile.thunderforest.com; img-src 'self' data: www.gravatar.com *.wp.com tile.openstreetmap.org gps.tile.openstreetmap.org api.thunderforest.com tile.tracestrack.com *.openstreetmap.fr matomo.openstreetmap.org https://openstreetmap-user-avatars.s3.dualstack.eu-west-1.amazonaws.com https://openstreetmap-gps-images.s3.dualstack.eu-west-1.amazonaws.com https://commons.wikimedia.org/wiki/ upload.wikimedia.org; script-src 'self' matomo.openstreetmap.org 'wasm-unsafe-eval' 'nonce-rSDSaNfvagKbp3XsrxMmvt2piGFr77P6'; style-src 'self' 'unsafe-inline' 'nonce-rSDSaNfvagKbp3XsrxMmvt2piGFr77P6'",
+    "content-type": "text/html; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "date": "Sat, 11 Apr 2026 19:25:10 GMT",
+    "etag": "W/\"0e5641f62c9b2e211170e833053e7f82-br\"",
+    "link": "</assets/index-e3ac32a59914bec0aac759b752393239d44d5f9baf1cc067af403f1f03b77e14.js>; rel=preload; as=script; nopush,</assets/turbo-ddc44468c3f2a177272c2635e622ef6a909e2fa74c250a9f98a31a94a87d1d29.js>; rel=modulepreload; as=script; nopush,</assets/application-c54179f4131c35c0bda3948cb81c345c2da4a81d7ed270b94c70dc2ae7a1dda8.js>; rel=preload; as=script; nopush,</assets/i18n/en-dd1b503e1e8daf7760ea43a9cfa0866825e87e455d6f6a0d661aad6536be460d.js>; rel=preload; as=script; nopush,</assets/screen-auto-ltr-46573c72fca1195477837776bb421b53339db3f9a4345c51a3589b4a29185ce4.css>; rel=preload; as=style; nopush,</assets/print-ltr-97dee1ca487394c852f28c2906a930316ab6d2cacf7f73e47c1c31fad8919051.css>; rel=preload; as=style; nopush,</assets/leaflet-all-d3e8505f47e0f0615d3daf2619f2267c086cbe9e17e276f393ee686dca54e0d3.css>; rel=preload; as=style; nopush,</assets/maplibre-gl-all-671191c247be2831d2737d30b396112dc1041453bd6291863062bbaea52a940a.css>; rel=preload; as=style; nopush",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "Apache",
+    "set-cookie": "_osm_session=f79b2715188ff3399025659b603f86ce; path=/; secure; httponly; samesite=lax\n_osm_totp_token=026469; domain=openstreetmap.org; path=/; expires=Sat, 11 Apr 2026 20:25:10 GMT; samesite=lax; secure",
+    "status": "200 OK",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Accept-Language,Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS, MISS",
+    "x-cache-hits": "0, 0",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-page-title": "OpenStreetMap",
+    "x-permitted-cross-domain-policies": "none",
+    "x-powered-by": "Phusion Passenger(R) 6.1.2",
+    "x-request-id": "adqgFprl637OJGD4uZIh1QAAAJs",
+    "x-runtime": "0.023523",
+    "x-served-by": "cache-qbd-vind4800023-QBD, cache-qbd-vind4800028-QBD",
+    "x-timer": "S1775935510.674776,VS0,VE503",
+    "x-xss-protection": "0"
+  },
+  "screenshot_phash": "d5d11a8eeae9aa82",
+  "threat_intel": {
+    "abuseipdb_isp": null,
+    "abuseipdb_score": null,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": null,
+    "urlscan_verdict": null,
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 0
+  },
+  "wayback_snapshot": {
+    "available": "true",
+    "timestamp": "20260411132911",
+    "url": "http://web.archive.org/web/20260411132911/https://www.openstreetmap.org/"
+  }
+}

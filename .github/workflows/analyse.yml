@@ -1,0 +1,96 @@
+name: Malicious Domain Analysis Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      domains_input:
+        description: 'Paste domain list (one per line) OR leave blank to use input/domains.txt'
+        required: false
+        type: string
+      batch_name:
+        description: 'Batch name/ID for this analysis run'
+        required: true
+        default: 'batch-001'
+      max_domains:
+        description: 'Max domains to process (leave blank = all)'
+        required: false
+        default: '100'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --use-deprecated=legacy-resolver -r requirements.txt
+          pip install grpcio grpcio-status lxml_html_clean
+
+      - name: Install Playwright and Chromium
+        run: |
+          python -m playwright install chromium
+          python -m playwright install-deps chromium
+
+      - name: Write domain input (if provided via workflow_dispatch)
+        if: ${{ github.event.inputs.domains_input != '' }}
+        run: echo '${{ github.event.inputs.domains_input }}' > input/domains.txt
+
+      - name: Run analysis pipeline
+        env:
+          VT_API_KEY: ${{ secrets.VT_API_KEY }}
+          URLSCAN_API_KEY: ${{ secrets.URLSCAN_API_KEY }}
+          ABUSEIPDB_API_KEY: ${{ secrets.ABUSEIPDB_API_KEY }}
+          OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+          GOOGLE_SAFE_BROWSING_KEY: ${{ secrets.GOOGLE_SAFE_BROWSING_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          HACKERTARGET_API_KEY: ${{ secrets.HACKERTARGET_API_KEY }}
+          BATCH_NAME: ${{ github.event.inputs.batch_name }}
+          MAX_DOMAINS: ${{ github.event.inputs.max_domains }}
+        run: |
+          if [ -n "$MAX_DOMAINS" ]; then
+            python run_local.py --batch-name "$BATCH_NAME" --max-domains "$MAX_DOMAINS"
+          else
+            python run_local.py --batch-name "$BATCH_NAME"
+          fi
+
+      - name: Generate consolidated dashboard
+        run: python -m pipeline.dashboard
+
+      - name: Upload evidence packages as artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ github.event.inputs.batch_name }}-${{ github.run_id }}
+          path: |
+            output/screenshots/
+            output/reports/
+            output/data/
+          retention-days: 90
+
+      - name: Deploy dashboard to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v4
+        id: deployment

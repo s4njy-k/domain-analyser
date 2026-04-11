@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ report.domain }} - Domain Analysis Report</title>
+  <style>{{ style_css }}</style>
+  <style>
+    .report-page {
+      background: #fafafa;
+      color: #161616;
+      min-height: 100vh;
+    }
+    .report-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .report-hero {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    .report-hero.severity-CRITICAL { background: linear-gradient(135deg, #7f1d1d, #b22222); }
+    .report-hero.severity-HIGH { background: linear-gradient(135deg, #8a3b00, #cc5500); }
+    .report-hero.severity-MEDIUM { background: linear-gradient(135deg, #715300, #b8860b); }
+    .report-hero.severity-LOW { background: linear-gradient(135deg, #0d4b24, #1a6b3a); }
+    .report-hero.severity-INACTIVE,
+    .report-hero.severity-UNKNOWN { background: linear-gradient(135deg, #555, #777); }
+    .hero-title h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .report-page .section-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      padding: 22px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .section-card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #102542;
+    }
+    .summary-text {
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .intel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .intel-card {
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #f5f7fb;
+    }
+    .intel-card.alert { background: #fff1f1; border-color: rgba(178, 34, 34, 0.3); }
+    .intel-card.warn { background: #fff7ec; border-color: rgba(204, 85, 0, 0.28); }
+    .intel-card.safe { background: #edf8f1; border-color: rgba(26, 107, 58, 0.28); }
+    .intel-card .label {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #5c6270;
+      margin-bottom: 8px;
+    }
+    .intel-card strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .report-table th,
+    .report-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+    .report-table th {
+      color: #1f2937;
+      background: #f5f7fb;
+    }
+    .new-domain-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(178, 34, 34, 0.12);
+      color: #8a1111;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .shot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .shot-card {
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      background: #f8fafc;
+    }
+    .shot-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #e8eff8;
+      font-weight: 700;
+    }
+    .shot-media {
+      background: #0f172a;
+      aspect-ratio: 16 / 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .shot-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+    .shot-meta {
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      word-break: break-word;
+      color: #334155;
+    }
+    .cloaking-banner {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff2d9;
+      border: 1px solid rgba(184, 134, 11, 0.35);
+      color: #7c4a00;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .legal-box {
+      padding: 18px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #d7dce2;
+      color: #111827;
+      line-height: 1.7;
+    }
+    .tech-columns {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px;
+    }
+    .code-list {
+      margin: 0;
+      padding-left: 20px;
+      word-break: break-word;
+    }
+    .badge-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.86);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 50;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: min(1200px, 95vw);
+      max-height: 92vh;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+    }
+    .lightbox button {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      width: 42px;
+      height: 42px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    @media (max-width: 900px) {
+      .report-hero { flex-direction: column; }
+      .tech-columns { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .report-shell { padding: 0; max-width: none; }
+      .report-page .section-card,
+      .report-hero { box-shadow: none; break-inside: avoid; }
+      .report-hero { border-radius: 0; }
+      .shot-media img { cursor: default; }
+      .lightbox, .action-row { display: none !important; }
+      .legal-box { color: #000; background: #fff; }
+    }
+  </style>
+</head>
+<body class="report-page">
+  <div class="report-shell">
+    <header class="report-hero severity-{{ report.ai_analysis.severity }}">
+      <div class="hero-title">
+        <p class="eyebrow">AI-Powered Malicious Domain Analyser</p>
+        <h1>{{ report.domain }}</h1>
+        <div class="hero-meta">
+          <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
+          <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
+          <span class="badge neutral">{{ report.batch_id }}</span>
+          <span class="badge neutral">{{ report.analysis_ts_utc }}</span>
+        </div>
+        <p>Input URL: <strong>{{ report.input_url }}</strong></p>
+      </div>
+      <div class="action-row">
+        <a class="button primary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+        <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
+      </div>
+    </header>
+
+    <section class="section-card" id="section-a">
+      <h2>A - Executive Summary</h2>
+      <p class="summary-text">{{ report.ai_analysis.illegal_activity_description }}</p>
+    </section>
+
+    <section class="section-card" id="section-b">
+      <h2>B - Threat Intel Verdicts</h2>
+      <div class="intel-grid">
+        <div class="intel-card {% if report.threat_intel.vt_malicious > 0 %}alert{% elif report.threat_intel.vt_suspicious > 0 %}warn{% else %}safe{% endif %}">
+          <span class="label">VirusTotal</span>
+          <strong>{{ report.threat_intel.vt_malicious }}/{{ report.threat_intel.vt_total }}</strong>
+          <span>Malicious engines flagged</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.urlscan_verdict == 'malicious' %}alert{% elif report.threat_intel.urlscan_verdict %}warn{% else %}safe{% endif %}">
+          <span class="label">URLScan</span>
+          <strong>{{ report.threat_intel.urlscan_verdict or 'N/A' }}</strong>
+          <span>Score: {{ report.threat_intel.urlscan_score if report.threat_intel.urlscan_score is not none else 'N/A' }}</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.urlhaus_listed %}alert{% else %}safe{% endif %}">
+          <span class="label">URLhaus</span>
+          <strong>{{ 'Listed' if report.threat_intel.urlhaus_listed else 'Not listed' }}</strong>
+          <span>{{ report.threat_intel.urlhaus_threat or 'No malware tag returned' }}</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.gsb_threats %}alert{% else %}safe{% endif %}">
+          <span class="label">Google Safe Browsing</span>
+          <strong>{{ report.threat_intel.gsb_threats|join(', ') if report.threat_intel.gsb_threats else 'Clean' }}</strong>
+          <span>Blocklist presence</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.otx_pulse_count > 0 %}warn{% else %}safe{% endif %}">
+          <span class="label">AlienVault OTX</span>
+          <strong>{{ report.threat_intel.otx_pulse_count }}</strong>
+          <span>Threat pulses</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.phishtank_verified %}alert{% else %}safe{% endif %}">
+          <span class="label">PhishTank</span>
+          <strong>{{ 'Verified' if report.threat_intel.phishtank_verified else 'Unverified' }}</strong>
+          <span>Community phishing consensus</span>
+        </div>
+        <div class="intel-card {% if report.threat_intel.abuseipdb_score and report.threat_intel.abuseipdb_score >= 50 %}warn{% else %}safe{% endif %}">
+          <span class="label">AbuseIPDB</span>
+          <strong>{{ report.threat_intel.abuseipdb_score if report.threat_intel.abuseipdb_score is not none else 'N/A' }}</strong>
+          <span>{{ report.threat_intel.abuseipdb_isp or 'ISP unavailable' }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="section-c">
+      <h2>C - Registration Data</h2>
+      <div class="grid-2">
+        <div>
+          <table class="report-table">
+            <tbody>
+              <tr><th>Registrar</th><td>{{ report.registration.registrar or 'Unknown' }}</td></tr>
+              <tr><th>Registration date</th><td>{{ report.registration.registered or 'Unknown' }}</td></tr>
+              <tr><th>Expiry date</th><td>{{ report.registration.expires or 'Unknown' }}</td></tr>
+              <tr><th>Nameservers</th><td>{{ report.registration.nameservers|join(', ') if report.registration.nameservers else 'Unknown' }}</td></tr>
+              <tr><th>Country</th><td>{{ report.registration.country or 'Unknown' }}</td></tr>
+              <tr><th>Domain age</th><td>{{ domain_age.days ~ ' days' if domain_age.days is not none else 'Unknown' }}</td></tr>
+            </tbody>
+          </table>
+          {% if domain_age.is_new_domain %}
+            <div class="new-domain-flag">NEW DOMAIN - Registered within 30 days</div>
+          {% endif %}
+        </div>
+        <div>
+          <div class="legal-box">
+            <strong>Fraud mechanism</strong>
+            <p>{{ report.ai_analysis.fraud_mechanism or 'N/A' }}</p>
+            <strong>Victim profile</strong>
+            <p>{{ report.ai_analysis.victim_profile or 'N/A' }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="section-d">
+      <h2>D - Screenshots</h2>
+      {% if capture_cards | selectattr('cloaking_suspected') | list %}
+        <div class="cloaking-banner">CLOAKING SUSPECTED - Desktop and mobile captures differ materially.</div>
+      {% endif %}
+      <div class="shot-grid">
+        {% for card in capture_cards %}
+          <article class="shot-card">
+            <div class="shot-head">
+              <span>{{ card.profile|replace('_', ' ')|title }}</span>
+              <span>{{ card.http_status if card.http_status is not none else 'Capture failed' }}</span>
+            </div>
+            {% if card.error %}
+              <div class="shot-meta">{{ card.error }}</div>
+            {% endif %}
+            {% if card.viewport_data_uri %}
+              <div class="shot-media">
+                <img src="{{ card.viewport_data_uri }}" alt="{{ card.profile }} viewport screenshot" data-lightbox="{{ card.viewport_data_uri }}">
+              </div>
+              <div class="shot-meta">
+                <strong>Viewport screenshot</strong><br>
+                Timestamp: {{ card.timestamp or 'N/A' }}<br>
+                SHA-256: {{ card.viewport_hash or 'N/A' }}
+              </div>
+            {% endif %}
+            {% if card.full_data_uri %}
+              <div class="shot-media">
+                <img src="{{ card.full_data_uri }}" alt="{{ card.profile }} full-page screenshot" data-lightbox="{{ card.full_data_uri }}">
+              </div>
+              <div class="shot-meta">
+                <strong>Full-page screenshot</strong><br>
+                Timestamp: {{ card.timestamp or 'N/A' }}<br>
+                SHA-256: {{ card.full_hash or 'N/A' }}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section-card" id="section-e">
+      <h2>E - Legal Analysis</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Statute</th>
+            <th>Offence</th>
+            <th>Evidence</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if report.ai_analysis.applicable_laws %}
+            {% for law in report.ai_analysis.applicable_laws %}
+              <tr>
+                <td>{{ law.statute or law['statute'] }}</td>
+                <td>{{ law.offence or law['offence'] }}</td>
+                <td>{{ law.evidence or law['evidence'] }}</td>
+                <td>{{ law.confidence or law['confidence'] }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr><td colspan="4">No specific legal provisions were assigned by the analytical model for this capture.</td></tr>
+          {% endif %}
+        </tbody>
+      </table>
+      <div class="legal-box" style="margin-top: 16px;">
+        {{ report.ai_analysis.illegal_activity_description }}
+      </div>
+    </section>
+
+    <section class="section-card" id="section-f">
+      <h2>F - Technical Details</h2>
+      <div class="tech-columns">
+        <div>
+          <table class="report-table">
+            <tbody>
+              <tr><th>HTTP status</th><td>{{ primary_capture.http_status if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Final URL</th><td>{{ primary_capture.final_url if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Page title</th><td>{{ primary_capture.title if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Redirect chain</th><td>{{ redirect_chain|join(' → ') if redirect_chain else 'No redirects recorded' }}</td></tr>
+              <tr><th>Wayback snapshot</th><td>{% if wayback_snapshot.url %}<a href="{{ wayback_snapshot.url }}">Archived copy</a>{% else %}Not available{% endif %}</td></tr>
+            </tbody>
+          </table>
+          <h3>DNS Records</h3>
+          <table class="report-table">
+            <tbody>
+              {% for record_type, values in report.dns_records.items() %}
+                <tr>
+                  <th>{{ record_type }}</th>
+                  <td>{{ values|join(', ') if values else 'No record returned' }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Certificate Transparency (first 10)</h3>
+          <ul class="code-list">
+            {% for cert in first_ten_certs %}
+              <li><strong>{{ cert.name }}</strong><br>{{ cert.issuer }}<br>{{ cert.not_before }}</li>
+            {% else %}
+              <li>No certificate transparency records returned.</li>
+            {% endfor %}
+          </ul>
+          <h3>Response Headers</h3>
+          <ul class="code-list">
+            {% for key, value in response_headers.items() %}
+              <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% else %}
+              <li>No response headers recorded.</li>
+            {% endfor %}
+          </ul>
+          <h3>Network Requests</h3>
+          <ul class="code-list">
+            <li><strong>First-party:</strong> {{ network_requests.first_party|length if network_requests.first_party is defined else 0 }}</li>
+            <li><strong>Third-party:</strong> {{ network_requests.third_party|length if network_requests.third_party is defined else 0 }}</li>
+            <li><strong>API calls:</strong> {{ network_requests.api_calls|length if network_requests.api_calls is defined else 0 }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="section-g">
+      <h2>G - Evidence Manifest</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Type</th>
+            <th>Profile</th>
+            <th>Timestamp</th>
+            <th>SHA-256</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in manifest_entries %}
+            <tr>
+              <td>{{ item.file }}</td>
+              <td>{{ item.type }}</td>
+              <td>{{ item.profile }}</td>
+              <td>{{ item.timestamp }}</td>
+              <td>{{ item.hash }}</td>
+            </tr>
+          {% else %}
+            <tr><td colspan="5">No manifest entries were generated.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><strong>Manifest hash:</strong> {{ report.evidence_manifest_hash or 'N/A' }}</p>
+    </section>
+
+    <section class="section-card" id="section-h">
+      <h2>H - Recommendations</h2>
+      <div class="grid-2">
+        <div class="legal-box">
+          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
+          <p><strong>Severity:</strong> {{ report.ai_analysis.severity }}</p>
+          <p><strong>Priority score:</strong> {{ report.ai_analysis.priority_score }}</p>
+          <div class="badge-stack">
+            <a class="button primary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+            <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
+          </div>
+        </div>
+        <div class="legal-box">
+          <strong>Linked domains (shared infrastructure)</strong>
+          <ul class="code-list">
+            {% for linked in linked_domains %}
+              <li>{{ linked }}</li>
+            {% else %}
+              <li>No linked domains were identified in the current dataset.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button type="button" aria-label="Close lightbox" onclick="window.closeReportLightbox()">×</button>
+    <img alt="Expanded screenshot preview" id="lightbox-image">
+  </div>
+
+  <script>
+    window.closeReportLightbox = function () {
+      document.getElementById('lightbox').classList.remove('active');
+    };
+    document.querySelectorAll('[data-lightbox]').forEach(function (image) {
+      image.addEventListener('click', function () {
+        document.getElementById('lightbox-image').src = image.getAttribute('data-lightbox');
+        document.getElementById('lightbox').classList.add('active');
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', function (event) {
+      if (event.target.id === 'lightbox') {
+        window.closeReportLightbox();
+      }
+    });
+  </script>
+</body>
+</html>

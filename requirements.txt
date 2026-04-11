@@ -1,0 +1,43 @@
+# Web capture
+playwright==1.44.0
+playwright-stealth==1.0.6
+
+# HTTP & async
+httpx==0.27.0
+aiohttp==3.9.5
+asyncio==3.4.3
+tenacity==8.3.0
+
+# Data processing
+pandas==2.2.2
+tldextract==5.1.2
+validators==0.28.3
+
+# DNS
+dnspython==2.6.1
+
+# HTML parsing & content extraction
+beautifulsoup4==4.12.3
+lxml==5.2.2
+trafilatura==1.9.0
+
+# Image processing
+Pillow==10.3.0
+imagehash==4.3.1
+
+# Report generation
+jinja2==3.1.4
+weasyprint==62.3
+
+# Data storage
+tinydb==4.8.0
+
+# Utilities
+python-dateutil==2.9.0
+rich==13.7.1
+click==8.1.7
+pydantic==2.7.4
+python-dotenv==1.0.1
+
+# AI (free tier)
+google-generativeai==0.7.2

@@ -1,0 +1,126 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-11T19:23:15Z",
+  "batch_id": "local-smoke-20260411T192302Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260411T192309Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.example.com/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
+      "profile": "desktop",
+      "screenshot_full_hash": "1cfe77e476efaa82e671d5f15705c27c258fe058e6c2cb3ec42e6e09ae06abbe",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T192309Z_fullpage.png",
+      "screenshot_viewport_hash": "1cfe77e476efaa82e671d5f15705c27c258fe058e6c2cb3ec42e6e09ae06abbe",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_desktop_20260411T192309Z_viewport.png",
+      "title": "Example Domain"
+    },
+    {
+      "capture_ts_utc": "20260411T192314Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.example.com/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "04d708a92fa3fcdc3e67f87ffcd5c671d590a1aff25a14e81e131ee987f430bc",
+      "screenshot_full_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T192314Z_fullpage.png",
+      "screenshot_viewport_hash": "04d708a92fa3fcdc3e67f87ffcd5c671d590a1aff25a14e81e131ee987f430bc",
+      "screenshot_viewport_path": "/Users/turnstyle/Projects/domain-analyser/output/screenshots/example.com_mobile_android_20260411T192314Z_viewport.png",
+      "title": "Example Domain"
+    }
+  ],
+  "cert_transparency": [],
+  "dns_records": {
+    "A": [
+      "104.20.23.154",
+      "172.66.147.243"
+    ],
+    "MX": [
+      "0 "
+    ],
+    "NS": [
+      "elliott.ns.cloudflare.com",
+      "hera.ns.cloudflare.com"
+    ],
+    "TXT": [
+      "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+      "v=spf1 -all"
+    ]
+  },
+  "domain": "example.com",
+  "evidence_manifest_hash": "454794fa80eb8f00a4dff52a81a3396a7a0ba4a0cefbfd8f218b8ffb62348f2a",
+  "input_url": "https://www.example.com",
+  "linked_domains": [],
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://www.example.com/"
+      }
+    ],
+    "third_party": []
+  },
+  "redirect_chain": [
+    "https://www.example.com/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "response_headers": {
+    "age": "3461",
+    "allow": "GET, HEAD",
+    "cf-cache-status": "HIT",
+    "cf-ray": "9eac5d1d2bb2d34e-FRA",
+    "content-encoding": "br",
+    "content-type": "text/html",
+    "date": "Sat, 11 Apr 2026 19:23:05 GMT",
+    "last-modified": "Fri, 10 Apr 2026 01:29:17 GMT",
+    "server": "cloudflare"
+  },
+  "screenshot_phash": "bc3c3cc2c3c3c3c3",
+  "threat_intel": {
+    "abuseipdb_isp": null,
+    "abuseipdb_score": null,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": null,
+    "urlscan_verdict": null,
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 0
+  },
+  "wayback_snapshot": {
+    "available": "true",
+    "timestamp": "20260411070208",
+    "url": "http://web.archive.org/web/20260411070208/http://example.com/"
+  }
+}

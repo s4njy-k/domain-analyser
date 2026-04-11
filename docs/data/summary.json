@@ -1,0 +1,26 @@
+{
+  "batch_id": "local-smoke-20260411T192302Z",
+  "generated_at_utc": "2026-04-11T19:25:25Z",
+  "total_domains": 5,
+  "active_malicious": 2,
+  "inactive_down": 1,
+  "unique_ips": 5,
+  "unique_registrars": 0,
+  "severity_counts": {
+    "LOW": 3,
+    "MEDIUM": 2
+  },
+  "category_counts": {
+    "BENIGN": 3,
+    "ILLEGAL_BETTING": 1,
+    "INVESTMENT_FRAUD": 1
+  },
+  "top_impersonated_brands": [],
+  "top_hosting_countries": [
+    {
+      "country": "Unknown",
+      "count": 5
+    }
+  ],
+  "clusters": []
+}
