@@ -1,0 +1,244 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "Insufficient evidence was available to assign a definitive malicious workflow.",
+    "illegal_activity_description": "Threat intelligence sources indicate elevated risk, but the captured content does not conclusively establish a specific criminal workflow.",
+    "priority_score": 0,
+    "recommended_action": "Preserve evidence and prioritise manual analyst review.",
+    "severity": "MEDIUM",
+    "threat_category": "UNKNOWN",
+    "victim_profile": "Unknown."
+  },
+  "analysis_ts_utc": "2026-04-12T05:57:04Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055658Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://helpdesk1aadhar.co.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "helpdesk1aadhar.co.in\nis parked free, courtesy of GoDaddy.com.\nGet This Domain\nRelated Search Topics\nHelpdesk Aadhar Card\nHelpdesk Aadhar Link\nHelpdesk Aadhar Download\nHelpdesk Aadhar Update\nHelpdesk Aadhar Seeding\nHelpdesk Aadhar Number\nCopyright © 1999-2026 GoDaddy, LLC. All rights reserved.\nPrivacy Policy\n\nDisclaimer: References to any specific company, product or services on this Site are not controlled by GoDaddy.com LLC and do not constitute or imply its association with or endorsement of third party advertisers.",
+      "profile": "desktop",
+      "screenshot_full_hash": "4c06ac5c894ea12bc0c6ed6d1cff208ccf92ae6a7a39b926d735ff0ce8c7a367",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/helpdesk1aadhar.co.in_desktop_20260412T055658Z_fullpage.png",
+      "screenshot_viewport_hash": "6dab6bcf2cbca038c2c1d005e326359cca92c6bfff99c6228c0c36a870cb7e9a",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/helpdesk1aadhar.co.in_desktop_20260412T055658Z_viewport.png",
+      "title": ""
+    },
+    {
+      "capture_ts_utc": "20260412T055704Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://helpdesk1aadhar.co.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "helpdesk1aadhar.co.in is parked free, courtesy of GoDaddy.com.\nGet This Domain\nRelated Search Topics\nHelpdesk Aadhar Card\nHelpdesk Aadhar Link\nHelpdesk Aadhar Download\nHelpdesk Aadhar Update\nHelpdesk Aadhar Seeding\nHelpdesk Aadhar Number\nCopyright © 1999-2026 GoDaddy, LLC. All rights reserved.\nPrivacy Policy\n\nDisclaimer: References to any specific company, product or services on this Site are not controlled by GoDaddy.com LLC and do not constitute or imply its association with or endorsement of third party advertisers.",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "d8477aa8fe1b3312dca94c316a0bc0e67c589cb4345db0f820524045a5323a1b",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/helpdesk1aadhar.co.in_mobile_android_20260412T055704Z_fullpage.png",
+      "screenshot_viewport_hash": "9be0eb29e8c19da517b83c1707cd9b0ddff5ea67af30ea44244d7b2c411b94f3",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/helpdesk1aadhar.co.in_mobile_android_20260412T055704Z_viewport.png",
+      "title": ""
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "www.helpdesk1aadhar.co.in",
+      "not_before": "2025-09-06T06:27:53"
+    },
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "helpdesk1aadhar.co.in",
+      "not_before": "2025-08-10T10:48:13"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "3.33.130.190",
+      "15.197.148.33"
+    ],
+    "AAAA": [],
+    "MX": [
+      "10 mailstore1.secureserver.net",
+      "0 smtp.secureserver.net"
+    ],
+    "NS": [
+      "ns38.domaincontrol.com",
+      "ns37.domaincontrol.com"
+    ],
+    "TXT": [
+      "D4925248",
+      "v=spf1 include:secureserver.net -all"
+    ]
+  },
+  "domain": "helpdesk1aadhar.co.in",
+  "evidence_manifest_hash": "4ca3d3c9dc6503b7f127b46398e922604f72877b6eb7cb0e559e88d3a4dcb0f5",
+  "input_url": "https://helpdesk1aadhar.co.in",
+  "linked_domains": [
+    "dafabet365.in"
+  ],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "15.197.148.33",
+      "3.33.130.190"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=1&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parking/landers/helpdesk1aadhar.co.in?trafficTarget=gd&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=2&abp=2&gdabp=true"
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parkingEvents?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://helpdesk1aadhar.co.in/d/search/p/godaddy/xml/domain/multiset/v4/?url=helpdesk1aadhar.co.in&Partner=godad_park_dm_2903_search_domainparking&maxListings=3&maxWeb=0&maxRT=6&maxRTL=6&maxPC=6&urlLang=en&type=pwLowRelevancyRedirect&affilData=ip%3D135.232.211.210%26xfip%3D135.232.211.210%26ua%3DMozilla%252F5.0%2520%2528Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64%2529%2520AppleWebKit%252F537.36%2520%28KHTML%252C%2520like%2520Gecko%29%2520Chrome%252F124.0.0.0%2520Safari%252F537.36%26ur%3Dhttps%253A%252F%252Fhelpdesk1aadhar.co.in%252Flander&serveUrl=https%3A%2F%2Fhelpdesk1aadhar.co.in&seedTerm="
+      },
+      {
+        "method": "GET",
+        "resource_type": "xhr",
+        "url": "https://widget.trustpilot.com/trustbox-data/5419b637fa0340045cd0c936?businessUnitId=483fd2b90000640005029919&locale=en-US"
+      },
+      {
+        "method": "GET",
+        "resource_type": "xhr",
+        "url": "https://widget.trustpilot.com/stats/TrustboxImpression?locale=en-US&styleHeight=20px&styleWidth=fit-content&theme=light&fontFamily=Ubuntu&url=https%3A%2F%2Fhelpdesk1aadhar.co.in%2Flander&referrer=https%3A%2F%2Fhelpdesk1aadhar.co.in%2F&userAgent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F124.0.0.0%20Safari%2F537.36&language=en-IN&platform=Linux%20x86_64&nosettings=1&businessUnitId=483fd2b90000640005029919&widgetId=5419b637fa0340045cd0c936"
+      },
+      {
+        "method": "GET",
+        "resource_type": "xhr",
+        "url": "https://widget.trustpilot.com/stats/TrustboxView?locale=en-US&styleHeight=20px&styleWidth=fit-content&theme=light&fontFamily=Ubuntu&url=https%3A%2F%2Fhelpdesk1aadhar.co.in%2Flander&referrer=https%3A%2F%2Fhelpdesk1aadhar.co.in%2F&userAgent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F124.0.0.0%20Safari%2F537.36&language=en-IN&platform=Linux%20x86_64&nosettings=1&businessUnitId=483fd2b90000640005029919&widgetId=5419b637fa0340045cd0c936"
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parkingEvents?abp=1&gdabp=true"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://helpdesk1aadhar.co.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://helpdesk1aadhar.co.in/lander"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google.com/adsense/domains/caf.js?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://img1.wsimg.com/parking-lander/static/js/main.89f98556.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://img1.wsimg.com/parking-lander/static/css/main.0e4ec69f.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=483fd2b90000640005029919"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://widget.trustpilot.com/fonts/ubuntu.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://widget.trustpilot.com/fonts/ubuntu/4iCs6KVjbNBYlgoKfw72.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://widget.trustpilot.com/fonts/ubuntu/4iCv6KVjbNBYlgoCjC3jsGyN.woff2"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://helpdesk1aadhar.co.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-HELPDESK1AADHAR.CO.IN-20260412-055704",
+  "response_headers": {
+    "content-length": "114",
+    "content-type": "text/html",
+    "date": "Sun, 12 Apr 2026 05:56:53 GMT"
+  },
+  "screenshot_phash": "b1319b34db30cf32",
+  "threat_intel": {
+    "abuseipdb_isp": "Amazon Technologies Inc.",
+    "abuseipdb_score": 59,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fe1-bbc9-7459-8c80-38c33844d38e.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

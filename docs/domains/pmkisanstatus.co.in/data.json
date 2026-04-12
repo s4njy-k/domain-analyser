@@ -1,0 +1,582 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [
+      {
+        "confidence": "CLEAR",
+        "evidence": "The page appears to solicit credentials or impersonate a legitimate service.",
+        "offence": "Cheating by personation using computer resource",
+        "statute": "IT Act 2000, Section 66D"
+      },
+      {
+        "confidence": "PROBABLE",
+        "evidence": "The site content suggests inducement of victims to disclose information or transfer value.",
+        "offence": "Cheating by deception",
+        "statute": "BNS 2023, Section 318"
+      }
+    ],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "The website appears to impersonate a legitimate brand or service to obtain credentials, OTPs, or payment details.",
+    "illegal_activity_description": "The collected evidence is consistent with a phishing workflow that impersonates a legitimate service and induces victims to submit sensitive information. Such conduct supports digital personation and deception-based cheating provisions under Indian cybercrime law.",
+    "priority_score": 0,
+    "recommended_action": "Immediate blocking review under IT Act S.69A and referral for takedown/IOC dissemination.",
+    "severity": "MEDIUM",
+    "threat_category": "PHISHING",
+    "victim_profile": "Indian consumers and account holders targeted through digital impersonation."
+  },
+  "analysis_ts_utc": "2026-04-12T06:01:42Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T060136Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://pmkisanstatus.co.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "HOME\nSARKARI YOJANA\nLAND KNOWLEDGE\nHEALTH\nBANKING\n pradeep patel\n April 9, 2026\n 0\nHow to Check Land Records in Uttar Pradesh 2026 (उत्तर प्रदेश में भूमि अभिलेख कैसे जांचें)\n\nHow to Check Land Records in Uttar Pradesh: उत्तर प्रदेश में भूमि से जुड़े मामलों का दायरा बहुत बड़ा है, और इसी वजह से land records (भूमि अभिलेख) का महत्व…\n\nREAD MORE +\n pradeep patel\n April 6, 2026\n 0\nUP Bhulekh Khasra Khatauni Nakal 2026 : पूरी जानकारी\n\nUP Bhulekh Khasra Khatauni Nakal:अगर आपने कभी जमीन से जुड़ा कोई काम किया है—चाहे वह खरीदना हो, बेचना हो, या फिर सिर्फ रिकॉर्ड देखना हो—तो आपने “UP Bhulekh Khasra Khatauni…\n\nREAD MORE +\n pradeep patel\n April 3, 2026\n 0\nNAPS Me Registration Kaise Kare 2026 – Step-by-Step Complete Guide (NAPS में रजिस्ट्रेशन कैसे करें)\n\nNAPS Me Registration Kaise Kare :अगर आप अपने करियर को एक सही दिशा देना चाहते हैं और साथ ही कोई ऐसी स्कीम ढूंढ रहे हैं जहाँ आप सीखते हुए कमाई…\n\nREAD MORE +\n pradeep patel\n March 31, 2026\n 0\nUnion Bank Net Banking Registration 2026– Complete Guide (यूनियन बैंक नेट बैंकिंग रजिस्ट्रेशन – पूरी गाइड)\n\nUnion Bank Net Banking Registration:आज के डिजिटल दौर में बैंकिंग का तरीका पूरी तरह बदल चुका है। पहले जहां लोगों को छोटी-छोटी बैंकिंग जरूरतों के लिए बैंक की शाखा में…\n\nREAD MORE +\nPosts pagination\n1 2 … 16 Next\nRecent Posts\nHow to Check Land Records in Uttar Pradesh 2026 (उत्तर प्रदेश में भूमि अभिलेख कैसे जांचें)\nUP Bhulekh Khasra Khatauni Nakal 2026 : पूरी जानकारी\nNAPS Me Registration Kaise Kare 2026 – Step-by-Step Complete Guide (NAPS में रजिस्ट्रेशन कैसे करें)\nUnion Bank Net Banking Registration 2026– Complete Guide (यूनियन बैंक नेट बैंकिंग रजिस्ट्रेशन – पूरी गाइड)\nSukanya Samriddhi Yojana Online Account Opening 2026 – Complete Guide | सुकन्या समृद्धि योजना ऑनलाइन खाता खोलने की पूरी जानकारी\nCategories\nBANKING (2)\nbihar (1)\nHEALTH (41)\nLAND KNOWLEDGE (5)\nMaharashtra (1)\nrajasthan (1)\nSARKARI YOJANA (7)\nuttar pradesh (5)\n\nहर सरकारी योजना और नई शुरू होने वाली योजनाओं की पूरी, सटीक और नवीनतम अपडेट — आसान और स्पष्ट हिंदी में।\n\nImportant links\nAbout Us\nContact Us\nDisclaimer\nPrivacy Policy\nCopyright © 2026 PM Sahayata Kendra. All Rights Reserved.",
+      "profile": "desktop",
+      "screenshot_full_hash": "a0cefded2d20b48b09feaf49cb2f049682464656d659efe4cf6d95ec9ca43323",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/pmkisanstatus.co.in_desktop_20260412T060136Z_fullpage.png",
+      "screenshot_viewport_hash": "1f9c68ac5bd0975795d450445a508de55e17fcb03083408b51d685525774ace1",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/pmkisanstatus.co.in_desktop_20260412T060136Z_viewport.png",
+      "title": "-"
+    },
+    {
+      "capture_ts_utc": "20260412T060142Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://pmkisanstatus.co.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Menu\n pradeep patel\n April 9, 2026\n 0\nHow to Check Land Records in Uttar Pradesh 2026 (उत्तर प्रदेश में भूमि अभिलेख कैसे जांचें)\n\nHow to Check Land Records in Uttar Pradesh: उत्तर प्रदेश में भूमि से जुड़े मामलों का दायरा बहुत बड़ा है, और इसी वजह से land records (भूमि अभिलेख) का महत्व…\n\nREAD MORE +\n pradeep patel\n April 6, 2026\n 0\nUP Bhulekh Khasra Khatauni Nakal 2026 : पूरी जानकारी\n\nUP Bhulekh Khasra Khatauni Nakal:अगर आपने कभी जमीन से जुड़ा कोई काम किया है—चाहे वह खरीदना हो, बेचना हो, या फिर सिर्फ रिकॉर्ड देखना हो—तो आपने “UP Bhulekh Khasra Khatauni…\n\nREAD MORE +\n pradeep patel\n April 3, 2026\n 0\nNAPS Me Registration Kaise Kare 2026 – Step-by-Step Complete Guide (NAPS में रजिस्ट्रेशन कैसे करें)\n\nNAPS Me Registration Kaise Kare :अगर आप अपने करियर को एक सही दिशा देना चाहते हैं और साथ ही कोई ऐसी स्कीम ढूंढ रहे हैं जहाँ आप सीखते हुए कमाई…\n\nREAD MORE +\n pradeep patel\n March 31, 2026\n 0\nUnion Bank Net Banking Registration 2026– Complete Guide (यूनियन बैंक नेट बैंकिंग रजिस्ट्रेशन – पूरी गाइड)\n\nUnion Bank Net Banking Registration:आज के डिजिटल दौर में बैंकिंग का तरीका पूरी तरह बदल चुका है। पहले जहां लोगों को छोटी-छोटी बैंकिंग जरूरतों के लिए बैंक की शाखा में…\n\nREAD MORE +\nPosts pagination\n1 2 … 16 Next\nRecent Posts\nHow to Check Land Records in Uttar Pradesh 2026 (उत्तर प्रदेश में भूमि अभिलेख कैसे जांचें)\nUP Bhulekh Khasra Khatauni Nakal 2026 : पूरी जानकारी\nNAPS Me Registration Kaise Kare 2026 – Step-by-Step Complete Guide (NAPS में रजिस्ट्रेशन कैसे करें)\nUnion Bank Net Banking Registration 2026– Complete Guide (यूनियन बैंक नेट बैंकिंग रजिस्ट्रेशन – पूरी गाइड)\nSukanya Samriddhi Yojana Online Account Opening 2026 – Complete Guide | सुकन्या समृद्धि योजना ऑनलाइन खाता खोलने की पूरी जानकारी\nCategories\nBANKING (2)\nbihar (1)\nHEALTH (41)\nLAND KNOWLEDGE (5)\nMaharashtra (1)\nrajasthan (1)\nSARKARI YOJANA (7)\nuttar pradesh (5)\n\nहर सरकारी योजना और नई शुरू होने वाली योजनाओं की पूरी, सटीक और नवीनतम अपडेट — आसान और स्पष्ट हिंदी में।\n\nImportant links\nAbout Us\nContact Us\nDisclaimer\nPrivacy Policy\nCopyright © 2026 PM Sahayata Kendra. All Rights Reserved.",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "2dd9e95709434cc133faaedc1f3823f594d0f952111d52bc89b76bc6b9fd4a58",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/pmkisanstatus.co.in_mobile_android_20260412T060142Z_fullpage.png",
+      "screenshot_viewport_hash": "43bee582eb682ffd9b2a5ce944449f1a768a85a65f613d3dff0704f7c589d610",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/pmkisanstatus.co.in_mobile_android_20260412T060142Z_viewport.png",
+      "title": "-"
+    }
+  ],
+  "cert_transparency": [],
+  "dns_records": {
+    "A": [
+      "104.21.35.76",
+      "172.67.215.223"
+    ],
+    "AAAA": [
+      "2606:4700:3037::ac43:d7df",
+      "2606:4700:3030::6815:234c"
+    ],
+    "MX": [
+      "10 mx2.hostinger.in",
+      "5 mx1.hostinger.in"
+    ],
+    "NS": [
+      "elma.ns.cloudflare.com",
+      "emerson.ns.cloudflare.com"
+    ],
+    "TXT": [
+      "google-site-verification: google19184b94da699c13.html",
+      "google-site-verification=9A2TffD0ErdQZCqIucLUD-zNdSuOP-IeCZchJ6-YnY8",
+      "google-site-verification=sQfGVEeu4NJuEc1l3GQ1Sulj74Uyq9LTzWhy90fGD8k",
+      "v=spf1 include:spf.titan.email include:spf.mx.hostinger.com include:relay.mailchannels.net ~all"
+    ]
+  },
+  "domain": "pmkisanstatus.co.in",
+  "evidence_manifest_hash": "d7023918f819aa6dab90adcbc7da5f2250e68cd06dc3cb7eefd6c6145bedcec7",
+  "input_url": "https://pmkisanstatus.co.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.35.76",
+      "172.67.215.223",
+      "18.159.80.129",
+      "2606:4700:3030::6815:234c",
+      "2606:4700:3037::ac43:d7df"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "xhr",
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20260408&st=env&sjk=2362789174552046"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://pmkisanstatus.co.in/cdn-cgi/rum?"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://www.google.com/recaptcha/api2/aframe"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://pmkisanstatus.co.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=2.8.5"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=2.8.5"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.48.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/elementor/css/post-1107.css?ver=1775539534"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/elementor/css/post-3550.css?ver=1775539534"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/elementor/css/post-1058.css?ver=1775542166"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/bootstrap.min.css?ver=5.3.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/bootstrap-icons.css?ver=5.3.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/style.css?ver=3.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/jquery.mCustomScrollbar.css?ver=3.1.5"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/blocks-styles.css?ver=1.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/owl.carousel.css?ver=2.3.4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.34.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.24.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/2026/03/cropped-WhatsApp_Image_2026-03-04_at_12.50.33__3_-removebg-preview-1.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/2026/04/Whisk_d73c158aa848913b2db415e08db327e6dr.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/2026/04/UP_Bhulekh_Khasra_202604050919.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/2026/04/National_Apprenticeship_Promotio%E2%80%A6_202604030504.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pmkisanstatus.co.in/wp-content/uploads/2026/03/Whisk_1c929a908ffef94827b40ad9af99a333dr.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/jquery.easing.1.3.js?ver=1.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/ResizeSensor.js?ver=1.0.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/jquery.mCustomScrollbar.js?ver=3.1.5"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/bootstrap.min.js?ver=5.3.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/underscore.min.js?ver=1.13.7"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/customize-base.min.js?ver=6.9.4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/customize-preview.min.js?ver=6.9.4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/main.js?ver=1.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/js/owl.carousel.js?ver=2.3.4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/header-footer-elementor/inc/js/frontend.js?ver=2.8.5"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://pmkisanstatus.co.in/wp-content/themes/technical-blogging/css/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/section-frontend-handlers.d85ab872da118940910d.bundle.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-content/plugins/elementor/assets/js/text-editor.45609661e409413f1cef.bundle.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pmkisanstatus.co.in/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&display=swap&ver=1.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fonts.googleapis.com/css2?family=Poppins&family=Poppins&display=swap"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=auto"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=auto"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2277633250958686&host=ca-host-pub-2644536267352236"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJbecmNE.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLucHtA.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202604080101/show_ads_impl_fy2021.js?bust=31097754"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://pmkisanstatus.co.in/d4518055-331a-4b8d-97e2-bc46db5715c9"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://googleads.g.doubleclick.net/pagead/html/r20260408/r20190131/zrt_lookup_fy2021.html"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2277633250958686&output=html&adk=1812271804&adf=3025194257&lmt=1775973692&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpmkisanstatus.co.in%2F&host=ca-host-pub-2644536267352236&pra=5&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng2NCIsIiIsIjEyNS4wLjY0MjIuMjYiLG51bGwsMCxudWxsLCI2NCIsW1siSGVhZGxlc3NDaHJvbWUiLCIxMjUuMC42NDIyLjI2Il0sWyJDaHJvbWl1bSIsIjEyNS4wLjY0MjIuMjYiXSxbIk5vdC5BL0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&abgtt=7&dt=1775973692307&bpp=14&bdt=226&idt=112&shv=r20260408&mjsv=m202604080101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=7444297524745&frm=20&pv=2&u_tz=330&u_his=2&u_h=768&u_w=1366&u_ah=768&u_aw=1366&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1366&bih=768&scr_x=0&scr_y=0&eid=31097490%2C95366174%2C95384087%2C31097754%2C95387623%2C95386955&oid=2&pvsid=2362789174552046&tmod=1629470960&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C853%2C1366%2C768&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&pgls=CAEaBTYuOS40~CAEQBBoHMS4xNzUuMA..~CAEQBRoFNC4wLjE.&ifi=1&uci=a!1&fsb=1&dtd=153"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/254/runner.html"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://pagead2.googlesyndication.com/bg/QbLkVzjjtfpibCmxoy81glVJ9418Gr1UnGMTD8x19p0.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://pagead2.googlesyndication.com/pagead/sodar?id=sodar2&v=254&li=gda_r20260408&jk=2362789174552046&rc="
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://ep2.adtrafficquality.google/generate_204?eyD30w"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=254&t=2&li=gda_r20260408&jk=2362789174552046&bg=!Tk2lTS_NAAZuQnBWTkI7AEcBe5WfOEW81BfKxW_T2k1wDbi9Ef_n7kKwkySZKlbZl904K0yTEsHke9RVwfE2JtjeEl7MTOLhLabUtJsenXP7COq8WFZODwIAAABmUgAAAAVoAQd-ADf1UkwOm4iQl0ZjtizMWrQ7sQ2v_d1p8vnJ7LlBk0DB8NBGwKDDclz6PGE3QLcKRd831qO3hg5tmQJOqCDRze0dbmwhn6fog9JknIZEWvJ7CX0185OANM5BF0Di4FkIsjSLX_kntPCz0t3e9xL3qFhY7gOsJpGzwJgkHUM3535w9ZG6iwa77BnS4-NdDN5rQQO2mXv7gn_j-bPKk4TqPsT29sjYqpzbAV8rVCd8i_KYuqsZjw6szXv-w3AKAiaAppgQC7HvcgCl4OXsaVZTeo2_72HCfFXUnJRZ1ZQwLGjlRrjiVbiPaZ0VPG1imPxn_3JsiDzSXgEfuM9Pv-nUbLaobZSpUN7_mG2Ubj_XFa3Vqanl6ytqizFMMuRIRktziFWaH2GMsZsF3tZiK8i35jBg-wr7gGQI_IFuqdgR317CB45-V23tCHmJ3cWbzDNpz6k6nzufUwwy8Cl5NflDFJE_AEY8s-Zi0JbiVi3zWbDpT5f8RYfkagTEix71kxFOcqpfXuuUQxY5MgYoh0_Q5VS266bZPUebFb6Lb1JIqsa8_kfHtMT404CRT4BkHlHIGQhvg23jiRm63DGSAJiS7eU-63smFHKCA6J7NpuUu9fbt_akaNlL72LRNzJgwbm2lz7ehUhiOGekTuDb4uzkEK8kXW7EX6xOX1cRfA-3gIQj-LKwKOFB7azHVnISl1bFx4s0Qv8NXlfhSyD8QKlCG0sfUrYCsgdU-7zBgPYg3KW4cKqy8UHse0yAOBtWnh_rY8F5z7CeAzGEqNdmxClmFCznnejmvcJxCVCHYjhWGKhZWHH_NMkoedGZF3gaghoJ2zKMfv_ryBDIY5o8CqhnJgxMeP2n1aI9VaM"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://pmkisanstatus.co.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PMKISANSTATUS.CO.IN-20260412-060142",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "9eb00455491622c4-ORD",
+    "content-encoding": "br",
+    "content-security-policy": "upgrade-insecure-requests",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 06:01:32 GMT",
+    "link": "<https://pmkisanstatus.co.in/wp-json/>; rel=\"https://api.w.org/\"",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qYFDkLfhxWeU5AiSL%2FSC3yni39PXeJjZuL9ZIVT4avXcpXKZEaLK3FLAoasYeqZ%2Fzq6b%2FQA2ePP8eh%2Fn6aRqOokw%2B3JPBzq3W9Wtu8C3dL75LH9hV3yTbRYCzKltLqB2tYYiU1zW\"}]}",
+    "retry-after": "60",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=10,cfOrigin;dur=335",
+    "vary": "Accept-Encoding",
+    "x-powered-by": "PHP/8.3.30",
+    "x-turbo-charged-by": "LiteSpeed"
+  },
+  "screenshot_phash": "bec836cc3e3c8c1c",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/0416a55a-5bd5-4d96-a072-25e8d958bda4.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:37:21Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T053716Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://epfoclaimstatus.org.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "epfoclaimstatus.org.in\nRelated Search Topics\nEpf Claim Status Online Check\nEpf Claim Status Tracking\nEpf Claim Status Payment Under Process\nEpf Claim Status Online Tracking\nEpf Member Login\nEpf Claim Online Apply\nCopyright © epfoclaimstatus.org.in.  All rights reserved.\nPrivacy Policy",
+      "profile": "desktop",
+      "screenshot_full_hash": "d22590671c7d4ec909bb1675d4fcd0e3abb833798d98b3194bfc90bd794f1dd7",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/epfoclaimstatus.org.in_desktop_20260412T053716Z_fullpage.png",
+      "screenshot_viewport_hash": "9cacf4518291ade889cf08546eb816829da4008e5529c90e2745e4d310f806ec",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/epfoclaimstatus.org.in_desktop_20260412T053716Z_viewport.png",
+      "title": ""
+    },
+    {
+      "capture_ts_utc": "20260412T053721Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://epfoclaimstatus.org.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "epfoclaimstatus.org.in\nRelated Search Topics\nEpf Claim Status Online Check\nEpf Claim Status Tracking\nEpf Claim Status Payment Under Process\nEpf Claim Status Online Tracking\nEpf Member Login\nEpf Claim Online Apply\nCopyright © epfoclaimstatus.org.in.  All rights reserved.\nPrivacy Policy",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "61f08c6db58a915d7151f6dcc736a36009bf34a279641a9b2c76fcc8c6d5778b",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/epfoclaimstatus.org.in_mobile_android_20260412T053721Z_fullpage.png",
+      "screenshot_viewport_hash": "410b5e05b0b6607b0a6c6eeb96a717db2b01bd5f37a401df15cc270d7ae0e16c",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/epfoclaimstatus.org.in_mobile_android_20260412T053721Z_viewport.png",
+      "title": ""
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "www.epfoclaimstatus.org.in",
+      "not_before": "2025-06-13T05:25:24"
+    },
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "epfoclaimstatus.org.in",
+      "not_before": "2025-06-12T06:21:14"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "75.2.103.23"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "dns1.bigrock.in",
+      "dns2.bigrock.in",
+      "dns3.bigrock.in",
+      "dns4.bigrock.in"
+    ],
+    "TXT": []
+  },
+  "domain": "epfoclaimstatus.org.in",
+  "evidence_manifest_hash": "75cc3234a12b7bb7fd32d15fa9e263c0b2fd28c80be8f6bf8bd1a5ede25339e9",
+  "input_url": "https://epfoclaimstatus.org.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "75.2.103.23"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=1&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/domains/domain?domain=epfoclaimstatus.org.in&portfolioId=CC424D47-8411-425B-8699-295C6F8A1FC3&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=2&abp=2&gdabp=true"
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parkingEvents?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://epfoclaimstatus.org.in/d/search/p/godaddy/xml/domain/multiset/v4/?url=epfoclaimstatus.org.in&Partner=godad_park_dm_2903_general_domainparking&maxListings=3&maxWeb=0&maxRT=6&maxRTL=6&maxPC=6&urlLang=en&type=a3cdf2bedcc44423a595b90420681494&affilData=ip%3D135.232.211.210%26xfip%3D135.232.211.210%26ua%3DMozilla%252F5.0%2520%2528Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64%2529%2520AppleWebKit%252F537.36%2520%28KHTML%252C%2520like%2520Gecko%29%2520Chrome%252F124.0.0.0%2520Safari%252F537.36%26ur%3Dhttps%253A%252F%252Fepfoclaimstatus.org.in%252Flander&serveUrl=https%3A%2F%2Fepfoclaimstatus.org.in&seedTerm="
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parkingEvents?abp=1&gdabp=true"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://epfoclaimstatus.org.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://epfoclaimstatus.org.in/lander"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google.com/adsense/domains/caf.js?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://img1.wsimg.com/parking-lander/static/js/main.89f98556.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://img1.wsimg.com/parking-lander/static/css/main.0e4ec69f.css"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://epfoclaimstatus.org.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-EPFOCLAIMSTATUS.ORG.IN-20260412-053721",
+  "response_headers": {
+    "content-length": "114",
+    "content-type": "text/html",
+    "date": "Sun, 12 Apr 2026 05:37:12 GMT"
+  },
+  "screenshot_phash": "9b8b649b648e65cc",
+  "threat_intel": {
+    "abuseipdb_isp": "Amazon.com, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fc9-01ff-770d-a364-f02874488b26.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

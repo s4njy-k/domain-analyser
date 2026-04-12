@@ -1,0 +1,133 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 0,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "INACTIVE",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:41:42Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T054112Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://download1xbet.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "desktop",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    },
+    {
+      "capture_ts_utc": "20260412T054142Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://download1xbet.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "mobile_android",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R12",
+      "name": "download1xbet.in",
+      "not_before": "2026-02-17T03:44:59"
+    },
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R12",
+      "name": "www.download1xbet.in",
+      "not_before": "2026-02-17T03:44:59"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "217.21.94.144"
+    ],
+    "AAAA": [
+      "2a02:4780:11:884:0:ae7:a312:10"
+    ],
+    "MX": [
+      "10 mx2.hostinger.com",
+      "5 mx1.hostinger.com"
+    ],
+    "NS": [
+      "ns2.dns-parking.com",
+      "ns1.dns-parking.com"
+    ],
+    "TXT": [
+      "v=spf1 include:_spf.mail.hostinger.com ~all"
+    ]
+  },
+  "domain": "download1xbet.in",
+  "evidence_manifest_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "input_url": "https://download1xbet.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "217.21.94.144",
+      "2a02:4780:11:884:0:ae7:a312:10"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [],
+    "third_party": []
+  },
+  "redirect_chain": [],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-DOWNLOAD1XBET.IN-20260412-054142",
+  "response_headers": {},
+  "screenshot_phash": null,
+  "threat_intel": {
+    "abuseipdb_isp": "TerraTransit AG",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fcd-5ebd-74a7-9129-f802e1393fd7.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

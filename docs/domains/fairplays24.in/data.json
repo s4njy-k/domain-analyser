@@ -1,0 +1,213 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T06:05:38Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T060534Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://fairplays24.in/",
+      "http_status": 200,
+      "meta_desc": "Master the game at Fairplays24.in. Grab a free Demo ID, explore virtual markets, and sharpen your sports strategy without any cash risk. 100% Fun, 0% Money.",
+      "page_text": "⚠️ Hosting plan for this site has expired. Renew now to avoid service disruption.\nFairplay24\nHome\nAbout Us\nPrivacy Policy\n Remember Me\nForgot Password?\nLOGIN\nDEMO LOGIN\nOR\n\nGet Your Ready-Made ID From Whatsapp\n\nFairplay24 Upgrade\n\n1To1 Customer Support\n\n24/7 Instant Support\n\nFor whitelabel enquiry,please contact\nfairplay1official@gmail.com\nDream Cricket for Everyone\n\nBuild your dream cricket team, compete with friends, and master dream cricket strategy—completely free with no real money involved!\n\n Start Playing Free\nLearn How to Play \n 100% Free\n No Real Money\n Skill-Based\n\n© 2026 Fairplays24.in | Demo & Skill-Based Sports Platform\n\n Home  About Us  Privacy Policy\n WhatsApp Us Now",
+      "profile": "desktop",
+      "screenshot_full_hash": "05a4f303e24695e7c264783366877427a638137f50b49d97f5ed249e2a0b9ff7",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplays24.in_desktop_20260412T060534Z_fullpage.png",
+      "screenshot_viewport_hash": "9a20a62c84290c49e0e4dc06b75ee6da0a1f3b931f44d79ce3802174a2cc854d",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplays24.in_desktop_20260412T060534Z_viewport.png",
+      "title": "fairplay24 login | fairplay24/ fairplay24.Co /Fairplay Id"
+    },
+    {
+      "capture_ts_utc": "20260412T060538Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://fairplays24.in/",
+      "http_status": 200,
+      "meta_desc": "Master the game at Fairplays24.in. Grab a free Demo ID, explore virtual markets, and sharpen your sports strategy without any cash risk. 100% Fun, 0% Money.",
+      "page_text": "⚠️ Hosting plan for this site has expired. Renew now to avoid service disruption.\nFairplay24\n Remember Me\nForgot Password?\nLOGIN\nDEMO LOGIN\nOR\n\nGet Your Ready-Made ID From Whatsapp\n\nFairplay24 Upgrade\n\n1To1 Customer Support\n\n24/7 Instant Support\n\nFor whitelabel enquiry,please contact\nfairplay1official@gmail.com\nDream Cricket for Everyone\n\nBuild your dream cricket team, compete with friends, and master dream cricket strategy—completely free with no real money involved!\n\n Start Playing Free\nLearn How to Play \n 100% Free\n No Real Money\n Skill-Based\n\n© 2026 Fairplays24.in | Demo & Skill-Based Sports Platform\n\n Home  About Us  Privacy Policy\n WhatsApp Us Now",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "c97d8b35a7f395dcc093f07a5aa177e9bb51b65bf67a97753471661e9bdb4eed",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplays24.in_mobile_android_20260412T060538Z_fullpage.png",
+      "screenshot_viewport_hash": "b9838f96cce94bc8c3a9d864d93b781e6f269ad9e887a91295d72861d783bee6",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplays24.in_mobile_android_20260412T060538Z_viewport.png",
+      "title": "fairplay24 login | fairplay24/ fairplay24.Co /Fairplay Id"
+    }
+  ],
+  "cert_transparency": [],
+  "dns_records": {
+    "A": [
+      "198.12.222.155"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "ns10.domaincontrol.com",
+      "ns09.domaincontrol.com"
+    ],
+    "TXT": [
+      "google-site-verification=HrMu2qzXVyhuuUDO0Rc5o8Fal82Lgh0VJEZNM7RpwiU"
+    ]
+  },
+  "domain": "fairplays24.in",
+  "evidence_manifest_hash": "a63421b92b0d32df2c1906c0c8ee4886a89714bd13ac564c05abbf998d488e49",
+  "input_url": "https://fairplays24.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "198.12.222.155"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://fairplays24.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fairplays24.in/assets/css/style.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplays24.in/assets/img/logo.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplays24.in/assets/img/fairplay24-upgrade.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplays24.in/assets/img/customer-support.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplays24.in/assets/img/instant-support.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplays24.in/assets/js/script.js"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwiPGQ.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXg.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2?2820a3852bdb9a5832199cc61cec4e65"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAXC-q.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_Gwft.woff2"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://fairplays24.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-FAIRPLAYS24.IN-20260412-060538",
+  "response_headers": {
+    "content-encoding": "br",
+    "content-length": "2416",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 06:05:29 GMT",
+    "server": "Apache",
+    "vary": "Accept-Encoding",
+    "x-powered-by": "PHP/8.2.30"
+  },
+  "screenshot_phash": "c9758dc19c21de27",
+  "threat_intel": {
+    "abuseipdb_isp": "GoDaddy.com, LLC",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7feb-8621-7563-a699-1f75997fc123.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "true",
+    "timestamp": "20250301121624",
+    "url": "http://web.archive.org/web/20250301121624/https://fairplays24.in/"
+  }
+}

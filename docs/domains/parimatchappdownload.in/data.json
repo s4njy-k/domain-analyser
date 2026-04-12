@@ -1,0 +1,300 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [
+      {
+        "confidence": "CLEAR",
+        "evidence": "The page appears to solicit credentials or impersonate a legitimate service.",
+        "offence": "Cheating by personation using computer resource",
+        "statute": "IT Act 2000, Section 66D"
+      },
+      {
+        "confidence": "PROBABLE",
+        "evidence": "The site content suggests inducement of victims to disclose information or transfer value.",
+        "offence": "Cheating by deception",
+        "statute": "BNS 2023, Section 318"
+      }
+    ],
+    "brand_impersonated": "Paytm",
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "The website appears to impersonate a legitimate brand or service to obtain credentials, OTPs, or payment details.",
+    "illegal_activity_description": "The collected evidence is consistent with a phishing workflow that impersonates a legitimate service and induces victims to submit sensitive information. Such conduct supports digital personation and deception-based cheating provisions under Indian cybercrime law.",
+    "priority_score": 0,
+    "recommended_action": "Immediate blocking review under IT Act S.69A and referral for takedown/IOC dissemination.",
+    "severity": "MEDIUM",
+    "threat_category": "PHISHING",
+    "victim_profile": "Indian consumers and account holders targeted through digital impersonation."
+  },
+  "analysis_ts_utc": "2026-04-12T05:53:28Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055318Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-indian.in/",
+      "http_status": 200,
+      "meta_desc": "Visit the official Parimatch India website for online sports betting, cricket odds, live casino, fast registration, secure login, instant deposits, and quick withdrawals. Get welcome bonuses, free bets, and access via Android & iOS app.",
+      "page_text": "Parimatch App\nREGISTER\nDOWNLOAD\n\nHome\n\nParimatch India — Official Betting and Casino Platform\n\nParimatch India is a trusted international online betting platform offering a complete experience for sports betting, live cricket odds, casino games, esports, and fast payments in INR. Fully optimized for Indian users, Parimatch provides convenient deposits via UPI, PayTM, PhonePe, GPay, bank cards, and supports quick withdrawals with high-level security and data protection.\n\nParimatch Official Site Review\n\nParimatch is an international bookmaker founded in 1994 and recognized as one of the leading platforms for online betting. Over the years, the brand expanded globally, including India, where it became popular for its wide range of sports events, user-friendly interface, fast payments, and localized support.\nThe platform offers sports betting, esports, casino games, and live casino. Parimatch is known for high-level security, partnerships with famous athletes, and modern betting tools.\n\nBelow is a table with key information for new Parimatch users in India:\n\nParameter\tDetails\nInterface languages\tEnglish, Hindi, Bengali, Telugu, etc.\nBet types\tLive, Pre-match, Express, System bets\nSports\tCricket, Football, Tennis, Kabaddi, Esports, Hockey, etc.\nMin deposit\tFrom ₹200\nMax deposit\tUp to ₹1,000,000\nMin withdrawal\tFrom ₹300–₹1000\nMax withdrawal\tUp to ₹1,000,000\nDeposit methods\tUPI, PayTM, PhonePe, GPay, Bank Cards, Crypto\nWithdrawal methods\tUPI, Bank Transfer, Crypto\nRegistration Parimatch\n\nRegistration at Parimatch is quick and straightforward, allowing users to access sports betting, casino, live events, and bonuses. Parimatch supports several account creation methods, offering maximum convenience for Indian players.\nYou may register via email, phone number, or social media accounts (where available). All personal data is protected by advanced encryption, and full access requires passing KYC verification.\n\nAvailable registration methods:\nVia phone number\nEnter your mobile number → receive OTP → confirm.\nVia email\nSubmit email, create a password → confirm registration.\nThrough social media (where available)\n• Google\n• Facebook\n• Telegram\nYou can enter without creating a password — authorization is instant.\nHow to Login Parimatch\n\nLogging in to your Parimatch account takes only a few seconds. Users in India can log in via phone number, email, or supported social networks. Additional security features include session protection, OTP verification, and optional two-factor authentication.\n\nPassword recovery is available through SMS or email.\n\nStep-by-step login guide:\nVisit the Parimatch official site or open the app.\nClick Login.\nChoose login method: phone, email, social account.\nEnter your credentials.\nConfirm via OTP if required.\nAccess your profile.\nParimatch Bonus\n\nParimatch offers an extensive selection of bonuses designed for both new users and loyal players. The platform regularly updates its promotional calendar, providing fresh rewards for sports betting, casino games, live dealer tables, and esports. Bonuses include welcome packages, deposit boosts, free bets, cashback offers, seasonal promotions, and exclusive VIP rewards.\n\nAll bonuses are easily accessible through the Promotions section, and many of them come with simple wagering requirements, making Parimatch one of the most user-friendly platforms in the Indian betting market.\n\nFree Bet\n\nA Free Bet allows players to place a wager without using their own funds. It’s a risk-free opportunity to explore betting markets and test strategies. If the free bet wins, you receive the net profit only (stake excluded).\nFree Bets are commonly offered for:\n\nBig sports events (IPL, Premier League, UFC)\nEsports tournaments\nExpress/accumulator promotions\nSpecial weekly campaigns\n\nThey are ideal for beginners and users who want to try new markets without financial risk.\n\nWelcome Bonus\n\nThe Welcome Bonus is one of the most attractive offers for new Parimatch users. Typically structured as a 100% first deposit bonus, it effectively doubles the starting balance and allows players to explore more markets right from the beginning.\n\nWelcome bonuses may apply to:\n\nSports betting\nLive betting\nCasino games\nLive casino\n\nBetting requirements vary depending on the category, but Parimatch usually provides straightforward terms that are easy to complete.\n\nDeposit Bonus\n\nA Deposit Bonus rewards users with extra funds whenever they top up their account. This type of promotion is usually available during special events or as part of ongoing weekly/monthly offers.\n\nCommon formats include:\n\nPercentage bonus (e.g., 25%–75%)\nFixed bonus amount for a specific deposit range\nReload bonuses for returning players\nCasino-only deposit boosts\n\nDeposit bonuses help extend gameplay, giving users more opportunities to bet and win.\n\nNo-Deposit Bonus\n\nA No-Deposit Bonus is one of the most valuable rewards because players receive it without making any deposit.\nParimatch may offer:\n\nFree spins\nFree bets\nPromo codes\nEvent-based giveaways\n\nThese bonuses are often given during festivals, major tournaments, app launches, or as part of loyalty campaigns. Perfect for exploring the platform with zero financial commitment.\n\nOther Promotions\n\nParimatch also features a variety of special promotions tailored for different types of players:\n\n• Cashback\n\nReceive a percentage of your lost bets back as bonus funds. Available in sports and casino sections.\n\n• Express Boosts\n\nHigher payouts for accumulator bets with multiple selections.\n\n• Esports Promotions\n\nSpecial odds boosts, free bets, and cashback for CS2, Dota 2, Valorant, and other tournaments.\n\n• VIP / Loyalty Rewards\n\nExclusive bonuses, personal managers, higher withdrawal limits, and premium promotions for high-activity players.\n\n• Seasonal Offers\n\nFestive bonuses during IPL, New Year, Diwali, World Cup, and other major sports events.\n\nDeposit Methods in Parimatch\n\nDeposits at Parimatch India are fast and secure, supporting the most popular local payment methods: UPI, PayTM, PhonePe, GPay, bank cards, and cryptocurrency.\nMost deposits are processed instantly, and Parimatch does not charge additional fees. Minimum deposit amounts vary by method but start at ₹200.\n\nHow to deposit:\nLog in to your Parimatch account.\nGo to Deposit.\nSelect the payment method.\nEnter deposit amount.\nConfirm payment via UPI/wallet/card.\nFunds appear instantly.\nDeposit limits\nMethod\tMin\tMax\nUPI (GPay/PayTM/PhonePe)\t₹200\t₹100,000\nBank Cards\t₹300\t₹500,000\nCrypto\t₹500\t₹1,000,000\nE-wallets\t₹200\t₹200,000\nWithdrawal Methods Parimatch\n\nWithdrawals at Parimatch are fast, usually processed within 1–12 hours. Supported methods include UPI, bank transfer, and cryptocurrency. KYC verification is required before the first withdrawal, which ensures safe transactions.\n\nHow to withdraw funds:\nLog in to your account.\nOpen the Withdrawal section.\nChoose the method.\nEnter the amount.\nConfirm the request.\nReceive funds to your bank or UPI wallet.\nWithdrawal limits\nMethod\tMin\tMax\nUPI\t₹300\t₹100,000\nBank Transfer\t₹500\t₹500,000\nCrypto\t₹1000\t₹1,000,000\nTypes of Bets\n\nParimatch offers a wide range of betting markets covering hundreds of sports events daily. Both beginners and experienced bettors can choose from classic and advanced betting types. The platform supports pre-match and live betting, allowing users to make predictions before the event starts or during the game in real time.\n\nPlayers can place single bets, accumulators, system bets, handicaps, totals, player specials, team props, and long-term outright bets (such as tournament winners or season outcomes). Live betting at Parimatch includes dynamic odds, quick bet placement, and real-time statistics for better decision-making.\n\nParimatch adapts its betting markets to the preferences of Indian users, offering extended coverage of cricket, kabaddi, football, esports, and more.\n\nCricket\n\nCricket is the number one sport for Indian bettors, and Parimatch provides extensive markets for both national and international competitions. Users can bet on IPL, T20 leagues, ODI, Test Matches, BBL, PSL, CPL, and ICC events. Betting options include match winner, top batsman, top bowler, total runs, overs, player performance, live ball-by-ball betting, and many more.\n\nCricket fans also enjoy cash-out options and instant live odds updates.\n\nEsports\n\nEsports is one of the fastest-growing sections at Parimatch. The platform covers major tournaments and leagues in popular titles such as:\n• CS2\n• Dota 2\n• Valorant\n• League of Legends\n• Fortnite\n• PUBG Mobile\n• Call of Duty\n\nMarkets include match winner, map winner, handicaps, total kills, first blood, and other game-specific outcomes. Live streams and instant odds adjustment make esports betting more dynamic and engaging.\n\nTennis\n\nTennis betting at Parimatch features ATP, WTA, Grand Slam tournaments (Australian Open, Roland Garros, Wimbledon, US Open), Challenger events, and live matches.\nAvailable markets include:\n\nMatch winner\nTotal sets\nTotal games\nHandicaps\nTie-breaks\nPlayer performance\nCorrect score\n\nLive tennis betting is especially popular because odds change rapidly with each game and point.\n\nFootball\n\nFootball is one of the most comprehensive betting categories on Parimatch. The platform covers global tournaments such as the Champions League, Europa League, Premier League, La Liga, Serie A, Bundesliga, Ligue 1, World Cup, Euro Cup, and many national championships worldwide.\n\nBetting markets include:\n\nMatch winner\nBoth teams to score\nTotals\nHandicaps\nPlayer goals\nCorners\nCards\nSpecial markets (VAR decisions, first goal scorer, time intervals)\n\nLive betting allows players to place bets throughout the match based on real-time action.\n\nHockey\n\nHockey fans can enjoy betting on the NHL, KHL, World Championships, and international tournaments. The fast pace of hockey makes live betting especially exciting.\nParimatch offers markets such as:\n\nMatch winner\nGoals totals\nHandicaps\nPeriod betting\nPlayer goals\nPowerplay performance\n\nLive events feature real-time stats and flexible betting options.\n\nOther Sports Available at Parimatch\n\nIn addition to the most popular sports, Parimatch covers dozens of other categories:\n\nKabaddi — Pro Kabaddi League, international matches\nBasketball — NBA, EuroLeague, FIBA tournaments\nUFC & MMA — UFC, Bellator, ONE Championship\nBoxing — title fights and regional events\nVolleyball — international leagues and club tournaments\nBadminton — BWF tours\nBaseball, Rugby, Handball, Motorsports, Snooker, and many more\n\nEach sport includes a variety of markets, live options, and statistical tools to help bettors make informed decisions.\n\nHow to Bet in Parimatch\n\nPlacing a bet at Parimatch is simple and suitable for beginners and experienced bettors. The platform offers detailed odds, match statistics, and live updates.\n\nStep-by-step guide to placing a bet:\nLog in to Parimatch.\nChoose Sports or Live.\nSelect an event.\nClick on the odds.\nEnter the stake amount.\nConfirm the bet.\nTrack results in your account.\nCasino Parimatch\n\nParimatch Casino offers one of the most diverse gaming collections in the Indian online gambling market. The platform includes thousands of slots, dozens of table games, high-quality live casino rooms, and interactive game shows. All games come from top-tier international providers such as Evolution Gaming, Pragmatic Play, Playtech, NetEnt, Ezugi, Microgaming, and more—ensuring high RTP, smooth performance, and fair outcomes.\n\nPlayers can enjoy both classic casino entertainment and modern live-stream experiences with professional dealers. Games run 24/7 and are fully optimized for the Parimatch mobile app and browser version.\n\nBlackjack\n\nBlackjack is one of the most iconic and strategic card games available in Parimatch Casino. The goal is simple: reach a hand value of 21 or get closer to it than the dealer without going over. The game perfectly combines luck and strategy, which makes it popular among both beginners and professional players.\n\nBaccarat\n\nBaccarat is known for its simplicity and elegance. The rules are extremely straightforward—players bet on one of three outcomes: Player win, Banker win, or Tie. No complex decisions are required, making it ideal for beginners.\n\nRoulette\n\nRoulette is one of the most thrilling games at Parimatch Casino. Players place bets on numbers, colors, sectors, or combinations, and a spinning wheel determines the winner. The variety of bets makes roulette suitable for both casual players and serious strategists.\n\nParimatch Mobile App\n\nThe Parimatch mobile app is a fully optimized betting and casino platform designed for users who prefer fast access, smooth navigation, and secure transactions directly from their smartphones. Available for both Android and iOS, the app includes all the features of the desktop version — sports betting, cricket odds, live casino, slot games, virtual sports, account management, deposits, withdrawals, and real-time notifications.\n\nAndroid App\n\nThe Parimatch Android app can be downloaded as an APK file from the official Parimatch website. Due to Google Play restrictions on real-money betting apps, the APK installation ensures users get the latest version with all features included.\n\niOS App\n\nThe Parimatch iOS app is available directly in the App Store, making installation effortless for iPhone and iPad users. It offers a sleek interface, fast loading times, and full compatibility with the latest iOS versions.\n\nParimatch Bookmaker Advantages\n\n• Fast registration & smooth login\n• UPI, PayTM, Bank Transfer support\n• Live and pre-match sports betting\n• Casino & live dealer games\n• Apps for Android & iOS\n• Bonuses, free bets, cashback\n• 24/7 customer support\n• Modern and safe platform\n\nSupport Parimatch\n\nParimatch support works 24/7 and assists with any questions regarding payments, bonuses, betting rules, and technical issues.\n\nAvailable contact methods:\n• Live Chat — instant help\n• Email: support@parimatch.com\n• Telegram chat (regional availability)\n• FAQ section — common solutions\n\nIs Parimatch Legal in India?\n\nYes. Parimatch operates legally in India as an offshore betting platform licensed by international gaming authorities. Indian law allows online betting on foreign websites as long as they are not hosted within India and comply with security standards.\nParimatch ensures encrypted transactions, data protection, and transparent terms for Indian users.\n\nFAQ\nIs Parimatch safe to use?\n\nYes, it operates under a reputable international license and uses secure encryption.\n\nHow do I register at Parimatch?\nWhat deposit methods are available in India?\nHow long does withdrawal take?\nDoes Parimatch offer bonuses?\nCan I play casino games?\nDoes Parimatch have a mobile app?\nTO TOP\nTerms and Conditions\nContact Us",
+      "profile": "desktop",
+      "screenshot_full_hash": "e81f9d28ed3ca3590b2ab898135323c6883487a729e60b936ce6d053ea43aa9d",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatchappdownload.in_desktop_20260412T055318Z_fullpage.png",
+      "screenshot_viewport_hash": "3ce1b29400a941c554d9f1c59559d2da2e23b49a1a72fd794dcdbf820a57a986",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatchappdownload.in_desktop_20260412T055318Z_viewport.png",
+      "title": "Parimatch Official Site India — Online Betting, Registration, Bonuses | Login"
+    },
+    {
+      "capture_ts_utc": "20260412T055327Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-indian.in/",
+      "http_status": 200,
+      "meta_desc": "Visit the official Parimatch India website for online sports betting, cricket odds, live casino, fast registration, secure login, instant deposits, and quick withdrawals. Get welcome bonuses, free bets, and access via Android & iOS app.",
+      "page_text": "Parimatch App\nREGISTER\nDOWNLOAD\n\nHome\n\nParimatch India — Official Betting and Casino Platform\n\nParimatch India is a trusted international online betting platform offering a complete experience for sports betting, live cricket odds, casino games, esports, and fast payments in INR. Fully optimized for Indian users, Parimatch provides convenient deposits via UPI, PayTM, PhonePe, GPay, bank cards, and supports quick withdrawals with high-level security and data protection.\n\nParimatch Official Site Review\n\nParimatch is an international bookmaker founded in 1994 and recognized as one of the leading platforms for online betting. Over the years, the brand expanded globally, including India, where it became popular for its wide range of sports events, user-friendly interface, fast payments, and localized support.\nThe platform offers sports betting, esports, casino games, and live casino. Parimatch is known for high-level security, partnerships with famous athletes, and modern betting tools.\n\nBelow is a table with key information for new Parimatch users in India:\n\nParameter\tDetails\nInterface languages\tEnglish, Hindi, Bengali, Telugu, etc.\nBet types\tLive, Pre-match, Express, System bets\nSports\tCricket, Football, Tennis, Kabaddi, Esports, Hockey, etc.\nMin deposit\tFrom ₹200\nMax deposit\tUp to ₹1,000,000\nMin withdrawal\tFrom ₹300–₹1000\nMax withdrawal\tUp to ₹1,000,000\nDeposit methods\tUPI, PayTM, PhonePe, GPay, Bank Cards, Crypto\nWithdrawal methods\tUPI, Bank Transfer, Crypto\nRegistration Parimatch\n\nRegistration at Parimatch is quick and straightforward, allowing users to access sports betting, casino, live events, and bonuses. Parimatch supports several account creation methods, offering maximum convenience for Indian players.\nYou may register via email, phone number, or social media accounts (where available). All personal data is protected by advanced encryption, and full access requires passing KYC verification.\n\nAvailable registration methods:\nVia phone number\nEnter your mobile number → receive OTP → confirm.\nVia email\nSubmit email, create a password → confirm registration.\nThrough social media (where available)\n• Google\n• Facebook\n• Telegram\nYou can enter without creating a password — authorization is instant.\nHow to Login Parimatch\n\nLogging in to your Parimatch account takes only a few seconds. Users in India can log in via phone number, email, or supported social networks. Additional security features include session protection, OTP verification, and optional two-factor authentication.\n\nPassword recovery is available through SMS or email.\n\nStep-by-step login guide:\nVisit the Parimatch official site or open the app.\nClick Login.\nChoose login method: phone, email, social account.\nEnter your credentials.\nConfirm via OTP if required.\nAccess your profile.\nParimatch Bonus\n\nParimatch offers an extensive selection of bonuses designed for both new users and loyal players. The platform regularly updates its promotional calendar, providing fresh rewards for sports betting, casino games, live dealer tables, and esports. Bonuses include welcome packages, deposit boosts, free bets, cashback offers, seasonal promotions, and exclusive VIP rewards.\n\nAll bonuses are easily accessible through the Promotions section, and many of them come with simple wagering requirements, making Parimatch one of the most user-friendly platforms in the Indian betting market.\n\nFree Bet\n\nA Free Bet allows players to place a wager without using their own funds. It’s a risk-free opportunity to explore betting markets and test strategies. If the free bet wins, you receive the net profit only (stake excluded).\nFree Bets are commonly offered for:\n\nBig sports events (IPL, Premier League, UFC)\nEsports tournaments\nExpress/accumulator promotions\nSpecial weekly campaigns\n\nThey are ideal for beginners and users who want to try new markets without financial risk.\n\nWelcome Bonus\n\nThe Welcome Bonus is one of the most attractive offers for new Parimatch users. Typically structured as a 100% first deposit bonus, it effectively doubles the starting balance and allows players to explore more markets right from the beginning.\n\nWelcome bonuses may apply to:\n\nSports betting\nLive betting\nCasino games\nLive casino\n\nBetting requirements vary depending on the category, but Parimatch usually provides straightforward terms that are easy to complete.\n\nDeposit Bonus\n\nA Deposit Bonus rewards users with extra funds whenever they top up their account. This type of promotion is usually available during special events or as part of ongoing weekly/monthly offers.\n\nCommon formats include:\n\nPercentage bonus (e.g., 25%–75%)\nFixed bonus amount for a specific deposit range\nReload bonuses for returning players\nCasino-only deposit boosts\n\nDeposit bonuses help extend gameplay, giving users more opportunities to bet and win.\n\nNo-Deposit Bonus\n\nA No-Deposit Bonus is one of the most valuable rewards because players receive it without making any deposit.\nParimatch may offer:\n\nFree spins\nFree bets\nPromo codes\nEvent-based giveaways\n\nThese bonuses are often given during festivals, major tournaments, app launches, or as part of loyalty campaigns. Perfect for exploring the platform with zero financial commitment.\n\nOther Promotions\n\nParimatch also features a variety of special promotions tailored for different types of players:\n\n• Cashback\n\nReceive a percentage of your lost bets back as bonus funds. Available in sports and casino sections.\n\n• Express Boosts\n\nHigher payouts for accumulator bets with multiple selections.\n\n• Esports Promotions\n\nSpecial odds boosts, free bets, and cashback for CS2, Dota 2, Valorant, and other tournaments.\n\n• VIP / Loyalty Rewards\n\nExclusive bonuses, personal managers, higher withdrawal limits, and premium promotions for high-activity players.\n\n• Seasonal Offers\n\nFestive bonuses during IPL, New Year, Diwali, World Cup, and other major sports events.\n\nDeposit Methods in Parimatch\n\nDeposits at Parimatch India are fast and secure, supporting the most popular local payment methods: UPI, PayTM, PhonePe, GPay, bank cards, and cryptocurrency.\nMost deposits are processed instantly, and Parimatch does not charge additional fees. Minimum deposit amounts vary by method but start at ₹200.\n\nHow to deposit:\nLog in to your Parimatch account.\nGo to Deposit.\nSelect the payment method.\nEnter deposit amount.\nConfirm payment via UPI/wallet/card.\nFunds appear instantly.\nDeposit limits\nMethod\tMin\tMax\nUPI (GPay/PayTM/PhonePe)\t₹200\t₹100,000\nBank Cards\t₹300\t₹500,000\nCrypto\t₹500\t₹1,000,000\nE-wallets\t₹200\t₹200,000\nWithdrawal Methods Parimatch\n\nWithdrawals at Parimatch are fast, usually processed within 1–12 hours. Supported methods include UPI, bank transfer, and cryptocurrency. KYC verification is required before the first withdrawal, which ensures safe transactions.\n\nHow to withdraw funds:\nLog in to your account.\nOpen the Withdrawal section.\nChoose the method.\nEnter the amount.\nConfirm the request.\nReceive funds to your bank or UPI wallet.\nWithdrawal limits\nMethod\tMin\tMax\nUPI\t₹300\t₹100,000\nBank Transfer\t₹500\t₹500,000\nCrypto\t₹1000\t₹1,000,000\nTypes of Bets\n\nParimatch offers a wide range of betting markets covering hundreds of sports events daily. Both beginners and experienced bettors can choose from classic and advanced betting types. The platform supports pre-match and live betting, allowing users to make predictions before the event starts or during the game in real time.\n\nPlayers can place single bets, accumulators, system bets, handicaps, totals, player specials, team props, and long-term outright bets (such as tournament winners or season outcomes). Live betting at Parimatch includes dynamic odds, quick bet placement, and real-time statistics for better decision-making.\n\nParimatch adapts its betting markets to the preferences of Indian users, offering extended coverage of cricket, kabaddi, football, esports, and more.\n\nCricket\n\nCricket is the number one sport for Indian bettors, and Parimatch provides extensive markets for both national and international competitions. Users can bet on IPL, T20 leagues, ODI, Test Matches, BBL, PSL, CPL, and ICC events. Betting options include match winner, top batsman, top bowler, total runs, overs, player performance, live ball-by-ball betting, and many more.\n\nCricket fans also enjoy cash-out options and instant live odds updates.\n\nEsports\n\nEsports is one of the fastest-growing sections at Parimatch. The platform covers major tournaments and leagues in popular titles such as:\n• CS2\n• Dota 2\n• Valorant\n• League of Legends\n• Fortnite\n• PUBG Mobile\n• Call of Duty\n\nMarkets include match winner, map winner, handicaps, total kills, first blood, and other game-specific outcomes. Live streams and instant odds adjustment make esports betting more dynamic and engaging.\n\nTennis\n\nTennis betting at Parimatch features ATP, WTA, Grand Slam tournaments (Australian Open, Roland Garros, Wimbledon, US Open), Challenger events, and live matches.\nAvailable markets include:\n\nMatch winner\nTotal sets\nTotal games\nHandicaps\nTie-breaks\nPlayer performance\nCorrect score\n\nLive tennis betting is especially popular because odds change rapidly with each game and point.\n\nFootball\n\nFootball is one of the most comprehensive betting categories on Parimatch. The platform covers global tournaments such as the Champions League, Europa League, Premier League, La Liga, Serie A, Bundesliga, Ligue 1, World Cup, Euro Cup, and many national championships worldwide.\n\nBetting markets include:\n\nMatch winner\nBoth teams to score\nTotals\nHandicaps\nPlayer goals\nCorners\nCards\nSpecial markets (VAR decisions, first goal scorer, time intervals)\n\nLive betting allows players to place bets throughout the match based on real-time action.\n\nHockey\n\nHockey fans can enjoy betting on the NHL, KHL, World Championships, and international tournaments. The fast pace of hockey makes live betting especially exciting.\nParimatch offers markets such as:\n\nMatch winner\nGoals totals\nHandicaps\nPeriod betting\nPlayer goals\nPowerplay performance\n\nLive events feature real-time stats and flexible betting options.\n\nOther Sports Available at Parimatch\n\nIn addition to the most popular sports, Parimatch covers dozens of other categories:\n\nKabaddi — Pro Kabaddi League, international matches\nBasketball — NBA, EuroLeague, FIBA tournaments\nUFC & MMA — UFC, Bellator, ONE Championship\nBoxing — title fights and regional events\nVolleyball — international leagues and club tournaments\nBadminton — BWF tours\nBaseball, Rugby, Handball, Motorsports, Snooker, and many more\n\nEach sport includes a variety of markets, live options, and statistical tools to help bettors make informed decisions.\n\nHow to Bet in Parimatch\n\nPlacing a bet at Parimatch is simple and suitable for beginners and experienced bettors. The platform offers detailed odds, match statistics, and live updates.\n\nStep-by-step guide to placing a bet:\nLog in to Parimatch.\nChoose Sports or Live.\nSelect an event.\nClick on the odds.\nEnter the stake amount.\nConfirm the bet.\nTrack results in your account.\nCasino Parimatch\n\nParimatch Casino offers one of the most diverse gaming collections in the Indian online gambling market. The platform includes thousands of slots, dozens of table games, high-quality live casino rooms, and interactive game shows. All games come from top-tier international providers such as Evolution Gaming, Pragmatic Play, Playtech, NetEnt, Ezugi, Microgaming, and more—ensuring high RTP, smooth performance, and fair outcomes.\n\nPlayers can enjoy both classic casino entertainment and modern live-stream experiences with professional dealers. Games run 24/7 and are fully optimized for the Parimatch mobile app and browser version.\n\nBlackjack\n\nBlackjack is one of the most iconic and strategic card games available in Parimatch Casino. The goal is simple: reach a hand value of 21 or get closer to it than the dealer without going over. The game perfectly combines luck and strategy, which makes it popular among both beginners and professional players.\n\nBaccarat\n\nBaccarat is known for its simplicity and elegance. The rules are extremely straightforward—players bet on one of three outcomes: Player win, Banker win, or Tie. No complex decisions are required, making it ideal for beginners.\n\nRoulette\n\nRoulette is one of the most thrilling games at Parimatch Casino. Players place bets on numbers, colors, sectors, or combinations, and a spinning wheel determines the winner. The variety of bets makes roulette suitable for both casual players and serious strategists.\n\nParimatch Mobile App\n\nThe Parimatch mobile app is a fully optimized betting and casino platform designed for users who prefer fast access, smooth navigation, and secure transactions directly from their smartphones. Available for both Android and iOS, the app includes all the features of the desktop version — sports betting, cricket odds, live casino, slot games, virtual sports, account management, deposits, withdrawals, and real-time notifications.\n\nAndroid App\n\nThe Parimatch Android app can be downloaded as an APK file from the official Parimatch website. Due to Google Play restrictions on real-money betting apps, the APK installation ensures users get the latest version with all features included.\n\niOS App\n\nThe Parimatch iOS app is available directly in the App Store, making installation effortless for iPhone and iPad users. It offers a sleek interface, fast loading times, and full compatibility with the latest iOS versions.\n\nParimatch Bookmaker Advantages\n\n• Fast registration & smooth login\n• UPI, PayTM, Bank Transfer support\n• Live and pre-match sports betting\n• Casino & live dealer games\n• Apps for Android & iOS\n• Bonuses, free bets, cashback\n• 24/7 customer support\n• Modern and safe platform\n\nSupport Parimatch\n\nParimatch support works 24/7 and assists with any questions regarding payments, bonuses, betting rules, and technical issues.\n\nAvailable contact methods:\n• Live Chat — instant help\n• Email: support@parimatch.com\n• Telegram chat (regional availability)\n• FAQ section — common solutions\n\nIs Parimatch Legal in India?\n\nYes. Parimatch operates legally in India as an offshore betting platform licensed by international gaming authorities. Indian law allows online betting on foreign websites as long as they are not hosted within India and comply with security standards.\nParimatch ensures encrypted transactions, data protection, and transparent terms for Indian users.\n\nFAQ\nIs Parimatch safe to use?\n\nYes, it operates under a reputable international license and uses secure encryption.\n\nHow do I register at Parimatch?\nWhat deposit methods are available in India?\nHow long does withdrawal take?\nDoes Parimatch offer bonuses?\nCan I play casino games?\nDoes Parimatch have a mobile app?\nTO TOP\nTerms and Conditions\nContact Us",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "ae3d81da2c11b8653451065bf4359bbf3cc4f2d8af24d14d4eeb5531f3f90eba",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatchappdownload.in_mobile_android_20260412T055327Z_fullpage.png",
+      "screenshot_viewport_hash": "085a9f55cab1861a3bf85407569988abfe4758a5f23590debb7841cf465f615d",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatchappdownload.in_mobile_android_20260412T055327Z_viewport.png",
+      "title": "Parimatch Official Site India — Online Betting, Registration, Bonuses | Login"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=E7",
+      "name": "link.parimatchappdownload.in",
+      "not_before": "2026-04-06T11:03:38"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "*.parimatchappdownload.in",
+      "not_before": "2026-03-17T16:54:53"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "parimatchappdownload.in",
+      "not_before": "2026-03-17T16:54:53"
+    },
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R13",
+      "name": "www.parimatchappdownload.in",
+      "not_before": "2026-02-26T04:34:07"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "104.21.63.79",
+      "172.67.144.54"
+    ],
+    "AAAA": [
+      "2606:4700:3033::ac43:9036",
+      "2606:4700:3032::6815:3f4f"
+    ],
+    "MX": [
+      "10 eforward1.registrar-servers.com",
+      "10 eforward2.registrar-servers.com",
+      "10 eforward3.registrar-servers.com",
+      "15 eforward4.registrar-servers.com",
+      "20 eforward5.registrar-servers.com"
+    ],
+    "NS": [
+      "lars.ns.cloudflare.com",
+      "chelsea.ns.cloudflare.com"
+    ],
+    "TXT": [
+      "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+    ]
+  },
+  "domain": "parimatchappdownload.in",
+  "evidence_manifest_hash": "12c7ac7a6b4036c69db4503fbdb1cc75120e3bf0955a8e303008be78267e1f67",
+  "input_url": "https://parimatchappdownload.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.63.79",
+      "172.67.144.54",
+      "188.114.96.3",
+      "2606:4700:3032::6815:3f4f",
+      "2606:4700:3033::ac43:9036"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://mc.yandex.com/watch/105517232?wmode=7&page-url=https%3A%2F%2Fparimatch-indian.in%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22125%22%2C%22Chromium%22%3Bv%3D%22125%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224%22%0Acha%0Ax64%0Achb%0A64%0Achf%0A125.0.6422.26%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22125.0.6422.26%22%2C%22Chromium%22%3Bv%3D%22125.0.6422.26%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3Avtcs89ph60k3d1axodnp3iflk6msb%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-IN%3Av%3A2450%3Acn%3A1%3Adp%3A0%3Als%3A1001468396939%3Ahid%3A538304987%3Az%3A330%3Ai%3A20260412112312%3Aet%3A1775973193%3Ac%3A1%3Arn%3A702381276%3Arqn%3A1%3Au%3A177597319390445366%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A2317%3Awv%3A2%3Ads%3A0%2C10%2C1097%2C130%2C1105%2C0%2C%2C42%2C1%2C%2C%2C%2C2411%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1775973189505%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1775973193%3At%3AParimatch%20Official%20Site%20India%20%E2%80%94%20Online%20Betting%2C%20Registration%2C%20Bonuses%20%7C%20Login&t=gdpr(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(1)cdl(na)eco(42275364)ti(1)"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://parimatch-indian.in/cdn-cgi/rum?"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://mc.yandex.com/watch/105517232/1?wmode=7&page-url=https%3A%2F%2Fparimatch-indian.in%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22125%22%2C%22Chromium%22%3Bv%3D%22125%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224%22%0Acha%0Ax64%0Achb%0A64%0Achf%0A125.0.6422.26%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22125.0.6422.26%22%2C%22Chromium%22%3Bv%3D%22125.0.6422.26%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3Avtcs89ph60k3d1axodnp3iflk6msb%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-IN%3Av%3A2450%3Acn%3A1%3Adp%3A0%3Als%3A1001468396939%3Ahid%3A538304987%3Az%3A330%3Ai%3A20260412112312%3Aet%3A1775973193%3Ac%3A1%3Arn%3A702381276%3Arqn%3A1%3Au%3A177597319390445366%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A2317%3Awv%3A2%3Ads%3A0%2C10%2C1097%2C130%2C1105%2C0%2C%2C42%2C1%2C%2C%2C%2C2411%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1775973189505%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1775973193%3At%3AParimatch%20Official%20Site%20India%20%E2%80%94%20Online%20Betting%2C%20Registration%2C%20Bonuses%20%7C%20Login&t=gdpr%2814%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842275364%29ti%281%29&redirnss=1"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://parimatchappdownload.in/"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://parimatch-indian.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/assets/build/fonts/roboto-regular.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/assets/build/fonts/roboto-bold.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/assets/build/css/main.min.css?ver=1764675566"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/style.css?ver=1.0.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-indian.in/wp-content/uploads/2025/11/images.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://mc.yandex.ru/metrika/tag.js?id=105517232"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/assets/build/fonts/roboto-medium.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://parimatch-indian.in/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://parimatch-indian.in/wp-content/themes/stake-india/assets/build/js/main.min.js?ver=1764675567"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_check?scid=243a9613-204d-39e5-ee4e-77760959431e&cid=105517232"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/metrika/advert.gif?t=gdpr(14)ti(4)"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_start?cid=105517232&redirect_domain=mc.yandex.com&scid=243a9613-204d-39e5-ee4e-77760959431e&token=10999.IEAKcdFhD_uIazBQrzHM1muvuNgCb-jrTF_SFQ-PkaOAXiRlpBFPDSWhJNn7OQ7h.xY5iXqRUy7ILvMxbqk7Gdpu2CEQ%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_decide?cid=105517232&scid=243a9613-204d-39e5-ee4e-77760959431e&token=10999.XwHFf-JXzpEFgabe3KpsAQTmYC4u4HhhvEqTx58sOnroQfXjT9viTOBk1q9CHb2WRba2ut1e-o4f1E8NQIA5BHjWS9eUq-u3_xyE1WgEZ30%2C._iCbDkHjgbS0q4_qVQIa4sVyCZU%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_check_secondary?scid=9ad63004-4eb8-a471-11a4-6b79086f41ec&cid=105517232"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_start_secondary?cid=105517232&redirect_domain=mc.yandex.com&scid=9ad63004-4eb8-a471-11a4-6b79086f41ec&token=10999.fm9CxaUiZXFY_HCenbECwRgDuIw5p7MkZE5LRB_XNLYnclYK8yphfKaJENhxdrW3.gB31cjVLmgM4QyX4mpyN6Bq1Krg%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_decide_secondary?cid=105517232&scid=9ad63004-4eb8-a471-11a4-6b79086f41ec&token=10999.ARx9L0ijA-yRNRfBOQJSrd9chnhbT3x897Mb9D9Tsj5H91TSg-rFjr_KBgwxO3326wOEO9sh-R885IKOUGsG8Emf9d59pqgSPI2F5KpOHQo%2C.40olSvSJEJBjIIoV_YelYDDNPlQ%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_finish_secondary?cid=105517232&redirect_domain=mc.yandex.com&scid=9ad63004-4eb8-a471-11a4-6b79086f41ec&token=10999.0PPvDwJn2uMShsCOX9j6LFwkQHSrd6dDw649CDUFEMmr8xxmPCjnU5zd9E6V4X9V_-VHfRJFR3V9wZAhAuPp30QMSJ57H6XnCr5qwsgMWICXAM-p1QGYK5ULxf36CW_E4cFJyA7eiLIV0fpNg0ennu3HvAsmuAL6RLgDZLHrAZfELZQcVpOweO9OYdR2qZuo7qo12kRZiRjOofXjss1Aow%2C%2C.cTR_Ab830dw5HVIHtV9lEkUpICI%2C"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://parimatchappdownload.in/",
+    "https://parimatch-indian.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PARIMATCHAPPDOWNLOAD.IN-20260412-055328",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "9eaff8198d2690cb-ORD",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 05:53:11 GMT",
+    "link": "<https://parimatch-indian.in/wp-json/>; rel=\"https://api.w.org/\", <https://parimatch-indian.in/wp-json/wp/v2/pages/403>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://parimatch-indian.in/>; rel=shortlink",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=C0g1p5kVtw7GIhVIr2MRVcAnr%2F4VCmA%2BlhN4xLfpOe73SahcangXtwVlaoz9iHNljgsSrJhvoqXg7l%2B%2F9oVr2ArAPmDYME%2Fhs883K%2FxwcZ7VmqBzJAzLJXvewEdBfphSIDp35ve%2F\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=9,cfOrigin;dur=1081",
+    "set-cookie": "pll_language=en; expires=Mon, 12-Apr-2027 05:53:11 GMT; Max-Age=31536000; path=/; secure; SameSite=Lax",
+    "strict-transport-security": "max-age=31536000;",
+    "vary": "Accept-Encoding"
+  },
+  "screenshot_phash": "9fe0cce0cce037e1",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fdc-f66a-769a-a1b2-3368a3703678.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

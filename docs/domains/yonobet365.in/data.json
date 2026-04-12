@@ -1,0 +1,258 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:48:50Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T054844Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "http://exploreonlineresults.com/?dn=yonobet365.in&sksubid=35961519&_slsen=0",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "",
+      "profile": "desktop",
+      "screenshot_full_hash": "7e02f4631f4fbe135fc16d20b31f637b93b8243f9be0099bee8a62911bb19861",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/yonobet365.in_desktop_20260412T054844Z_fullpage.png",
+      "screenshot_viewport_hash": "7e02f4631f4fbe135fc16d20b31f637b93b8243f9be0099bee8a62911bb19861",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/yonobet365.in_desktop_20260412T054844Z_viewport.png",
+      "title": ""
+    },
+    {
+      "capture_ts_utc": "20260412T054850Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "http://exploreonlineresults.com/?dn=yonobet365.in&sksubid=35961519&_slsen=0",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "e3e89eca9d38be4dae22c52769175c464f932e96fa8e6005ac18658e4a1be8bd",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/yonobet365.in_mobile_android_20260412T054850Z_fullpage.png",
+      "screenshot_viewport_hash": "e3e89eca9d38be4dae22c52769175c464f932e96fa8e6005ac18658e4a1be8bd",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/yonobet365.in_mobile_android_20260412T054850Z_viewport.png",
+      "title": ""
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=Encryption Everywhere DV TLS CA - G2",
+      "name": "www.yonobet365.in",
+      "not_before": "2026-03-19T00:00:00"
+    },
+    {
+      "issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=Encryption Everywhere DV TLS CA - G2",
+      "name": "yonobet365.in",
+      "not_before": "2026-02-11T00:00:00"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "91.195.240.123"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "ns1.dnsowl.com",
+      "ns2.dnsowl.com",
+      "ns3.dnsowl.com"
+    ],
+    "TXT": []
+  },
+  "domain": "yonobet365.in",
+  "evidence_manifest_hash": "f269b9587666d5e723c891267f47938dfa6654588710828a7d693c212990d99e",
+  "input_url": "https://yonobet365.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "91.195.240.123"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://obseu.iseaskies.com/ct"
+      },
+      {
+        "method": "GET",
+        "resource_type": "xhr",
+        "url": "https://yonobet365.in/search/tsc.php?ses=ogcxQSmVUZPJ-IMq6y9pT77AYA-xtDRRVi_GPfxnv2-MH6MM6qCRdLA6Z31Q-paZ6FfjjjOerzMOFX3FXCec__dDmn0DZi9Nhorm8dSbxecrJFuFtABUNkDt8hDaINDglCtIgAAOjBWUeI0A44a38VI_MTv_8xVj1vvMaHjrJKwkMeEsprfG3TGuzmROs-yWnlz5kfGsoi2MulOIeBysKofBL6mLOr80poEnFep1Ax7vCKkW7fPf4iP1y9ZKeuEj6Ex2Qhf4MGqv_5dlyaYFWQGM2KPgMOK4tvyg17BYXYOGlPkenxVLfGZ2r-SSIhrZ1rv72jWFB0kwSDIQCulD5Mdm8OH6JN2I9fYZQvpEyC0KRoMaVGBm3lJzPRX2sXe_g&cv=2"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://yonobet365.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://yonobet365.in/img.sedoparking.com/images/js_preloader.gif"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://yonobet365.in/search/redirect.php?f=http%3A%2F%2Fexploreonlineresults.com%3Fdn%3Dyonobet365.in%26sksubid%3D35961519%26_slsen%3D0&v=ogcg50ifwWfEoGKpB5UD6WwGY01pBsKF9E20YNr9avdJ8IJTX98l-q4sFaB2HnqAnksMXU4QFyRd0GmGCL_Tb9dcjB3k1ANr9oF9A7MgwUkQbhg4Kwtfcbxcacu122mMoVoFSe3tbEDVmtoBkkRO_uqJrwfCLQf4HyhmDtfS-P0kR57a0ySz_ORXfY3aQr_rOel&l=ogcv9pWFjc1mxeRZ2hXoLLzTziVQqF7WlZlVo60vtbm8NB0flLFFTWGc65VF9ClLbsGe7Q_xr6wEVsUClX9ImLlqTpF2lEfm_UIYPpi-EvGLhj12PK9M6CF40hI7jONp8rD262onL6WWXB1pPaQgQK_zLitkZAlp5Red7uRDONo5ZWdw-4-_Jh-lS05TsZdNkWkLx4tmIUBjBqYPnVPphnrM7gi3V-9KO8gjcC4SF8R5zjyhA7BzyUOvQhX1mGUanIozHHwR6xK8t_sL83cHf9CLxIng8z_soVuasoa2GaJgpcPrK9YDHPqxaUGOqJ_SCwjX14_LzC0xGHJxpA3oM24y5yvqAxM3O3mHy4elVa-g2AYx_65XsnbrxFZcGn-BAK6kmYlDwHSmfi7PcyPFMjLzHG20ax1aCQvOpaeG6DSVi7k5yQ7GR9lcwppN_Hkq9lD8o292nOzawIRQ5mDa-D0xvbaHkXSei6M2EuykXOpZgxQs77tVg_tllgQxlX22G7Qe1ydz2b7-AZ3hX5iiV3a_iFWRsaSmoLWpv6oS1GQfl2cbNyHfC6IKmXohrOpUWUgzrKmpQVjBp0wBqEg5gf9-63vHJgzE7UKuhB3p7BSNV0gP6cVY4H81_KwnAxey8WWWz7fP8C1n2YNI9OhcLkMiE1ZycIw79tN_7HpyKIwiYaQY7_QYxGFm7UvcfjuJbzmm0vqb1rOKN9ve4o4"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://yonobet365.in/search/tcerider.php?f=http%3A%2F%2Fexploreonlineresults.com%3Fdn%3Dyonobet365.in%26sksubid%3D35961519%26_slsen%3D0&v=ogcg50ifwWfEoGKpB5UD6WwGY01pBsKF9E20YNr9avdJ8IJTX98l-q4sFaB2HnqAnksMXU4QFyRd0GmGCL_Tb9dcjB3k1ANr9oF9A7MgwUkQbhg4Kwtfcbxcacu122mMoVoFSe3tbEDVmtoBkkRO_uqJrwfCLQf4HyhmDtfS-P0kR57a0ySz_ORXfY3aQr_rOel&l=ogcv9pWFjc1mxeRZ2hXoLLzTziVQqF7WlZlVo60vtbm8NB0flLFFTWGc65VF9ClLbsGe7Q_xr6wEVsUClX9ImLlqTpF2lEfm_UIYPpi-EvGLhj12PK9M6CF40hI7jONp8rD262onL6WWXB1pPaQgQK_zLitkZAlp5Red7uRDONo5ZWdw-4-_Jh-lS05TsZdNkWkLx4tmIUBjBqYPnVPphnrM7gi3V-9KO8gjcC4SF8R5zjyhA7BzyUOvQhX1mGUanIozHHwR6xK8t_sL83cHf9CLxIng8z_soVuasoa2GaJgpcPrK9YDHPqxaUGOqJ_SCwjX14_LzC0xGHJxpA3oM24y5yvqAxM3O3mHy4elVa-g2AYx_65XsnbrxFZcGn-BAK6kmYlDwHSmfi7PcyPFMjLzHG20ax1aCQvOpaeG6DSVi7k5yQ7GR9lcwppN_Hkq9lD8o292nOzawIRQ5mDa-D0xvbaHkXSei6M2EuykXOpZgxQs77tVg_tllgQxlX22G7Qe1ydz2b7-AZ3hX5iiV3a_iFWRsaSmoLWpv6oS1GQfl2cbNyHfC6IKmXohrOpUWUgzrKmpQVjBp0wBqEg5gf9-63vHJgzE7UKuhB3p7BSNV0gP6cVY4H81_KwnAxey8WWWz7fP8C1n2YNI9OhcLkMiE1ZycIw79tN_7HpyKIwiYaQY7_QYxGFm7UvcfjuJbzmm0vqb1rOKN9ve4o4"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://euob.iseaskies.com/sxp/i/581749a3c1e7922374ca9b3d4dff0407.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://obseu.iseaskies.com/tracker/tc_imp.gif?e=37dfbd8ee84e00126debce32e84e8b959225c24f567d43d6da1908be6245cad7bd70a976750ef80ed89373bfe70e9c20c1e53e8d57148f6d2717071a10acf9f29f673dfbe0f875504a6fe37a7e558f6ad736c752340626910103093d505dc6b73a4e6ca336e231884cf9c129ec4036ec1f276810d956f244fd95c9dd3cb03605fe7ed2b44728cd5173122611c792106ee70ff0ac8fbf111ea24c91b729f0468335900fc24630d04915f814580427db2e77f8d9b8ff77a77be91fcc62b30e2d26de826502623e4680668e831af6142d83ebd55f3166328adf75759bf7094d711b681778ffcc733d2818a5f84d678cb5f53090f038234b7de9ffba919b70a0ded848f744de0d7f70c7fa9abcf26798d8e262913008d9fcc0251b44f26439fec14762b8d1f226db57f642a0980a9c1ad9c57ccd39379385359d27ccc0e2e1d7aba75969fc30a9f2a5770e66e9976096b15cea1b5913cb4f0ed0c2db9b8fbc9537cb3bdd92f5d029bf273574853873d4a3a00e6990e833f352a9d35a9537f72b0c0b44cb32b81dccc0be3fe0c778895ce6859c8327b55a4e60f01c22546f5f3e89ec6fb751dfc98432ae9369bdc86cd6c2a7be788c91e95461729ec2580483f7461a4cb4e8e215f863cfb41896b43cb86ebd2389419648c5a257c4192ef8ad9365233e60032a0b4016aae18c6fce03b7454e4735f9b44fdf9e040dfeb8dfbda06dc2ede4f49af9aff1494720fa4786b5597282436518d67f5c716cf579b37719c2e8c77f8b60d7268cb72dcdb80e91670e2120067a0f9dc0e4df3b67549a184095cfdaa7adcc520682adbb7c90d36e78d0d10e216af190c54b22b02099429c1dea238613d9c00fe5b934e68795d19e477ef2e73a629e6ba18cb4b70b956d3c0a189268424caca55f8d8108d8cdde9100df8d9532103640b938a202a85cb38977ca3102703643277c9652dcf23235ec6bd2bbe7769c96199e7e61ae0f7d2b98edd80d58e770fd9012d945784528bd5d2bf1c5882dcd163e889901e59a84ab9248c85c4b2312f5722c559e990d54a4659ea3bf4ad3b3e54a0f00c10a286841dd0b42a4d9b80a1bfb0f6dc1d5c318dbdebad34b76eb74ea7b35059d0a7a208bb25116d289bdc4e8b00ff36ef32cc72fc28c0bd8ffb87666fd8c41de8cfeef91b1c4c7374185fa3715c67d80009d42f3bb68fb9edfdf70ae948abba8133986ebe5fd4add46d71145200062ca8c2b6f8a30f857d49624fc543ae8655ec935af9c3d30fc21621b1bd9a8843197830d30735528c2c3cfe3d151d667e7f36165cfdc411a011738657cb66e&cri=CgrDHrQ8I6&ts=361&cb=1775972918842"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://yonobet365.in/bad999c2-4fab-4a75-9557-d35f736056dc"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "http://exploreonlineresults.com/?dn=yonobet365.in&sksubid=35961519&_slsen=0"
+      },
+      {
+        "method": "POST",
+        "resource_type": "ping",
+        "url": "https://obseu.iseaskies.com/mon"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://l.cdn-fileserver.com/bping.php?vgd_rpth=%2Fola&wshp=0&r=1775972919262&vgd_cage=5&crid=629487735&ugd=4&lper=100&gdpr=0&vgd_tsce=L1197&vgd_oresf=one&vgd_setup=c21&vgd_wlstp=0&vi=1775972919385520836&wsip=170762498&vgd_asn=8075&vgd_cdv=O3056&lf=6&cc=US&sc=IL&ssld=%7B%22QQNN%22%3A%22Pb%22%2C%22QQN75%22%3A%22Nw8N1ym%22%2C%22QQ8E%22%3A%22%22%2C%22QQQN%22%3A%22VT%22%7D&mspa=0&vgd_l2type=dmola&vgd_oreqf=one&prid=8PR11258V&cid=8CU7H2X2K&hvsid=00001775972919260022801825284423&requrl=http%3A%2F%2Fyonobet365.in%3F_slsen%3D0&vgd_len=544&vgd_end=1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://resultsfastfind.com/sr/754870121/SAFEFRAME.html?ule=862&%21DVfD=&%21Qr=&%21YD=&%21YDLp=&%21r=~&%28v0Q=~&-%21YD=&0YD=&5uvm0=~&5v90=~&7%21GS88Srd0=&70u0=&7Dv0V=&88=%2AO&89G%28p=ivLNSYGm8&89G%28x=&8DL=6x~.t&8VYD=tp1NnMMx.&8YD=nc%2AMKpspo&8m0YD=&9mm0v=A&Bv=&D%28VB=A&Dr8%28%28%28=&G%28rVV=A&GmL=&LY=AMM.1Mp1A1xn..p~nxt&Q%21Bu5YD=Lp&Q0cX=&Q8m=EkfHadXX%2FqHdVGQGBrQV4H%29NdqkkX%2FQrGXH&QDL=&QDi%28QYG=&QDmA=&QDmp=&Vr%29XVu=9mm0%3A%2F%2F7iGi%21rmxt.UYG%3FSvuvrG%3D~&XaD=N&Xv0rGB=~&YGm8u=nCe-JM.e_%3Abk6%7CRrne%3AXYYUXYXUs1UXX&YvYD=~&aD0V=~&aD0V8Gvm=&b5VB=&bD=&htmlsrc=1&iYD=8.rnA.xARMM%218RNt8MRQMBQR%21%21Dt%218pM~AnQ&iuQB=iGr&kkdd=A%2A%7CW%7Cu%2A93AHhn&mv8r=wAA1M&r8VYD=&tpid=&upm70r=D%28iuQ&v%21DVfD=&v8=fw&vY4r=AA.Ndtn1&vvuD=%7B%22vv88%22%3A%22%2AO%22%2C%22vv8m7%22%3A%2289Y8Qai%22%2C%22vvY0%22%3A%22%22%2C%22vvv8%22%3A%22fw%22%7D&eobd=&eoac=RvYbkNvbY&eoch=n_qUe_eq&ure=1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "https://scripts.clarity.ms/0.8.54/clarity.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "https://msadsscale.microsoft.com/bingads/telemetryJS.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "https://s.yimg.com/ds/scripts/selectTier-p1.1.0.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://s.cdn-fileserver.com/__media__/pics/9900/42/702//arrrow.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://l.cdn-fileserver.com/log?logid=kfk&evtid=l3frameload&layer=YCM&requrl=http%3A%2F%2Fexploreonlineresults.com%2F&dn=exploreonlineresults.com"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://s.cdn-fileserver.com/__media__/pics/9900/42/702//bg1.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://s.cdn-fileserver.com/__media__/fonts/montserrat_regular/montserrat_regular.woff"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://l.cdn-fileserver.com/bql.php?vgd_len=5358&&vgd_l2type=dmola&fp=8qRAENaFnOkppmhmxIFGnXSplju4iNMrmoqkLpRkE7DcRqfejleWyYXOuuApqUq6UgsbC4XfsJX_jNVFLXpypb18oLC6ypnGUyAF0eHTkq6XUl6byERzPt4KjhML3W3GcBWUaosarA4%3D&cme=Vf4aoFa6p9QJcsCcDuLaZT6uez8CDJ4VJt1_mcgiHCFwgWDRgvyqh9ytozfLJd7mHSQA1nvZKULZuNWML_3T6BrMiPQHTNSoxclY0JZdPE8F94UQ9hWDvEcONDr9nFDLn3uhzwJrWEw859vtfa581vVLAdEh9AdhsvURdMScx-sjIDBsU06dBToNbK4cfpw-RDAgMD2RYfOOR_SHSO_olc8lH1tZ-GQ2UTncmDYio0F9eiQ4iaIu_8hbJzAPmRItjGY_UFxwuV7Lv029Pk0FxA%3D%3D%7C%7Cb8KlCmE6kTENKxSBIehsQLbXBNKeHPZV%7CD4HbilMHIHYmUVHIt007psprkF2yYm-pbymq9sXLGRAF2nYyvZWPvVFqpdQJUHg8BIFd6UptQntUjByYCHtMkjq2ChjY0WoshdDGxn_woYXGsJWLR_J6myITZZD3PufG51dr5U140IOxGc8WkqHRSTRT_aNK5RooNECh3NdvtxgVeGDHP4vtl6RPFTRsS_fjjUCQigQjaCqKwvTLwu2_eTYFEC-KioI_dvFdqyQ0o70Wo7H3oTb2FD2yPYfsrdUYEvu5wiX7pX33be9Lr0ibOiFSTXZYK0zCXVYqmmc4HxPyJ9DTu-kw3XSTYR8IltHXc_mpL0DqlR9QKjEKXZjorX9bLOGa_zw9gFMHMfEQY7h3hwqgaSTb1wQx5jgHF9bUh91NMRVs0rqf6eugCq2V66DpIv_Ip-HnjOVfDbF-6dBLEmIUBPwz1_jn6xdBMP8OsFS2ot5ofwoZHFdertHhJRGCNEaHgz9TXP-95SPAx4ZGTF0f7rGMWQnccGTSCIbhszlH3PICkycKTPd7zyVJwZkMTnoWwNKQlSf4rw3VMZisiMjUNY0W8t-zylOPaVMD3-e-lUiYHVWvIos3jLXst9pBseUEDopl_nFp32HUZ6lr8q6pA5h8HmpZbXd98nTnut5CmVUonOf8dS2SR-R1Ds3MQYWtNx9Od7qFgxR5PhLF7tA3X_F2mmXl7g2jNr0ypqwSS4Mky2zq2cxkDS2AcRTjoc9MZ0vAr69PwSB05EybfAzN61QZDrFanUulM_13BLEy368A0MN96oPL7wVu7LRe26zbk8f2uuODnbNHGmrpjzbldsShfqJL9Y_lodkV6UybbbOIiZ4JQ4cgp2MJBMc-22zvws-F%7CWOR44ZnjshyX0FEZj6c52uG8KGTsvju_%7CQI69fL-w4L6aeT5b-WR7AgkGYdgJ71V3%7CxDcVMoSqRITbhE5b0cic0m1vzbMPvCFjXHv8d7SOn6RQecqRepx4mw%3D%3D%7C&ctst=Default&ksu=360&fdkt=658&vgde_kbbh=fuoyxQBuGUBO&kwd[]=Betting+Systems&kwt[]=658&kbc[]=2ced1baae9ed85876cbfa368a02ba636.d2s&kwp[]=1&kid[]=3524329&kbc2[]=dmodel%3D1%7Cclid_fz%3D28922%7Cclid_serp%3D-1%7Cakp%3D7%7C5%3D-1%7C6%3D-1%7C16%3D-1%7C19%3D0.00%7Ckus%3D0.4268%7Ckucs%3D5.0000%7Ckcucs%3D5.0000%7Ckcucs2%3D5.0000%7Ckssks%3D5.0000%7Crcid%3D191283%7Cclpr%3D0.837600%7Ccllvl%3D5%7Cokt%3D658%7Cbdkt%3D658%7Cps%3D0.996%7Cps_id%3D0&ktd[]=79440933458516512328309412096&kwd[]=Betting+Guide&kwt[]=658&kbc[]=2ced1baae9ed85876cbfa368a02ba636.d2s&kwp[]=2&kid[]=3523822&kbc2[]=dmodel%3D1%7Cclid_fz%3D-2%7Cclid_serp%3D-2%7Cakp%3D4%7C5%3D-1%7C6%3D-1%7C16%3D-1%7C19%3D0.00%7Ckus%3D0.3967%7Ckucs%3D5.0000%7Ckcucs%3D5.0000%7Ckcucs2%3D5.0000%7Ckssks%3D5.0000%7Crcid%3D189420%7Cclpr%3D0.852300%7Ccllvl%3D5%7Cokt%3D658%7Cbdkt%3D658%7Cps%3D0.996%7Cps_id%3D0&ktd[]=79228162514264337593561125120&kwd[]=Watch+Live+Cricket&kwt[]=658&kbc[]=2ced1baae9ed85876cbfa368a02ba636.d2s&kwp[]=3&kid[]=30364163&kbc2[]=dmodel%3D1%7Cclid_fz%3D22249%7Cclid_serp%3D22249%7Cakp%3D6%7C5%3D-1%7C6%3D-1%7C16%3D-1%7C19%3D0.00%7Ckus%3D0.3664%7Ckucs%3D5.0000%7Ckcucs%3D5.0000%7Ckcucs2%3D5.0000%7Ckssks%3D5.0000%7Crcid%3D47108%7Cclpr%3D0.651900%7Ccllvl%3D1%7Cokt%3D658%7Cbdkt%3D658%7Cps%3D0.996%7Cps_id%3D0&ktd[]=79228162514264337593577902336&kwd[]=Online+Sports+Betting+Deals&kwt[]=658&kbc[]=2ced1baae9ed85876cbfa368a02ba636.d2s&kwp[]=4&kid[]=1325773936&kbc2[]=dmodel%3D1%7Cclid_fz%3D8792%7Cclid_serp%3D29984%7Cakp%3D1%7C5%3D-1%7C6%3D-1%7C16%3D-1%7C19%3D0.00%7Ckus%3D0.4701%7Ckucs%3D5.0000%7Ckcucs%3D5.0000%7Ckcucs2%3D5.0000%7Ckssks%3D5.0000%7Crcid%3D127668%7Cclpr%3D0.840000%7Ccllvl%3D5%7Cokt%3D658%7Cbdkt%3D658%7Cps%3D0.996%7Cps_id%3D0&ktd[]=79228162514264337593561125120&kwd[]=Betting+Games&kwt[]=658&kbc[]=2ced1baae9ed85876cbfa368a02ba636.d2s&kwp[]=5&kid[]=3523812&kbc2[]=dmodel%3D1%7Cclid_fz%3D8986%7Cclid_serp%3D8986%7Cakp%3D12%7C5%3D-1%7C6%3D-1%7C16%3D-1%7C19%3D0.00%7Ckus%3D0.3642%7Ckucs%3D5.0000%7Ckcucs%3D5.0000%7Ckcucs2%3D5.0000%7Ckssks%3D5.0000%7Crcid%3D189420%7Cclpr%3D0.851200%7Ccllvl%3D5%7Cokt%3D658%7Cbdkt%3D658%7Cps%3D0.996%7Cps_id%3D0&ktd[]=79228162514264337593561125120&v=1&geo=41.78%7C-87.71&lper=100&vgde_sa_ijp=%7B%227E8O%22%3A9%2C%22L77%22%3Ak1jQJ%2C%22E-jM8zd%22%3Ak1jQJ%7D&lpid=&tsid=1005&hint=&cc=US&wsip=170762466&bca=0&ugd=4&vgde_setid=Nfu&vgde_chost=LJQxj7Qk1Q7k8zO.NmY&cid=8CU7H2X2K&vi=1775972919385520836&vsid=4189745198273822&tdAdd[]=asnum%3D8075&vgde_test_data_struct=%7B%22EO7E8O%22%3Au%7D&vgd_adprefflag=00&vgd_adpref_diff=1010&vgd_fm_lang=EN&vgd_implt=3&vgd_cage=1&vgd_tsce=L1197-S1197&vgd_l3_sc=IL&vgd_pdtid=1&vgd_oscar=1&vgd_ctrlid=O_SERP&vgd_nrrv=34196&vgd_nrrmf=8301000480a&vgd_nrrsf=scrr&vgd_cty=chicago&vgd_csovr=0&vgd_intc_log=%7B%22impl_type%22%3A%22fwd%22%2C%22xvip%22%3A%22199.191.50.11%22%7D&vgd_ifrmode=03&sbdrId=&verid=&mprpslog=Nzg2BhDWz5Hi_EEMaEGW1InFVL4GTuyj_sroWZLVEmkg39jH6_PoqMmjl-Uw-rwIltsQCc3yUoWgsfrr1NG6mC-UCKT7v33b6MLWr6-84hUoth6eNQZ-RdKtk6yvbbfL-QqYvc6qVFAQ7T2uKkJKEyzoL-mr00TJ44AcUyl3OyAhrtD6XEpGMmUjK0Fo0j4HITCj_T64tYo&kbbq=%26asn%3D8075&vgd_ppvi=2152351851925932649&vgd_wlstp=0&vgd_vstrid=4189745198273822&vgd_scsver=3083&vgd_himglg=K0P0-O0K0-S0&vgd_cache_metadata=%7B%22kbb%22%3Afalse%7D&vgd_cfud=260123&vgd_optout=0&vgd_l2shld=1&vgd_akcip=135.232.211.210&vgd_oreqf=one&vgd_oresf=one&vgd_och=0&vgd_rensize=1366_768&vgd_scr_h=768&vgd_scr_w=1366&vgd_col_sch=l&vgd_ect=4g&vgd_be=0&vgd_nmerr=1&tdAdd[]=uiparams%3D%3Brend_w%3A1366%3Brend_h%3A768&vgd_sc=IL&hvsid=00001775972919260022801825284423&rc=0&rand=1775972919588&acid=undefined&matm=1775972919588&vgde_ltimesrc=u&vgde_ltime=Af9&vgde_rtime=fhi&vgde_etm=uH&vgde_timeObj=%7B%22juJ-JN%22%3Azxjj%2C%22jfjm1O%22%3AfXf%2C%22QNLLQ71L7%22%3Au9%2C%22QNLLLJzOJL%22%3Auh%2C%22QNLLJ-JN%22%3AXW%7D&vgd_lhl=2288&vgd_sbSup=1&vgd_nrrs=34196&vgde_cdeplbl=1E8Mzm7M1e18j1GjJ&vgd_end=1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://l.cdn-fileserver.com/bqi.php?vgd_len=1861&&vgd_aref=0&vgd_tsce=L1197-S1197&vgd_l2type=dmola&vgd_ydspr=0&vgd_cdv=O3056&vgd_cage=1&vgd_pgids=0&vgd_pdtid=1&vgd_oreqf=one&vgd_oresf=one&lf=3&prid=8PR11258V&cid=8CU7H2X2K&crid=629487735&requrl=http%3A%2F%2Fyonobet365.in%3F_slsen%3D0&vi=1775972919385520836&ugd=4&cc=US&sc=IL&vgd_acid=undefined&hvsid=00001775972919260022801825284423&cme=Vf4aoFa6p9QJcsCcDuLaZT6uez8CDJ4VJt1_mcgiHCFwgWDRgvyqh9ytozfLJd7mHSQA1nvZKULZuNWML_3T6BrMiPQHTNSoxclY0JZdPE8F94UQ9hWDvEcONDr9nFDLn3uhzwJrWEw859vtfa581vVLAdEh9AdhsvURdMScx-sjIDBsU06dBToNbK4cfpw-RDAgMD2RYfOOR_SHSO_olc8lH1tZ-GQ2UTncmDYio0F9eiQ4iaIu_8hbJzAPmRItjGY_UFxwuV7Lv029Pk0FxA%3D%3D%7C%7Cb8KlCmE6kTENKxSBIehsQLbXBNKeHPZV%7CD4HbilMHIHYmUVHIt007psprkF2yYm-pbymq9sXLGRAF2nYyvZWPvVFqpdQJUHg8BIFd6UptQntUjByYCHtMkjq2ChjY0WoshdDGxn_woYXGsJWLR_J6myITZZD3PufG51dr5U140IOxGc8WkqHRSTRT_aNK5RooNECh3NdvtxgVeGDHP4vtl6RPFTRsS_fjjUCQigQjaCqKwvTLwu2_eTYFEC-KioI_dvFdqyQ0o70Wo7H3oTb2FD2yPYfsrdUYEvu5wiX7pX33be9Lr0ibOiFSTXZYK0zCXVYqmmc4HxPyJ9DTu-kw3XSTYR8IltHXc_mpL0DqlR9QKjEKXZjorX9bLOGa_zw9gFMHMfEQY7h3hwqgaSTb1wQx5jgHF9bUh91NMRVs0rqf6eugCq2V66DpIv_Ip-HnjOVfDbF-6dBLEmIUBPwz1_jn6xdBMP8OsFS2ot5ofwoZHFdertHhJRGCNEaHgz9TXP-95SPAx4ZGTF0f7rGMWQnccGTSCIbhszlH3PICkycKTPd7zyVJwZkMTnoWwNKQlSf4rw3VMZisiMjUNY0W8t-zylOPaVMD3-e-lUiYHVWvIos3jLXst9pBseUEDopl_nFp32HUZ6lr8q6pA5h8HmpZbXd98nTnut5CmVUonOf8dS2SR-R1Ds3MQYWtNx9Od7qFgxR5PhLF7tA3X_F2mmXl7g2jNr0ypqwSS4Mky2zq2cxkDS2AcRTjoc9MZ0vAr69PwSB05EybfAzN61QZDrFanUulM_13BLEy368A0MN96oPL7wVu7LRe26zbk8f2uuODnbNHGmrpjzbldsShfqJL9Y_lodkV6UybbbOIiZ4JQ4cgp2MJBMc-22zvws-F%7CWOR44ZnjshyX0FEZj6c52uG8KGTsvju_%7CQI69fL-w4L6aeT5b-WR7AgkGYdgJ71V3%7CxDcVMoSqRITbhE5b0cic0m1vzbMPvCFjXHv8d7SOn6RQecqRepx4mw%3D%3D%7C&fp=8qRAENaFnOkppmhmxIFGnXSplju4iNMrmoqkLpRkE7DcRqfejleWyYXOuuApqUq6UgsbC4XfsJX_jNVFLXpypb18oLC6ypnGUyAF0eHTkq6XUl6byERzPt4KjhML3W3GcBWUaosarA4%3D&vgd_rensize=1366_768&vgd_end=1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://l.cdn-fileserver.com/bqi.php?vgd_len=1908&lf=4&prid=8PR11258V&crid=629487735&pid=8POET61Y3&cid=8CU7H2X2K&dn=yonobet365.in&ugd=4&cc=US&sc=IL&vi=1775972919385520836&requrl=http%3A%2F%2Fyonobet365.in%3F_slsen%3D0&hvsid=00001775972919260022801825284423&vgd_l2type=dmola&vgd_cdv=1886&vgd_cage=1&vgd_scsver=3083&vgd_tsce=L1197-S1197&vgd_cetp=4g&vgd_cdlk=9.7&vgd_crtt=0&cme=Vf4aoFa6p9QJcsCcDuLaZT6uez8CDJ4VJt1_mcgiHCFwgWDRgvyqh9ytozfLJd7mHSQA1nvZKULZuNWML_3T6BrMiPQHTNSoxclY0JZdPE8F94UQ9hWDvEcONDr9nFDLn3uhzwJrWEw859vtfa581vVLAdEh9AdhsvURdMScx-sjIDBsU06dBToNbK4cfpw-RDAgMD2RYfOOR_SHSO_olc8lH1tZ-GQ2UTncmDYio0F9eiQ4iaIu_8hbJzAPmRItjGY_UFxwuV7Lv029Pk0FxA==||b8KlCmE6kTENKxSBIehsQLbXBNKeHPZV|D4HbilMHIHYmUVHIt007psprkF2yYm-pbymq9sXLGRAF2nYyvZWPvVFqpdQJUHg8BIFd6UptQntUjByYCHtMkjq2ChjY0WoshdDGxn_woYXGsJWLR_J6myITZZD3PufG51dr5U140IOxGc8WkqHRSTRT_aNK5RooNECh3NdvtxgVeGDHP4vtl6RPFTRsS_fjjUCQigQjaCqKwvTLwu2_eTYFEC-KioI_dvFdqyQ0o70Wo7H3oTb2FD2yPYfsrdUYEvu5wiX7pX33be9Lr0ibOiFSTXZYK0zCXVYqmmc4HxPyJ9DTu-kw3XSTYR8IltHXc_mpL0DqlR9QKjEKXZjorX9bLOGa_zw9gFMHMfEQY7h3hwqgaSTb1wQx5jgHF9bUh91NMRVs0rqf6eugCq2V66DpIv_Ip-HnjOVfDbF-6dBLEmIUBPwz1_jn6xdBMP8OsFS2ot5ofwoZHFdertHhJRGCNEaHgz9TXP-95SPAx4ZGTF0f7rGMWQnccGTSCIbhszlH3PICkycKTPd7zyVJwZkMTnoWwNKQlSf4rw3VMZisiMjUNY0W8t-zylOPaVMD3-e-lUiYHVWvIos3jLXst9pBseUEDopl_nFp32HUZ6lr8q6pA5h8HmpZbXd98nTnut5CmVUonOf8dS2SR-R1Ds3MQYWtNx9Od7qFgxR5PhLF7tA3X_F2mmXl7g2jNr0ypqwSS4Mky2zq2cxkDS2AcRTjoc9MZ0vAr69PwSB05EybfAzN61QZDrFanUulM_13BLEy368A0MN96oPL7wVu7LRe26zbk8f2uuODnbNHGmrpjzbldsShfqJL9Y_lodkV6UybbbOIiZ4JQ4cgp2MJBMc-22zvws-F|WOR44ZnjshyX0FEZj6c52uG8KGTsvju_|QI69fL-w4L6aeT5b-WR7AgkGYdgJ71V3|xDcVMoSqRITbhE5b0cic0m1vzbMPvCFjXHv8d7SOn6RQecqRepx4mw==|&vgd_ifrmode=03&sbdrId=&verid=&mprpslog=Nzg2BhDWz5Hi_EEMaEGW1InFVL4GTuyj_sroWZLVEmkg39jH6_PoqMmjl-Uw-rwIltsQCc3yUoWgsfrr1NG6mC-UCKT7v33b6MLWr6-84hUoth6eNQZ-RdKtk6yvbbfL-QqYvc6qVFAQ7T2uKkJKEyzoL-mr00TJ44AcUyl3OyAhrtD6XEpGMmUjK0Fo0j4HITCj_T64tYo&vgd_end=1"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://yonobet365.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-YONOBET365.IN-20260412-054850",
+  "response_headers": {
+    "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 05:48:38 GMT",
+    "expires": "Mon, 26 Jul 1997 05:00:00 GMT",
+    "last-modified": "Sun, 12 Apr 2026 05:48:38 GMT",
+    "pragma": "no-cache",
+    "server": "Parking/1.0",
+    "vary": "Accept-Encoding",
+    "x-adblock-key": "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANnylWw2vLY4hUn9w06zQKbhKBfvjFUCsdFlb6TdQhxb9RXWXuI4t31c+o8fYOv/s8q1LGPga3DE1L/tHU4LENMCAwEAAQ==_i8GPqVIoCgc8x/ucqQ2zAcndJcJ6JD+Y8A6Mc1LH8aarmKFWA/qSrH25xSn1IKDy+HQG173WtU/pLhQAU61Mkg==",
+    "x-cache-miss-from": "parking-79cf8c95dd-4p8kz"
+  },
+  "screenshot_phash": "ceb131199bdb6464",
+  "threat_intel": {
+    "abuseipdb_isp": "Sedo Domain Parking",
+    "abuseipdb_score": 15,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019c4c5c-16f1-732c-9907-0dc185573403.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

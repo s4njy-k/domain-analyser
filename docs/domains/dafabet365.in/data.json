@@ -1,0 +1,181 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "Insufficient evidence was available to assign a definitive malicious workflow.",
+    "illegal_activity_description": "Threat intelligence sources indicate elevated risk, but the captured content does not conclusively establish a specific criminal workflow.",
+    "priority_score": 0,
+    "recommended_action": "Preserve evidence and prioritise manual analyst review.",
+    "severity": "MEDIUM",
+    "threat_category": "UNKNOWN",
+    "victim_profile": "Unknown."
+  },
+  "analysis_ts_utc": "2026-04-12T05:44:43Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T054439Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://dafabet365.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "",
+      "profile": "desktop",
+      "screenshot_full_hash": "a56ca687702e34e813f37db0e44b398f9d7e32f25977555156209cc73698b2c5",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/dafabet365.in_desktop_20260412T054439Z_fullpage.png",
+      "screenshot_viewport_hash": "a56ca687702e34e813f37db0e44b398f9d7e32f25977555156209cc73698b2c5",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/dafabet365.in_desktop_20260412T054439Z_viewport.png",
+      "title": ""
+    },
+    {
+      "capture_ts_utc": "20260412T054443Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://dafabet365.in/lander",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "29aa4b0ea08f14b67996c19b5820d18d080cb8db5774251d2a7a605e728319d9",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/dafabet365.in_mobile_android_20260412T054443Z_fullpage.png",
+      "screenshot_viewport_hash": "29aa4b0ea08f14b67996c19b5820d18d080cb8db5774251d2a7a605e728319d9",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/dafabet365.in_mobile_android_20260412T054443Z_viewport.png",
+      "title": ""
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "dafabet365.in",
+      "not_before": "2025-04-30T02:27:56"
+    },
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "www.dafabet365.in",
+      "not_before": "2025-04-30T02:06:21"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "3.33.130.190",
+      "15.197.148.33"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "ns57.domaincontrol.com",
+      "ns58.domaincontrol.com"
+    ],
+    "TXT": []
+  },
+  "domain": "dafabet365.in",
+  "evidence_manifest_hash": "535174ef1f7900e2782eecb97caf5d53bbbc2cfbebd043aad46163cce237b283",
+  "input_url": "https://dafabet365.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "15.197.148.33",
+      "3.33.130.190"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=1&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parking/landers/dafabet365.in?trafficTarget=gd&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=2&abp=2&gdabp=true"
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parkingEvents?abp=1&gdabp=true"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://dafabet365.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://dafabet365.in/lander"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google.com/adsense/domains/caf.js?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://img1.wsimg.com/parking-lander/static/js/main.89f98556.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://img1.wsimg.com/parking-lander/static/css/main.0e4ec69f.css"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://dafabet365.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-DAFABET365.IN-20260412-054443",
+  "response_headers": {
+    "content-length": "114",
+    "content-type": "text/html",
+    "date": "Sun, 12 Apr 2026 05:44:35 GMT"
+  },
+  "screenshot_phash": "8000000000000000",
+  "threat_intel": {
+    "abuseipdb_isp": "Amazon Technologies Inc.",
+    "abuseipdb_score": 59,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/f148b947-6b93-45dc-a5d2-b6d83fd90599.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

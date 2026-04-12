@@ -1,0 +1,155 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:40:29Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T054025Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://1xbet-app-download.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Index of /\n \tName\tLast modified\tSize\tDescription\n\n\n \tcgi-bin/\t2020-02-13 10:44\t-\t \n",
+      "profile": "desktop",
+      "screenshot_full_hash": "0a4f6dee54dc8bc4196fb4b059a4e1eea6969e2b77e50ee52d523a1a258f5715",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-app-download.in_desktop_20260412T054025Z_fullpage.png",
+      "screenshot_viewport_hash": "0a4f6dee54dc8bc4196fb4b059a4e1eea6969e2b77e50ee52d523a1a258f5715",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-app-download.in_desktop_20260412T054025Z_viewport.png",
+      "title": "Index of /"
+    },
+    {
+      "capture_ts_utc": "20260412T054029Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://1xbet-app-download.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Index of /\n \tName\tLast modified\tSize\tDescription\n\n\n \tcgi-bin/\t2020-02-13 10:44\t-\t \n",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "5170e8a9fd2d6f4fd05bffc2202ecc09aab391e475cd3b217285d49178742b20",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-app-download.in_mobile_android_20260412T054029Z_fullpage.png",
+      "screenshot_viewport_hash": "1695f843dd105471cf7ff314dfa93c24615e6b3be315f7002962d09fda9abb32",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-app-download.in_mobile_android_20260412T054029Z_viewport.png",
+      "title": "Index of /"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "*.1xbet-app-download.in",
+      "not_before": "2026-03-28T13:38:56"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "1xbet-app-download.in",
+      "not_before": "2026-03-28T13:38:56"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "104.21.4.222",
+      "172.67.132.139"
+    ],
+    "AAAA": [
+      "2606:4700:3032::6815:4de",
+      "2606:4700:3036::ac43:848b"
+    ],
+    "MX": [
+      "0 _dc-mx.631e1635d533.1xbet-app-download.in"
+    ],
+    "NS": [
+      "junade.ns.cloudflare.com",
+      "paloma.ns.cloudflare.com"
+    ],
+    "TXT": []
+  },
+  "domain": "1xbet-app-download.in",
+  "evidence_manifest_hash": "31a21c1c4608b60a3d34f35097387d29713708bb2278d917eaf1441554b325e2",
+  "input_url": "https://1xbet-app-download.in",
+  "linked_domains": [
+    "1xbet-download.in"
+  ],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.4.222",
+      "172.67.132.139",
+      "188.114.97.3",
+      "2606:4700:3032::6815:4de",
+      "2606:4700:3036::ac43:848b"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://1xbet-app-download.in/"
+      }
+    ],
+    "third_party": []
+  },
+  "redirect_chain": [
+    "https://1xbet-app-download.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-1XBET-APP-DOWNLOAD.IN-20260412-054029",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "9eafe550af4cb57d-ORD",
+    "content-encoding": "br",
+    "content-type": "text/html;charset=ISO-8859-1",
+    "date": "Sun, 12 Apr 2026 05:40:21 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P6rUexyJ%2FRKfYGrOYibmXi1gqAU%2BX3QvIaAW7IPYD%2FvHPkN3KZs7f%2BdW36TfE7dMA4VV%2Fwzn0R5w0nu2om2xFYldK70yUotWqRj%2F29ItmQinWs6vpZwciB3qeysL%2BzSoh05gOxzQKkA%3D\"}]}",
+    "server": "cloudflare"
+  },
+  "screenshot_phash": "8303030707fffcf8",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019c4a99-edd1-76c2-8396-a4780ecbbd3a.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

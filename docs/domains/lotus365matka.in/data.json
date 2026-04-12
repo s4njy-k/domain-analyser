@@ -1,0 +1,180 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:56:43Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055636Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://lotus365matka.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Welcome to Lotus365 Matka\n\nCopyright © 2026 BakeMyTech. All rights reserved.",
+      "profile": "desktop",
+      "screenshot_full_hash": "5d91b84e702cc4ca6a54b2a3e6b77c00f07566e860f9d8bdc1f622cd886ba5fd",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365matka.in_desktop_20260412T055636Z_fullpage.png",
+      "screenshot_viewport_hash": "5d91b84e702cc4ca6a54b2a3e6b77c00f07566e860f9d8bdc1f622cd886ba5fd",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365matka.in_desktop_20260412T055636Z_viewport.png",
+      "title": "Welcome To Lotus365 Matka"
+    },
+    {
+      "capture_ts_utc": "20260412T055643Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://lotus365matka.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Welcome to Lotus365 Matka\n\nCopyright © 2026 BakeMyTech. All rights reserved.",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "2a8fea8b991c1bffa9fac2474c6aef45b8c4d3802315297839556607e4e65ebc",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365matka.in_mobile_android_20260412T055643Z_fullpage.png",
+      "screenshot_viewport_hash": "2a8fea8b991c1bffa9fac2474c6aef45b8c4d3802315297839556607e4e65ebc",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365matka.in_mobile_android_20260412T055643Z_viewport.png",
+      "title": "Welcome To Lotus365 Matka"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R12",
+      "name": "lotus365matka.in",
+      "not_before": "2026-03-24T20:47:19"
+    },
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R12",
+      "name": "www.lotus365matka.in",
+      "not_before": "2026-03-24T20:47:19"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "88.223.87.21",
+      "147.79.79.152"
+    ],
+    "AAAA": [
+      "2a02:4780:4d:d8c4:987b:2705:ef99:1696",
+      "2a02:4780:4c:5c66:f341:64d2:ada:b1d2"
+    ],
+    "MX": [
+      "10 mx2.hostinger.in",
+      "5 mx1.hostinger.in"
+    ],
+    "NS": [
+      "ns1.dns-parking.com",
+      "ns2.dns-parking.com"
+    ],
+    "TXT": [
+      "v=spf1 include:_spf.mail.hostinger.com ~all"
+    ]
+  },
+  "domain": "lotus365matka.in",
+  "evidence_manifest_hash": "ab5818892b6ce12a46447d853d73e6f75f5ff09027712041a09b6e58b4d060d2",
+  "input_url": "https://lotus365matka.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "147.79.79.152",
+      "2a02:4780:42:8897:95c4:9c77:9e9b:24bb",
+      "2a02:4780:4c:5c66:f341:64d2:ada:b1d2",
+      "2a02:4780:4d:d8c4:987b:2705:ef99:1696",
+      "88.223.87.21"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://lotus365matka.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://lotus365matka.in/assets/style.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://lotus365matka.in/assets/images/logo1.png"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://lotus365matka.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-LOTUS365MATKA.IN-20260412-055643",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "content-encoding": "br",
+    "content-security-policy": "upgrade-insecure-requests",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 05:56:32 GMT",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "pragma": "no-cache",
+    "retry-after": "60",
+    "server": "hcdn",
+    "set-cookie": "ci_session=3bf92c7d924dbce130f4c3f293a281edc26a03b3; expires=Sun, 12-Apr-2026 07:56:32 GMT; Max-Age=7200; path=/; HttpOnly; secure",
+    "x-hcdn-cache-status": "DYNAMIC",
+    "x-hcdn-request-id": "2626cf3691516f5ad3230bc0532bba88-bos-edge5",
+    "x-hcdn-upstream-rt": "0.753",
+    "x-powered-by": "PHP/7.2.34"
+  },
+  "screenshot_phash": "a33326a3e6a2a6b3",
+  "threat_intel": {
+    "abuseipdb_isp": "HOSTINGER-HOSTING",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/305aa0d7-a560-4953-856c-b67e3ec4119a.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

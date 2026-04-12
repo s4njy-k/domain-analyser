@@ -1,0 +1,125 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 0,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "INACTIVE",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:58:00Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055800Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://pmkisanstatuscheck.co.in/\nCall log:\nnavigating to \"https://pmkisanstatuscheck.co.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "desktop",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    },
+    {
+      "capture_ts_utc": "20260412T055800Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://pmkisanstatuscheck.co.in/\nCall log:\nnavigating to \"https://pmkisanstatuscheck.co.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "mobile_android",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "pmkisanstatuscheck.co.in",
+      "not_before": "2025-06-08T15:43:12"
+    },
+    {
+      "issuer": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2",
+      "name": "www.pmkisanstatuscheck.co.in",
+      "not_before": "2025-06-08T14:48:42"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "*.pmkisanstatuscheck.co.in",
+      "not_before": "2025-04-21T11:20:55"
+    }
+  ],
+  "dns_records": {
+    "A": [],
+    "AAAA": [],
+    "MX": [],
+    "NS": [],
+    "TXT": []
+  },
+  "domain": "pmkisanstatuscheck.co.in",
+  "evidence_manifest_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "input_url": "https://pmkisanstatuscheck.co.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "172.67.166.37"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [],
+    "third_party": []
+  },
+  "redirect_chain": [],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PMKISANSTATUSCHECK.CO.IN-20260412-055800",
+  "response_headers": {},
+  "screenshot_phash": null,
+  "threat_intel": {
+    "abuseipdb_isp": null,
+    "abuseipdb_score": null,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/818df6c8-db69-426a-b265-4adce0143150.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "true",
+    "timestamp": "20250316090115",
+    "url": "http://web.archive.org/web/20250316090115/https://www.pmkisanstatuscheck.co.in/"
+  }
+}

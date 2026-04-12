@@ -1,0 +1,187 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:40:10Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T054005Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.searchhounds.com/articles/how-to-discover-and-download-the-years-best-songs.html?psystem=PW&domain=1xbetdownload.co.in&oref=https%3A%2F%2F1xbetdownload.co.in%2F&trafficTarget=reseller",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Access Denied\nYou don't have permission to access \"http://www.searchhounds.com/articles/how-to-discover-and-download-the-years-best-songs.html?\" on this server.\n\nReference #18.29714017.1775972400.1c6ace0b\n\nhttps://errors.edgesuite.net/18.29714017.1775972400.1c6ace0b",
+      "profile": "desktop",
+      "screenshot_full_hash": "5db5881138212a31fd77b69e2927ff0c1f8d6ba5bc8fe89459224ca3f9d7e19b",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbetdownload.co.in_desktop_20260412T054005Z_fullpage.png",
+      "screenshot_viewport_hash": "5db5881138212a31fd77b69e2927ff0c1f8d6ba5bc8fe89459224ca3f9d7e19b",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbetdownload.co.in_desktop_20260412T054005Z_viewport.png",
+      "title": "Access Denied"
+    },
+    {
+      "capture_ts_utc": "20260412T054010Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.searchhounds.com/articles/how-to-discover-and-download-the-years-best-songs.html?psystem=PW&domain=1xbetdownload.co.in&oref=https%3A%2F%2F1xbetdownload.co.in%2F&trafficTarget=reseller",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Access Denied\nYou don't have permission to access \"http://www.searchhounds.com/articles/how-to-discover-and-download-the-years-best-songs.html?\" on this server.\n\nReference #18.21714017.1775972405.22aafc5c\n\nhttps://errors.edgesuite.net/18.21714017.1775972405.22aafc5c",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "0dba3c0c07c40124adde88b30f344f0f4ebae18ad412a599d6252309276289e7",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbetdownload.co.in_mobile_android_20260412T054010Z_fullpage.png",
+      "screenshot_viewport_hash": "b97e8bede83fadcd3e020a1ee9d7811f25db946ad51cf35f63c09fa6fd1b5490",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbetdownload.co.in_mobile_android_20260412T054010Z_viewport.png",
+      "title": "Access Denied"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=GoDaddy.com, CN=GoDaddy TLS Intermediate CA DV - R1v1",
+      "name": "www.1xbetdownload.co.in",
+      "not_before": "2026-03-30T22:11:33"
+    },
+    {
+      "issuer": "C=US, O=GoDaddy.com, CN=GoDaddy TLS Intermediate CA DV - R1v1",
+      "name": "1xbetdownload.co.in",
+      "not_before": "2026-03-30T16:19:29"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "*.1xbetdownload.co.in",
+      "not_before": "2026-03-30T08:30:08"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "76.223.67.189",
+      "13.248.213.45"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "ns54.domaincontrol.com",
+      "ns53.domaincontrol.com"
+    ],
+    "TXT": []
+  },
+  "domain": "1xbetdownload.co.in",
+  "evidence_manifest_hash": "2a9402883029c04e9371bc4db6312f3c79d5754de55f0594700444a26a94e4ef",
+  "input_url": "https://1xbetdownload.co.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "13.248.213.45",
+      "2a02:26f0:1700:11::b856:6790",
+      "76.223.67.189"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=1&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parking/landers/1xbetdownload.co.in?trafficTarget=reseller&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=2&abp=2&gdabp=true"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://1xbetdownload.co.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://1xbetdownload.co.in/lander"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google.com/adsense/domains/caf.js?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://img1.wsimg.com/parking-lander/static/js/main.89f98556.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://img1.wsimg.com/parking-lander/static/css/main.0e4ec69f.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://www.searchhounds.com/articles/how-to-discover-and-download-the-years-best-songs.html?psystem=PW&domain=1xbetdownload.co.in&oref=https%3A%2F%2F1xbetdownload.co.in%2F&trafficTarget=reseller"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://1xbetdownload.co.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-1XBETDOWNLOAD.CO.IN-20260412-054010",
+  "response_headers": {
+    "content-length": "114",
+    "content-type": "text/html",
+    "date": "Sun, 12 Apr 2026 05:40:00 GMT"
+  },
+  "screenshot_phash": "8707070727e3e3d3",
+  "threat_intel": {
+    "abuseipdb_isp": "Amazon.com, Inc.",
+    "abuseipdb_score": 25,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fcc-4011-744c-8387-2c9f659cfad6.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [
+      {
+        "confidence": "CLEAR",
+        "evidence": "The page appears to solicit credentials or impersonate a legitimate service.",
+        "offence": "Cheating by personation using computer resource",
+        "statute": "IT Act 2000, Section 66D"
+      },
+      {
+        "confidence": "PROBABLE",
+        "evidence": "The site content suggests inducement of victims to disclose information or transfer value.",
+        "offence": "Cheating by deception",
+        "statute": "BNS 2023, Section 318"
+      }
+    ],
+    "brand_impersonated": "Paytm",
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "The website appears to impersonate a legitimate brand or service to obtain credentials, OTPs, or payment details.",
+    "illegal_activity_description": "The collected evidence is consistent with a phishing workflow that impersonates a legitimate service and induces victims to submit sensitive information. Such conduct supports digital personation and deception-based cheating provisions under Indian cybercrime law.",
+    "priority_score": 0,
+    "recommended_action": "Immediate blocking review under IT Act S.69A and referral for takedown/IOC dissemination.",
+    "severity": "MEDIUM",
+    "threat_category": "PHISHING",
+    "victim_profile": "Indian consumers and account holders targeted through digital impersonation."
+  },
+  "analysis_ts_utc": "2026-04-12T05:55:26Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055519Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://fairplay-live.com/",
+      "http_status": 200,
+      "meta_desc": "Fairplay live is a reliable and official website for betting. Learn how to complete registration, deposit, and place bets on your favorite team. Enjoy the best odds now!",
+      "page_text": "Apps\nPromo Code\nBonuses\nSports\nJOIN NOW\nDOWNLOAD APP\nDeposit & Withdrawal\nLoyalty Program\nCasino\nFantasy Sports\nEnglish\nFairPlay – India Best Sports Betting Live Site\n\nThe FairPlay Pro bookmaker and casino is a newcomer on the Indian market, but the platform has already managed to gain a huge player base. To stand out from the competition, the website is set to revolutionize sports betting in India with a better choice of betting options, more profitable odds, and focus on major sports types. The casino section of the site has plenty of classic card and table games with live dealers, as well as exotic titles and game shows.\n\nJOIN NOW\nSIGN UP and GRAB YOUR\n200% DEPOSIT BONUS and 50,000 INR\nGET BONUS\nOfficial website\thttps://fairplay.in/\nFounded\t2019\nOwner\tFairPlay Group\nLicense\tGaming Curacao\nServices\tSports betting, gambling (live card and table games, slots)\nWelcome Bonus\t100% match bonus of up to ₹3,000 or 10% of the deposit amount (when depositing ₹100,000 and more)\nMinimum Deposit\t₹500\nIndian Players\tYes\nIndian Rupees\tYes\nMobile Options\tWebsite, app (Android)\nSupport\tLive chat\nPromo Code\nWebsite Interface\nTypes of Bets\nRegistration\nAccount Deletion\nHow to place Bet\nLive Casino\nLive Card\nPayment Options\nApp\nMobile Site\nFairPlay Advantages\nLicense & Regulation\nRestricted Countries\nLegality\nSupport\nFAQ\nFairPlay Promo Code India\n\nFairPlay rewards its active players with random and seasonal bonuses that come as gift cards and promo codes. Make sure you agree to receive newsletters and notifications from the platform via phone and email to receive codes. You can also check out affiliate websites for exclusive promo codes and get all sorts of hefty offers. Typically, it’s a match bonus for your next deposit to spend either in the sportsbook or casino section.\n\nOnce you find or receive a promo code, you can use it in a few steps:\n\nLog in to FairPlay and click on the wallet icon in the upper-right corner;\nScroll down and click the “Redeem Gift Card” button;\nEnter the code in the corresponding form and hit “Redeem.”\n\nAll bonuses obtained from gift cards come with wagering requirements. You can get acquainted with them in Rules and Regulations. Apart from promotional codes, you can also benefit from referral and affiliate ones upon registration. You get bonus money while the person who referred you or FairPlay’s affiliate gets extra money each time you make a deposit.\n\n⠀COPY\n⠀⠀⠀⠀⠀BONUS\nGET BONUS\nActive until: 11th of July 2025 AM\nFairPlay Live Website Interface\nInterface Cricket Tab\nInterface Main Screen\nInterface News\n\nThe overall design of the platform is done in dark tones with a pinch of orange. The welcome page greets you with the latest promotions and announcements. Scrolling down, you’ll find bars with brief info about FairPlay games, the loyalty program, game providers, available payment methods, and the button to download the mobile app.\n\nThe buttons for login and registration are right where you expect – in the upper-right part of the page. To the left of them, you’ll find the Menu tab with nine sections: Markets, News, About Us, Tutorials, Privacy Policy, FAQs, Promotions, Loyalty, and Affiliates.\n\nRight below the menu and the login button are the main sections of the site:\n\nInplay. This is where you can find all games currently playing, with the available sports to the left and the list of all events in the center. Clicking on the green “play” button near the event, you can access the live broadcast.\nCricket, Soccer, and Tennis. These are three separate tabs for the major sports covered on FairPlay. They share the same interface, with the list of leagues and matches to the left, the high odds in the middle, and the bet slip to the right.\nPremium Sportsbook. That’s where you can find other types of sports on the platform. The overall design of this section is different from the rest of the site, but the layout is mostly the same. The list of available sports, as well as the “Live,” “Schedule,” and “My bets” tabs are on the left, the list of events is in the middle, and the bet slip is in the lower-right corner.\nLive casino. In this category, you’ll find the majority of live games on the site. The section is separated into several tabs.\nLive Cards. This one contains the list of live dealer card games.\nSlots. This tab has all slots you can play on the platform.\nJOIN NOW\nFairPlay Sports Types of Bets\n\nThe bookie focuses on three sports types (cricket, tennis, and soccer), covering all major leagues and tournaments. Apart from that, the site has 29 other sports ranging from baseball and basketball to snooker and stock car racing. Fans of eSports can bet on events in seven categories in FairPlay sports: FIFA, eCricket, eFighting, NBA 2K, eTennis, Rocket League, and eSoccer. The site also accepts bets on Dota 2 and Counter Strike events.\n\nAs for bet types, players can choose from three available options:\n\nSingle. A simple bet made on one particular outcome.\nCombo. It’s a chain where each following bet multiplies the previous one. If at least one bet in the chain loses, the combo falls apart.\nSystem. Similar to a Combo, a System bet combines several events in a chain, but it won’t fall apart if one or several bets lose.\n\nIn addition to bet types, FairPlay provides a great selection of markets for every individual sport. The main market types include:\n\nMatch (1X2). A bet on one of three outcomes, which are the win of one of the teams or a draw.\nCorrect Score. A bet on a particular game score by the end of the match.\nOver/Under. A bet on the number of occurrences like goals, corners, points, penalties, etc. being higher or lower than a certain predetermined number.\nOdd/Even. A bet on a number of occurrences being odd (1, 3, 5, etc.) or even (2, 4, 6, etc.).\nHalf-time/Full-time. A bet on the outcome of half-time or the full match.\nHandicap. Additional bets that boost the odds.\n\nSome markets are common to all sports, while others are unique to certain types of disciplines.\n\nHow to Register into FairPlay?\n\nYou’re free to browse the website and explore the list of available sports without registering, but if you want to start betting with real money or play online casino, you need to sign up. The process is quite smooth and takes only four steps:\n\n1\n\nVisit FairPlay and click on the “Join Now” button in the top-right corner of the screen.\n\n2\n\nOn the new page, fill in the registration form. The official site will ask you for the standard info.\n\n3\n\nAgree to receive promotional letters (optional). Double-check the info you provided and click “Register”;\n\n4\n\nOn the next page, type in the code you received in the SMS and complete the captcha.\n\nREGISTRATION\n\nThat’s it. The site will take you to the main page and ask you to accept the terms and conditions. From this moment, you can deposit, bet on sports, and play casino games. But you won’t have full access to FairPlay features until you pass the verification procedure.\n\nAccount Verification\n\nApart from simple verification through phone number, you may have to pass a document check to withdraw your winnings. This way, you guarantee that the winnings go straight to your account and prove that you’ve reached the legal age of 18 years old. You may either wait until the administration sends you a request to confirm your ID or contact the support service yourself:\n\n1\n\nHead to the live chat in the lower-right part of the main page;\n\n2\n\nInform the support that you want to confirm your identity and wait for the response with instructions;\n\n3\n\nProvide copies of one of the following documents;\n\n4\n\nWait until the administration verifies the info. You’ll receive a message with the results.\n\nThe verification process lasts for around 1-2 days. After you pass it, there won’t be any problems with withdrawals in the future. Keep in mind that the website may use your data to perform extra checks like ordering your credit report.\n\nFairPlay Club Account Deletion\n\nIn case you want to quit playing or don’t want to be a member of FairPlay anymore, the site offers an option to close your account by contacting the support team. The account won’t be deleted instantly after your request is approved, so you’ll be able to restore access to it through the Client Service.\n\nAlternatively, you can simply restrict access to your profile with the “Self-Exclude” feature. Reach out to support and select one of the available self-exclusion periods: 6 months, 1 year, 2 years, 3 years, 4 years, and 5 years.\n\nOnce the website’s support receives your request, FairPlay will reach out to you to settle questions regarding the money left on your player account, bonus funds, and cancel any outstanding bets you have at the moment. Keep in mind that you’ll be excluded from all platforms operated by the FairPlay Group.\n\nIf you’re opting for something less radical, feel free to use the “Take a Break” option. It’s similar to self-exclusion but with smaller time periods ranging from 24 hours to 6 weeks.\n\nHow to Place a Bet at FairPlay?\n\nThanks to a simple and user-friendly UI, placing a bet on FairPlay.pro is quick. Note that the platform has two separate betting sections with slightly different interfaces.\n\nTo bet on cricket, tennis, or soccer in their dedicated sections:\n\nSign up or log in and make a deposit;\nOn the main page, click on the “Soccer,” “Cricket,” or “Tennis” tab;\nScroll through the list of games and click on the one you need;\nSelect the market and click on the odds;\nIn the bet slip to the right, adjust the odds (optional) and enter the stake amount;\nConfirm the bet before placing and hit “Place bet.”\n\nFor betting on other sports types, head to the “Premium Sportsbook” section:\n\nSelect the sport from the list to the left;\nClick on the game to open the market menu;\nChoose the market;\nIn the bet slip, select the type of bet (combo and system are available when choosing 2 or more markets), set the stake amount, agree to odds changes, and click “Place Bet.”\n\nYou can track all ongoing bets in the “Open bets” section.\n\nBET NOW\n\nFairPlay Live Casino\n\nThe “Live Casino” section on FairPlay is powered by Evolution Gaming. Upon visiting it, you get into a lobby, from which you can select the game. Overall, there are eight separate tabs in the section:\n\nTop games.\n\nThis is where you can find all popular table and card titles, as well as game shows;\n\nRoulette.\n\nYou can choose from 16 Roulette variations, including French, American, Lightning, Immersive, VIP Roulette, and so on;\n\nBaccarat.\n\nThis section contains 33 options, which are mostly different tables for the same game. Here, you’ll also find a table for Fan Tan;\n\nBlackjack.\n\nThis tab offers 67 Blackjack tables for different variations of the iconic game;\n\nDice.\n\nFans of Sic Bo and the classic dice can play both games (one table per option);\n\nPoker.\n\nTry your hand at one of six Poker variations: classic and 2-Hand Casino Hold’em, Extreme Texas Hold’em, Caribbean Stud, Triple Card Poker, and Texas Hold’em Bonus Poker;\n\nGame Shows.\n\nThis section is for Wheel of Fortune type games played with hosts. You can play Dream Catcher, Cash or Crash, Crazy Time, and Mega Ball in addition to Football Studio Roulette and dice tables;\n\nFirst Person.\n\nThese are variations of classic online games that offer more immersion through first-person gameplay.\n\nLive Card\n\nIn this tab, you’ll find 13 card games, most of which are unavailable in the “Live Casino” section. The list includes a few exotic options you won’t find on other platforms in India:\n\nTeen Patti Live (two tables);\nAndar Bahar;\nPoker;\n7 Up 7 Down;\n32 Cards;\nHi-Lo;\nAmar Akbar;\nDragon Tiger;\nBollywood Casino;\n20-20;\n6-player Poker’\nWorli Matka.\nSlot Games\n\nWhile the choice of titles in the “Slots” category is quite modest (only 41 games are available at the moment), Fairplay features some of the top games on the market, such as:\n\nGonzo’s Quest. One of the top NetEnt titles, Gonzo’s Quest takes to the legendary city of Eldorado. The game offers a high RTP of 95.97 and great mechanics like avalanche reels that replace matching symbols with new ones to form more combos.\nNarcos. One of the newest NetEnt games, the Narcos slot was inspired by the same-named American TV show. The game immerses you into the atmosphere of danger and cartels, and the RTP of 96.27% guarantees large winnings.\nStarburst. This iconic slot is known to every casino player around the world. Developed by NetEnt, the game offers a decent RTP of 96.09% and a plethora of bonus features like expanding wilds and respins.\n\nBesides that, FairPlay has several slots dedicated to famous rock bands and Chinese culture.\n\nFairPlay Payment Options for Players from India\n\nThe wallet section on FairPlay is different from what you expect to see on a online betting site. Entering the deposit page, you won’t find a familiar selection of payment options. Instead, you’ll see three general options.\n\nDeposit Methods\n\nTo deposit money on your player account, you can use the following methods:\n\nMethod\tMinimum Deposit\tMaximum Deposit\nPayment Gateway (UPI, PayTM, Netbanking)\t₹500\t₹500,000\nBank Transfer\t₹5,000\t₹500,000\nCrypto Transfers (BTC, BTH, ETH)\t₹3,721 (ETH)₹1,860 (BTC)₹1,116 (BTH)\tNot set\nOffline Transfers\tIndividual\t\nWithdrawal Methods\n\nAs for withdrawals, you have two major options:\n\nMethod\tMinimum Deposit\tMaximum Deposit\nBank Transfer\t₹1,000\tUnlimited\nOffline Transfers\tIndividual\t\n\nBefore you can withdraw cash through a bank transfer, you need to add a bank account to your profile. It takes around 12 hours to process a withdrawal request. To cash in and out with offline transfers, you need to contact support.\n\nFairPlay App – Android and iOS\n\nIf you want to keep track of your bets on the go, FairPlay offers a user-friendly mobile application. Powered by your device’s hardware, the app guarantees high speed and quality of casino games and zero lags when you bet on sports.\n\nMobile App for Android Devices\n\nThe version for Android-based gadgets welcomes players with the familiar design with the FairPlay logo on top, the menu bar to the top left, and then the log in and Join Now buttons to the right. The FairPlay registration process follows the desktop site, and if you’re already a member, you can access your Fairplay account with your email and password.\n\nThe bar with the Sportsbook, Casino, Live Cards, and Slots tabs is slightly different from the one in the PC version. Sections with cricket, soccer, and tennis events have a separate bar.\n\nIt only takes a few steps to install the app:\n\nGo to your device’s settings, proceed to “Security” > “Unknown sources,” and allow installing third-party software;\nHead to the FairPlay Club welcome page via a mobile browser, scroll down, and tap the “Download the Fairplay App” button to get the .apk file;\nOnce the file is downloaded, open it and confirm the installation.\n\nYou can now register or log in and enjoy top-notch casino games and a variety of betting options.\n\nSystem Requirements\n\nBefore downloading the mobile app on your Android device, make sure it meets the following requirements:\n\nAndroid version\t6.0+\n.apk file size\t18.2 MB\nRAM\t2 GB+\nProcessor frequency\t1.2 GHz+\n\nThe app may work on gadgets with lower specs, but its stability isn’t guaranteed.\n\nDOWNLOAD APP\n\nApp for iPhone and iPad \n\nAt the moment, FairPlay only has an app for Android devices. If you want to play on the go via an iOS-based gadget, you can sign up on the mobile website that works with almost all iPhones and iPads on the market.\n\nSystem Requirements\n\nSince the mobile website doesn’t have strict hardware requirements, you only need to be sure your device runs iOS 11.0 and higher.\n\nFairPlay Mobile Website\n\nIn case you don’t want to install the application or your device doesn’t meet the technical requirements, feel free to sign up through the mobile FairPlay website. It offers the same set of features as the desktop and app versions. You can:\n\nBet on sports;\nPlay slots and online casino games;\nDeposit and withdraw;\nClaim Fairplay bonuses;\nManage your account;\nRead news and so on.\n\nWhen it comes to the visuals, the mobile version is a complete copy of the desktop site. Almost all elements of the interface are in the same place. The menu tab is in the upper-left part and the profile, wallet, and search bar are to the right. You won’t find the “Open Bets” section in its initial place, as well as the “News” and “Blogs” tabs. The interface has been narrowed to fit phone and tablet screens. The site itself is quick and responsive.The mobile FairPlay site has a few advantages over the application, such as simpler requirements, and it doesn’t eat up memory space. But when it comes to speed, the app is somewhat superior.\n\nJOIN NOW\nWhy is FairPlay the Best Choice for Players from India?\n\nWith sports betting rapidly entering the lives of users from India, dozens of bookmaker’s have entered the Indian market. FairPlay is set to stand out from the competition, legally operating under Curacao licensing. The platform has been developed with convenient betting and casino experience in mind, catering to every player’s needs. Thanks to the technologies implemented during FairPlay’s development and the attitude towards Indian bettors, the site offers a plethora of benefits:\n\nThe highest betting odds currently available on the market. At the moment, the FairPlay betting company is the only bookmaker that calculates odds based on players’ bets. This results in a fair betting experience and more profits.\nThe website comes with the biggest selection of options for advance and fancy markets spanning every top league in such sports as cricket, tennis, and soccer.\nThe speed of bet acceptance on the platform is higher than on any online bookmaker in India.\nA unique deposit and withdrawal system that includes a variety of banking methods, You can choose from bank transfers, card payments, and digital wallets. Apart from that, players can make payments in several cryptocurrencies.\nLatest security technologies that keep personal information safe. The current list of safety measures includes SSL encryption that protects the data when you share it and Firewall that doesn’t allow third parties to access info on the website’s servers.\n In-built player for watching live broadcasts of major sports events covered on FairPlay.\nA wide array of live dealer games that offer a true-to-life experience. Play your favorite card games and Roulette with real croupiers.\nA hefty 100% match bonus for your first deposit at Fairplay. Get acquainted with the world of sports betting without risking your bankroll.\nPlayer settings with customizable bet amounts.\n\nCompetent and friendly customer Fairplay support team is available around the clock, as well as a detailed FAQ section and video tutorials.\n\nLicense and Regulation\n\nFairPlay Club is licensed by Gaming Curacao, a company regulated by the Curacao eGaming Commission. The platform is legally allowed to provide site for sports betting and casino services in countries that recognize a CGC license or don’t regulate online betting and gambling, so Indian residents can safely play here.\n\nTake note that the website reserves the right to use your personal info to perform checks and is obliged to disclose it if required by the law. Apart from that, the FairPlay official website may share your data with carefully selected partners. The site never gathers personal information without your knowledge. The platform may also restrict access to its services, as well as void or withhold bets under certain conditions like technical failures or any other malfunction that threatens its integrity.\n\nPlayers aren’t allowed to have multiple accounts on the website. If the platform proves that the bettor operates more than one account, it may void bets or withhold winnings obtained through all accounts of the player.\n\nFairPlay Sports Restricted Countries\n\nFairPlay India offers top-notch betting and gambling all around the world, including the Asian region. Thanks to the license issued by a company based in Curacao, the platform is allowed to legally operate in almost every country in the European Union. However, players from the following countries are prohibited from playing games:\n\nCanada;\nChina;\nSweden;\nRussia;\nUkraine;\nThe USA.\n\nWhile the Live Casino and Slots sections are unavailable for players in these regions, they still can enjoy sports betting.\n\nIs FairPlay Legal in India?\n\nSince Indian laws don’t provide solid restrictions for betting and gambling websites registered offshore, FairPlay is legal in the country. You won’t face any problems with the law for playing on the website. The only penalty you may face is an exclusion if you’re under 18.\n\nSupport\n\nAt the moment, you can get in touch with the support team through a live chat in the bottom-right corner of any page on the website. You can expect to get help around the clock, and the response time is quite short around 5 minutes.\n\nOn the other hand, you may not need to contact support at all because FairPlay has a detailed FAQ section that you can access both through a separate tab at the bottom of the main page or via the live chat window. It contains answers to dozens of questions regarding general gameplay, banking, account creation, and so on. Additionally, the website provides video tutorials for the most common types of interaction like placing bets, withdrawing money, etc.\n\nFAQ\nWhat games are available at FairPlay?\nCan I bet or play games without registering?\nWhat bonuses can I claim at FairPlay?\nCan I trust games at FairPlay?\nCan I register from outside India?\nWhat do I need to withdraw from FairPlay?\nLeave a Reply\n    \n\nBrahma\nApril 5, 2022 1:53 pm\n\nI’ve been betting with bookmaker Fairplay India for about a year now, and I think it’s a great place to relax mind and body. My withdrawals are always very fast, and I get quite a few bonuses. They can be given out several times a week. I mainly came to this site for the sake of doing IPL Fairplay. The odds on cricket are always very big, especially when there is a live match.\n\nReply\nSitara\nApril 6, 2022 11:52 am\n\nGreat bookmaker and online casino. Been playing since 2019 and have never had any issues. Fairplay. com also provides full support for their customers, and I sometimes contact them to ask about personal bonuses. So overall, I am happy with Fairplay betting. In all this time, I have already placed many bets on various sports ranging from cricket, football and more. I like how the pre-match betting menu works, and there is always a big number of outcomes and, therefore, good odds there.\n\nReply\nSudhir\nApril 12, 2022 9:31 am\n\nEvery time I make a Fairplay login, I’m often amazed how the bookmaker can always throw in lots of bonuses for sports betting or for slots and other gambling on the site. I have only been betting on the site for a few months now, and I have already been amazed. I have already made 2-3 withdrawals to my paytm, and everything was on time and without any delays. The site is beautiful, with great odds on IPL Fairplay. I am completely satisfied with everything in this office.\n\nReply\nArungedan\nApril 14, 2022 8:33 am\n\nHello, the great betting company where I bet on Fairplay in football. I have bet with many different other bookmakers, but from my personal experience, I can say that I have not met a more reliable office than Fairplay sports. I have already made withdrawals several times. Of course, I had to verify, which took a few days, but all in all, it is fast. I also downloaded the mobile app for Android from the official website, and now I bet through it.\n\nReply\nAvyaan\nMay 30, 2022 12:10 pm\n\nGood day everyone, I’ve been betting on Fairplay. club for about a year now, and in that time, I haven’t had any problems at all with the site or the bookmaker in general. I have read the bad reviews, and I don’t understand why people break the rules of the site and, in general, do not understand how to bet, and it makes me laugh. The bookmaker provides a very good bonus, including because of and in general other personal bonuses. I’ve already withdrawn over two hundred thousand INR, so I’m happy with everything.\n\nReply\nYash\nJune 14, 2022 12:42 pm\n\nThis is the best bookmaker in the last few years that I have found, and I used to bet with another one where there was constant confusion with the odds and with strange bonuses. However, I am happy that I finally found Fairplay. In addition, the company has a loyalty programme with which I understand you can get even more benefits and personal bonuses. Yes, basically, I have withdrawn a large amount of rupees even without bonuses in all the time I have been playing with this bookmaker.\n\nReply\nMarj\nJune 28, 2022 10:57 am\n\nI also want to leave my review, and I haven’t started betting so far. I’m just picking the best bookmakers for myself. I already have a few thoughts on Fairplay, and I like the wide betting line, perfectly competitive odds, user-friendly website and much more. I have already withdrawn an amount of INR 30 000 from the Fairplay club and never had any problems. I like a large number of personal bonuses for users, and by and large, Fairplay is now my favourite.\n\nReply\nVardaniya\nJune 29, 2022 1:43 pm\n\nHello, I registered using my older brother’s passport details, after which I contacted support and asked if I could bet if I am under 18, and they have blocked my account. Can my account be unblocked if I send in my passport? Has anyone experienced this problem?\n\nReply\n↑\nAbout\nContact\nFairplay Affiliate Program\nIs FairPlay Legal in India\nPrivacy Policy\nResponsible Gambling\nTerms and Conditions\n\n©2025 FairPlay. All Rights Reserved. ",
+      "profile": "desktop",
+      "screenshot_full_hash": "63162b7287a0cce923fa7d41dc0cfaab1797fd5baab8be22b0499e62bf684a79",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplay-login.in_desktop_20260412T055519Z_fullpage.png",
+      "screenshot_viewport_hash": "9044277f5635f1dea6ef21c80d609b48da3b8ce398a460e099b1b4fdda0073b8",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplay-login.in_desktop_20260412T055519Z_viewport.png",
+      "title": "FairPlay – The Best India Online Betting Platform"
+    },
+    {
+      "capture_ts_utc": "20260412T055525Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://fairplay-live.com/",
+      "http_status": 200,
+      "meta_desc": "Fairplay live is a reliable and official website for betting. Learn how to complete registration, deposit, and place bets on your favorite team. Enjoy the best odds now!",
+      "page_text": "Mobile App\nBonuses\nPromo Code\nCasino\nRummy\nSlots\nSports\nTennis Betting\nSoccer\nCricket\nHorse Racing\nIPL Betting\nFantasy Sports\nAbout Us\nContact\nAffiliate Program\nDeposit & Withdrawal\nLegality\nLoyalty Program\nPrivacy Policy\nResponsible Gambling\nTerms and conditions\nEnglish\nEnglish\nहिन्दी\nবাংলা\nJOIN NOW\nDOWNLOAD APP\nFairPlay – India Best Sports Betting Live Site\n\nThe FairPlay Pro bookmaker and casino is a newcomer on the Indian market, but the platform has already managed to gain a huge player base. To stand out from the competition, the website is set to revolutionize sports betting in India with a better choice of betting options, more profitable odds, and focus on major sports types. The casino section of the site has plenty of classic card and table games with live dealers, as well as exotic titles and game shows.\n\nJOIN NOW\nSIGN UP and GRAB YOUR\n200% DEPOSIT BONUS and 50,000 INR\nGET BONUS\nOfficial website\thttps://fairplay.in/\nFounded\t2019\nOwner\tFairPlay Group\nLicense\tGaming Curacao\nServices\tSports betting, gambling (live card and table games, slots)\nWelcome Bonus\t100% match bonus of up to ₹3,000 or 10% of the deposit amount (when depositing ₹100,000 and more)\nMinimum Deposit\t₹500\nIndian Players\tYes\nIndian Rupees\tYes\nMobile Options\tWebsite, app (Android)\nSupport\tLive chat\nPromo Code\nWebsite Interface\nTypes of Bets\nRegistration\nAccount Deletion\nHow to place Bet\nLive Casino\nLive Card\nPayment Options\nApp\nMobile Site\nFairPlay Advantages\nLicense & Regulation\nRestricted Countries\nLegality\nSupport\nFAQ\nFairPlay Promo Code India\n\nFairPlay rewards its active players with random and seasonal bonuses that come as gift cards and promo codes. Make sure you agree to receive newsletters and notifications from the platform via phone and email to receive codes. You can also check out affiliate websites for exclusive promo codes and get all sorts of hefty offers. Typically, it’s a match bonus for your next deposit to spend either in the sportsbook or casino section.\n\nOnce you find or receive a promo code, you can use it in a few steps:\n\nLog in to FairPlay and click on the wallet icon in the upper-right corner;\nScroll down and click the “Redeem Gift Card” button;\nEnter the code in the corresponding form and hit “Redeem.”\n\nAll bonuses obtained from gift cards come with wagering requirements. You can get acquainted with them in Rules and Regulations. Apart from promotional codes, you can also benefit from referral and affiliate ones upon registration. You get bonus money while the person who referred you or FairPlay’s affiliate gets extra money each time you make a deposit.\n\n⠀COPY\n⠀⠀⠀⠀⠀BONUS\nGET BONUS\nActive until: 11th of July 2025 AM\nFairPlay Live Website Interface\nInterface Cricket Tab\nInterface Main Screen\nInterface News\n\nThe overall design of the platform is done in dark tones with a pinch of orange. The welcome page greets you with the latest promotions and announcements. Scrolling down, you’ll find bars with brief info about FairPlay games, the loyalty program, game providers, available payment methods, and the button to download the mobile app.\n\nThe buttons for login and registration are right where you expect – in the upper-right part of the page. To the left of them, you’ll find the Menu tab with nine sections: Markets, News, About Us, Tutorials, Privacy Policy, FAQs, Promotions, Loyalty, and Affiliates.\n\nRight below the menu and the login button are the main sections of the site:\n\nInplay. This is where you can find all games currently playing, with the available sports to the left and the list of all events in the center. Clicking on the green “play” button near the event, you can access the live broadcast.\nCricket, Soccer, and Tennis. These are three separate tabs for the major sports covered on FairPlay. They share the same interface, with the list of leagues and matches to the left, the high odds in the middle, and the bet slip to the right.\nPremium Sportsbook. That’s where you can find other types of sports on the platform. The overall design of this section is different from the rest of the site, but the layout is mostly the same. The list of available sports, as well as the “Live,” “Schedule,” and “My bets” tabs are on the left, the list of events is in the middle, and the bet slip is in the lower-right corner.\nLive casino. In this category, you’ll find the majority of live games on the site. The section is separated into several tabs.\nLive Cards. This one contains the list of live dealer card games.\nSlots. This tab has all slots you can play on the platform.\nJOIN NOW\nFairPlay Sports Types of Bets\n\nThe bookie focuses on three sports types (cricket, tennis, and soccer), covering all major leagues and tournaments. Apart from that, the site has 29 other sports ranging from baseball and basketball to snooker and stock car racing. Fans of eSports can bet on events in seven categories in FairPlay sports: FIFA, eCricket, eFighting, NBA 2K, eTennis, Rocket League, and eSoccer. The site also accepts bets on Dota 2 and Counter Strike events.\n\nAs for bet types, players can choose from three available options:\n\nSingle. A simple bet made on one particular outcome.\nCombo. It’s a chain where each following bet multiplies the previous one. If at least one bet in the chain loses, the combo falls apart.\nSystem. Similar to a Combo, a System bet combines several events in a chain, but it won’t fall apart if one or several bets lose.\n\nIn addition to bet types, FairPlay provides a great selection of markets for every individual sport. The main market types include:\n\nMatch (1X2). A bet on one of three outcomes, which are the win of one of the teams or a draw.\nCorrect Score. A bet on a particular game score by the end of the match.\nOver/Under. A bet on the number of occurrences like goals, corners, points, penalties, etc. being higher or lower than a certain predetermined number.\nOdd/Even. A bet on a number of occurrences being odd (1, 3, 5, etc.) or even (2, 4, 6, etc.).\nHalf-time/Full-time. A bet on the outcome of half-time or the full match.\nHandicap. Additional bets that boost the odds.\n\nSome markets are common to all sports, while others are unique to certain types of disciplines.\n\nHow to Register into FairPlay?\n\nYou’re free to browse the website and explore the list of available sports without registering, but if you want to start betting with real money or play online casino, you need to sign up. The process is quite smooth and takes only four steps:\n\n1\n\nVisit FairPlay and click on the “Join Now” button in the top-right corner of the screen.\n\n2\n\nOn the new page, fill in the registration form. The official site will ask you for the standard info.\n\n3\n\nAgree to receive promotional letters (optional). Double-check the info you provided and click “Register”;\n\n4\n\nOn the next page, type in the code you received in the SMS and complete the captcha.\n\nREGISTRATION\n\nThat’s it. The site will take you to the main page and ask you to accept the terms and conditions. From this moment, you can deposit, bet on sports, and play casino games. But you won’t have full access to FairPlay features until you pass the verification procedure.\n\nAccount Verification\n\nApart from simple verification through phone number, you may have to pass a document check to withdraw your winnings. This way, you guarantee that the winnings go straight to your account and prove that you’ve reached the legal age of 18 years old. You may either wait until the administration sends you a request to confirm your ID or contact the support service yourself:\n\n1\n\nHead to the live chat in the lower-right part of the main page;\n\n2\n\nInform the support that you want to confirm your identity and wait for the response with instructions;\n\n3\n\nProvide copies of one of the following documents;\n\n4\n\nWait until the administration verifies the info. You’ll receive a message with the results.\n\nThe verification process lasts for around 1-2 days. After you pass it, there won’t be any problems with withdrawals in the future. Keep in mind that the website may use your data to perform extra checks like ordering your credit report.\n\nFairPlay Club Account Deletion\n\nIn case you want to quit playing or don’t want to be a member of FairPlay anymore, the site offers an option to close your account by contacting the support team. The account won’t be deleted instantly after your request is approved, so you’ll be able to restore access to it through the Client Service.\n\nAlternatively, you can simply restrict access to your profile with the “Self-Exclude” feature. Reach out to support and select one of the available self-exclusion periods: 6 months, 1 year, 2 years, 3 years, 4 years, and 5 years.\n\nOnce the website’s support receives your request, FairPlay will reach out to you to settle questions regarding the money left on your player account, bonus funds, and cancel any outstanding bets you have at the moment. Keep in mind that you’ll be excluded from all platforms operated by the FairPlay Group.\n\nIf you’re opting for something less radical, feel free to use the “Take a Break” option. It’s similar to self-exclusion but with smaller time periods ranging from 24 hours to 6 weeks.\n\nHow to Place a Bet at FairPlay?\n\nThanks to a simple and user-friendly UI, placing a bet on FairPlay.pro is quick. Note that the platform has two separate betting sections with slightly different interfaces.\n\nTo bet on cricket, tennis, or soccer in their dedicated sections:\n\nSign up or log in and make a deposit;\nOn the main page, click on the “Soccer,” “Cricket,” or “Tennis” tab;\nScroll through the list of games and click on the one you need;\nSelect the market and click on the odds;\nIn the bet slip to the right, adjust the odds (optional) and enter the stake amount;\nConfirm the bet before placing and hit “Place bet.”\n\nFor betting on other sports types, head to the “Premium Sportsbook” section:\n\nSelect the sport from the list to the left;\nClick on the game to open the market menu;\nChoose the market;\nIn the bet slip, select the type of bet (combo and system are available when choosing 2 or more markets), set the stake amount, agree to odds changes, and click “Place Bet.”\n\nYou can track all ongoing bets in the “Open bets” section.\n\nBET NOW\n\nFairPlay Live Casino\n\nThe “Live Casino” section on FairPlay is powered by Evolution Gaming. Upon visiting it, you get into a lobby, from which you can select the game. Overall, there are eight separate tabs in the section:\n\nTop games.\n\nThis is where you can find all popular table and card titles, as well as game shows;\n\nRoulette.\n\nYou can choose from 16 Roulette variations, including French, American, Lightning, Immersive, VIP Roulette, and so on;\n\nBaccarat.\n\nThis section contains 33 options, which are mostly different tables for the same game. Here, you’ll also find a table for Fan Tan;\n\nBlackjack.\n\nThis tab offers 67 Blackjack tables for different variations of the iconic game;\n\nDice.\n\nFans of Sic Bo and the classic dice can play both games (one table per option);\n\nPoker.\n\nTry your hand at one of six Poker variations: classic and 2-Hand Casino Hold’em, Extreme Texas Hold’em, Caribbean Stud, Triple Card Poker, and Texas Hold’em Bonus Poker;\n\nGame Shows.\n\nThis section is for Wheel of Fortune type games played with hosts. You can play Dream Catcher, Cash or Crash, Crazy Time, and Mega Ball in addition to Football Studio Roulette and dice tables;\n\nFirst Person.\n\nThese are variations of classic online games that offer more immersion through first-person gameplay.\n\nLive Card\n\nIn this tab, you’ll find 13 card games, most of which are unavailable in the “Live Casino” section. The list includes a few exotic options you won’t find on other platforms in India:\n\nTeen Patti Live (two tables);\nAndar Bahar;\nPoker;\n7 Up 7 Down;\n32 Cards;\nHi-Lo;\nAmar Akbar;\nDragon Tiger;\nBollywood Casino;\n20-20;\n6-player Poker’\nWorli Matka.\nSlot Games\n\nWhile the choice of titles in the “Slots” category is quite modest (only 41 games are available at the moment), Fairplay features some of the top games on the market, such as:\n\nGonzo’s Quest. One of the top NetEnt titles, Gonzo’s Quest takes to the legendary city of Eldorado. The game offers a high RTP of 95.97 and great mechanics like avalanche reels that replace matching symbols with new ones to form more combos.\nNarcos. One of the newest NetEnt games, the Narcos slot was inspired by the same-named American TV show. The game immerses you into the atmosphere of danger and cartels, and the RTP of 96.27% guarantees large winnings.\nStarburst. This iconic slot is known to every casino player around the world. Developed by NetEnt, the game offers a decent RTP of 96.09% and a plethora of bonus features like expanding wilds and respins.\n\nBesides that, FairPlay has several slots dedicated to famous rock bands and Chinese culture.\n\nFairPlay Payment Options for Players from India\n\nThe wallet section on FairPlay is different from what you expect to see on a online betting site. Entering the deposit page, you won’t find a familiar selection of payment options. Instead, you’ll see three general options.\n\nDeposit Methods\n\nTo deposit money on your player account, you can use the following methods:\n\nMethod\tMinimum Deposit\tMaximum Deposit\nPayment Gateway (UPI, PayTM, Netbanking)\t₹500\t₹500,000\nBank Transfer\t₹5,000\t₹500,000\nCrypto Transfers (BTC, BTH, ETH)\t₹3,721 (ETH)₹1,860 (BTC)₹1,116 (BTH)\tNot set\nOffline Transfers\tIndividual\t\nWithdrawal Methods\n\nAs for withdrawals, you have two major options:\n\nMethod\tMinimum Deposit\tMaximum Deposit\nBank Transfer\t₹1,000\tUnlimited\nOffline Transfers\tIndividual\t\n\nBefore you can withdraw cash through a bank transfer, you need to add a bank account to your profile. It takes around 12 hours to process a withdrawal request. To cash in and out with offline transfers, you need to contact support.\n\nFairPlay App – Android and iOS\n\nIf you want to keep track of your bets on the go, FairPlay offers a user-friendly mobile application. Powered by your device’s hardware, the app guarantees high speed and quality of casino games and zero lags when you bet on sports.\n\nMobile App for Android Devices\n\nThe version for Android-based gadgets welcomes players with the familiar design with the FairPlay logo on top, the menu bar to the top left, and then the log in and Join Now buttons to the right. The FairPlay registration process follows the desktop site, and if you’re already a member, you can access your Fairplay account with your email and password.\n\nThe bar with the Sportsbook, Casino, Live Cards, and Slots tabs is slightly different from the one in the PC version. Sections with cricket, soccer, and tennis events have a separate bar.\n\nIt only takes a few steps to install the app:\n\nGo to your device’s settings, proceed to “Security” > “Unknown sources,” and allow installing third-party software;\nHead to the FairPlay Club welcome page via a mobile browser, scroll down, and tap the “Download the Fairplay App” button to get the .apk file;\nOnce the file is downloaded, open it and confirm the installation.\n\nYou can now register or log in and enjoy top-notch casino games and a variety of betting options.\n\nSystem Requirements\n\nBefore downloading the mobile app on your Android device, make sure it meets the following requirements:\n\nAndroid version\t6.0+\n.apk file size\t18.2 MB\nRAM\t2 GB+\nProcessor frequency\t1.2 GHz+\n\nThe app may work on gadgets with lower specs, but its stability isn’t guaranteed.\n\nDOWNLOAD APP\n\nApp for iPhone and iPad \n\nAt the moment, FairPlay only has an app for Android devices. If you want to play on the go via an iOS-based gadget, you can sign up on the mobile website that works with almost all iPhones and iPads on the market.\n\nSystem Requirements\n\nSince the mobile website doesn’t have strict hardware requirements, you only need to be sure your device runs iOS 11.0 and higher.\n\nFairPlay Mobile Website\n\nIn case you don’t want to install the application or your device doesn’t meet the technical requirements, feel free to sign up through the mobile FairPlay website. It offers the same set of features as the desktop and app versions. You can:\n\nBet on sports;\nPlay slots and online casino games;\nDeposit and withdraw;\nClaim Fairplay bonuses;\nManage your account;\nRead news and so on.\n\nWhen it comes to the visuals, the mobile version is a complete copy of the desktop site. Almost all elements of the interface are in the same place. The menu tab is in the upper-left part and the profile, wallet, and search bar are to the right. You won’t find the “Open Bets” section in its initial place, as well as the “News” and “Blogs” tabs. The interface has been narrowed to fit phone and tablet screens. The site itself is quick and responsive.The mobile FairPlay site has a few advantages over the application, such as simpler requirements, and it doesn’t eat up memory space. But when it comes to speed, the app is somewhat superior.\n\nJOIN NOW\nWhy is FairPlay the Best Choice for Players from India?\n\nWith sports betting rapidly entering the lives of users from India, dozens of bookmaker’s have entered the Indian market. FairPlay is set to stand out from the competition, legally operating under Curacao licensing. The platform has been developed with convenient betting and casino experience in mind, catering to every player’s needs. Thanks to the technologies implemented during FairPlay’s development and the attitude towards Indian bettors, the site offers a plethora of benefits:\n\nThe highest betting odds currently available on the market. At the moment, the FairPlay betting company is the only bookmaker that calculates odds based on players’ bets. This results in a fair betting experience and more profits.\nThe website comes with the biggest selection of options for advance and fancy markets spanning every top league in such sports as cricket, tennis, and soccer.\nThe speed of bet acceptance on the platform is higher than on any online bookmaker in India.\nA unique deposit and withdrawal system that includes a variety of banking methods, You can choose from bank transfers, card payments, and digital wallets. Apart from that, players can make payments in several cryptocurrencies.\nLatest security technologies that keep personal information safe. The current list of safety measures includes SSL encryption that protects the data when you share it and Firewall that doesn’t allow third parties to access info on the website’s servers.\n In-built player for watching live broadcasts of major sports events covered on FairPlay.\nA wide array of live dealer games that offer a true-to-life experience. Play your favorite card games and Roulette with real croupiers.\nA hefty 100% match bonus for your first deposit at Fairplay. Get acquainted with the world of sports betting without risking your bankroll.\nPlayer settings with customizable bet amounts.\n\nCompetent and friendly customer Fairplay support team is available around the clock, as well as a detailed FAQ section and video tutorials.\n\nLicense and Regulation\n\nFairPlay Club is licensed by Gaming Curacao, a company regulated by the Curacao eGaming Commission. The platform is legally allowed to provide site for sports betting and casino services in countries that recognize a CGC license or don’t regulate online betting and gambling, so Indian residents can safely play here.\n\nTake note that the website reserves the right to use your personal info to perform checks and is obliged to disclose it if required by the law. Apart from that, the FairPlay official website may share your data with carefully selected partners. The site never gathers personal information without your knowledge. The platform may also restrict access to its services, as well as void or withhold bets under certain conditions like technical failures or any other malfunction that threatens its integrity.\n\nPlayers aren’t allowed to have multiple accounts on the website. If the platform proves that the bettor operates more than one account, it may void bets or withhold winnings obtained through all accounts of the player.\n\nFairPlay Sports Restricted Countries\n\nFairPlay India offers top-notch betting and gambling all around the world, including the Asian region. Thanks to the license issued by a company based in Curacao, the platform is allowed to legally operate in almost every country in the European Union. However, players from the following countries are prohibited from playing games:\n\nCanada;\nChina;\nSweden;\nRussia;\nUkraine;\nThe USA.\n\nWhile the Live Casino and Slots sections are unavailable for players in these regions, they still can enjoy sports betting.\n\nIs FairPlay Legal in India?\n\nSince Indian laws don’t provide solid restrictions for betting and gambling websites registered offshore, FairPlay is legal in the country. You won’t face any problems with the law for playing on the website. The only penalty you may face is an exclusion if you’re under 18.\n\nSupport\n\nAt the moment, you can get in touch with the support team through a live chat in the bottom-right corner of any page on the website. You can expect to get help around the clock, and the response time is quite short around 5 minutes.\n\nOn the other hand, you may not need to contact support at all because FairPlay has a detailed FAQ section that you can access both through a separate tab at the bottom of the main page or via the live chat window. It contains answers to dozens of questions regarding general gameplay, banking, account creation, and so on. Additionally, the website provides video tutorials for the most common types of interaction like placing bets, withdrawing money, etc.\n\nFAQ\nWhat games are available at FairPlay?\nCan I bet or play games without registering?\nWhat bonuses can I claim at FairPlay?\nCan I trust games at FairPlay?\nCan I register from outside India?\nWhat do I need to withdraw from FairPlay?\nLeave a Reply\n    \n\nBrahma\nApril 5, 2022 1:53 pm\n\nI’ve been betting with bookmaker Fairplay India for about a year now, and I think it’s a great place to relax mind and body. My withdrawals are always very fast, and I get quite a few bonuses. They can be given out several times a week. I mainly came to this site for the sake of doing IPL Fairplay. The odds on cricket are always very big, especially when there is a live match.\n\nReply\nSitara\nApril 6, 2022 11:52 am\n\nGreat bookmaker and online casino. Been playing since 2019 and have never had any issues. Fairplay. com also provides full support for their customers, and I sometimes contact them to ask about personal bonuses. So overall, I am happy with Fairplay betting. In all this time, I have already placed many bets on various sports ranging from cricket, football and more. I like how the pre-match betting menu works, and there is always a big number of outcomes and, therefore, good odds there.\n\nReply\nSudhir\nApril 12, 2022 9:31 am\n\nEvery time I make a Fairplay login, I’m often amazed how the bookmaker can always throw in lots of bonuses for sports betting or for slots and other gambling on the site. I have only been betting on the site for a few months now, and I have already been amazed. I have already made 2-3 withdrawals to my paytm, and everything was on time and without any delays. The site is beautiful, with great odds on IPL Fairplay. I am completely satisfied with everything in this office.\n\nReply\nArungedan\nApril 14, 2022 8:33 am\n\nHello, the great betting company where I bet on Fairplay in football. I have bet with many different other bookmakers, but from my personal experience, I can say that I have not met a more reliable office than Fairplay sports. I have already made withdrawals several times. Of course, I had to verify, which took a few days, but all in all, it is fast. I also downloaded the mobile app for Android from the official website, and now I bet through it.\n\nReply\nAvyaan\nMay 30, 2022 12:10 pm\n\nGood day everyone, I’ve been betting on Fairplay. club for about a year now, and in that time, I haven’t had any problems at all with the site or the bookmaker in general. I have read the bad reviews, and I don’t understand why people break the rules of the site and, in general, do not understand how to bet, and it makes me laugh. The bookmaker provides a very good bonus, including because of and in general other personal bonuses. I’ve already withdrawn over two hundred thousand INR, so I’m happy with everything.\n\nReply\nYash\nJune 14, 2022 12:42 pm\n\nThis is the best bookmaker in the last few years that I have found, and I used to bet with another one where there was constant confusion with the odds and with strange bonuses. However, I am happy that I finally found Fairplay. In addition, the company has a loyalty programme with which I understand you can get even more benefits and personal bonuses. Yes, basically, I have withdrawn a large amount of rupees even without bonuses in all the time I have been playing with this bookmaker.\n\nReply\nMarj\nJune 28, 2022 10:57 am\n\nI also want to leave my review, and I haven’t started betting so far. I’m just picking the best bookmakers for myself. I already have a few thoughts on Fairplay, and I like the wide betting line, perfectly competitive odds, user-friendly website and much more. I have already withdrawn an amount of INR 30 000 from the Fairplay club and never had any problems. I like a large number of personal bonuses for users, and by and large, Fairplay is now my favourite.\n\nReply\nVardaniya\nJune 29, 2022 1:43 pm\n\nHello, I registered using my older brother’s passport details, after which I contacted support and asked if I could bet if I am under 18, and they have blocked my account. Can my account be unblocked if I send in my passport? Has anyone experienced this problem?\n\nReply\n↑\nDOWNLOAD APP\nAbout\nContact\nFairplay Affiliate Program\nIs FairPlay Legal in India\nPrivacy Policy\nResponsible Gambling\nTerms and Conditions\n\n©2025 FairPlay. All Rights Reserved. ",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "662d9fe228d545796814b6978a607ea00f4832c5916e6aca25da23bda8248f60",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplay-login.in_mobile_android_20260412T055525Z_fullpage.png",
+      "screenshot_viewport_hash": "7b1f4b909f3c5b709f06d60c35f05846107bfb3390254768f2a4535870253073",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/fairplay-login.in_mobile_android_20260412T055525Z_viewport.png",
+      "title": "FairPlay – The Best India Online Betting Platform"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "*.fairplay-login.in",
+      "not_before": "2026-03-27T00:00:00"
+    },
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "fairplay-login.in",
+      "not_before": "2026-03-27T00:00:00"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "172.67.208.188",
+      "104.21.53.40"
+    ],
+    "AAAA": [
+      "2606:4700:3037::ac43:d0bc",
+      "2606:4700:3036::6815:3528"
+    ],
+    "MX": [],
+    "NS": [
+      "kirk.ns.cloudflare.com",
+      "vita.ns.cloudflare.com"
+    ],
+    "TXT": []
+  },
+  "domain": "fairplay-login.in",
+  "evidence_manifest_hash": "28bd128cd97a8867e5ff5305de62d9d213416828a448ad9d2efc9d403066422f",
+  "input_url": "https://fairplay-login.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.53.40",
+      "172.67.208.188",
+      "172.67.212.181",
+      "2606:4700:3036::6815:3528",
+      "2606:4700:3037::ac43:d0bc"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://fairplay-live.com/cdn-cgi/rum?"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1225859837&t=pageview&_s=1&dl=https%3A%2F%2Ffairplay-live.com%2F&ul=en-in&dt=FairPlay%20%E2%80%93%20The%20Best%20India%20Online%20Betting%20Platform&sr=1366x768&vp=1366x768&_u=YEBAAEABAAAAACAAI~&jid=934884181&gjid=2066610186&cid=1732326593.1775973318&tid=UA-215304675-12&_gid=1354838082.1775973318&_r=1&_slc=1&gtm=45He6481n815DKNVSSv858022568za200zd858022568&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938468~117266400~117384406~118289195&z=418682093"
+      },
+      {
+        "method": "POST",
+        "resource_type": "fetch",
+        "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-MNLZT8DX6V&gtm=45je6481v9109659460z8858022568za20gzb858022568zd858022568&_p=1775973317616&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1732326593.1775973318&frm=0&pscdl=noapi&rcb=6&sr=1366x768&uaa=x64&uab=64&uafvl=HeadlessChrome%3B125.0.6422.26%7CChromium%3B125.0.6422.26%7CNot.A%252FBrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&_s=1&tag_exp=0~115938466~115938469~117884344~118289195&sid=1775973317&sct=1&seg=0&dl=https%3A%2F%2Ffairplay-live.com%2F&dt=FairPlay%20%E2%80%93%20The%20Best%20India%20Online%20Betting%20Platform&en=page_view&_fv=1&_ss=1&tfd=3204"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://mc.yandex.com/watch/87286261?wmode=7&page-url=https%3A%2F%2Ffairplay-live.com%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22125%22%2C%22Chromium%22%3Bv%3D%22125%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224%22%0Acha%0Ax64%0Achb%0A64%0Achf%0A125.0.6422.26%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22125.0.6422.26%22%2C%22Chromium%22%3Bv%3D%22125.0.6422.26%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3Acw41qwg7gpyuh49ouuxh6e1csmxuj%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-IN%3Av%3A2450%3Acn%3A1%3Adp%3A0%3Als%3A1420316624664%3Ahid%3A846282629%3Az%3A330%3Ai%3A20260412112518%3Aet%3A1775973319%3Ac%3A1%3Arn%3A747888859%3Arqn%3A1%3Au%3A1775973319815164771%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A737%3Awv%3A2%3Ads%3A0%2C12%2C278%2C70%2C28%2C0%2C%2C516%2C2%2C1133%2C1133%2C0%2C1006%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1775973314609%3Agi%3AR0ExLjEuMTczMjMyNjU5My4xNzc1OTczMzE4%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1775973319%3At%3AFairPlay%20%E2%80%93%20The%20Best%20India%20Online%20Betting%20Platform&t=gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42009092)ti(1)"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://mc.yandex.com/watch/87286261/1?wmode=7&page-url=https%3A%2F%2Ffairplay-live.com%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22125%22%2C%22Chromium%22%3Bv%3D%22125%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224%22%0Acha%0Ax64%0Achb%0A64%0Achf%0A125.0.6422.26%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22125.0.6422.26%22%2C%22Chromium%22%3Bv%3D%22125.0.6422.26%22%2C%22Not.A%2FBrand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0&browser-info=pv%3A1%3Avf%3Acw41qwg7gpyuh49ouuxh6e1csmxuj%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-IN%3Av%3A2450%3Acn%3A1%3Adp%3A0%3Als%3A1420316624664%3Ahid%3A846282629%3Az%3A330%3Ai%3A20260412112518%3Aet%3A1775973319%3Ac%3A1%3Arn%3A747888859%3Arqn%3A1%3Au%3A1775973319815164771%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A737%3Awv%3A2%3Ads%3A0%2C12%2C278%2C70%2C28%2C0%2C%2C516%2C2%2C1133%2C1133%2C0%2C1006%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1775973314609%3Agi%3AR0ExLjEuMTczMjMyNjU5My4xNzc1OTczMzE4%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1775973319%3At%3AFairPlay%20%E2%80%93%20The%20Best%20India%20Online%20Betting%20Platform&t=gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842009092%29ti%281%29&redirnss=1"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://fairplay-login.in/"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://fairplay-live.com/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/fonts/roboto-regular.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "font",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/fonts/roboto-bold.woff2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fairplay-live.com/wp-content/cache/wpfc-minified/q9k03owk/bpw35.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fairplay-live.com/wp-content/cache/wpfc-minified/1amsa06/bpw35.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fairplay-live.com/wp-content/cache/wpfc-minified/8bfgcjhd/bpw2t.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://fairplay-live.com/wp-content/cache/wpfc-minified/jos83g1j/bpw2t.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/Logo.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/06/Group-30.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/assets/images/logo-dark.svg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/FairPlay-Sports-Types-of-Bets.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/fairplay-reg-1.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/fairplay-reg-2.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/fairplay-reg-3.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/How-to-Place-a-Bet-at-FairPlay.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/Live-Casino.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Top-games.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Roulette.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Baccarat.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Blackjack.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Dice.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Poker.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/Game-Shows.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/05/First-Person.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/Payment-Options-for-Players-from-India.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/FairPlay-Mobile-App.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/FairPlay-Mobile-Website.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/Is-FairPlay-Legal-in-India.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=239eb2e2-72c0-4312-9497-1dc2006ddd71"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://images.dmca.com/Badges/DMCABadgeHelper.min.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/js/main.min.js?ver=1747027600"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-includes/js/comment-reply.min.js?ver=6.8.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/assets/vendor/simplebar/dist/simplebar.min.js?ver=5.3.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/custom-scrollbar.js?ver=9b36ac27c6216ab1de67"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/assets/vendor/isotope-layout/dist/isotope.pkgd.min.js?ver=3.0.6"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/plugin-isotope.js?ver=15b566c76c127f028181"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/layout-grid.js?ver=d6aa7791eb1db1e88590"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/lazysizes-cfg.js?ver=e4a684c7748623ddbf8b"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/lazysizes-object-fit-cover.js?ver=4.1.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/lazysizes-swiper-duplicates-load.js?ver=e9a9d96930527983f1eb"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/assets/vendor/lazysizes/lazysizes.min.js?ver=5.3.2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/lazyload.js?ver=9a1f538569ebb9961833"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/assets/vendor/fancybox/dist/jquery.fancybox.min.js?ver=3.5.7"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/popup-gallery.js?ver=ca54862a4ddb62bb0d7b"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/plugin-fancybox.js?ver=e34cabf11362a0290936"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://fairplay-live.com/wp-content/plugins/visual-portfolio/build/assets/js/main.js?ver=79d4507ab78ec1156abe"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/uploads/2022/01/bg.jpg"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/images/icon/icon-big-star-2.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/images/icon/icon-big-star-1.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.googletagmanager.com/gtm.js?id=GTM-5DKNVSS"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-MNLZT8DX6V&cx=c&gtm=4e6481&bs=ctrl2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google-analytics.com/analytics.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://mc.yandex.ru/metrika/tag.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://my.rtmark.net/p.js?f=sync&lr=1&partner=fcadbb9b48d1e9a8964f2996f023c977a9067077b4f02c85ed301dbb9d45c34f"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://my.rtmark.net/img.gif?f=sync&partner=fcadbb9b48d1e9a8964f2996f023c977a9067077b4f02c85ed301dbb9d45c34f&ttl=&rurl=https%3A%2F%2Ffairplay-live.com%2F"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_check?scid=89127324-70b5-8241-de60-24d8170bcf4a&cid=87286261"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/metrika/advert.gif?t=gdpr(14)ti(4)"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_start?cid=87286261&redirect_domain=mc.yandex.com&scid=89127324-70b5-8241-de60-24d8170bcf4a&token=10999.8Ogj6kkwQme1yaBam1wG-_2dzPAz8yo8i7VECMnXVHeDTw0QolyXoWhFYxnxPy0C.5BuoqZDTKaSO_3po8Unt1tN65RQ%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_decide?cid=87286261&scid=89127324-70b5-8241-de60-24d8170bcf4a&token=10999.VT66M8KPqpgALftOMJufPixgUp1YTDFMV-G1w_LOkq4vKZ4gg5y2xWtMpwvsDxoj8JlTlnaAFG6FEwvNj-kUKn_3WMfGg_sLVtIhWNZSAyQ%2C.hq_p5v9xhCd9wuzUsFHYiX8E4ZE%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_check_secondary?scid=8fd0ae02-ee10-a9cd-77ca-dd0835769a1e&cid=87286261"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://fairplay-live.com/wp-content/themes/betting-theme-main/assets/build/images/icon/icon_sprites.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_start_secondary?cid=87286261&redirect_domain=mc.yandex.com&scid=8fd0ae02-ee10-a9cd-77ca-dd0835769a1e&token=10999.kREyNFE0DsMD0aS56JcUfoPCdrAeWOtHJxrtB4rr71FPGwVeTh9EnD3wSDt2Cl-Y.EMYDzzqNmXBKXx3uzwkqo5aG_d0%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.com/sync_cookie_image_decide_secondary?cid=87286261&scid=8fd0ae02-ee10-a9cd-77ca-dd0835769a1e&token=10999.yM9QGMmrK4GPADpr8aVPAeCHEglAlbD8wgxXGvJvw1LfeJoLLfgkL8I2OKObUdra8IAnjkYtN7VT1wlq2cgwzE2FG3EyANdObZLe1eLY3g8%2C.V9QMCH7xuz_Kk7VT2d9jZFwnuEw%2C"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://mc.yandex.ru/sync_cookie_image_finish_secondary?cid=87286261&redirect_domain=mc.yandex.com&scid=8fd0ae02-ee10-a9cd-77ca-dd0835769a1e&token=10999.tZLC9ryjy2IBdpJ44CnEgS2BW9PQ78lD-ix2ETEo2_d3ODyA_Tep-cZ1wnD0XBmtw6NbOIYMpiZA6Pu3vt8hVdC2VW1S4bHpGVmWyTNUCERsbCHKEibtM8zeQhhRaSo-QkqqSRrs4ORjQIBOquWF7g-DQ4ixXcdDo0GUi_gk-_wAmVCLbhQ_z4SAC8FpWVYMPfYFuEIu-HA45r5LHoyG3A%2C%2C.AJQD0hDAe5GJvOGtPEF9-pNsNf8%2C"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://fairplay-login.in/",
+    "https://fairplay-live.com/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-FAIRPLAY-LOGIN.IN-20260412-055526",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "9eaffb213d56eadc-ORD",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 05:55:15 GMT",
+    "last-modified": "Wed, 11 Jun 2025 08:36:21 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mXwLcSDPdL2bWtial4QAk9ACyhCFnlHcWKlBQjI9HzzGmQ8dcfyTbaE1%2FflE6dY96ajNuPdWjbJIMLMmFSlozRNVmUxS1cFIINzni8yvW6USGeWcegU8NgspPQupavv%2Fn0AUKg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=7,cfOrigin;dur=264",
+    "vary": "Accept-Encoding"
+  },
+  "screenshot_phash": "ee956e3b843a4c91",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019bb761-2a4d-7508-947c-e81378b2b36a.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

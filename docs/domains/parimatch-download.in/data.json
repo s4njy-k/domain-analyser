@@ -1,0 +1,255 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:53:57Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055352Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-download.in/",
+      "http_status": 403,
+      "meta_desc": "",
+      "page_text": "parimatch-download.in\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: 9eaff905ba5422e0\nPerformance and Security by Cloudflare\nPrivacy",
+      "profile": "desktop",
+      "screenshot_full_hash": "cb37c866a2fc7768ce1dfc02e731ec78c83d9cb236bd4a6b5dd84244dc340fe9",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-download.in_desktop_20260412T055352Z_fullpage.png",
+      "screenshot_viewport_hash": "cb37c866a2fc7768ce1dfc02e731ec78c83d9cb236bd4a6b5dd84244dc340fe9",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-download.in_desktop_20260412T055352Z_viewport.png",
+      "title": "Just a moment..."
+    },
+    {
+      "capture_ts_utc": "20260412T055357Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-download.in/",
+      "http_status": 403,
+      "meta_desc": "",
+      "page_text": "parimatch-download.in\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: 9eaff91fdf54e1ef\nPerformance and Security by Cloudflare\nPrivacy",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "3ed9fdcb1ccd9b37144d30d94bc715a91806df8978bf1dfb8fdd4386b3128fdc",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-download.in_mobile_android_20260412T055357Z_fullpage.png",
+      "screenshot_viewport_hash": "1f4d78ec20a126d4efe71c840024e93f4ea3336b730c7d059d91bc16cf5201a0",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-download.in_mobile_android_20260412T055357Z_viewport.png",
+      "title": "Just a moment..."
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Let's Encrypt, CN=R12",
+      "name": "parimatch-download.in",
+      "not_before": "2026-04-10T02:17:38"
+    },
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "*.parimatch-download.in",
+      "not_before": "2026-03-24T00:00:00"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "172.67.184.205",
+      "104.21.76.10"
+    ],
+    "AAAA": [
+      "2606:4700:3036::6815:4c0a",
+      "2606:4700:3032::ac43:b8cd"
+    ],
+    "MX": [],
+    "NS": [
+      "bethany.ns.cloudflare.com",
+      "cody.ns.cloudflare.com"
+    ],
+    "TXT": []
+  },
+  "domain": "parimatch-download.in",
+  "evidence_manifest_hash": "1fa9f45b0148df5001e043a263f36e8ff11f07354641bb1b9e1ed181cfbc5637",
+  "input_url": "https://parimatch-download.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.76.10",
+      "172.67.184.205",
+      "188.114.96.3",
+      "2606:4700:3032::ac43:b8cd",
+      "2606:4700:3036::6815:4c0a"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://challenges.cloudflare.com/turnstile/v0/g/b0a7532ac8ec/api.js?onload=cFyL2&render=explicit"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://parimatch-download.in/cdn-cgi/challenge-platform/h/g/flow/ov1/1376771946:1775970817:EKaehTkR-HPNU6z6uTKA-NzdJEEDEJGlnSMA-tG5IrE/9eaff905ba5422e0/3utvZct1Mhbt1yvr8sH__uybcAX6vbjc88Lxy0M2XHo-1775973228-1.2.1.1-ovkPMlGua6AssIWXpsoh03QG9l2.H9GvwjQ8tzNko.HuuVXNclCOAMBHSHVlsjyj"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://parimatch-download.in/cdn-cgi/rum?"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/flow/ov1/317500008:1775970819:bJpvViucvjVtMlsl9qm02YwxsUxL6XYlDbt8qX2Y6Y0/9eaff9079fbdb834/Lri3rDm8MAYi47pNO8bXVFwmnlzTkfe.Oq.s32vpBfw-1775973228-1.2.1.1-45cFYRr.9yXAd3urtWkUSo7Y9ru8qvzzzAnnMMn1dh.FutZtke4SSK3msJHVa8O3"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/9eaff9079fbdb834/1775973228997/46de397e956c3b9a28509ea2eefc42b035535eff9a938d2e16ac8ffd731b18e9/ztWCWU-u1XNLyHM"
+      },
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/flow/ov1/317500008:1775970819:bJpvViucvjVtMlsl9qm02YwxsUxL6XYlDbt8qX2Y6Y0/9eaff9079fbdb834/Lri3rDm8MAYi47pNO8bXVFwmnlzTkfe.Oq.s32vpBfw-1775973228-1.2.1.1-45cFYRr.9yXAd3urtWkUSo7Y9ru8qvzzzAnnMMn1dh.FutZtke4SSK3msJHVa8O3"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://parimatch-download.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://parimatch-download.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://parimatch-download.in/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9eaff905ba5422e0"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://parimatch-download.in/e5957c43-dcd9-4a53-b52c-f68df0a2ce25"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/f/ov2/av0/rch/fj4pb/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://parimatch-download.in/a912f14b-e93a-494c-9955-46498f75f7f2"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/cmg/1"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://challenges.cloudflare.com/e8f8e14f-4bec-4fa9-ba73-3618387e8273"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://challenges.cloudflare.com/881d6976-0299-4ba3-8af2-e351767c100e"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/d/9eaff9079fbdb834/1775973228997/3ROpAdidTQvyd9z"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://challenges.cloudflare.com/881d6976-0299-4ba3-8af2-e351767c100e"
+      },
+      {
+        "method": "GET",
+        "resource_type": "other",
+        "url": "blob:https://challenges.cloudflare.com/c0711c7a-1241-465b-b863-51824fd8f37f"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://parimatch-download.in/",
+    "https://parimatch-download.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PARIMATCH-DOWNLOAD.IN-20260412-055357",
+  "response_headers": {
+    "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-mitigated": "challenge",
+    "cf-ray": "9eaff905ba5422e0-ORD",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=UTF-8",
+    "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Sun, 12 Apr 2026 05:53:48 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "origin-agent-cluster": "?1",
+    "permissions-policy": "accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+    "referrer-policy": "same-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=K9vu%2Bo3i1vTmHphcwRXBVQOG1prz7n5UYWbf4%2FmlxclWSvNiQDcxWu1%2F1MsEqCoB%2B11SGEMMunlmK6ITipY0hkddrNUjfRKIgQgbHouY%2B7cErjhrLchTe8hRFv8GJN94g6UbYJh7iUg%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "chlray;desc=\"9eaff905ba5422e0\"\ncfEdge;dur=2,cfOrigin;dur=0",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "screenshot_phash": "be3963c1c4ccc669",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fdd-b2a4-772a-9a98-e6b939918218.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "true",
+    "timestamp": "20260302075522",
+    "url": "http://web.archive.org/web/20260302075522/https://parimatch-download.in/"
+  }
+}

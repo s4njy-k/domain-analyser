@@ -1,0 +1,165 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:37:39Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T053734Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://1xbet-download.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Index of /\n \tName\tLast modified\tSize\tDescription\n\n\n \tcgi-bin/\t2020-02-13 09:56\t-\t \n",
+      "profile": "desktop",
+      "screenshot_full_hash": "adb018d9fb0bf6c6952d0fbca7374513e2f391845dd96708ace0a82ce4170210",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-download.in_desktop_20260412T053734Z_fullpage.png",
+      "screenshot_viewport_hash": "adb018d9fb0bf6c6952d0fbca7374513e2f391845dd96708ace0a82ce4170210",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-download.in_desktop_20260412T053734Z_viewport.png",
+      "title": "Index of /"
+    },
+    {
+      "capture_ts_utc": "20260412T053739Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://1xbet-download.in/",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Index of /\n \tName\tLast modified\tSize\tDescription\n\n\n \tcgi-bin/\t2020-02-13 09:56\t-\t \n",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "f8ef6116739b00a9218352ded87b2659255f964e541bf960029849161d567289",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-download.in_mobile_android_20260412T053739Z_fullpage.png",
+      "screenshot_viewport_hash": "7f9af7dae5c7e6cb8bdfa6903aec4b909bf007aa6bbc35ddade5b7d0b26e4a65",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/1xbet-download.in_mobile_android_20260412T053739Z_viewport.png",
+      "title": "Index of /"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "*.1xbet-download.in",
+      "not_before": "2026-04-07T21:41:01"
+    },
+    {
+      "issuer": "C=US, O=Google Trust Services, CN=WE1",
+      "name": "1xbet-download.in",
+      "not_before": "2026-04-07T21:41:01"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "172.67.212.181",
+      "104.21.16.128"
+    ],
+    "AAAA": [
+      "2606:4700:3030::6815:1080",
+      "2606:4700:3030::ac43:d4b5"
+    ],
+    "MX": [
+      "0 _dc-mx.f4eecd114941.1xbet-download.in"
+    ],
+    "NS": [
+      "carrera.ns.cloudflare.com",
+      "santino.ns.cloudflare.com"
+    ],
+    "TXT": []
+  },
+  "domain": "1xbet-download.in",
+  "evidence_manifest_hash": "cd061c7b1f68180c5d1e71551901f29951b962d4ec3fe046c6347e781b464bc9",
+  "input_url": "https://1xbet-download.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.16.128",
+      "172.67.212.181",
+      "2606:4700:3030::6815:1080",
+      "2606:4700:3030::ac43:d4b5"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "POST",
+        "resource_type": "xhr",
+        "url": "https://1xbet-download.in/cdn-cgi/rum?"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://1xbet-download.in/"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://1xbet-download.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-1XBET-DOWNLOAD.IN-20260412-053739",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "9eafe123a92eb083-ORD",
+    "content-encoding": "br",
+    "content-type": "text/html;charset=ISO-8859-1",
+    "date": "Sun, 12 Apr 2026 05:37:30 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hiCtksajxobF%2BviozTtqQgT5zp78B7e%2B5lNh%2FFpaXomhTgi0MJe1Q59AdSbc%2BZWQn6FA8LkkOMF4V8Dt1K6wkr8jgPccor3VjNov3gxvYpSbB0svvTRhVRGM2JcVNoXiPZ6ZjA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=6,cfOrigin;dur=337"
+  },
+  "screenshot_phash": "8303030707fffcf8",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fc9-9ed2-758a-9d62-332f4c4c5192.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

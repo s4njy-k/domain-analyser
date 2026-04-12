@@ -1,0 +1,133 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 0,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "INACTIVE",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:57:51Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055751Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://parimatch-login.in/\nCall log:\nnavigating to \"https://parimatch-login.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "desktop",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    },
+    {
+      "capture_ts_utc": "20260412T055751Z",
+      "cloaking_suspected": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://parimatch-login.in/\nCall log:\nnavigating to \"https://parimatch-login.in/\", waiting until \"domcontentloaded\"\n",
+      "final_url": null,
+      "http_status": null,
+      "meta_desc": null,
+      "page_text": null,
+      "profile": "mobile_android",
+      "screenshot_full_hash": null,
+      "screenshot_full_path": null,
+      "screenshot_viewport_hash": null,
+      "screenshot_viewport_path": null,
+      "title": null
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "*.parimatch-login.in",
+      "not_before": "2026-03-13T00:00:00"
+    },
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "parimatch-login.in",
+      "not_before": "2026-03-13T00:00:00"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "104.21.35.94",
+      "172.67.217.13"
+    ],
+    "AAAA": [
+      "2606:4700:3032::6815:235e",
+      "2606:4700:3036::ac43:d90d"
+    ],
+    "MX": [],
+    "NS": [
+      "kirk.ns.cloudflare.com",
+      "vita.ns.cloudflare.com"
+    ],
+    "TXT": []
+  },
+  "domain": "parimatch-login.in",
+  "evidence_manifest_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "input_url": "https://parimatch-login.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.35.94",
+      "172.67.217.13",
+      "188.114.96.3",
+      "2606:4700:3032::6815:235e",
+      "2606:4700:3036::ac43:d90d"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [],
+    "third_party": []
+  },
+  "redirect_chain": [],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PARIMATCH-LOGIN.IN-20260412-055751",
+  "response_headers": {},
+  "screenshot_phash": null,
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019b45bf-b3f3-7289-994a-2ffcf0bd4372.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

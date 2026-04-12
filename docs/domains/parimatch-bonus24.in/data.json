@@ -1,0 +1,185 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T05:55:59Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T055554Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-bonus24.in/",
+      "http_status": 520,
+      "meta_desc": "",
+      "page_text": "Web server is returning an unknown error Error code 520\nVisit cloudflare.com for more information.\n2026-04-12 05:55:51 UTC\nYou\nBrowser\nWorking\nChicago\nCloudflare\nWorking\nparimatch-bonus24.in\nHost\nError\nWhat happened?\n\nThere is an unknown connection issue between Cloudflare and the origin web server. As a result, the web page can not be displayed.\n\nWhat can I do?\nIf you are a visitor of this website:\n\nPlease try again in a few minutes.\n\nIf you are the owner of this website:\n\nThere is an issue between Cloudflare's cache and your origin web server. Cloudflare monitors for these errors and automatically investigates the cause. To help support the investigation, you can pull the corresponding error log from your web server and submit it our support team. Please include the Ray ID (which is at the bottom of this error page). Additional troubleshooting resources.\n\nCloudflare Ray ID: 9eaffc02cc9ee28b • Your IP: Click to reveal • Performance & security by Cloudflare",
+      "profile": "desktop",
+      "screenshot_full_hash": "2a046e37fe4b00769f173f646a9b2d8a857c31a6a1fa2e435fb78bdf95a669d1",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-bonus24.in_desktop_20260412T055554Z_fullpage.png",
+      "screenshot_viewport_hash": "84fea0a3e2f6bb24f03f2dcdebcb2255324ff7d529c76f4f1ef482d686bf03b7",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-bonus24.in_desktop_20260412T055554Z_viewport.png",
+      "title": "parimatch-bonus24.in | 520: Web server is returning an unknown error"
+    },
+    {
+      "capture_ts_utc": "20260412T055559Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://parimatch-bonus24.in/",
+      "http_status": 520,
+      "meta_desc": "",
+      "page_text": "Web server is returning an unknown error Error code 520\nVisit cloudflare.com for more information.\n2026-04-12 05:55:56 UTC\nYou\nBrowser Working\nChicago\nCloudflare Working\nparimatch-bonus24.in\nHost Error\nWhat happened?\n\nThere is an unknown connection issue between Cloudflare and the origin web server. As a result, the web page can not be displayed.\n\nWhat can I do?\nIf you are a visitor of this website:\n\nPlease try again in a few minutes.\n\nIf you are the owner of this website:\n\nThere is an issue between Cloudflare's cache and your origin web server. Cloudflare monitors for these errors and automatically investigates the cause. To help support the investigation, you can pull the corresponding error log from your web server and submit it our support team. Please include the Ray ID (which is at the bottom of this error page). Additional troubleshooting resources.\n\nCloudflare Ray ID: 9eaffc1f2c835769\nYour IP: Click to reveal\nPerformance & security by Cloudflare",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "18e3a8c08dcd2994d0e4692496c179eaa784d15b3f36d0ab301f160149f8dc5d",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-bonus24.in_mobile_android_20260412T055559Z_fullpage.png",
+      "screenshot_viewport_hash": "6e813cd9264a05a1e466077961502ec79a6f4cb575ed5debe6cd23bb982228b9",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/parimatch-bonus24.in_mobile_android_20260412T055559Z_viewport.png",
+      "title": "parimatch-bonus24.in | 520: Web server is returning an unknown error"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "*.parimatch-bonus24.in",
+      "not_before": "2026-03-20T00:00:00"
+    },
+    {
+      "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36",
+      "name": "parimatch-bonus24.in",
+      "not_before": "2026-03-20T00:00:00"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "172.67.143.33",
+      "104.21.54.232"
+    ],
+    "AAAA": [
+      "2606:4700:3037::ac43:8f21",
+      "2606:4700:3033::6815:36e8"
+    ],
+    "MX": [],
+    "NS": [
+      "nancy.ns.cloudflare.com",
+      "piers.ns.cloudflare.com"
+    ],
+    "TXT": [
+      "google-site-verification=i9F37piCi9FZsCMzWIR23ejwl0AA0hAi231cS9i7v2g"
+    ]
+  },
+  "domain": "parimatch-bonus24.in",
+  "evidence_manifest_hash": "30e6850295402375dfe48ca707965b75ca6b3067012c65639450e02c4ec7d6c3",
+  "input_url": "https://parimatch-bonus24.in",
+  "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "104.21.112.1",
+      "104.21.54.232",
+      "172.67.143.33",
+      "2606:4700:3033::6815:36e8",
+      "2606:4700:3037::ac43:8f21"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://parimatch-bonus24.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/styles/main.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/images/cf-icon-browser.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/images/cf-icon-ok.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/images/cf-icon-cloud.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/images/cf-icon-server.png"
+      },
+      {
+        "method": "GET",
+        "resource_type": "image",
+        "url": "https://parimatch-bonus24.in/cdn-cgi/images/cf-icon-error.png"
+      }
+    ],
+    "third_party": []
+  },
+  "redirect_chain": [
+    "https://parimatch-bonus24.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-PARIMATCH-BONUS24.IN-20260412-055559",
+  "response_headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "cf-ray": "9eaffc02cc9ee28b-ORD",
+    "content-length": "7379",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 12 Apr 2026 05:55:51 GMT",
+    "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "referrer-policy": "same-origin",
+    "server": "cloudflare",
+    "server-timing": "cfEdge;dur=653,cfOrigin;dur=0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "screenshot_phash": "ee1b636ebcce4014",
+  "threat_intel": {
+    "abuseipdb_isp": "Cloudflare, Inc.",
+    "abuseipdb_score": 0,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/01980226-6e40-746b-b275-9dcdf22dda76.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

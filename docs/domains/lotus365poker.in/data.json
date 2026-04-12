@@ -1,0 +1,185 @@
+{
+  "ai_analysis": {
+    "applicable_laws": [],
+    "brand_impersonated": null,
+    "confidence": "MEDIUM",
+    "fraud_mechanism": "No active fraud mechanism was evident in the captured content.",
+    "illegal_activity_description": "The collected evidence does not presently indicate a clear malicious workflow. The domain should be retained only for reference unless new indicators emerge.",
+    "priority_score": 5,
+    "recommended_action": "No immediate enforcement action recommended; retain for watchlist comparison.",
+    "severity": "LOW",
+    "threat_category": "BENIGN",
+    "victim_profile": "No specific victim group identified."
+  },
+  "analysis_ts_utc": "2026-04-12T06:00:43Z",
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "captures": [
+    {
+      "capture_ts_utc": "20260412T060039Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.searchhounds.com/articles/ai-powered-personal-finance-tools-revolutionizing.html?psystem=PW&domain=lotus365poker.in&oref=https%3A%2F%2Flotus365poker.in%2F&trafficTarget=reseller",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Access Denied\nYou don't have permission to access \"http://www.searchhounds.com/articles/ai-powered-personal-finance-tools-revolutionizing.html?\" on this server.\n\nReference #18.967c4217.1775973634.180a3550\n\nhttps://errors.edgesuite.net/18.967c4217.1775973634.180a3550",
+      "profile": "desktop",
+      "screenshot_full_hash": "dc7fcce384f625ade6c41216e6b724c659889c53a9b4216f29abd020be2a8198",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365poker.in_desktop_20260412T060039Z_fullpage.png",
+      "screenshot_viewport_hash": "dc7fcce384f625ade6c41216e6b724c659889c53a9b4216f29abd020be2a8198",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365poker.in_desktop_20260412T060039Z_viewport.png",
+      "title": "Access Denied"
+    },
+    {
+      "capture_ts_utc": "20260412T060043Z",
+      "cloaking_suspected": false,
+      "error": null,
+      "final_url": "https://www.searchhounds.com/articles/ai-powered-personal-finance-tools-revolutionizing.html?psystem=PW&domain=lotus365poker.in&oref=https%3A%2F%2Flotus365poker.in%2F&trafficTarget=reseller",
+      "http_status": 200,
+      "meta_desc": "",
+      "page_text": "Access Denied\nYou don't have permission to access \"http://www.searchhounds.com/articles/ai-powered-personal-finance-tools-revolutionizing.html?\" on this server.\n\nReference #18.8b7c4217.1775973639.10036608\n\nhttps://errors.edgesuite.net/18.8b7c4217.1775973639.10036608",
+      "profile": "mobile_android",
+      "screenshot_full_hash": "0f389ab7d15733ae73cac0379c0b54591c1cffa20c7513e2b4d29abb5b6acf68",
+      "screenshot_full_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365poker.in_mobile_android_20260412T060043Z_fullpage.png",
+      "screenshot_viewport_hash": "5bd8f63d7c1aaf7cc6b4fa45c11cdcf4c2da523dc719b39ffe687a69521a63fa",
+      "screenshot_viewport_path": "/home/runner/work/domain-analyser/domain-analyser/output/screenshots/lotus365poker.in_mobile_android_20260412T060043Z_viewport.png",
+      "title": "Access Denied"
+    }
+  ],
+  "cert_transparency": [
+    {
+      "issuer": "C=US, O=GoDaddy.com, CN=GoDaddy TLS Intermediate CA DV - R1v1",
+      "name": "www.lotus365poker.in",
+      "not_before": "2026-03-19T20:13:40"
+    },
+    {
+      "issuer": "C=US, O=GoDaddy.com, CN=GoDaddy TLS Intermediate CA DV - R1v1",
+      "name": "lotus365poker.in",
+      "not_before": "2026-03-17T09:10:18"
+    }
+  ],
+  "dns_records": {
+    "A": [
+      "76.223.67.189",
+      "13.248.213.45"
+    ],
+    "AAAA": [],
+    "MX": [],
+    "NS": [
+      "ns75.domaincontrol.com",
+      "ns76.domaincontrol.com"
+    ],
+    "TXT": []
+  },
+  "domain": "lotus365poker.in",
+  "evidence_manifest_hash": "fe9053705d3fbf890e69d5b018bbbb65d6d39b9ee3929004550959d1be722d86",
+  "input_url": "https://lotus365poker.in",
+  "linked_domains": [
+    "1xbetdownload.co.in",
+    "lotus365casinos.in"
+  ],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": [
+      "13.248.213.45",
+      "2a02:26f0:1700:11::b856:679e",
+      "76.223.67.189"
+    ]
+  },
+  "network_requests": {
+    "api_calls": [
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=1&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://api.aws.parking.godaddy.com/v1/parking/landers/lotus365poker.in?trafficTarget=reseller&abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "fetch",
+        "url": "https://img1.wsimg.com/parking-lander/px.js?ch=2&abp=2&gdabp=true"
+      }
+    ],
+    "first_party": [
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://lotus365poker.in/"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://lotus365poker.in/lander"
+      }
+    ],
+    "third_party": [
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://www.google.com/adsense/domains/caf.js?abp=1&gdabp=true"
+      },
+      {
+        "method": "GET",
+        "resource_type": "script",
+        "url": "https://img1.wsimg.com/parking-lander/static/js/main.89f98556.js"
+      },
+      {
+        "method": "GET",
+        "resource_type": "stylesheet",
+        "url": "https://img1.wsimg.com/parking-lander/static/css/main.0e4ec69f.css"
+      },
+      {
+        "method": "GET",
+        "resource_type": "document",
+        "url": "https://www.searchhounds.com/articles/ai-powered-personal-finance-tools-revolutionizing.html?psystem=PW&domain=lotus365poker.in&oref=https%3A%2F%2Flotus365poker.in%2F&trafficTarget=reseller"
+      }
+    ]
+  },
+  "redirect_chain": [
+    "https://lotus365poker.in/"
+  ],
+  "registration": {
+    "country": null,
+    "expires": null,
+    "nameservers": [],
+    "registered": null,
+    "registrar": null,
+    "status": []
+  },
+  "report_identifier": "NCTAU-DAR-LOTUS365POKER.IN-20260412-060043",
+  "response_headers": {
+    "content-length": "114",
+    "content-type": "text/html",
+    "date": "Sun, 12 Apr 2026 06:00:34 GMT"
+  },
+  "screenshot_phash": "8707070727e3e3d3",
+  "threat_intel": {
+    "abuseipdb_isp": "Amazon.com, Inc.",
+    "abuseipdb_score": 25,
+    "gsb_threats": [],
+    "otx_pulse_count": 0,
+    "otx_pulses": [],
+    "phishtank_verified": false,
+    "urlhaus_listed": false,
+    "urlhaus_threat": null,
+    "urlscan_score": null,
+    "urlscan_screenshot_url": "https://urlscan.io/screenshots/019d7fe7-79c4-753f-bd06-b181fda76072.png",
+    "urlscan_verdict": "benign",
+    "vt_categories": {},
+    "vt_malicious": 0,
+    "vt_suspicious": 0,
+    "vt_total": 94
+  },
+  "wayback_snapshot": {
+    "available": "false",
+    "timestamp": null,
+    "url": null
+  }
+}

@@ -1,23 +1,91 @@
 {
-  "batch_id": "sample-refresh",
-  "generated_at_utc": "2026-04-12T04:47:37Z",
-  "total_domains": 4,
-  "active_malicious": 0,
-  "inactive_down": 0,
-  "unique_ips": 4,
+  "batch_id": "domain-set-20260412-rerun-20260412T053559Z",
+  "generated_at_utc": "2026-04-12T06:06:07Z",
+  "total_domains": 65,
+  "active_malicious": 9,
+  "inactive_down": 37,
+  "unique_ips": 34,
   "unique_registrars": 0,
   "severity_counts": {
-    "LOW": 4
+    "LOW": 20,
+    "INACTIVE": 36,
+    "MEDIUM": 9
   },
   "category_counts": {
-    "BENIGN": 4
+    "BENIGN": 56,
+    "PHISHING": 5,
+    "UNKNOWN": 4
   },
-  "top_impersonated_brands": [],
+  "top_impersonated_brands": [
+    {
+      "brand": "Paytm",
+      "count": 3
+    }
+  ],
   "top_hosting_countries": [
     {
       "country": "Unknown",
-      "count": 4
+      "count": 64
+    },
+    {
+      "country": "India",
+      "count": 1
     }
   ],
-  "clusters": []
+  "clusters": [
+    {
+      "cluster_type": "Shared IP",
+      "indicator": "76.223.67.189",
+      "size": 4,
+      "domains": [
+        "1xbetdownload.co.in",
+        "fair-playlogin.in",
+        "lotus365casinos.in",
+        "lotus365poker.in"
+      ]
+    },
+    {
+      "cluster_type": "Shared IP",
+      "indicator": "3.33.130.190",
+      "size": 3,
+      "domains": [
+        "dafabet365.in",
+        "helpdesk1aadhar.co.in",
+        "lotus365login.in"
+      ]
+    },
+    {
+      "cluster_type": "Shared Visual Template",
+      "indicator": "8303030707fffcf8",
+      "size": 2,
+      "domains": [
+        "1xbet-app-download.in",
+        "1xbet-download.in"
+      ]
+    },
+    {
+      "cluster_type": "Shared Visual Template",
+      "indicator": "8707070727e3e3d3",
+      "size": 2,
+      "domains": [
+        "1xbetdownload.co.in",
+        "lotus365poker.in"
+      ]
+    },
+    {
+      "cluster_type": "Shared Visual Template",
+      "indicator": "8707070727e3e3cb",
+      "size": 2,
+      "domains": [
+        "fair-playlogin.in",
+        "lotus365login.in"
+      ]
+    }
+  ],
+  "top_allocation_holders": [
+    {
+      "holder": "Hiox Softwares Private Limited",
+      "count": 1
+    }
+  ]
 }
