@@ -1,6 +1,5 @@
-domain,severity,category,vt_score,registered,status,hosting_country,registrar,ip,priority_score
-example.com,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,172.66.147.243,5
-github.com,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,20.207.73.82,5
-openstreetmap.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,151.101.193.55,5
-python.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,151.101.128.223,5
-wikipedia.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,103.102.166.224,5
+domain,severity,category,vt_score,registered,status,hosting_country,allocation_holder,apnic_region,registrar,ip,priority_score
+github.com,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,Unknown,Unknown,20.207.73.82,5
+openstreetmap.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,Unknown,Unknown,151.101.193.55,5
+python.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,Unknown,Unknown,151.101.128.223,5
+wikipedia.org,LOW,BENIGN,0/0,,ACTIVE,Unknown,Unknown,Unknown,Unknown,103.102.166.224,5

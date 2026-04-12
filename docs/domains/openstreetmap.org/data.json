@@ -11,7 +11,7 @@
     "threat_category": "BENIGN",
     "victim_profile": "No specific victim group identified."
   },
-  "analysis_ts_utc": "2026-04-11T20:23:30Z",
+  "analysis_ts_utc": "2026-04-12T04:47:34Z",
   "batch_id": "local-smoke-20260411T202053Z",
   "captures": [
     {
@@ -71,6 +71,14 @@
   "evidence_manifest_hash": "f00d12c96388957ca0e74fd97648be3029a4fa95a6e9df628c82ac2548db3448",
   "input_url": "https://www.openstreetmap.org",
   "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": []
+  },
   "network_requests": {
     "api_calls": [
       {
@@ -320,6 +328,7 @@
     "registrar": null,
     "status": []
   },
+  "report_identifier": "NCTAU-DAR-OPENSTREETMAP.ORG-20260412-044734",
   "response_headers": {
     "accept-ranges": "bytes",
     "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",

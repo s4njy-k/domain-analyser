@@ -1,22 +1,22 @@
 {
-  "batch_id": "local-smoke-20260411T202053Z",
-  "generated_at_utc": "2026-04-11T20:23:31Z",
-  "total_domains": 5,
+  "batch_id": "sample-refresh",
+  "generated_at_utc": "2026-04-12T04:47:37Z",
+  "total_domains": 4,
   "active_malicious": 0,
   "inactive_down": 0,
-  "unique_ips": 5,
+  "unique_ips": 4,
   "unique_registrars": 0,
   "severity_counts": {
-    "LOW": 5
+    "LOW": 4
   },
   "category_counts": {
-    "BENIGN": 5
+    "BENIGN": 4
   },
   "top_impersonated_brands": [],
   "top_hosting_countries": [
     {
       "country": "Unknown",
-      "count": 5
+      "count": 4
     }
   ],
   "clusters": []

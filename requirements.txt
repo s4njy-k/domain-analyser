@@ -28,6 +28,7 @@ imagehash==4.3.1
 # Report generation
 jinja2==3.1.4
 weasyprint==62.3
+Markdown==3.6
 
 # Data storage
 tinydb==4.8.0

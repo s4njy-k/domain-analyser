@@ -142,6 +142,27 @@
     });
   }
 
+  function renderHolders(holders) {
+    const panel = byId("holders-panel");
+    const tbody = byId("holders-table-body");
+    if (!tbody) return;
+    tbody.innerHTML = "";
+    if (!holders.length) {
+      if (panel) {
+        panel.hidden = true;
+      }
+      return;
+    }
+    if (panel) {
+      panel.hidden = false;
+    }
+    holders.forEach((holder) => {
+      const row = document.createElement("tr");
+      row.innerHTML = "<td>" + holder.holder + "</td><td>" + holder.count + "</td>";
+      tbody.appendChild(row);
+    });
+  }
+
   function renderClusters(clusters) {
     const tbody = byId("cluster-table-body");
     if (!tbody) return;
@@ -186,7 +207,7 @@
   function filterDomains() {
     const filters = activeFilters();
     const filtered = state.domains.filter((row) => {
-      const haystack = [row.domain, row.brand_impersonated, row.registrar].join(" ").toLowerCase();
+      const haystack = [row.domain, row.brand_impersonated, row.registrar, row.allocation_holder, row.apnic_region].join(" ").toLowerCase();
       if (filters.search && !haystack.includes(filters.search)) {
         return false;
       }
@@ -222,6 +243,7 @@
     return [
       '<div class="actions-inline">',
       '<a href="' + row.report_link + '">Report</a>',
+      '<a href="' + row.pdf_report_link + '">PDF</a>',
       '<a href="' + row.raw_json_link + '">JSON</a>',
       '<a href="' + row.evidence_link + '">ZIP</a>',
       "</div>"
@@ -234,7 +256,7 @@
     tbody.innerHTML = "";
     const rows = filterDomains();
     if (!rows.length) {
-      tbody.innerHTML = '<tr><td colspan="7" class="empty-state">No domains match the current filters.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No domains match the current filters.</td></tr>';
       return;
     }
     rows.forEach((row) => {
@@ -245,6 +267,8 @@
         "<td>" + row.category + "</td>",
         "<td>" + row.vt_score + "</td>",
         "<td>" + (row.registered || "Unknown") + "</td>",
+        "<td>" + (row.allocation_holder || "Unknown") + "</td>",
+        "<td>" + (row.apnic_region || "Unknown") + "</td>",
         "<td>" + row.status + "</td>",
         "<td>" + actionLinks(row) + "</td>"
       ].join("");
@@ -285,6 +309,7 @@
       renderSummary(summary);
       renderCharts(summary);
       renderBrands(safeArray(summary.top_impersonated_brands));
+      renderHolders(safeArray(summary.top_allocation_holders));
       renderClusters(safeArray(summary.clusters));
       populateSelect("severity-filter", Object.keys(safeObject(summary.severity_counts)));
       populateSelect("category-filter", Object.keys(safeObject(summary.category_counts)));
@@ -297,7 +322,7 @@
     } catch (error) {
       const tbody = byId("domains-table-body");
       if (tbody) {
-        tbody.innerHTML = '<tr><td colspan="7" class="empty-state">Dashboard data could not be loaded.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Dashboard data could not be loaded.</td></tr>';
       }
       console.error(error);
     }

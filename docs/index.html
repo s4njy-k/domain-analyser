@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Malicious Domain Dashboard - local-smoke-20260411T202053Z</title>
+  <title>Malicious Domain Dashboard - sample-refresh</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="dashboard-page">
@@ -12,7 +12,7 @@
       <div>
         <p class="eyebrow">TAU / I4C Investigation Dashboard</p>
         <h1>Malicious Domain Analysis Dashboard</h1>
-        <p class="header-copy">Batch <strong>local-smoke-20260411T202053Z</strong> · Generated <strong>2026-04-11T20:23:31Z</strong> · Total domains <strong>5</strong></p>
+        <p class="header-copy">Batch <strong>sample-refresh</strong> · Generated <strong>2026-04-12T04:47:37Z</strong> · Total domains <strong>4</strong></p>
       </div>
       <div class="header-actions">
         <a class="button secondary" href="data/domains.csv">Download Full CSV</a>
@@ -57,6 +57,17 @@
             <tr><th>Brand</th><th>Count</th></tr>
           </thead>
           <tbody id="brands-table-body"></tbody>
+        </table>
+      </article>
+      <article class="panel" id="holders-panel">
+        <div class="panel-header">
+          <h2>Top Allocation Holders</h2>
+        </div>
+        <table class="dashboard-table compact">
+          <thead>
+            <tr><th>Holder</th><th>Count</th></tr>
+          </thead>
+          <tbody id="holders-table-body"></tbody>
         </table>
       </article>
     </section>
@@ -105,6 +116,8 @@
               <th><button type="button" class="sort-button" data-sort="category">Category</button></th>
               <th><button type="button" class="sort-button" data-sort="vt_malicious">VT Score</button></th>
               <th><button type="button" class="sort-button" data-sort="registered">Reg Date</button></th>
+              <th><button type="button" class="sort-button" data-sort="allocation_holder">APNIC Holder</button></th>
+              <th><button type="button" class="sort-button" data-sort="apnic_region">APNIC Region</button></th>
               <th><button type="button" class="sort-button" data-sort="status">Status</button></th>
               <th>Actions</th>
             </tr>

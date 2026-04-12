@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import date, datetime, timezone
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import Any, Optional
 from zipfile import ZIP_DEFLATED, ZipFile
 
@@ -14,6 +15,7 @@ from pipeline.utils import (
     ROOT_DIR,
     ensure_runtime_dirs,
     json_dumps,
+    logger,
     manifest_hash,
     path_to_data_uri,
     perceptual_hash,
@@ -23,6 +25,10 @@ from pipeline.utils import (
 )
 
 TEMPLATES_DIR = ROOT_DIR / "templates"
+REPORT_DISCLAIMER = (
+    "Analyst-generated draft for internal cybercrime review by the National Cybercrime Threat Analytics Unit "
+    "(NCTAU), Indian Cyber Crime Coordination Centre (I4C); not an official government issuance or blocking order."
+)
 
 
 class ThreatIntelResult(BaseModel):
@@ -68,6 +74,48 @@ class CaptureData(BaseModel):
     error: Optional[str] = None
 
 
+class APNICAllocation(BaseModel):
+    ip_address: Optional[str] = None
+    ip_version: Optional[int] = None
+    resource: Optional[str] = None
+    start: Optional[str] = None
+    value: Optional[str] = None
+    nir: Optional[str] = None
+    cc: Optional[str] = None
+    economy_name: Optional[str] = None
+    delegation_date: Optional[str] = None
+    transfer_date: Optional[str] = None
+    opaque_id: Optional[str] = None
+    holder_name: Optional[str] = None
+    registry: Optional[str] = None
+    type: Optional[str] = None
+    allocation_type: Optional[str] = None
+
+
+class HolderLinkedASN(BaseModel):
+    resource: Optional[str] = None
+    start: Optional[str] = None
+    value: Optional[str] = None
+    nir: Optional[str] = None
+    cc: Optional[str] = None
+    economy_name: Optional[str] = None
+    delegation_date: Optional[str] = None
+    transfer_date: Optional[str] = None
+    opaque_id: Optional[str] = None
+    holder_name: Optional[str] = None
+    registry: Optional[str] = None
+    type: Optional[str] = None
+
+
+class NetworkAttribution(BaseModel):
+    resolved_ips: list[str] = Field(default_factory=list)
+    matched_allocations: list[APNICAllocation] = Field(default_factory=list)
+    primary_holder: Optional[str] = None
+    primary_cc: Optional[str] = None
+    primary_economy_name: Optional[str] = None
+    holder_linked_asns: list[HolderLinkedASN] = Field(default_factory=list)
+
+
 class AIAnalysis(BaseModel):
     threat_category: str = "UNKNOWN"
     brand_impersonated: Optional[str] = None
@@ -92,6 +140,7 @@ class DomainReport(BaseModel):
     dns_records: dict
     cert_transparency: list[dict]
     threat_intel: ThreatIntelResult
+    network_attribution: NetworkAttribution = Field(default_factory=NetworkAttribution)
     captures: list[CaptureData]
     ai_analysis: AIAnalysis
     evidence_manifest_hash: Optional[str] = None
@@ -139,6 +188,7 @@ def _build_model(domain: str, merged: dict[str, Any], ai_result: dict[str, Any],
         dns_records=merged.get("dns_records") or {},
         cert_transparency=merged.get("cert_transparency") or [],
         threat_intel=ThreatIntelResult(**(merged.get("threat_intel") or {})),
+        network_attribution=NetworkAttribution(**(merged.get("network_attribution") or {})),
         captures=_capture_entries(merged.get("captures") or []),
         ai_analysis=AIAnalysis(**(ai_result or {})),
         evidence_manifest_hash=None,
@@ -260,9 +310,11 @@ def _linked_domains_from_existing(report: DomainReport, current_json_path: Path 
 def render_domain_report(
     report_dict: dict[str, Any],
     raw_json_link: str,
+    pdf_report_link: str,
     evidence_zip_link: str,
     manifest_entries: list[dict[str, Any]],
     linked_domains: list[str] | None = None,
+    is_pdf: bool = False,
 ) -> str:
     env = _jinja_env()
     template = env.get_template("domain_report.html.j2")
@@ -272,9 +324,13 @@ def render_domain_report(
     return template.render(
         report=report,
         style_css=style_css,
+        report_identifier=report_dict.get("report_identifier"),
+        report_disclaimer=REPORT_DISCLAIMER,
+        is_pdf=is_pdf,
         capture_cards=_capture_cards(report),
         domain_age=_domain_age(report.registration.registered),
         raw_json_link=raw_json_link,
+        pdf_report_link=pdf_report_link,
         evidence_zip_link=evidence_zip_link,
         manifest_entries=manifest_entries,
         linked_domains=linked_domains or [],
@@ -287,6 +343,48 @@ def render_domain_report(
     )
 
 
+def _report_identifier(domain: str, analysis_ts_utc: str) -> str:
+    compact_ts = analysis_ts_utc.replace("-", "").replace(":", "").replace("T", "-").replace("Z", "")
+    return f"NCTAU-DAR-{safe_filename(domain).upper()}-{compact_ts}"
+
+
+def _render_pdf(html: str, output_path: Path) -> None:
+    try:
+        from weasyprint import HTML
+
+        HTML(string=html, base_url=str(ROOT_DIR)).write_pdf(str(output_path))
+        return
+    except Exception as exc:
+        weasyprint_error = exc
+        logger.warning(
+            f"[yellow]WeasyPrint PDF rendering unavailable ({exc}); falling back to Playwright PDF output.[/yellow]"
+        )
+
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with TemporaryDirectory() as tmpdir:
+            html_path = Path(tmpdir) / "report.html"
+            html_path.write_text(html, encoding="utf-8")
+            with sync_playwright() as playwright:
+                browser = playwright.chromium.launch()
+                page = browser.new_page(viewport={"width": 1440, "height": 1080})
+                page.goto(html_path.as_uri(), wait_until="load")
+                page.pdf(
+                    path=str(output_path),
+                    format="A4",
+                    print_background=True,
+                    margin={"top": "16mm", "right": "12mm", "bottom": "18mm", "left": "12mm"},
+                )
+                browser.close()
+        return
+    except Exception as fallback_exc:
+        raise RuntimeError(
+            "PDF generation failed with both WeasyPrint and Playwright fallback: "
+            f"{weasyprint_error}; {fallback_exc}"
+        ) from fallback_exc
+
+
 def generate_domain_report(
     domain: str,
     merged: dict[str, Any],
@@ -296,6 +394,7 @@ def generate_domain_report(
 ) -> dict[str, Any]:
     ensure_runtime_dirs()
     report = _build_model(domain, merged, ai_result, batch_id)
+    report_identifier = _report_identifier(domain, report.analysis_ts_utc)
     screenshot_entries = _screenshot_manifest_entries(report)
     report.evidence_manifest_hash = manifest_hash(screenshot_entries)
 
@@ -309,6 +408,7 @@ def generate_domain_report(
             "wayback_snapshot": merged.get("wayback_snapshot", {}),
             "screenshot_phash": merged.get("screenshot_phash"),
             "linked_domains": linked_domains or _linked_domains_from_existing(report, json_path),
+            "report_identifier": report_identifier,
         }
     )
     write_json(json_path, report_payload)
@@ -326,14 +426,26 @@ def generate_domain_report(
     )
 
     report_path = REPORTS_DIR / f"{safe_filename(domain)}.html"
+    pdf_path = REPORTS_DIR / f"{safe_filename(domain)}.pdf"
     html = render_domain_report(
         report_payload,
         raw_json_link=f"../data/{json_path.name}",
+        pdf_report_link=f"./{pdf_path.name}",
         evidence_zip_link=f"./{safe_filename(domain)}_evidence.zip",
         manifest_entries=manifest_entries,
         linked_domains=report_payload.get("linked_domains", []),
     )
     report_path.write_text(html, encoding="utf-8")
+    pdf_html = render_domain_report(
+        report_payload,
+        raw_json_link=f"../data/{json_path.name}",
+        pdf_report_link=f"./{pdf_path.name}",
+        evidence_zip_link=f"./{safe_filename(domain)}_evidence.zip",
+        manifest_entries=manifest_entries,
+        linked_domains=report_payload.get("linked_domains", []),
+        is_pdf=True,
+    )
+    _render_pdf(pdf_html, pdf_path)
 
     manifest_path = REPORTS_DIR / f"{safe_filename(domain)}_manifest.json"
     html_entry = {
@@ -344,20 +456,30 @@ def generate_domain_report(
         "profile": "system",
         "type": "html_report",
     }
+    pdf_entry = {
+        "file": pdf_path.name,
+        "path": str(pdf_path),
+        "hash": sha256_file(pdf_path),
+        "timestamp": report.analysis_ts_utc,
+        "profile": "system",
+        "type": "pdf_report",
+    }
     manifest_payload = {
         "domain": domain,
         "batch_id": batch_id,
         "analysis_ts_utc": report.analysis_ts_utc,
         "evidence_manifest_hash": report.evidence_manifest_hash,
-        "files": manifest_entries + [html_entry],
+        "report_identifier": report_identifier,
+        "files": manifest_entries + [html_entry, pdf_entry],
     }
     write_json(manifest_path, manifest_payload)
 
-    zip_path = package_evidence_zip(domain, report_path, json_path, manifest_path, report)
+    zip_path = package_evidence_zip(domain, report_path, pdf_path, json_path, manifest_path, report)
     return {
         "report": report,
         "report_dict": report_payload,
         "report_path": report_path,
+        "pdf_path": pdf_path,
         "json_path": json_path,
         "manifest_path": manifest_path,
         "zip_path": zip_path,
@@ -367,6 +489,7 @@ def generate_domain_report(
 def package_evidence_zip(
     domain: str,
     report_path: Path,
+    pdf_path: Path,
     json_path: Path,
     manifest_path: Path,
     report: DomainReport,
@@ -374,6 +497,7 @@ def package_evidence_zip(
     zip_path = REPORTS_DIR / f"{safe_filename(domain)}_evidence.zip"
     with ZipFile(zip_path, "w", compression=ZIP_DEFLATED) as archive:
         archive.write(report_path, arcname=report_path.name)
+        archive.write(pdf_path, arcname=pdf_path.name)
         archive.write(json_path, arcname=json_path.name)
         archive.write(manifest_path, arcname=manifest_path.name)
         for capture in report.captures:

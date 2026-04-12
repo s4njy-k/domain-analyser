@@ -11,7 +11,7 @@
     "threat_category": "BENIGN",
     "victim_profile": "No specific victim group identified."
   },
-  "analysis_ts_utc": "2026-04-11T20:22:54Z",
+  "analysis_ts_utc": "2026-04-12T04:47:32Z",
   "batch_id": "local-smoke-20260411T202053Z",
   "captures": [
     {
@@ -89,6 +89,14 @@
   "evidence_manifest_hash": "e50fbbfd68caf963fba99a7d06e30dc86aec9311c2760599a4f512a6eadd9c8b",
   "input_url": "https://github.com",
   "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": []
+  },
   "network_requests": {
     "api_calls": [
       {
@@ -893,6 +901,7 @@
     "registrar": null,
     "status": []
   },
+  "report_identifier": "NCTAU-DAR-GITHUB.COM-20260412-044732",
   "response_headers": {
     "accept-ranges": "bytes",
     "cache-control": "max-age=0, private, must-revalidate",

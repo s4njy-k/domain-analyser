@@ -3,6 +3,26 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+if [[ "$(uname -s)" == "Linux" ]] && command -v apt-get >/dev/null 2>&1; then
+  SUDO=""
+  if [[ "${EUID}" -ne 0 ]] && command -v sudo >/dev/null 2>&1; then
+    SUDO="sudo"
+  fi
+  ${SUDO} apt-get update
+  ${SUDO} apt-get install -y \
+    libcairo2 \
+    libffi-dev \
+    libgdk-pixbuf-2.0-0 \
+    libglib2.0-0 \
+    libharfbuzz0b \
+    libharfbuzz-subset0 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libpangoft2-1.0-0 \
+    shared-mime-info \
+    fonts-liberation
+fi
+
 python3 -m pip install --upgrade pip
 python3 -m pip install --use-deprecated=legacy-resolver -r "${ROOT_DIR}/requirements.txt"
 python3 -m pip install grpcio grpcio-status lxml_html_clean

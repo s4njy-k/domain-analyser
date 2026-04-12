@@ -24,6 +24,7 @@ def cluster_infrastructure(domain_reports: list) -> dict:
     ns_clusters = defaultdict(list)       # Nameserver -> [domains]
     registrar_clusters = defaultdict(list) # Registrar -> [domains]
     template_clusters = defaultdict(list) # PHash -> [domains]
+    holder_clusters = defaultdict(list)   # APNIC allocation holder -> [domains]
 
     for report in domain_reports:
         # Cluster by hosting IP
@@ -46,12 +47,17 @@ def cluster_infrastructure(domain_reports: list) -> dict:
         if phash:
             template_clusters[phash].append(report["domain"])
 
+        holder = (report.get("network_attribution") or {}).get("primary_holder")
+        if holder:
+            holder_clusters[holder].append(report["domain"])
+
     # Return clusters with >1 member only
     return {
         "by_ip": {k: v for k, v in ip_clusters.items() if len(v) > 1},
         "by_nameserver": {k: v for k, v in ns_clusters.items() if len(v) > 1},
         "by_registrar": {k: v for k, v in registrar_clusters.items() if len(v) > 2},
         "by_template": {k: v for k, v in template_clusters.items() if len(v) > 1},
+        "by_allocation_holder": {k: v for k, v in holder_clusters.items() if len(v) > 1},
     }
 
 
@@ -94,6 +100,7 @@ def _flatten_clusters(clusters: dict[str, dict[str, list[str]]]) -> list[dict]:
         "by_nameserver": "Shared Nameserver",
         "by_registrar": "Shared Registrar",
         "by_template": "Shared Visual Template",
+        "by_allocation_holder": "Shared Allocation Holder",
     }
     for cluster_type, values in clusters.items():
         for indicator, domains in values.items():
@@ -133,10 +140,22 @@ def _domain_rows(report_payloads: list[dict]) -> list[dict]:
             "vt_malicious": payload.get("threat_intel", {}).get("vt_malicious", 0),
             "registered": payload.get("registration", {}).get("registered"),
             "status": "DOWN" if chosen_capture.get("http_status") is None else "ACTIVE",
-            "hosting_country": payload.get("registration", {}).get("country") or payload.get("threat_intel", {}).get("abuseipdb_country") or "Unknown",
+            "hosting_country": (
+                payload.get("network_attribution", {}).get("primary_economy_name")
+                or payload.get("registration", {}).get("country")
+                or payload.get("threat_intel", {}).get("abuseipdb_country")
+                or "Unknown"
+            ),
+            "allocation_holder": payload.get("network_attribution", {}).get("primary_holder") or "Unknown",
+            "apnic_region": (
+                payload.get("network_attribution", {}).get("primary_economy_name")
+                or payload.get("network_attribution", {}).get("primary_cc")
+                or "Unknown"
+            ),
             "registrar": payload.get("registration", {}).get("registrar") or "Unknown",
             "ip": dns_a[0] if dns_a else None,
             "report_link": f"domains/{safe_filename(payload['domain'])}/report.html",
+            "pdf_report_link": f"domains/{safe_filename(payload['domain'])}/report.pdf",
             "raw_json_link": f"domains/{safe_filename(payload['domain'])}/data.json",
             "evidence_link": f"evidence/{safe_filename(payload['domain'])}_evidence.zip",
             "priority_score": payload.get("ai_analysis", {}).get("priority_score", 0),
@@ -150,11 +169,12 @@ def _summary_payload(report_payloads: list[dict], domain_rows: list[dict], clust
     category_counts = Counter(row["category"] for row in domain_rows)
     countries = Counter(row["hosting_country"] for row in domain_rows)
     brands = Counter(row["brand_impersonated"] for row in domain_rows if row.get("brand_impersonated"))
+    holders = Counter(row["allocation_holder"] for row in domain_rows if row.get("allocation_holder") and row["allocation_holder"] != "Unknown")
     unique_ips = {row["ip"] for row in domain_rows if row.get("ip")}
     unique_registrars = {row["registrar"] for row in domain_rows if row.get("registrar") and row["registrar"] != "Unknown"}
     flat_clusters = _flatten_clusters(clusters)
 
-    return {
+    summary = {
         "batch_id": batch_id or (report_payloads[0]["batch_id"] if report_payloads else "batch-unknown"),
         "generated_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "total_domains": len(domain_rows),
@@ -168,6 +188,9 @@ def _summary_payload(report_payloads: list[dict], domain_rows: list[dict], clust
         "top_hosting_countries": [{"country": country, "count": count} for country, count in countries.most_common(10)],
         "clusters": flat_clusters,
     }
+    if holders:
+        summary["top_allocation_holders"] = [{"holder": holder, "count": count} for holder, count in holders.most_common(10)]
+    return summary
 
 
 def _write_domains_csv(rows: list[dict]) -> None:
@@ -180,6 +203,8 @@ def _write_domains_csv(rows: list[dict]) -> None:
         "registered",
         "status",
         "hosting_country",
+        "allocation_holder",
+        "apnic_region",
         "registrar",
         "ip",
         "priority_score",
@@ -211,9 +236,13 @@ def _write_per_domain_docs(report_payloads: list[dict]) -> list[Path]:
 
         manifest_path = REPORTS_DIR / f"{domain_slug}_manifest.json"
         manifest_payload = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {"files": []}
+        pdf_source = REPORTS_DIR / f"{domain_slug}.pdf"
+        pdf_target = domain_dir / "report.pdf"
+        copy_if_exists(pdf_source, pdf_target)
         report_html = render_domain_report(
             payload,
             raw_json_link="data.json",
+            pdf_report_link="report.pdf",
             evidence_zip_link=f"../../evidence/{domain_slug}_evidence.zip",
             manifest_entries=manifest_payload.get("files", []),
             linked_domains=payload.get("linked_domains", []),

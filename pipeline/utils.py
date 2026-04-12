@@ -23,12 +23,14 @@ load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 INPUT_DIR = ROOT_DIR / "input"
+RESOURCES_DIR = ROOT_DIR / "resources"
 OUTPUT_DIR = ROOT_DIR / "output"
 DOCS_DIR = ROOT_DIR / "docs"
 SCREENSHOTS_DIR = OUTPUT_DIR / "screenshots"
 REPORTS_DIR = OUTPUT_DIR / "reports"
 DATA_DIR = OUTPUT_DIR / "data"
 DASHBOARD_DIR = OUTPUT_DIR / "dashboard"
+APNIC_DATA_PATH = RESOURCES_DIR / "APNIC_(IP&ASN)_Resources.csv"
 
 DEFAULT_TIMEOUT = 20.0
 INDIA_TIMEZONE = "Asia/Kolkata"

@@ -8,6 +8,7 @@ from urllib.parse import urlparse
 import dns.resolver
 import httpx
 
+from pipeline.apnic import enrich_network_attribution
 from pipeline.ingest import calculate_priority_score
 from pipeline.utils import (
     DEFAULT_TIMEOUT,
@@ -58,6 +59,7 @@ def _default_ti() -> dict[str, Any]:
         "otx_pulses": [],
         "phishtank_verified": False,
         "phishtank_in_database": False,
+        "abuseipdb_ip": None,
         "abuseipdb_score": None,
         "abuseipdb_isp": None,
         "abuseipdb_usage_type": None,
@@ -287,8 +289,8 @@ def _resolve_dns_records_sync(domain: str) -> dict[str, list[str]]:
     resolver = dns.resolver.Resolver(configure=True)
     resolver.timeout = 5
     resolver.lifetime = 8
-    records: dict[str, list[str]] = {"A": [], "MX": [], "NS": [], "TXT": []}
-    for record_type in ("A", "MX", "NS", "TXT"):
+    records: dict[str, list[str]] = {"A": [], "AAAA": [], "MX": [], "NS": [], "TXT": []}
+    for record_type in ("A", "AAAA", "MX", "NS", "TXT"):
         try:
             answers = resolver.resolve(domain, record_type)
             if record_type == "TXT":
@@ -369,6 +371,16 @@ def _merge_errors(payload: dict[str, Any], source_name: str, result: dict[str, A
         payload["errors"][source_name] = error
 
 
+def _ip_candidates(dns_records: dict[str, list[str]], combined: dict[str, Any]) -> list[str]:
+    candidates: list[str] = []
+    candidates.extend(dns_records.get("A") or [])
+    candidates.extend(dns_records.get("AAAA") or [])
+    for value in (combined.get("urlscan_page_ip"), combined.get("abuseipdb_ip")):
+        if value:
+            candidates.append(str(value))
+    return candidates
+
+
 async def gather_passive_intel(domain: str, url: str) -> dict[str, Any]:
     parsed = urlparse(url if "://" in url else f"https://{domain}")
     input_url = url if parsed.scheme else f"https://{domain}"
@@ -402,7 +414,7 @@ async def gather_passive_intel(domain: str, url: str) -> dict[str, Any]:
     resolved = await asyncio.gather(*tasks.values(), return_exceptions=True)
     combined = _default_ti()
     registration = _default_registration()
-    dns_records = {"A": [], "MX": [], "NS": [], "TXT": []}
+    dns_records = {"A": [], "AAAA": [], "MX": [], "NS": [], "TXT": []}
     cert_transparency: list[dict[str, Any]] = []
 
     for key, value in zip(tasks.keys(), resolved):
@@ -410,7 +422,7 @@ async def gather_passive_intel(domain: str, url: str) -> dict[str, Any]:
             if key == "registration":
                 registration = _default_registration(str(value))
             elif key == "dns":
-                dns_records = {"A": [], "MX": [], "NS": [], "TXT": []}
+                dns_records = {"A": [], "AAAA": [], "MX": [], "NS": [], "TXT": []}
                 combined["errors"][key] = str(value)
             elif key == "crt":
                 combined["errors"][key] = str(value)
@@ -431,6 +443,7 @@ async def gather_passive_intel(domain: str, url: str) -> dict[str, Any]:
     passive_priority = calculate_priority_score(domain, input_url, registration.get("registered"))
     if combined.get("phishtank_verified") or combined.get("urlhaus_listed"):
         passive_priority = min(100, passive_priority + 25)
+    network_attribution = enrich_network_attribution(_ip_candidates(dns_records, combined))
 
     return {
         "domain": domain,
@@ -440,11 +453,15 @@ async def gather_passive_intel(domain: str, url: str) -> dict[str, Any]:
         "dns_records": dns_records,
         "cert_transparency": cert_transparency,
         "threat_intel": combined,
+        "network_attribution": network_attribution,
         "passive_priority_score": passive_priority,
         "registrar": registration.get("registrar"),
         "registered": registration.get("registered"),
         "expires": registration.get("expires"),
         "country": registration.get("country"),
         "nameservers": registration.get("nameservers", []),
+        "primary_allocation_holder": network_attribution.get("primary_holder"),
+        "primary_allocation_cc": network_attribution.get("primary_cc"),
+        "primary_allocation_economy": network_attribution.get("primary_economy_name"),
         **combined,
     }

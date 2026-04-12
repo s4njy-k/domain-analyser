@@ -11,7 +11,7 @@
     "threat_category": "BENIGN",
     "victim_profile": "No specific victim group identified."
   },
-  "analysis_ts_utc": "2026-04-11T20:21:31Z",
+  "analysis_ts_utc": "2026-04-12T04:47:36Z",
   "batch_id": "local-smoke-20260411T202053Z",
   "captures": [
     {
@@ -85,6 +85,14 @@
   "evidence_manifest_hash": "b875a68d34bc720041c3dfcf2543c1ed232a20c01fcc772673e37b9d164b2d26",
   "input_url": "https://www.wikipedia.org",
   "linked_domains": [],
+  "network_attribution": {
+    "holder_linked_asns": [],
+    "matched_allocations": [],
+    "primary_cc": null,
+    "primary_economy_name": null,
+    "primary_holder": null,
+    "resolved_ips": []
+  },
   "network_requests": {
     "api_calls": [],
     "first_party": [
@@ -132,6 +140,7 @@
     "registrar": null,
     "status": []
   },
+  "report_identifier": "NCTAU-DAR-WIKIPEDIA.ORG-20260412-044736",
   "response_headers": {
     "accept-ranges": "bytes",
     "age": "9716",

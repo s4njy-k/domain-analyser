@@ -3,111 +3,257 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ report.domain }} - Domain Analysis Report</title>
+  <title>{{ report.domain }} - NCTAU Domain Analysis Report</title>
   <style>{{ style_css }}</style>
   <style>
+    @page {
+      size: A4;
+      margin: 16mm 12mm 18mm;
+      @top-left {
+        content: "NCTAU / I4C Domain Analysis Draft";
+        color: #475569;
+        font-size: 9pt;
+      }
+      @top-right {
+        content: "{{ report_identifier }}";
+        color: #475569;
+        font-size: 9pt;
+      }
+      @bottom-left {
+        content: "{{ report_disclaimer }}";
+        color: #64748b;
+        font-size: 8pt;
+      }
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        color: #475569;
+        font-size: 9pt;
+      }
+    }
+
     .report-page {
-      background: #fafafa;
-      color: #161616;
+      background: #edf2f8;
+      color: #10233c;
       min-height: 100vh;
     }
+
     .report-shell {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
       padding: 24px;
     }
-    .report-hero {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 24px;
-      border-radius: 18px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-      margin-bottom: 24px;
-      color: #fff;
-    }
-    .report-hero.severity-CRITICAL { background: linear-gradient(135deg, #7f1d1d, #b22222); }
-    .report-hero.severity-HIGH { background: linear-gradient(135deg, #8a3b00, #cc5500); }
-    .report-hero.severity-MEDIUM { background: linear-gradient(135deg, #715300, #b8860b); }
-    .report-hero.severity-LOW { background: linear-gradient(135deg, #0d4b24, #1a6b3a); }
-    .report-hero.severity-INACTIVE,
-    .report-hero.severity-UNKNOWN { background: linear-gradient(135deg, #555, #777); }
-    .hero-title h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-    }
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-    .report-page .section-card {
+
+    .report-hero,
+    .section-card,
+    .cover-strip,
+    .summary-matrix {
       background: #fff;
       border-radius: 18px;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
-      padding: 22px;
-      margin-bottom: 20px;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
       border: 1px solid rgba(15, 23, 42, 0.08);
     }
-    .section-card h2 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      color: #102542;
+
+    .report-hero {
+      overflow: hidden;
+      margin-bottom: 18px;
     }
-    .summary-text {
-      font-size: 1.02rem;
-      line-height: 1.7;
+
+    .cover-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+      gap: 18px;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(20, 56, 104, 0.2), transparent 35%),
+        linear-gradient(135deg, #0f2744, #1f4b7a 55%, #2e6da4);
+      color: #f8fbff;
+      border: 0;
+      box-shadow: none;
+      border-radius: 18px 18px 0 0;
     }
-    .intel-grid {
+
+    .cover-strip h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+    }
+
+    .cover-strip p {
+      margin: 0 0 8px;
+      line-height: 1.6;
+    }
+
+    .cover-meta {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 16px;
+      align-self: stretch;
+    }
+
+    .cover-meta dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .cover-meta dt {
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 4px;
+    }
+
+    .cover-meta dd {
+      margin: 0;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .hero-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 16px 24px 20px;
+      background: #f7f9fc;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .disclaimer-banner {
+      border-radius: 14px;
+      background: #fff8de;
+      color: #7a4a00;
+      border: 1px solid rgba(184, 134, 11, 0.35);
+      padding: 12px 14px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      flex: 1 1 420px;
+    }
+
+    .summary-matrix {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
+      gap: 1px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: rgba(15, 23, 42, 0.08);
     }
-    .intel-card {
+
+    .summary-matrix article {
+      padding: 16px 18px;
+      background: #fff;
+    }
+
+    .summary-matrix .label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    .summary-matrix strong {
+      display: block;
+      font-size: 1.2rem;
+      word-break: break-word;
+    }
+
+    .section-card {
+      padding: 22px;
+      margin-bottom: 18px;
+      break-inside: avoid;
+    }
+
+    .section-card h2 {
+      margin: 0 0 14px;
+      color: #102542;
+    }
+
+    .section-card h3 {
+      margin: 18px 0 10px;
+      color: #17365f;
+    }
+
+    .summary-text,
+    .section-card p,
+    .legal-box {
+      line-height: 1.7;
+    }
+
+    .intel-grid,
+    .grid-2,
+    .grid-3,
+    .shot-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .intel-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .intel-card,
+    .legal-box,
+    .detail-panel,
+    .tech-block {
       border-radius: 16px;
       padding: 16px;
       border: 1px solid rgba(15, 23, 42, 0.08);
-      background: #f5f7fb;
+      background: #f8fafc;
     }
+
     .intel-card.alert { background: #fff1f1; border-color: rgba(178, 34, 34, 0.3); }
     .intel-card.warn { background: #fff7ec; border-color: rgba(204, 85, 0, 0.28); }
     .intel-card.safe { background: #edf8f1; border-color: rgba(26, 107, 58, 0.28); }
+
     .intel-card .label {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: #5c6270;
       margin-bottom: 8px;
     }
+
     .intel-card strong {
       display: block;
-      font-size: 1.35rem;
+      font-size: 1.28rem;
       margin-bottom: 6px;
     }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 18px;
-    }
+
     .report-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.95rem;
     }
+
     .report-table th,
     .report-table td {
       text-align: left;
       padding: 10px 12px;
       border-bottom: 1px solid #e5e7eb;
       vertical-align: top;
+      word-break: break-word;
     }
+
     .report-table th {
       color: #1f2937;
       background: #f5f7fb;
     }
+
     .new-domain-flag {
       display: inline-flex;
       align-items: center;
@@ -117,47 +263,9 @@
       background: rgba(178, 34, 34, 0.12);
       color: #8a1111;
       font-weight: 700;
-      margin-top: 10px;
+      margin-top: 12px;
     }
-    .shot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-    }
-    .shot-card {
-      border-radius: 16px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      background: #f8fafc;
-    }
-    .shot-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 12px 14px;
-      background: #e8eff8;
-      font-weight: 700;
-    }
-    .shot-media {
-      background: #0f172a;
-      aspect-ratio: 16 / 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .shot-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      cursor: zoom-in;
-    }
-    .shot-meta {
-      padding: 12px 14px;
-      font-size: 0.86rem;
-      word-break: break-word;
-      color: #334155;
-    }
+
     .cloaking-banner {
       padding: 12px 14px;
       border-radius: 14px;
@@ -167,29 +275,69 @@
       font-weight: 700;
       margin-bottom: 14px;
     }
-    .legal-box {
-      padding: 18px;
+
+    .shot-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .shot-card {
       border-radius: 16px;
-      background: #fff;
-      border: 1px solid #d7dce2;
-      color: #111827;
-      line-height: 1.7;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      background: #f8fafc;
     }
-    .tech-columns {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 18px;
+
+    .shot-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #e8eff8;
+      font-weight: 700;
     }
+
+    .shot-media {
+      background: #0f172a;
+      aspect-ratio: 16 / 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .shot-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .shot-meta {
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      color: #334155;
+    }
+
     .code-list {
       margin: 0;
       padding-left: 20px;
       word-break: break-word;
     }
-    .badge-stack {
+
+    .action-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
+
+    .agency-mark {
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 8px;
+    }
+
     .lightbox {
       position: fixed;
       inset: 0;
@@ -200,13 +348,16 @@
       padding: 24px;
       z-index: 50;
     }
+
     .lightbox.active { display: flex; }
+
     .lightbox img {
       max-width: min(1200px, 95vw);
       max-height: 92vh;
       border-radius: 14px;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
     }
+
     .lightbox button {
       position: absolute;
       top: 24px;
@@ -220,44 +371,144 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
-    @media (max-width: 900px) {
-      .report-hero { flex-direction: column; }
-      .tech-columns { grid-template-columns: 1fr; }
+
+    @media (max-width: 960px) {
+      .cover-strip {
+        grid-template-columns: 1fr;
+      }
     }
+
     @media print {
-      .report-shell { padding: 0; max-width: none; }
-      .report-page .section-card,
-      .report-hero { box-shadow: none; break-inside: avoid; }
-      .report-hero { border-radius: 0; }
-      .shot-media img { cursor: default; }
-      .lightbox, .action-row { display: none !important; }
-      .legal-box { color: #000; background: #fff; }
+      body.report-page {
+        background: #fff;
+      }
+      .report-shell {
+        padding: 0;
+        max-width: none;
+      }
+      .report-hero,
+      .section-card,
+      .summary-matrix {
+        box-shadow: none;
+      }
+      .hero-toolbar,
+      .lightbox {
+        display: none !important;
+      }
+      .shot-media img {
+        cursor: default;
+      }
+      a {
+        color: #10233c;
+        text-decoration: none;
+      }
     }
   </style>
 </head>
 <body class="report-page">
   <div class="report-shell">
-    <header class="report-hero severity-{{ report.ai_analysis.severity }}">
-      <div class="hero-title">
-        <p class="eyebrow">AI-Powered Malicious Domain Analyser</p>
-        <h1>{{ report.domain }}</h1>
-        <div class="hero-meta">
-          <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
-          <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
-          <span class="badge neutral">{{ report.batch_id }}</span>
-          <span class="badge neutral">{{ report.analysis_ts_utc }}</span>
+    <header class="report-hero">
+      <div class="cover-strip">
+        <div>
+          <p class="agency-mark">National Cybercrime Threat Analytics Unit (NCTAU)</p>
+          <p class="agency-mark">Indian Cyber Crime Coordination Centre (I4C) - Analyst Draft</p>
+          <h1>Cybercrime Domain Analysis Report</h1>
+          <p><strong>Subject domain:</strong> {{ report.domain }}</p>
+          <p><strong>Input URL:</strong> {{ report.input_url }}</p>
+          <div class="hero-meta">
+            <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
+            <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
+            <span class="badge neutral">{{ report.batch_id }}</span>
+          </div>
         </div>
-        <p>Input URL: <strong>{{ report.input_url }}</strong></p>
+        <aside class="cover-meta">
+          <dl>
+            <div>
+              <dt>Report ID</dt>
+              <dd>{{ report_identifier }}</dd>
+            </div>
+            <div>
+              <dt>Analysis Timestamp (UTC)</dt>
+              <dd>{{ report.analysis_ts_utc }}</dd>
+            </div>
+            <div>
+              <dt>Priority Score</dt>
+              <dd>{{ report.ai_analysis.priority_score }}</dd>
+            </div>
+            <div>
+              <dt>Primary Allocation Holder</dt>
+              <dd>{{ report.network_attribution.primary_holder or 'Unavailable' }}</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
-      <div class="action-row">
-        <a class="button primary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
-        <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
-      </div>
+      {% if not is_pdf %}
+        <div class="hero-toolbar">
+          <div class="disclaimer-banner">
+            <strong>Draft handling note:</strong> {{ report_disclaimer }}
+          </div>
+          <div class="action-stack">
+            <a class="button primary" href="{{ pdf_report_link }}">Download PDF Report</a>
+            <a class="button secondary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+            <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
+          </div>
+        </div>
+      {% endif %}
     </header>
+
+    <section class="summary-matrix">
+      <article>
+        <span class="label">Severity</span>
+        <strong>{{ report.ai_analysis.severity }}</strong>
+      </article>
+      <article>
+        <span class="label">Threat Category</span>
+        <strong>{{ report.ai_analysis.threat_category }}</strong>
+      </article>
+      <article>
+        <span class="label">Confidence</span>
+        <strong>{{ report.ai_analysis.confidence }}</strong>
+      </article>
+      <article>
+        <span class="label">Brand Impersonated</span>
+        <strong>{{ report.ai_analysis.brand_impersonated or 'None identified' }}</strong>
+      </article>
+      <article>
+        <span class="label">Resolved IPs</span>
+        <strong>{{ report.network_attribution.resolved_ips|length }}</strong>
+      </article>
+      <article>
+        <span class="label">Holder-linked ASNs</span>
+        <strong>{{ report.network_attribution.holder_linked_asns|length }}</strong>
+      </article>
+    </section>
 
     <section class="section-card" id="section-a">
       <h2>A - Executive Summary</h2>
       <p class="summary-text">{{ report.ai_analysis.illegal_activity_description }}</p>
+      <div class="grid-2">
+        <div class="legal-box">
+          <strong>Fraud mechanism</strong>
+          <p>{{ report.ai_analysis.fraud_mechanism or 'N/A' }}</p>
+          <strong>Victim profile</strong>
+          <p>{{ report.ai_analysis.victim_profile or 'N/A' }}</p>
+        </div>
+        <div class="legal-box">
+          <strong>Attribution summary</strong>
+          <p>
+            {% if report.network_attribution.primary_holder %}
+              The primary resolved infrastructure maps to APNIC allocation holder
+              <strong>{{ report.network_attribution.primary_holder }}</strong>
+              {% if report.network_attribution.primary_economy_name %}
+                in {{ report.network_attribution.primary_economy_name }}
+              {% endif %}.
+            {% else %}
+              No APNIC allocation holder was identified for the resolved addresses captured during this run.
+            {% endif %}
+          </p>
+          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
+        </div>
+      </div>
     </section>
 
     <section class="section-card" id="section-b">
@@ -302,16 +553,16 @@
     </section>
 
     <section class="section-card" id="section-c">
-      <h2>C - Registration Data</h2>
+      <h2>C - Registration and DNS</h2>
       <div class="grid-2">
-        <div>
+        <div class="detail-panel">
           <table class="report-table">
             <tbody>
               <tr><th>Registrar</th><td>{{ report.registration.registrar or 'Unknown' }}</td></tr>
               <tr><th>Registration date</th><td>{{ report.registration.registered or 'Unknown' }}</td></tr>
               <tr><th>Expiry date</th><td>{{ report.registration.expires or 'Unknown' }}</td></tr>
               <tr><th>Nameservers</th><td>{{ report.registration.nameservers|join(', ') if report.registration.nameservers else 'Unknown' }}</td></tr>
-              <tr><th>Country</th><td>{{ report.registration.country or 'Unknown' }}</td></tr>
+              <tr><th>Registrant country</th><td>{{ report.registration.country or 'Unknown' }}</td></tr>
               <tr><th>Domain age</th><td>{{ domain_age.days ~ ' days' if domain_age.days is not none else 'Unknown' }}</td></tr>
             </tbody>
           </table>
@@ -319,19 +570,24 @@
             <div class="new-domain-flag">NEW DOMAIN - Registered within 30 days</div>
           {% endif %}
         </div>
-        <div>
-          <div class="legal-box">
-            <strong>Fraud mechanism</strong>
-            <p>{{ report.ai_analysis.fraud_mechanism or 'N/A' }}</p>
-            <strong>Victim profile</strong>
-            <p>{{ report.ai_analysis.victim_profile or 'N/A' }}</p>
-          </div>
+        <div class="detail-panel">
+          <h3>DNS Records</h3>
+          <table class="report-table">
+            <tbody>
+              {% for record_type, values in report.dns_records.items() %}
+                <tr>
+                  <th>{{ record_type }}</th>
+                  <td>{{ values|join(', ') if values else 'No record returned' }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
     <section class="section-card" id="section-d">
-      <h2>D - Screenshots</h2>
+      <h2>D - Evidence Capture</h2>
       {% if capture_cards | selectattr('cloaking_suspected') | list %}
         <div class="cloaking-banner">CLOAKING SUSPECTED - Desktop and mobile captures differ materially.</div>
       {% endif %}
@@ -402,9 +658,76 @@
     </section>
 
     <section class="section-card" id="section-f">
-      <h2>F - Technical Details</h2>
-      <div class="tech-columns">
-        <div>
+      <h2>F - Network Attribution</h2>
+      <div class="grid-2">
+        <div class="detail-panel">
+          <h3>Resolved IP Set</h3>
+          <ul class="code-list">
+            {% for ip in report.network_attribution.resolved_ips %}
+              <li>{{ ip }}</li>
+            {% else %}
+              <li>No IPv4 or IPv6 addresses were resolved during this run.</li>
+            {% endfor %}
+          </ul>
+          <h3>Holder-linked ASN Allocations</h3>
+          <ul class="code-list">
+            {% for asn in report.network_attribution.holder_linked_asns %}
+              <li>
+                <strong>{{ asn.resource }}</strong>
+                {% if asn.holder_name %}<br>{{ asn.holder_name }}{% endif %}
+                {% if asn.economy_name or asn.cc %}<br>{{ asn.economy_name or 'Unknown economy' }}{% if asn.cc %} ({{ asn.cc }}){% endif %}{% endif %}
+              </li>
+            {% else %}
+              <li>No holder-linked ASN allocations were identified from the APNIC dataset.</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="detail-panel">
+          <h3>Primary Allocation Holder</h3>
+          <p><strong>{{ report.network_attribution.primary_holder or 'Unavailable' }}</strong></p>
+          <p>
+            {% if report.network_attribution.primary_economy_name or report.network_attribution.primary_cc %}
+              {{ report.network_attribution.primary_economy_name or 'Unknown economy' }}
+              {% if report.network_attribution.primary_cc %}({{ report.network_attribution.primary_cc }}){% endif %}
+            {% else %}
+              No APNIC geography was matched.
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      <h3>Matched APNIC Allocations</h3>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>IP</th>
+            <th>Resource</th>
+            <th>Holder</th>
+            <th>NIR / Country</th>
+            <th>Economy</th>
+            <th>Delegation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for allocation in report.network_attribution.matched_allocations %}
+            <tr>
+              <td>{{ allocation.ip_address }}</td>
+              <td>{{ allocation.resource }}</td>
+              <td>{{ allocation.holder_name or 'Unknown' }}</td>
+              <td>{{ allocation.nir or 'N/A' }}{% if allocation.cc %} / {{ allocation.cc }}{% endif %}</td>
+              <td>{{ allocation.economy_name or 'Unknown' }}</td>
+              <td>{{ allocation.delegation_date or 'Unknown' }}</td>
+            </tr>
+          {% else %}
+            <tr><td colspan="6">No APNIC allocation block matched the resolved IP set.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section-card" id="section-g">
+      <h2>G - Technical Observations and Link Analysis</h2>
+      <div class="grid-2">
+        <div class="tech-block">
           <table class="report-table">
             <tbody>
               <tr><th>HTTP status</th><td>{{ primary_capture.http_status if primary_capture else 'N/A' }}</td></tr>
@@ -414,25 +737,28 @@
               <tr><th>Wayback snapshot</th><td>{% if wayback_snapshot.url %}<a href="{{ wayback_snapshot.url }}">Archived copy</a>{% else %}Not available{% endif %}</td></tr>
             </tbody>
           </table>
-          <h3>DNS Records</h3>
-          <table class="report-table">
-            <tbody>
-              {% for record_type, values in report.dns_records.items() %}
-                <tr>
-                  <th>{{ record_type }}</th>
-                  <td>{{ values|join(', ') if values else 'No record returned' }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+          <h3>Network Requests</h3>
+          <ul class="code-list">
+            <li><strong>First-party:</strong> {{ network_requests.first_party|length if network_requests.first_party is defined else 0 }}</li>
+            <li><strong>Third-party:</strong> {{ network_requests.third_party|length if network_requests.third_party is defined else 0 }}</li>
+            <li><strong>API calls:</strong> {{ network_requests.api_calls|length if network_requests.api_calls is defined else 0 }}</li>
+          </ul>
         </div>
-        <div>
+        <div class="tech-block">
           <h3>Certificate Transparency (first 10)</h3>
           <ul class="code-list">
             {% for cert in first_ten_certs %}
               <li><strong>{{ cert.name }}</strong><br>{{ cert.issuer }}<br>{{ cert.not_before }}</li>
             {% else %}
               <li>No certificate transparency records returned.</li>
+            {% endfor %}
+          </ul>
+          <h3>Linked Domains (shared infrastructure)</h3>
+          <ul class="code-list">
+            {% for linked in linked_domains %}
+              <li>{{ linked }}</li>
+            {% else %}
+              <li>No linked domains were identified in the current dataset.</li>
             {% endfor %}
           </ul>
           <h3>Response Headers</h3>
@@ -443,19 +769,31 @@
               <li>No response headers recorded.</li>
             {% endfor %}
           </ul>
-          <h3>Network Requests</h3>
-          <ul class="code-list">
-            <li><strong>First-party:</strong> {{ network_requests.first_party|length if network_requests.first_party is defined else 0 }}</li>
-            <li><strong>Third-party:</strong> {{ network_requests.third_party|length if network_requests.third_party is defined else 0 }}</li>
-            <li><strong>API calls:</strong> {{ network_requests.api_calls|length if network_requests.api_calls is defined else 0 }}</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section-card" id="section-g">
-      <h2>G - Evidence Manifest</h2>
-      <table class="report-table">
+    <section class="section-card" id="section-h">
+      <h2>H - Evidence Manifest and Recommendations</h2>
+      <div class="grid-2">
+        <div class="legal-box">
+          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
+          <p><strong>Severity:</strong> {{ report.ai_analysis.severity }}</p>
+          <p><strong>Priority score:</strong> {{ report.ai_analysis.priority_score }}</p>
+          {% if not is_pdf %}
+            <div class="action-stack">
+              <a class="button primary" href="{{ pdf_report_link }}">Download PDF Report</a>
+              <a class="button secondary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+              <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="legal-box">
+          <p><strong>Manifest hash:</strong> {{ report.evidence_manifest_hash or 'N/A' }}</p>
+          <p>{{ report_disclaimer }}</p>
+        </div>
+      </div>
+      <table class="report-table" style="margin-top: 16px;">
         <thead>
           <tr>
             <th>File</th>
@@ -479,55 +817,31 @@
           {% endfor %}
         </tbody>
       </table>
-      <p><strong>Manifest hash:</strong> {{ report.evidence_manifest_hash or 'N/A' }}</p>
-    </section>
-
-    <section class="section-card" id="section-h">
-      <h2>H - Recommendations</h2>
-      <div class="grid-2">
-        <div class="legal-box">
-          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
-          <p><strong>Severity:</strong> {{ report.ai_analysis.severity }}</p>
-          <p><strong>Priority score:</strong> {{ report.ai_analysis.priority_score }}</p>
-          <div class="badge-stack">
-            <a class="button primary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
-            <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
-          </div>
-        </div>
-        <div class="legal-box">
-          <strong>Linked domains (shared infrastructure)</strong>
-          <ul class="code-list">
-            {% for linked in linked_domains %}
-              <li>{{ linked }}</li>
-            {% else %}
-              <li>No linked domains were identified in the current dataset.</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
     </section>
   </div>
 
-  <div class="lightbox" id="lightbox">
-    <button type="button" aria-label="Close lightbox" onclick="window.closeReportLightbox()">×</button>
-    <img alt="Expanded screenshot preview" id="lightbox-image">
-  </div>
+  {% if not is_pdf %}
+    <div class="lightbox" id="lightbox">
+      <button type="button" aria-label="Close lightbox" onclick="window.closeReportLightbox()">×</button>
+      <img alt="Expanded screenshot preview" id="lightbox-image">
+    </div>
 
-  <script>
-    window.closeReportLightbox = function () {
-      document.getElementById('lightbox').classList.remove('active');
-    };
-    document.querySelectorAll('[data-lightbox]').forEach(function (image) {
-      image.addEventListener('click', function () {
-        document.getElementById('lightbox-image').src = image.getAttribute('data-lightbox');
-        document.getElementById('lightbox').classList.add('active');
+    <script>
+      window.closeReportLightbox = function () {
+        document.getElementById('lightbox').classList.remove('active');
+      };
+      document.querySelectorAll('[data-lightbox]').forEach(function (image) {
+        image.addEventListener('click', function () {
+          document.getElementById('lightbox-image').src = image.getAttribute('data-lightbox');
+          document.getElementById('lightbox').classList.add('active');
+        });
       });
-    });
-    document.getElementById('lightbox').addEventListener('click', function (event) {
-      if (event.target.id === 'lightbox') {
-        window.closeReportLightbox();
-      }
-    });
-  </script>
+      document.getElementById('lightbox').addEventListener('click', function (event) {
+        if (event.target.id === 'lightbox') {
+          window.closeReportLightbox();
+        }
+      });
+    </script>
+  {% endif %}
 </body>
 </html>
