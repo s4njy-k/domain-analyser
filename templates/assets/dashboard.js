@@ -207,7 +207,7 @@
   function filterDomains() {
     const filters = activeFilters();
     const filtered = state.domains.filter((row) => {
-      const haystack = [row.domain, row.brand_impersonated, row.registrar, row.allocation_holder, row.apnic_region].join(" ").toLowerCase();
+      const haystack = [row.domain, row.brand_impersonated, row.registrar, row.allocation_holder, row.apnic_region, row.payment_summary].join(" ").toLowerCase();
       if (filters.search && !haystack.includes(filters.search)) {
         return false;
       }
@@ -240,12 +240,18 @@
   }
 
   function actionLinks(row) {
+    const pdfLink = row.pdf_report_available
+      ? '<a href="' + row.pdf_report_link + '" download>PDF</a>'
+      : '<span class="muted-link">PDF pending</span>';
+    const zipLink = row.evidence_available
+      ? '<a href="' + row.evidence_link + '" download>ZIP</a>'
+      : '<span class="muted-link">ZIP pending</span>';
     return [
       '<div class="actions-inline">',
       '<a href="' + row.report_link + '">Report</a>',
-      '<a href="' + row.pdf_report_link + '">PDF</a>',
+      pdfLink,
       '<a href="' + row.raw_json_link + '">JSON</a>',
-      '<a href="' + row.evidence_link + '">ZIP</a>',
+      zipLink,
       "</div>"
     ].join("");
   }

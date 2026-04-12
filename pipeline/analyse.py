@@ -111,6 +111,8 @@ def _has_word(text: str, words: tuple[str, ...]) -> bool:
 
 def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
     result = _default_response()
+    payment_methods = domain_data.get("payment_methods") or []
+    payment_labels = ", ".join(sorted({entry.get("method", "") for entry in payment_methods if entry.get("method")}))
     text = " ".join(
         filter(
             None,
@@ -120,6 +122,7 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
                 domain_data.get("page_text"),
                 domain_data.get("final_url"),
                 domain_data.get("domain"),
+                payment_labels,
             ],
         )
     ).lower()
@@ -212,7 +215,10 @@ def _heuristic_analysis(domain_data: dict) -> dict[str, Any]:
         result["fraud_mechanism"] = "The platform appears to solicit gambling activity or offshore betting participation."
         result["victim_profile"] = "Indian bettors targeted through online gambling promotions."
         result["illegal_activity_description"] = "The evidence suggests the website promotes or enables online betting activity directed at Indian users. Depending on payment flows and hosting model, associated foreign exchange and laundering offences may also arise."
-        result["recommended_action"] = "Escalate for gambling-law review and blocking consideration."
+        if payment_labels:
+            result["recommended_action"] = f"Escalate for gambling-law review, preserve payment-rail evidence ({payment_labels}), and consider blocking."
+        else:
+            result["recommended_action"] = "Escalate for gambling-law review and blocking consideration."
     elif investment_page:
         category = "INVESTMENT_FRAUD" if "crypto" not in text else "CRYPTO_FRAUD"
         laws = [
@@ -290,9 +296,13 @@ HTTP STATUS: {domain_data.get('http_status', 'Unknown')}
 FINAL URL (after redirects): {domain_data.get('final_url', '')}
 PAGE TITLE: {domain_data.get('title', '')}
 META DESCRIPTION: {domain_data.get('meta_desc', '')}
+CAPTURE QUALITY SCORE: {domain_data.get('capture_quality_score', 0)}
 
 PAGE TEXT (first 3000 chars):
 {(domain_data.get('page_text') or '')[:3000]}
+
+DETECTED PAYMENT METHODS:
+{json.dumps(domain_data.get('payment_methods', []), ensure_ascii=False)}
 
 THREAT INTELLIGENCE VERDICTS:
 - VirusTotal: {domain_data.get('vt_malicious', 0)}/{domain_data.get('vt_total', 0)} engines flagged

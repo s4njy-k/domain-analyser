@@ -63,7 +63,7 @@ python3 run_local.py --batch-name batch-001
 - Chromium for Playwright
 - WeasyPrint runtime libraries on Debian/Ubuntu systems
 
-If you are not on Debian/Ubuntu, install the equivalent Cairo, Pango, Harfbuzz, GDK-Pixbuf, and MIME libraries for WeasyPrint yourself. The code uses WeasyPrint first and falls back to Playwright PDF rendering if WeasyPrint is unavailable.
+If you are not on Debian/Ubuntu, install the equivalent Cairo, Pango, Harfbuzz, GDK-Pixbuf, and MIME libraries for WeasyPrint yourself. The code prefers Chromium PDF rendering for layout fidelity and falls back to WeasyPrint if Playwright PDF output is unavailable.
 
 ## Workflow Behavior
 
@@ -71,6 +71,7 @@ The GitHub Actions workflow:
 
 - triggers on `workflow_dispatch`
 - accepts `domains_input`, `batch_name`, and `max_domains`
+- processes the full committed `input/domains.txt` when `max_domains` is left blank
 - runs on `ubuntu-22.04`
 - installs Playwright Chromium and WeasyPrint system libraries
 - uploads `output/screenshots/`, `output/reports/`, and `output/data/` as 90-day artifacts
@@ -94,6 +95,7 @@ For every processed domain, the pipeline generates:
 - APNIC allocation enrichment for resolved IPv4 and IPv6 addresses
 - holder-linked ASN allocation context derived from matched APNIC holder names
 - desktop and mobile screenshot evidence
+- heuristic extraction of visible payment methods and deposit rails from page content, embedded frame content, and network requests
 - a structured AI legal classification with the full India-law reference block
 - a browser-view HTML report
 - a formal downloadable PDF draft report

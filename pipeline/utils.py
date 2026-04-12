@@ -91,6 +91,14 @@ def ensure_runtime_dirs() -> None:
         directory.mkdir(parents=True, exist_ok=True)
 
 
+def reset_runtime_outputs() -> None:
+    ensure_runtime_dirs()
+    for directory in (SCREENSHOTS_DIR, REPORTS_DIR, DATA_DIR, DASHBOARD_DIR):
+        if directory.exists():
+            shutil.rmtree(directory)
+        directory.mkdir(parents=True, exist_ok=True)
+
+
 def chunked(items: list[Any], size: int) -> Iterator[list[Any]]:
     for index in range(0, len(items), size):
         yield items[index:index + size]

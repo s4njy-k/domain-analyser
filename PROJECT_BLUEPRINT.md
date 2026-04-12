@@ -148,7 +148,7 @@ Each processed domain produces:
 - evidence manifest
 - evidence ZIP package
 
-The formal PDF report is rendered from the same report content using `weasyprint` with a print-optimized layout, page numbering, report identifier, and recurring draft disclaimer. When the host lacks the required WeasyPrint system libraries, the implementation falls back to Playwright PDF output so the report job still completes.
+The formal PDF report is rendered from the same report content with Chromium PDF output for layout fidelity, page numbering, report identifier, and recurring draft disclaimer. When browser-backed PDF output is unavailable, the implementation falls back to `weasyprint` so the report job still completes.
 
 ### 4.7 Phase 6 - Dashboard Publishing
 
@@ -324,6 +324,7 @@ Current workflow hardening:
 - uploads artifacts with 90-day retention
 - deploys `docs/` to GitHub Pages in the same job
 - commits the generated `docs/` snapshot back to `main` so the repository tree mirrors the currently published dashboard
+- leaves `max_domains` blank to process the full `input/domains.txt` list by default
 
 ### 8.2 Pages Requirements
 
@@ -333,6 +334,7 @@ Operational constraints discovered during implementation:
 - Repository secrets must be stored as GitHub Actions secrets, not in `.env.example`.
 - The repo-tracked `.env.example` file must remain a blank template.
 - The workflow requires `contents: write` if the generated `docs/` snapshot is pushed back to the repository after deployment.
+- Payment-method indicators are extracted from rendered page content, accessible embedded-frame content, and observed network requests and persisted into the per-domain report payload.
 
 ### 8.3 Secrets
 

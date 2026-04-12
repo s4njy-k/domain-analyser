@@ -148,13 +148,17 @@ def _domain_rows(report_payloads: list[dict]) -> list[dict]:
 
     rows = []
     for payload in report_payloads:
+        domain_slug = safe_filename(payload["domain"])
         dns_a = payload.get("dns_records", {}).get("A") or []
         chosen_capture = primary_capture(payload)
+        pdf_source = REPORTS_DIR / f"{domain_slug}.pdf"
+        evidence_source = REPORTS_DIR / f"{domain_slug}_evidence.zip"
         row = {
             "domain": payload["domain"],
             "severity": payload.get("ai_analysis", {}).get("severity", "UNKNOWN"),
             "category": payload.get("ai_analysis", {}).get("threat_category", "UNKNOWN"),
             "brand_impersonated": payload.get("ai_analysis", {}).get("brand_impersonated"),
+            "payment_summary": ", ".join(entry.get("method", "") for entry in (payload.get("payment_methods") or []) if entry.get("method")),
             "vt_score": f"{payload.get('threat_intel', {}).get('vt_malicious', 0)}/{payload.get('threat_intel', {}).get('vt_total', 0)}",
             "vt_malicious": payload.get("threat_intel", {}).get("vt_malicious", 0),
             "registered": payload.get("registration", {}).get("registered"),
@@ -173,10 +177,12 @@ def _domain_rows(report_payloads: list[dict]) -> list[dict]:
             ),
             "registrar": payload.get("registration", {}).get("registrar") or "Unknown",
             "ip": dns_a[0] if dns_a else None,
-            "report_link": f"domains/{safe_filename(payload['domain'])}/report.html",
-            "pdf_report_link": f"domains/{safe_filename(payload['domain'])}/report.pdf",
-            "raw_json_link": f"domains/{safe_filename(payload['domain'])}/data.json",
-            "evidence_link": f"evidence/{safe_filename(payload['domain'])}_evidence.zip",
+            "report_link": f"domains/{domain_slug}/report.html",
+            "pdf_report_link": f"domains/{domain_slug}/report.pdf",
+            "pdf_report_available": pdf_source.exists() and pdf_source.stat().st_size > 0,
+            "raw_json_link": f"domains/{domain_slug}/data.json",
+            "evidence_link": f"evidence/{domain_slug}_evidence.zip",
+            "evidence_available": evidence_source.exists() and evidence_source.stat().st_size > 0,
             "priority_score": payload.get("ai_analysis", {}).get("priority_score", 0),
         }
         rows.append(row)
@@ -258,6 +264,11 @@ def _write_per_domain_docs(report_payloads: list[dict]) -> list[Path]:
         pdf_source = REPORTS_DIR / f"{domain_slug}.pdf"
         pdf_target = domain_dir / "report.pdf"
         copy_if_exists(pdf_source, pdf_target)
+        pdf_available = pdf_target.exists() and pdf_target.stat().st_size > 0
+        evidence_source = REPORTS_DIR / f"{domain_slug}_evidence.zip"
+        evidence_target = DOCS_DIR / "evidence" / evidence_source.name
+        copy_if_exists(evidence_source, evidence_target)
+        evidence_available = evidence_target.exists() and evidence_target.stat().st_size > 0
         report_html = render_domain_report(
             payload,
             raw_json_link="data.json",
@@ -265,12 +276,13 @@ def _write_per_domain_docs(report_payloads: list[dict]) -> list[Path]:
             evidence_zip_link=f"../../evidence/{domain_slug}_evidence.zip",
             manifest_entries=manifest_payload.get("files", []),
             linked_domains=payload.get("linked_domains", []),
+            pdf_available=pdf_available,
+            evidence_available=evidence_available,
+            pdf_generation_error=payload.get("pdf_generation_error"),
         )
         (domain_dir / "report.html").write_text(report_html, encoding="utf-8")
-
-        evidence_source = REPORTS_DIR / f"{domain_slug}_evidence.zip"
-        evidence_target = DOCS_DIR / "evidence" / evidence_source.name
-        copy_if_exists(evidence_source, evidence_target)
+        payload["pdf_report_available"] = pdf_available
+        payload["evidence_available"] = evidence_available
         copied_zips.append(evidence_target)
     return copied_zips
 

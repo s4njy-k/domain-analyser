@@ -14,7 +14,7 @@ from pipeline.dashboard import generate_dashboard
 from pipeline.ingest import load_and_normalise
 from pipeline.passive_intel import gather_passive_intel
 from pipeline.report import generate_domain_report
-from pipeline.utils import SCREENSHOTS_DIR, chunked, ensure_runtime_dirs
+from pipeline.utils import SCREENSHOTS_DIR, chunked, ensure_runtime_dirs, reset_runtime_outputs
 
 console = Console()
 
@@ -29,6 +29,7 @@ def main(input_file, batch_name, max_domains):
 
 async def run_pipeline(input_file, batch_name, max_domains):
     ensure_runtime_dirs()
+    reset_runtime_outputs()
     batch_id = f"{batch_name}-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')}Z"
     console.print(f"[bold blue]Starting batch {batch_id}[/bold blue]")
 
@@ -62,7 +63,7 @@ async def run_pipeline(input_file, batch_name, max_domains):
                     ai_result = await analyse_domain(merged)
 
                     # Phase 5: Generate report + evidence ZIP
-                    artefacts = generate_domain_report(domain, merged, ai_result, batch_id)
+                    artefacts = await generate_domain_report(domain, merged, ai_result, batch_id)
                     results.append(
                         {
                             "domain": domain,

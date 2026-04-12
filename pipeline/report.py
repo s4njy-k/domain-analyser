@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 from datetime import date, datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -72,6 +73,8 @@ class CaptureData(BaseModel):
     screenshot_full_hash: Optional[str] = None
     capture_ts_utc: Optional[str] = None
     cloaking_suspected: bool = False
+    capture_quality_score: int = 0
+    attempted_url: Optional[str] = None
     error: Optional[str] = None
 
 
@@ -117,6 +120,12 @@ class NetworkAttribution(BaseModel):
     holder_linked_asns: list[HolderLinkedASN] = Field(default_factory=list)
 
 
+class PaymentMethod(BaseModel):
+    method: str
+    source: Optional[str] = None
+    evidence: Optional[str] = None
+
+
 class AIAnalysis(BaseModel):
     threat_category: str = "UNKNOWN"
     brand_impersonated: Optional[str] = None
@@ -142,6 +151,7 @@ class DomainReport(BaseModel):
     cert_transparency: list[dict]
     threat_intel: ThreatIntelResult
     network_attribution: NetworkAttribution = Field(default_factory=NetworkAttribution)
+    payment_methods: list[PaymentMethod] = Field(default_factory=list)
     captures: list[CaptureData]
     ai_analysis: AIAnalysis
     evidence_manifest_hash: Optional[str] = None
@@ -173,6 +183,8 @@ def _capture_entries(payload: list[dict[str, Any]]) -> list[CaptureData]:
                 screenshot_full_hash=item.get("screenshot_full_hash"),
                 capture_ts_utc=item.get("capture_ts_utc"),
                 cloaking_suspected=bool(item.get("cloaking_suspected")),
+                capture_quality_score=int(item.get("capture_quality_score") or 0),
+                attempted_url=item.get("attempted_url"),
                 error=item.get("error"),
             )
         )
@@ -200,6 +212,7 @@ def _build_model(domain: str, merged: dict[str, Any], ai_result: dict[str, Any],
         cert_transparency=merged.get("cert_transparency") or [],
         threat_intel=ThreatIntelResult(**threat_intel),
         network_attribution=NetworkAttribution(**network_attribution),
+        payment_methods=[PaymentMethod(**entry) for entry in (merged.get("payment_methods") or [])],
         captures=_capture_entries(merged.get("captures") or []),
         ai_analysis=AIAnalysis(**(ai_result or {})),
         evidence_manifest_hash=None,
@@ -270,11 +283,15 @@ def _capture_cards(report: DomainReport) -> list[dict[str, Any]]:
 
 def _primary_capture(captures: list[CaptureData]) -> CaptureData | None:
     successful = [capture for capture in captures if not capture.error and capture.http_status is not None]
-    for capture in successful:
-        if capture.profile == "desktop":
-            return capture
     if successful:
-        return successful[0]
+        return max(
+            successful,
+            key=lambda capture: (
+                capture.capture_quality_score,
+                1 if capture.profile == "desktop" else 0,
+                capture.http_status or 0,
+            ),
+        )
     return captures[0] if captures else None
 
 
@@ -325,6 +342,9 @@ def render_domain_report(
     evidence_zip_link: str,
     manifest_entries: list[dict[str, Any]],
     linked_domains: list[str] | None = None,
+    pdf_available: bool = True,
+    evidence_available: bool = True,
+    pdf_generation_error: str | None = None,
     is_pdf: bool = False,
 ) -> str:
     env = _jinja_env()
@@ -343,6 +363,9 @@ def render_domain_report(
         raw_json_link=raw_json_link,
         pdf_report_link=pdf_report_link,
         evidence_zip_link=evidence_zip_link,
+        pdf_available=pdf_available,
+        evidence_available=evidence_available,
+        pdf_generation_error=pdf_generation_error,
         manifest_entries=manifest_entries,
         linked_domains=linked_domains or [],
         first_ten_certs=(report.cert_transparency or [])[:10],
@@ -359,44 +382,62 @@ def _report_identifier(domain: str, analysis_ts_utc: str) -> str:
     return f"NCTAU-DAR-{safe_filename(domain).upper()}-{compact_ts}"
 
 
-def _render_pdf(html: str, output_path: Path) -> None:
-    try:
-        from weasyprint import HTML
+def _render_pdf_with_weasyprint(html: str, output_path: Path) -> None:
+    from weasyprint import HTML
 
-        HTML(string=html, base_url=str(ROOT_DIR)).write_pdf(str(output_path))
-        return
+    HTML(string=html, base_url=str(ROOT_DIR)).write_pdf(str(output_path))
+
+
+async def _render_pdf_with_playwright(html: str, output_path: Path) -> None:
+    from playwright.async_api import async_playwright
+
+    with TemporaryDirectory() as tmpdir:
+        html_path = Path(tmpdir) / "report.html"
+        html_path.write_text(html, encoding="utf-8")
+        async with async_playwright() as playwright:
+            browser = await playwright.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"],
+            )
+            page = await browser.new_page(viewport={"width": 1440, "height": 1080})
+            await page.goto(html_path.as_uri(), wait_until="load")
+            await page.wait_for_load_state("networkidle")
+            await page.wait_for_timeout(1200)
+            await page.emulate_media(media="print")
+            await page.pdf(
+                path=str(output_path),
+                format="A4",
+                print_background=True,
+                prefer_css_page_size=True,
+                margin={"top": "16mm", "right": "12mm", "bottom": "18mm", "left": "12mm"},
+            )
+            await browser.close()
+
+
+async def _render_pdf_async(html: str, output_path: Path) -> str | None:
+    playwright_error: Exception | None = None
+    try:
+        await _render_pdf_with_playwright(html, output_path)
+        return None
     except Exception as exc:
-        weasyprint_error = exc
+        playwright_error = exc
         logger.warning(
-            f"[yellow]WeasyPrint PDF rendering unavailable ({exc}); falling back to Playwright PDF output.[/yellow]"
+            f"[yellow]Playwright PDF rendering unavailable ({exc}); falling back to WeasyPrint output.[/yellow]"
         )
 
     try:
-        from playwright.sync_api import sync_playwright
-
-        with TemporaryDirectory() as tmpdir:
-            html_path = Path(tmpdir) / "report.html"
-            html_path.write_text(html, encoding="utf-8")
-            with sync_playwright() as playwright:
-                browser = playwright.chromium.launch()
-                page = browser.new_page(viewport={"width": 1440, "height": 1080})
-                page.goto(html_path.as_uri(), wait_until="load")
-                page.pdf(
-                    path=str(output_path),
-                    format="A4",
-                    print_background=True,
-                    margin={"top": "16mm", "right": "12mm", "bottom": "18mm", "left": "12mm"},
-                )
-                browser.close()
-        return
+        await asyncio.to_thread(_render_pdf_with_weasyprint, html, output_path)
+        return None
     except Exception as fallback_exc:
-        raise RuntimeError(
-            "PDF generation failed with both WeasyPrint and Playwright fallback: "
-            f"{weasyprint_error}; {fallback_exc}"
-        ) from fallback_exc
+        message = (
+            "PDF generation failed with both Playwright and WeasyPrint fallback: "
+            f"{playwright_error}; {fallback_exc}"
+        )
+        logger.error(f"[red]{message}[/red]")
+        return message
 
 
-def generate_domain_report(
+async def generate_domain_report(
     domain: str,
     merged: dict[str, Any],
     ai_result: dict[str, Any],
@@ -436,17 +477,7 @@ def generate_domain_report(
         }
     )
 
-    report_path = REPORTS_DIR / f"{safe_filename(domain)}.html"
     pdf_path = REPORTS_DIR / f"{safe_filename(domain)}.pdf"
-    html = render_domain_report(
-        report_payload,
-        raw_json_link=f"../data/{json_path.name}",
-        pdf_report_link=f"./{pdf_path.name}",
-        evidence_zip_link=f"./{safe_filename(domain)}_evidence.zip",
-        manifest_entries=manifest_entries,
-        linked_domains=report_payload.get("linked_domains", []),
-    )
-    report_path.write_text(html, encoding="utf-8")
     pdf_html = render_domain_report(
         report_payload,
         raw_json_link=f"../data/{json_path.name}",
@@ -456,8 +487,24 @@ def generate_domain_report(
         linked_domains=report_payload.get("linked_domains", []),
         is_pdf=True,
     )
-    _render_pdf(pdf_html, pdf_path)
+    pdf_generation_error = await _render_pdf_async(pdf_html, pdf_path)
+    pdf_available = pdf_generation_error is None and pdf_path.exists() and pdf_path.stat().st_size > 0
+    report_payload["pdf_generation_error"] = pdf_generation_error
+    write_json(json_path, report_payload)
 
+    report_path = REPORTS_DIR / f"{safe_filename(domain)}.html"
+    html = render_domain_report(
+        report_payload,
+        raw_json_link=f"../data/{json_path.name}",
+        pdf_report_link=f"./{pdf_path.name}",
+        evidence_zip_link=f"./{safe_filename(domain)}_evidence.zip",
+        manifest_entries=manifest_entries,
+        linked_domains=report_payload.get("linked_domains", []),
+        pdf_available=pdf_available,
+        evidence_available=True,
+        pdf_generation_error=pdf_generation_error,
+    )
+    report_path.write_text(html, encoding="utf-8")
     manifest_path = REPORTS_DIR / f"{safe_filename(domain)}_manifest.json"
     html_entry = {
         "file": report_path.name,
@@ -467,21 +514,24 @@ def generate_domain_report(
         "profile": "system",
         "type": "html_report",
     }
-    pdf_entry = {
-        "file": pdf_path.name,
-        "path": str(pdf_path),
-        "hash": sha256_file(pdf_path),
-        "timestamp": report.analysis_ts_utc,
-        "profile": "system",
-        "type": "pdf_report",
-    }
+    pdf_entry = None
+    if pdf_available:
+        pdf_entry = {
+            "file": pdf_path.name,
+            "path": str(pdf_path),
+            "hash": sha256_file(pdf_path),
+            "timestamp": report.analysis_ts_utc,
+            "profile": "system",
+            "type": "pdf_report",
+        }
     manifest_payload = {
         "domain": domain,
         "batch_id": batch_id,
         "analysis_ts_utc": report.analysis_ts_utc,
         "evidence_manifest_hash": report.evidence_manifest_hash,
         "report_identifier": report_identifier,
-        "files": manifest_entries + [html_entry, pdf_entry],
+        "pdf_generation_error": pdf_generation_error,
+        "files": manifest_entries + [html_entry] + ([pdf_entry] if pdf_entry else []),
     }
     write_json(manifest_path, manifest_payload)
 
@@ -508,7 +558,8 @@ def package_evidence_zip(
     zip_path = REPORTS_DIR / f"{safe_filename(domain)}_evidence.zip"
     with ZipFile(zip_path, "w", compression=ZIP_DEFLATED) as archive:
         archive.write(report_path, arcname=report_path.name)
-        archive.write(pdf_path, arcname=pdf_path.name)
+        if pdf_path.exists() and pdf_path.stat().st_size > 0:
+            archive.write(pdf_path, arcname=pdf_path.name)
         archive.write(json_path, arcname=json_path.name)
         archive.write(manifest_path, arcname=manifest_path.name)
         for capture in report.captures:

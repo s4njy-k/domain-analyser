@@ -116,6 +116,13 @@ a {
   color: var(--text);
 }
 
+.button.disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.58;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -286,6 +293,12 @@ a {
   font-size: 0.82rem;
   text-decoration: none;
   color: #dcefff;
+}
+
+.actions-inline .muted-link {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.8;
 }
 
 .empty-state {

@@ -12,9 +12,9 @@ on:
         required: true
         default: 'batch-001'
       max_domains:
-        description: 'Max domains to process (leave blank = all)'
+        description: 'Max domains to process (leave blank = all domains in input/domains.txt)'
         required: false
-        default: '100'
+        default: ''
 
 permissions:
   contents: write
@@ -126,5 +126,5 @@ jobs:
             echo "No docs changes to commit."
             exit 0
           fi
-          git commit -m "Update published dashboard snapshot for ${BATCH_NAME}"
+          git commit -m "Update published dashboard snapshot for ${{ github.event.inputs.batch_name }}"
           git push origin HEAD:main

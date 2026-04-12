@@ -36,6 +36,8 @@
       color: #10233c;
       min-height: 100vh;
       font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .report-shell {
@@ -147,6 +149,21 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
+    }
+
+    .cover-classification {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .report-hero,
@@ -447,6 +464,13 @@
       margin-bottom: 8px;
     }
 
+    .analysis-note {
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
     .lightbox {
       position: fixed;
       inset: 0;
@@ -521,6 +545,7 @@
     {% if is_pdf %}
       <section class="cover-page">
         <p class="cover-kicker">National Cybercrime Threat Analytics Unit</p>
+        <div class="cover-classification">Controlled Draft • Internal Review Copy • Analyst Prepared</div>
         <h1>Cybercrime Domain Analysis Dossier</h1>
         <p class="cover-lead">
           Analyst-generated intelligence brief prepared in the style of an inter-agency cybercrime assessment pack.
@@ -617,8 +642,16 @@
             <strong>Draft handling note:</strong> {{ report_disclaimer }}
           </div>
           <div class="action-stack">
-            <a class="button primary" href="{{ pdf_report_link }}">Download PDF Report</a>
-            <a class="button secondary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+            {% if pdf_available %}
+              <a class="button primary" href="{{ pdf_report_link }}" download>Download PDF Report</a>
+            {% else %}
+              <span class="button secondary disabled" aria-disabled="true">PDF unavailable for this run</span>
+            {% endif %}
+            {% if evidence_available %}
+              <a class="button secondary" href="{{ evidence_zip_link }}" download>Download Evidence ZIP</a>
+            {% else %}
+              <span class="button secondary disabled" aria-disabled="true">Evidence ZIP unavailable</span>
+            {% endif %}
             <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
           </div>
         </div>
@@ -650,6 +683,10 @@
         <span class="label">Holder-linked ASNs</span>
         <strong>{{ report.network_attribution.holder_linked_asns|length }}</strong>
       </article>
+      <article>
+        <span class="label">Payment Indicators</span>
+        <strong>{{ report.payment_methods|length }}</strong>
+      </article>
     </section>
 
     <section class="section-card" id="section-a">
@@ -675,7 +712,19 @@
               No APNIC allocation holder was identified for the resolved addresses captured during this run.
             {% endif %}
           </p>
+          <p>
+            <strong>Detected payment rails:</strong>
+            {% if report.payment_methods %}
+              {{ report.payment_methods | map(attribute='method') | join(', ') }}
+            {% else %}
+              No explicit payment method indicators were extracted from the captured page content.
+            {% endif %}
+          </p>
           <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
+          <p class="analysis-note">
+            Payment indicators are heuristic observations from rendered content, frame content, and network traffic.
+            They support investigative triage and evidence preservation, but do not independently confirm processor affiliation.
+          </p>
         </div>
       </div>
     </section>
@@ -902,6 +951,8 @@
               <tr><th>HTTP status</th><td>{{ primary_capture.http_status if primary_capture else 'N/A' }}</td></tr>
               <tr><th>Final URL</th><td>{{ primary_capture.final_url if primary_capture else 'N/A' }}</td></tr>
               <tr><th>Page title</th><td>{{ primary_capture.title if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Capture quality</th><td>{{ primary_capture.capture_quality_score if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Capture URL used</th><td>{{ primary_capture.attempted_url if primary_capture else 'N/A' }}</td></tr>
               <tr><th>Redirect chain</th><td>{{ redirect_chain|join(' → ') if redirect_chain else 'No redirects recorded' }}</td></tr>
               <tr><th>Wayback snapshot</th><td>{% if wayback_snapshot.url %}<a href="{{ wayback_snapshot.url }}">Archived copy</a>{% else %}Not available{% endif %}</td></tr>
             </tbody>
@@ -914,6 +965,18 @@
           </ul>
         </div>
         <div class="tech-block">
+          <h3>Detected Payment Methods</h3>
+          <ul class="code-list">
+            {% for payment in report.payment_methods %}
+              <li>
+                <strong>{{ payment.method }}</strong>
+                {% if payment.source %}<br>Source: {{ payment.source }}{% endif %}
+                {% if payment.evidence %}<br>{{ payment.evidence }}{% endif %}
+              </li>
+            {% else %}
+              <li>No payment method or deposit rail indicators were extracted from the visible content and network requests.</li>
+            {% endfor %}
+          </ul>
           <h3>Certificate Transparency (first 10)</h3>
           <ul class="code-list">
             {% for cert in first_ten_certs %}
@@ -949,10 +1012,21 @@
           <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
           <p><strong>Severity:</strong> {{ report.ai_analysis.severity }}</p>
           <p><strong>Priority score:</strong> {{ report.ai_analysis.priority_score }}</p>
+          {% if pdf_generation_error %}
+            <p><strong>PDF status:</strong> {{ pdf_generation_error }}</p>
+          {% endif %}
           {% if not is_pdf %}
             <div class="action-stack">
-              <a class="button primary" href="{{ pdf_report_link }}">Download PDF Report</a>
-              <a class="button secondary" href="{{ evidence_zip_link }}">Download Evidence ZIP</a>
+              {% if pdf_available %}
+                <a class="button primary" href="{{ pdf_report_link }}" download>Download PDF Report</a>
+              {% else %}
+                <span class="button secondary disabled" aria-disabled="true">PDF unavailable for this run</span>
+              {% endif %}
+              {% if evidence_available %}
+                <a class="button secondary" href="{{ evidence_zip_link }}" download>Download Evidence ZIP</a>
+              {% else %}
+                <span class="button secondary disabled" aria-disabled="true">Evidence ZIP unavailable</span>
+              {% endif %}
               <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
             </div>
           {% endif %}
