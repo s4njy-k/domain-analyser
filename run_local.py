@@ -84,10 +84,6 @@ async def run_pipeline(input_file, batch_name, max_domains):
                 progress.advance(task)
                 await asyncio.sleep(0.5)  # Respect API rate limits
 
-            if batch_index < len(batches):
-                console.print("[cyan]Sleeping 60 seconds between batches to respect public API rate limits...[/cyan]")
-                await asyncio.sleep(60)
-
     # Phase 6: Dashboard
     summary = generate_dashboard(results, batch_id)
     console.print(

@@ -323,6 +323,7 @@ Current workflow hardening:
 - installs WeasyPrint runtime libraries before report generation
 - uploads artifacts with 90-day retention
 - deploys `docs/` to GitHub Pages in the same job
+- commits the generated `docs/` snapshot back to `main` so the repository tree mirrors the currently published dashboard
 
 ### 8.2 Pages Requirements
 
@@ -331,6 +332,7 @@ Operational constraints discovered during implementation:
 - GitHub Pages deployment through Actions requires the repository to support Pages for its visibility/plan combination.
 - Repository secrets must be stored as GitHub Actions secrets, not in `.env.example`.
 - The repo-tracked `.env.example` file must remain a blank template.
+- The workflow requires `contents: write` if the generated `docs/` snapshot is pushed back to the repository after deployment.
 
 ### 8.3 Secrets
 

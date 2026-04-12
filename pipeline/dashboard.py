@@ -11,11 +11,18 @@ from zipfile import ZIP_DEFLATED, ZipFile
 import httpx
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from pipeline.apnic import enrich_network_attribution
 from pipeline.report import DomainReport, render_domain_report
 from pipeline.utils import DATA_DIR, DOCS_DIR, REPORTS_DIR, ROOT_DIR, copy_if_exists, ensure_runtime_dirs, safe_filename
 
 TEMPLATES_DIR = ROOT_DIR / "templates"
 CHART_JS_URL = "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"
+
+
+def _first_value(values: list[str] | tuple[str, ...] | None) -> str | None:
+    if not values:
+        return None
+    return next((value for value in values if value), None)
 
 
 # dashboard.py — infrastructure clustering
@@ -28,17 +35,17 @@ def cluster_infrastructure(domain_reports: list) -> dict:
 
     for report in domain_reports:
         # Cluster by hosting IP
-        ip = report["dns_records"].get("A", [None])[0]
+        ip = _first_value((report.get("dns_records") or {}).get("A"))
         if ip:
             ip_clusters[ip].append(report["domain"])
 
         # Cluster by primary nameserver
-        ns = report["registration"]["nameservers"]
+        ns = _first_value((report.get("registration") or {}).get("nameservers"))
         if ns:
-            ns_clusters[ns[0].lower()].append(report["domain"])
+            ns_clusters[ns.lower()].append(report["domain"])
 
         # Cluster by registrar
-        reg = report["registration"].get("registrar")
+        reg = (report.get("registration") or {}).get("registrar")
         if reg:
             registrar_clusters[reg].append(report["domain"])
 
@@ -64,7 +71,19 @@ def cluster_infrastructure(domain_reports: list) -> dict:
 def _load_report_payloads() -> list[dict]:
     payloads = []
     for json_file in sorted(DATA_DIR.glob("*.json")):
-        payloads.append(json.loads(json_file.read_text(encoding="utf-8")))
+        payload = json.loads(json_file.read_text(encoding="utf-8"))
+        if not payload.get("network_attribution"):
+            dns_records = payload.get("dns_records") or {}
+            threat_intel = payload.get("threat_intel") or {}
+            payload["network_attribution"] = enrich_network_attribution(
+                [
+                    *list(dns_records.get("A") or []),
+                    *list(dns_records.get("AAAA") or []),
+                    *([threat_intel.get("urlscan_page_ip")] if threat_intel.get("urlscan_page_ip") else []),
+                    *([threat_intel.get("abuseipdb_ip")] if threat_intel.get("abuseipdb_ip") else []),
+                ]
+            )
+        payloads.append(payload)
     return payloads
 
 

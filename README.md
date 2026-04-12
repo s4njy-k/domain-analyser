@@ -75,12 +75,13 @@ The GitHub Actions workflow:
 - installs Playwright Chromium and WeasyPrint system libraries
 - uploads `output/screenshots/`, `output/reports/`, and `output/data/` as 90-day artifacts
 - deploys `docs/` to GitHub Pages
+- commits the generated `docs/` snapshot back to `main` so the repository tree reflects the latest published batch
 
 Required permissions in `.github/workflows/analyse.yml`:
 
 | Permission | Value |
 | --- | --- |
-| `contents` | `read` |
+| `contents` | `write` |
 | `pages` | `write` |
 | `id-token` | `write` |
 

@@ -9,6 +9,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pydantic import BaseModel, ConfigDict, Field
 
+from pipeline.apnic import enrich_network_attribution
 from pipeline.utils import (
     DATA_DIR,
     REPORTS_DIR,
@@ -179,16 +180,26 @@ def _capture_entries(payload: list[dict[str, Any]]) -> list[CaptureData]:
 
 
 def _build_model(domain: str, merged: dict[str, Any], ai_result: dict[str, Any], batch_id: str) -> DomainReport:
+    dns_records = merged.get("dns_records") or {}
+    threat_intel = merged.get("threat_intel") or {}
+    network_attribution = merged.get("network_attribution") or enrich_network_attribution(
+        [
+            *list(dns_records.get("A") or []),
+            *list(dns_records.get("AAAA") or []),
+            *([threat_intel.get("urlscan_page_ip")] if threat_intel.get("urlscan_page_ip") else []),
+            *([threat_intel.get("abuseipdb_ip")] if threat_intel.get("abuseipdb_ip") else []),
+        ]
+    )
     return DomainReport(
         domain=domain,
         input_url=merged.get("input_url", merged.get("final_url", f"https://{domain}")),
         batch_id=batch_id,
         analysis_ts_utc=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         registration=RegistrationData(**(merged.get("registration") or {})),
-        dns_records=merged.get("dns_records") or {},
+        dns_records=dns_records,
         cert_transparency=merged.get("cert_transparency") or [],
-        threat_intel=ThreatIntelResult(**(merged.get("threat_intel") or {})),
-        network_attribution=NetworkAttribution(**(merged.get("network_attribution") or {})),
+        threat_intel=ThreatIntelResult(**threat_intel),
+        network_attribution=NetworkAttribution(**network_attribution),
         captures=_capture_entries(merged.get("captures") or []),
         ai_analysis=AIAnalysis(**(ai_result or {})),
         evidence_manifest_hash=None,

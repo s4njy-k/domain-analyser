@@ -17,7 +17,7 @@ on:
         default: '100'
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -55,7 +55,6 @@ jobs:
             libgdk-pixbuf-2.0-0 \
             libglib2.0-0 \
             libharfbuzz0b \
-            libharfbuzz-subset0 \
             libpango-1.0-0 \
             libpangocairo-1.0-0 \
             libpangoft2-1.0-0 \
@@ -116,3 +115,16 @@ jobs:
       - name: Deploy Pages
         uses: actions/deploy-pages@v4
         id: deployment
+
+      - name: Commit published docs snapshot back to main
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No docs changes to commit."
+            exit 0
+          fi
+          git commit -m "Update published dashboard snapshot for ${BATCH_NAME}"
+          git push origin HEAD:main

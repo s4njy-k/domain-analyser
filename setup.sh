@@ -15,7 +15,6 @@ if [[ "$(uname -s)" == "Linux" ]] && command -v apt-get >/dev/null 2>&1; then
     libgdk-pixbuf-2.0-0 \
     libglib2.0-0 \
     libharfbuzz0b \
-    libharfbuzz-subset0 \
     libpango-1.0-0 \
     libpangocairo-1.0-0 \
     libpangoft2-1.0-0 \
