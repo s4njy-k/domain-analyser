@@ -31,6 +31,7 @@ REPORT_DISCLAIMER = (
     "Analyst-generated draft for internal cybercrime review by the National Cybercrime Threat Analytics Unit "
     "(NCTAU), Indian Cyber Crime Coordination Centre (I4C); not an official government issuance or blocking order."
 )
+I4C_LOGO_PATH = ROOT_DIR / "resources" / "i4clogo.png"
 
 
 class ThreatIntelResult(BaseModel):
@@ -341,6 +342,9 @@ def render_domain_report(
     pdf_report_link: str,
     evidence_zip_link: str,
     manifest_entries: list[dict[str, Any]],
+    batch_csv_link: str = "../../data/domains.csv",
+    batch_evidence_link: str = "../../evidence/all_evidence_packages.zip",
+    dashboard_link: str = "../../index.html",
     linked_domains: list[str] | None = None,
     pdf_available: bool = True,
     evidence_available: bool = True,
@@ -355,6 +359,7 @@ def render_domain_report(
     return template.render(
         report=report,
         style_css=style_css,
+        logo_data_uri=path_to_data_uri(I4C_LOGO_PATH),
         report_identifier=report_dict.get("report_identifier"),
         report_disclaimer=REPORT_DISCLAIMER,
         is_pdf=is_pdf,
@@ -363,6 +368,9 @@ def render_domain_report(
         raw_json_link=raw_json_link,
         pdf_report_link=pdf_report_link,
         evidence_zip_link=evidence_zip_link,
+        batch_csv_link=batch_csv_link,
+        batch_evidence_link=batch_evidence_link,
+        dashboard_link=dashboard_link,
         pdf_available=pdf_available,
         evidence_available=evidence_available,
         pdf_generation_error=pdf_generation_error,

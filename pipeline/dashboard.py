@@ -17,6 +17,7 @@ from pipeline.utils import DATA_DIR, DOCS_DIR, REPORTS_DIR, ROOT_DIR, copy_if_ex
 
 TEMPLATES_DIR = ROOT_DIR / "templates"
 CHART_JS_URL = "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"
+I4C_LOGO_PATH = ROOT_DIR / "resources" / "i4clogo.png"
 
 
 def _first_value(values: list[str] | tuple[str, ...] | None) -> str | None:
@@ -100,6 +101,7 @@ def _ensure_clean_docs() -> None:
 def _copy_static_assets() -> None:
     copy_if_exists(TEMPLATES_DIR / "assets" / "style.css", DOCS_DIR / "assets" / "style.css")
     copy_if_exists(TEMPLATES_DIR / "assets" / "dashboard.js", DOCS_DIR / "assets" / "dashboard.js")
+    copy_if_exists(I4C_LOGO_PATH, DOCS_DIR / "assets" / "i4clogo.png")
     chart_target = DOCS_DIR / "assets" / "chart.min.js"
     try:
         response = httpx.get(CHART_JS_URL, timeout=30)
@@ -274,6 +276,9 @@ def _write_per_domain_docs(report_payloads: list[dict]) -> list[Path]:
             raw_json_link="data.json",
             pdf_report_link="report.pdf",
             evidence_zip_link=f"../../evidence/{domain_slug}_evidence.zip",
+            batch_csv_link="../../data/domains.csv",
+            batch_evidence_link="../../evidence/all_evidence_packages.zip",
+            dashboard_link="../../index.html",
             manifest_entries=manifest_payload.get("files", []),
             linked_domains=payload.get("linked_domains", []),
             pdf_available=pdf_available,
@@ -313,6 +318,7 @@ def generate_dashboard(results: list[dict] | None = None, batch_id: str | None =
         batch_id=summary["batch_id"],
         generated_at_utc=summary["generated_at_utc"],
         total_domains=summary["total_domains"],
+        logo_path="assets/i4clogo.png",
         chart_js_url=CHART_JS_URL,
         summary_json_path="data/summary.json",
         domains_json_path="data/domains.json",

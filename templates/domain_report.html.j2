@@ -3,478 +3,611 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ report.domain }} - NCTAU Domain Analysis Report</title>
-  <style>{{ style_css }}</style>
+  <title>{{ report.domain }} - I4C Domain Assessment Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <style>
     @page {
       size: A4;
       margin: 16mm 12mm 18mm;
       @top-left {
-        content: "NCTAU / I4C Domain Analysis Draft";
-        color: #475569;
+        content: "I4C / NCTAU Analytical Draft";
+        color: #49607a;
         font-size: 9pt;
       }
       @top-right {
         content: "{{ report_identifier }}";
-        color: #475569;
+        color: #49607a;
         font-size: 9pt;
       }
       @bottom-left {
         content: "{{ report_disclaimer }}";
-        color: #64748b;
+        color: #6a7f92;
         font-size: 8pt;
       }
       @bottom-right {
         content: "Page " counter(page) " of " counter(pages);
-        color: #475569;
+        color: #49607a;
         font-size: 9pt;
       }
     }
 
-    .report-page {
-      background: #e7edf4;
-      color: #10233c;
-      min-height: 100vh;
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    :root {
+      --navy-950: #07131f;
+      --navy-900: #0b1f34;
+      --navy-800: #153454;
+      --navy-700: #1f4f82;
+      --paper: #eef3f7;
+      --surface: #ffffff;
+      --surface-soft: #f6f9fc;
+      --surface-strong: #dfe8f2;
+      --border: rgba(24, 53, 86, 0.12);
+      --text-strong: #10243d;
+      --text-main: #2a435f;
+      --text-muted: #5a7087;
+      --blue: #0f4ea8;
+      --teal: #1ba6c2;
+      --saffron: #efb91a;
+      --green: #108753;
+      --red: #cb2e44;
+      --critical: #d94f5e;
+      --high: #f18a2e;
+      --medium: #efc148;
+      --low: #33a570;
+      --inactive: #7c8897;
+      --shadow: 0 18px 44px rgba(10, 24, 42, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Aptos", "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #e7eef5, #f1f5f9 18%, #e9eff6 100%);
+      color: var(--text-main);
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .report-shell {
       max-width: 1320px;
       margin: 0 auto;
-      padding: 24px;
+      padding: 22px;
     }
 
-    .cover-page {
+    .cover-sheet,
+    .report-header,
+    .section-card,
+    .summary-grid {
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .cover-sheet {
       position: relative;
       overflow: hidden;
-      min-height: calc(100vh - 48px);
-      margin-bottom: 20px;
-      padding: 44px 42px;
+      min-height: calc(100vh - 44px);
+      margin-bottom: 22px;
+      padding: 34px 34px 30px;
       background:
-        radial-gradient(circle at top right, rgba(186, 147, 76, 0.14), transparent 26%),
-        linear-gradient(160deg, #0d2036 0%, #17365f 52%, #234d7f 100%);
-      color: #f8fbff;
-      border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+        radial-gradient(circle at top right, rgba(239, 185, 26, 0.16), transparent 24%),
+        radial-gradient(circle at left center, rgba(27, 166, 194, 0.14), transparent 22%),
+        linear-gradient(145deg, #0a1c2f 0%, #14385c 50%, #204f81 100%);
+      color: #f7fbff;
       page-break-after: always;
     }
 
-    .cover-page::before {
+    .cover-sheet::after {
       content: "";
       position: absolute;
-      inset: auto -120px -120px auto;
+      inset: auto -140px -140px auto;
       width: 360px;
       height: 360px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 65%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
     }
 
-    .cover-page::after {
-      content: "NCTAU";
-      position: absolute;
-      right: 42px;
-      bottom: 24px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 5.5rem;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.06);
-      font-weight: 700;
+    .cover-top,
+    .report-brand {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .cover-page h1,
-    .cover-strip h1,
-    .section-card h2 {
-      font-family: Georgia, "Times New Roman", serif;
+    .cover-lockup,
+    .brand-lockup {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
     }
 
-    .cover-kicker {
-      margin: 0 0 18px;
-      font-size: 0.78rem;
+    .report-logo {
+      width: 174px;
+      height: auto;
+      flex: 0 0 auto;
+    }
+
+    .cover-kicker,
+    .section-kicker {
+      margin: 0 0 8px;
+      font-size: 0.74rem;
       text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: rgba(255, 255, 255, 0.78);
+      letter-spacing: 0.18em;
+      color: #8db2d8;
     }
 
-    .cover-lead {
-      max-width: 760px;
-      margin: 0 0 26px;
-      color: rgba(248, 251, 255, 0.9);
-      line-height: 1.8;
-      font-size: 1.02rem;
-    }
-
-    .cover-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
-      gap: 22px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cover-panel {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 18px;
-      padding: 18px 20px;
-      backdrop-filter: blur(2px);
-    }
-
-    .cover-panel dl {
+    .cover-title,
+    .report-title {
+      font-family: "Fraunces", Georgia, serif;
+      line-height: 0.98;
+      color: inherit;
       margin: 0;
-      display: grid;
-      gap: 14px;
     }
 
-    .cover-panel dt {
-      margin-bottom: 4px;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255, 255, 255, 0.72);
+    .cover-title {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      max-width: 9.5ch;
     }
 
-    .cover-panel dd {
-      margin: 0;
+    .cover-intro {
+      max-width: 60rem;
+      margin: 18px 0 0;
+      color: rgba(247, 251, 255, 0.88);
+      line-height: 1.76;
       font-size: 1rem;
-      font-weight: 700;
-      word-break: break-word;
     }
 
-    .cover-badges {
+    .classification-pill,
+    .meta-chip,
+    .badge,
+    .severity-pill,
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+    }
+
+    .classification-pill,
+    .meta-chip,
+    .badge.category,
+    .badge.neutral {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f5fbff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .meta-chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
     }
 
-    .cover-classification {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 0.76rem;
-      letter-spacing: 0.1em;
+    .cover-side {
+      width: min(360px, 100%);
+      padding: 18px 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .cover-side dl,
+    .summary-grid dl,
+    .summary-stack dl {
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .cover-side dt,
+    .summary-grid dt,
+    .summary-stack dt {
+      margin-bottom: 4px;
+      font-size: 0.73rem;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.88);
+      letter-spacing: 0.1em;
+      color: inherit;
+      opacity: 0.76;
     }
 
-    .report-hero,
-    .section-card,
-    .cover-strip,
-    .summary-matrix {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
-      border: 1px solid rgba(15, 23, 42, 0.08);
+    .cover-side dd,
+    .summary-grid dd,
+    .summary-stack dd {
+      margin: 0;
+      font-size: 0.96rem;
+      font-weight: 700;
+      word-break: break-word;
     }
 
-    .report-hero {
+    .cover-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      line-height: 1.72;
+      color: rgba(247, 251, 255, 0.88);
+    }
+
+    .report-header {
       overflow: hidden;
       margin-bottom: 18px;
     }
 
-    .cover-strip {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-      gap: 18px;
-      padding: 24px;
+    .report-brand {
+      padding: 24px 26px;
       background:
-        radial-gradient(circle at top left, rgba(186, 147, 76, 0.12), transparent 32%),
-        linear-gradient(135deg, #10243d, #17365f 58%, #27568d);
-      color: #f8fbff;
-      border: 0;
-      box-shadow: none;
-      border-radius: 18px 18px 0 0;
-      position: relative;
+        radial-gradient(circle at top right, rgba(239, 185, 26, 0.14), transparent 26%),
+        linear-gradient(140deg, #0c2138, #173a60 54%, #204f81);
+      color: #f7fbff;
     }
 
-    .cover-strip h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      line-height: 1.1;
+    .report-title {
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      margin-bottom: 10px;
     }
 
-    .cover-strip p {
-      margin: 0 0 8px;
-      line-height: 1.6;
+    .report-subcopy {
+      margin: 0;
+      max-width: 58rem;
+      line-height: 1.72;
+      color: rgba(247, 251, 255, 0.88);
     }
 
-    .cover-meta {
+    .report-meta {
+      min-width: 280px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
       background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 16px;
-      padding: 16px;
-      align-self: stretch;
+      border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .cover-meta dl {
+    .report-meta dl {
       margin: 0;
       display: grid;
-      grid-template-columns: 1fr;
       gap: 10px;
     }
 
-    .cover-meta dt {
-      font-size: 0.74rem;
-      letter-spacing: 0.08em;
+    .report-meta dt {
+      font-size: 0.72rem;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.74);
       margin-bottom: 4px;
     }
 
-    .cover-meta dd {
+    .report-meta dd {
       margin: 0;
       font-weight: 700;
       word-break: break-word;
     }
 
-    .hero-toolbar {
+    .toolbar {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 12px;
-      align-items: center;
+      gap: 14px;
       padding: 16px 24px 20px;
-      background: #f7f9fc;
-      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      background: #f7fafc;
+      border-top: 1px solid rgba(24, 53, 86, 0.08);
     }
 
-    .disclaimer-banner {
-      border-radius: 14px;
-      background: #fff8de;
-      color: #7a4a00;
-      border: 1px solid rgba(184, 134, 11, 0.35);
-      padding: 12px 14px;
-      font-size: 0.93rem;
-      line-height: 1.6;
+    .toolbar-note {
       flex: 1 1 420px;
-    }
-
-    .summary-matrix {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1px;
-      overflow: hidden;
-      margin-bottom: 18px;
-      background: rgba(15, 23, 42, 0.08);
-    }
-
-    .summary-matrix article {
-      padding: 16px 18px;
-      background: #fff;
-    }
-
-    .summary-matrix .label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-
-    .summary-matrix strong {
-      display: block;
-      font-size: 1.2rem;
-      word-break: break-word;
-    }
-
-    .section-card {
-      padding: 22px;
-      margin-bottom: 18px;
-      break-inside: avoid;
-    }
-
-    .section-card h2 {
-      margin: 0 0 14px;
-      color: #102542;
-      border-bottom: 2px solid rgba(23, 54, 95, 0.14);
-      padding-bottom: 10px;
-    }
-
-    .section-card h3 {
-      margin: 18px 0 10px;
-      color: #17365f;
-    }
-
-    .summary-text,
-    .section-card p,
-    .legal-box {
-      line-height: 1.7;
-    }
-
-    .intel-grid,
-    .grid-2,
-    .grid-3,
-    .shot-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .intel-grid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .intel-card,
-    .legal-box,
-    .detail-panel,
-    .tech-block {
-      border-radius: 16px;
-      padding: 16px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      background: #f8fafc;
-    }
-
-    .intel-card.alert { background: #fff1f1; border-color: rgba(178, 34, 34, 0.3); }
-    .intel-card.warn { background: #fff7ec; border-color: rgba(204, 85, 0, 0.28); }
-    .intel-card.safe { background: #edf8f1; border-color: rgba(26, 107, 58, 0.28); }
-
-    .intel-card .label {
-      display: block;
-      font-size: 0.76rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #5c6270;
-      margin-bottom: 8px;
-    }
-
-    .intel-card strong {
-      display: block;
-      font-size: 1.28rem;
-      margin-bottom: 6px;
-    }
-
-    .report-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-
-    .report-table th,
-    .report-table td {
-      text-align: left;
-      padding: 10px 12px;
-      border-bottom: 1px solid #e5e7eb;
-      vertical-align: top;
-      word-break: break-word;
-    }
-
-    .report-table th {
-      color: #1f2937;
-      background: #f5f7fb;
-    }
-
-    .new-domain-flag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(178, 34, 34, 0.12);
-      color: #8a1111;
-      font-weight: 700;
-      margin-top: 12px;
-    }
-
-    .cloaking-banner {
       padding: 12px 14px;
-      border-radius: 14px;
-      background: #fff2d9;
-      border: 1px solid rgba(184, 134, 11, 0.35);
-      color: #7c4a00;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .shot-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .shot-card {
-      border-radius: 16px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-      background: #f8fafc;
-    }
-
-    .shot-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 12px 14px;
-      background: #e8eff8;
-      font-weight: 700;
-    }
-
-    .shot-media {
-      background: #0f172a;
-      aspect-ratio: 16 / 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .shot-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      cursor: zoom-in;
-    }
-
-    .shot-meta {
-      padding: 12px 14px;
-      font-size: 0.86rem;
-      color: #334155;
-    }
-
-    .code-list {
-      margin: 0;
-      padding-left: 20px;
-      word-break: break-word;
+      border-radius: var(--radius-md);
+      background: #fff8e5;
+      color: #7a5203;
+      border: 1px solid rgba(239, 185, 26, 0.32);
+      line-height: 1.65;
     }
 
     .action-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      align-items: flex-start;
     }
 
-    .agency-mark {
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.82);
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 11px 17px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 800;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, #0f4ea8, #2678d7);
+      color: #f9fcff;
+    }
+
+    .button.secondary {
+      background: #f0f5fb;
+      border-color: rgba(24, 53, 86, 0.1);
+      color: var(--text-strong);
+    }
+
+    .button.disabled,
+    .button[aria-disabled="true"] {
+      opacity: 0.58;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: rgba(24, 53, 86, 0.08);
+    }
+
+    .summary-grid > div {
+      background: var(--surface);
+      padding: 20px 22px;
+    }
+
+    .summary-topline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .summary-card {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: var(--surface-soft);
+      border: 1px solid rgba(24, 53, 86, 0.08);
+    }
+
+    .summary-card .label {
+      display: block;
       margin-bottom: 8px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
     }
 
-    .analysis-note {
-      margin-top: 12px;
-      font-size: 0.88rem;
-      color: #475569;
-      line-height: 1.6;
+    .summary-card strong {
+      display: block;
+      color: var(--text-strong);
+      font-size: 1.28rem;
+      line-height: 1.1;
+    }
+
+    .summary-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .note-box,
+    .detail-panel,
+    .evidence-card,
+    .legal-panel,
+    .tech-panel {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(24, 53, 86, 0.08);
+      background: var(--surface-soft);
+    }
+
+    .note-box,
+    .detail-panel,
+    .legal-panel,
+    .tech-panel {
+      padding: 16px 18px;
+    }
+
+    .note-box {
+      line-height: 1.72;
+      color: var(--text-main);
+    }
+
+    .note-box strong {
+      color: var(--text-strong);
+    }
+
+    .grid-2,
+    .grid-3,
+    .capture-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .section-card {
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .section-card h2 {
+      margin: 0 0 14px;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.55rem;
+      line-height: 1.08;
+      color: var(--text-strong);
+    }
+
+    .section-intro {
+      margin: 0 0 18px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .report-table th,
+    .report-table td {
+      text-align: left;
+      padding: 11px 10px;
+      border-bottom: 1px solid rgba(24, 53, 86, 0.09);
+      vertical-align: top;
+      word-break: break-word;
+    }
+
+    .report-table th {
+      color: var(--text-strong);
+      background: #edf3f9;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .severity-pill.critical,
+    .badge.severity.critical {
+      background: rgba(217, 79, 94, 0.16);
+      color: #d94f5e;
+    }
+
+    .severity-pill.high,
+    .badge.severity.high {
+      background: rgba(241, 138, 46, 0.16);
+      color: #d36d07;
+    }
+
+    .severity-pill.medium,
+    .badge.severity.medium {
+      background: rgba(239, 193, 72, 0.16);
+      color: #b07d05;
+    }
+
+    .severity-pill.low,
+    .badge.severity.low {
+      background: rgba(51, 165, 112, 0.16);
+      color: #12754c;
+    }
+
+    .severity-pill.inactive,
+    .badge.severity.inactive,
+    .badge.severity.unknown {
+      background: rgba(124, 136, 151, 0.16);
+      color: #516373;
+    }
+
+    .badge.category,
+    .badge.neutral {
+      background: rgba(24, 53, 86, 0.08);
+      color: var(--text-strong);
+      border: 1px solid rgba(24, 53, 86, 0.08);
+    }
+
+    .status-pill {
+      background: rgba(16, 135, 83, 0.14);
+      color: #12754c;
+    }
+
+    .status-pill.down,
+    .status-pill.inactive {
+      background: rgba(124, 136, 151, 0.16);
+      color: #536675;
+    }
+
+    .capture-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .evidence-card {
+      overflow: hidden;
+    }
+
+    .evidence-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      padding: 14px 16px;
+      background: linear-gradient(180deg, #e7eef6, #f5f9fc);
+      color: var(--text-strong);
+      font-weight: 800;
+    }
+
+    .evidence-frame {
+      aspect-ratio: 16 / 10;
+      background: #0b1621;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .evidence-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .evidence-meta {
+      padding: 14px 16px;
+      font-size: 0.84rem;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .key-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .key-list li + li {
+      margin-top: 6px;
+    }
+
+    .muted {
+      color: var(--text-muted);
     }
 
     .lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.86);
+      background: rgba(10, 20, 34, 0.88);
       display: none;
       align-items: center;
       justify-content: center;
@@ -482,166 +615,204 @@
       z-index: 50;
     }
 
-    .lightbox.active { display: flex; }
+    .lightbox.active {
+      display: flex;
+    }
 
     .lightbox img {
-      max-width: min(1200px, 95vw);
+      max-width: min(1220px, 95vw);
       max-height: 92vh;
-      border-radius: 14px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
     }
 
     .lightbox button {
       position: absolute;
       top: 24px;
       right: 24px;
-      background: rgba(255, 255, 255, 0.18);
-      color: #fff;
-      border: 0;
-      border-radius: 999px;
       width: 42px;
       height: 42px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
       font-size: 1.2rem;
       cursor: pointer;
     }
 
-    @media (max-width: 960px) {
-      .cover-grid,
-      .cover-strip {
+    @media (max-width: 1080px) {
+      .summary-grid,
+      .grid-2,
+      .grid-3,
+      .capture-grid,
+      .report-brand,
+      .cover-top {
         grid-template-columns: 1fr;
+      }
+
+      .report-brand,
+      .cover-top {
+        flex-direction: column;
+      }
+
+      .summary-topline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .report-shell {
+        padding: 12px;
+      }
+
+      .summary-topline {
+        grid-template-columns: 1fr;
+      }
+
+      .capture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
       }
     }
 
     @media print {
-      body.report-page {
+      body {
         background: #fff;
       }
+
       .report-shell {
-        padding: 0;
         max-width: none;
+        padding: 0;
       }
-      .cover-page,
-      .report-hero,
+
+      .cover-sheet,
+      .report-header,
       .section-card,
-      .summary-matrix {
+      .summary-grid {
         box-shadow: none;
       }
-      .hero-toolbar,
+
+      .toolbar,
       .lightbox {
         display: none !important;
       }
-      .shot-media img {
-        cursor: default;
-      }
+
       a {
-        color: #10233c;
-        text-decoration: none;
+        color: inherit;
       }
     }
   </style>
 </head>
-<body class="report-page">
+<body>
   <div class="report-shell">
     {% if is_pdf %}
-      <section class="cover-page">
-        <p class="cover-kicker">National Cybercrime Threat Analytics Unit</p>
-        <div class="cover-classification">Controlled Draft • Internal Review Copy • Analyst Prepared</div>
-        <h1>Cybercrime Domain Analysis Dossier</h1>
-        <p class="cover-lead">
-          Analyst-generated intelligence brief prepared in the style of an inter-agency cybercrime assessment pack.
-          This document compiles passive-intelligence indicators, capture evidence, legal analysis, and infrastructure
-          attribution for the subject domain listed below.
-        </p>
-        <div class="cover-grid">
-          <div class="cover-panel">
+      <section class="cover-sheet">
+        <div class="cover-top">
+          <div class="cover-lockup">
+            {% if logo_data_uri %}
+              <img class="report-logo" src="{{ logo_data_uri }}" alt="I4C logo">
+            {% endif %}
+            <div>
+              <p class="cover-kicker">Indian Cyber Crime Coordination Centre</p>
+              <div class="classification-pill">Analytical Draft • Circulation Copy</div>
+              <h1 class="cover-title">Domain threat assessment dossier</h1>
+            </div>
+          </div>
+          <aside class="cover-side">
             <dl>
-              <div>
-                <dt>Subject Domain</dt>
-                <dd>{{ report.domain }}</dd>
-              </div>
-              <div>
-                <dt>Input URL</dt>
-                <dd>{{ report.input_url }}</dd>
-              </div>
               <div>
                 <dt>Report Identifier</dt>
                 <dd>{{ report_identifier }}</dd>
               </div>
               <div>
-                <dt>Draft Handling Note</dt>
-                <dd>{{ report_disclaimer }}</dd>
+                <dt>Subject Domain</dt>
+                <dd>{{ report.domain }}</dd>
               </div>
-            </dl>
-            <div class="cover-badges">
-              <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
-              <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
-              <span class="badge neutral">{{ report.batch_id }}</span>
-            </div>
-          </div>
-          <aside class="cover-panel">
-            <dl>
               <div>
                 <dt>Analysis Timestamp (UTC)</dt>
                 <dd>{{ report.analysis_ts_utc }}</dd>
               </div>
               <div>
-                <dt>Priority Score</dt>
-                <dd>{{ report.ai_analysis.priority_score }}</dd>
-              </div>
-              <div>
-                <dt>Primary Allocation Holder</dt>
-                <dd>{{ report.network_attribution.primary_holder or 'Unavailable' }}</dd>
-              </div>
-              <div>
-                <dt>Primary Allocation Region</dt>
-                <dd>{{ report.network_attribution.primary_economy_name or report.network_attribution.primary_cc or 'Unavailable' }}</dd>
+                <dt>Severity</dt>
+                <dd>{{ report.ai_analysis.severity }}</dd>
               </div>
             </dl>
           </aside>
         </div>
+        <p class="cover-intro">
+          This draft report is intended to help receiving organisations quickly understand the observed website behaviour,
+          the supporting technical evidence, the likely enforcement relevance, and the infrastructure signals associated
+          with the subject domain. It is written to support review by government entities, intermediaries, and private-sector
+          partners who may need a concise but technically reliable analytical brief.
+        </p>
+        <div class="meta-chip-row">
+          <span class="meta-chip">Batch {{ report.batch_id }}</span>
+          <span class="meta-chip">Threat category {{ report.ai_analysis.threat_category }}</span>
+          <span class="meta-chip">Priority score {{ report.ai_analysis.priority_score }}</span>
+          <span class="meta-chip">Primary holder {{ report.network_attribution.primary_holder or 'Unavailable' }}</span>
+        </div>
+        <div class="cover-note">
+          <strong>Handling note:</strong> {{ report_disclaimer }}<br>
+          <strong>Interpretation note:</strong> Network attribution and holder-linked ASN references support investigative
+          context but do not by themselves establish control, ownership, or criminal liability. Legal conclusions remain
+          subject to review by the receiving authority.
+        </div>
       </section>
     {% endif %}
-    <header class="report-hero">
-      <div class="cover-strip">
-        <div>
-          <p class="agency-mark">National Cybercrime Threat Analytics Unit (NCTAU)</p>
-          <p class="agency-mark">Indian Cyber Crime Coordination Centre (I4C) - Analyst Draft</p>
-          <h1>Cybercrime Domain Analysis Report</h1>
-          <p><strong>Subject domain:</strong> {{ report.domain }}</p>
-          <p><strong>Input URL:</strong> {{ report.input_url }}</p>
-          <div class="hero-meta">
-            <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
-            <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
-            <span class="badge neutral">{{ report.batch_id }}</span>
+
+    <header class="report-header">
+      <div class="report-brand">
+        <div class="brand-lockup">
+          {% if logo_data_uri %}
+            <img class="report-logo" src="{{ logo_data_uri }}" alt="I4C logo">
+          {% endif %}
+          <div>
+            <p class="cover-kicker">National Cybercrime Threat Analytics Unit</p>
+            <h1 class="report-title">Cybercrime domain analytical report</h1>
+            <p class="report-subcopy">
+              Subject domain <strong>{{ report.domain }}</strong> assessed through passive intelligence, controlled browser
+              capture, APNIC-based infrastructure enrichment, and statutory triage aligned to Indian cybercrime enforcement needs.
+            </p>
+            <div class="meta-chip-row">
+              <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
+              <span class="badge category">{{ report.ai_analysis.threat_category }}</span>
+              <span class="badge neutral">{{ report.batch_id }}</span>
+            </div>
           </div>
         </div>
-        <aside class="cover-meta">
+        <aside class="report-meta">
           <dl>
             <div>
               <dt>Report ID</dt>
               <dd>{{ report_identifier }}</dd>
             </div>
             <div>
-              <dt>Analysis Timestamp (UTC)</dt>
-              <dd>{{ report.analysis_ts_utc }}</dd>
-            </div>
-            <div>
-              <dt>Priority Score</dt>
-              <dd>{{ report.ai_analysis.priority_score }}</dd>
+              <dt>Input URL</dt>
+              <dd>{{ report.input_url }}</dd>
             </div>
             <div>
               <dt>Primary Allocation Holder</dt>
               <dd>{{ report.network_attribution.primary_holder or 'Unavailable' }}</dd>
             </div>
+            <div>
+              <dt>Analysis Timestamp (UTC)</dt>
+              <dd>{{ report.analysis_ts_utc }}</dd>
+            </div>
           </dl>
         </aside>
       </div>
       {% if not is_pdf %}
-        <div class="hero-toolbar">
-          <div class="disclaimer-banner">
+        <div class="toolbar">
+          <div class="toolbar-note">
             <strong>Draft handling note:</strong> {{ report_disclaimer }}
           </div>
           <div class="action-stack">
+            <a class="button secondary" href="{{ dashboard_link }}">Open Dashboard</a>
+            <a class="button secondary" href="{{ batch_csv_link }}" download>Download Full CSV</a>
+            <a class="button secondary" href="{{ batch_evidence_link }}" download>Download Evidence Package</a>
             {% if pdf_available %}
               <a class="button primary" href="{{ pdf_report_link }}" download>Download PDF Report</a>
             {% else %}
@@ -658,120 +829,159 @@
       {% endif %}
     </header>
 
-    <section class="summary-matrix">
-      <article>
-        <span class="label">Severity</span>
-        <strong>{{ report.ai_analysis.severity }}</strong>
-      </article>
-      <article>
-        <span class="label">Threat Category</span>
-        <strong>{{ report.ai_analysis.threat_category }}</strong>
-      </article>
-      <article>
-        <span class="label">Confidence</span>
-        <strong>{{ report.ai_analysis.confidence }}</strong>
-      </article>
-      <article>
-        <span class="label">Brand Impersonated</span>
-        <strong>{{ report.ai_analysis.brand_impersonated or 'None identified' }}</strong>
-      </article>
-      <article>
-        <span class="label">Resolved IPs</span>
-        <strong>{{ report.network_attribution.resolved_ips|length }}</strong>
-      </article>
-      <article>
-        <span class="label">Holder-linked ASNs</span>
-        <strong>{{ report.network_attribution.holder_linked_asns|length }}</strong>
-      </article>
-      <article>
-        <span class="label">Payment Indicators</span>
-        <strong>{{ report.payment_methods|length }}</strong>
-      </article>
+    <section class="summary-grid">
+      <div>
+        <div class="summary-topline">
+          <article class="summary-card">
+            <span class="label">Severity</span>
+            <strong>{{ report.ai_analysis.severity }}</strong>
+          </article>
+          <article class="summary-card">
+            <span class="label">Threat Category</span>
+            <strong>{{ report.ai_analysis.threat_category }}</strong>
+          </article>
+          <article class="summary-card">
+            <span class="label">Confidence</span>
+            <strong>{{ report.ai_analysis.confidence }}</strong>
+          </article>
+          <article class="summary-card">
+            <span class="label">Payment Indicators</span>
+            <strong>{{ report.payment_methods|length }}</strong>
+          </article>
+        </div>
+        <div class="note-box">
+          <strong>How to read this report.</strong>
+          The executive assessment states the likely operational concern. Threat-intelligence verdicts indicate what external
+          sources independently flagged. Infrastructure and attribution sections explain where the domain appears to be hosted
+          and which resource-holder signals were observed. The legal section is an analyst aid for review by receiving entities,
+          not an automatic enforcement order.
+        </div>
+      </div>
+      <div class="summary-stack">
+        <div class="detail-panel">
+          <dl>
+            <div>
+              <dt>Brand Impersonated</dt>
+              <dd>{{ report.ai_analysis.brand_impersonated or 'None identified' }}</dd>
+            </div>
+            <div>
+              <dt>Resolved IPs</dt>
+              <dd>{{ report.network_attribution.resolved_ips|length }}</dd>
+            </div>
+            <div>
+              <dt>Holder-linked ASNs</dt>
+              <dd>{{ report.network_attribution.holder_linked_asns|length }}</dd>
+            </div>
+            <div>
+              <dt>Capture Status</dt>
+              <dd>
+                {% if primary_capture and primary_capture.http_status is not none %}
+                  <span class="status-pill active">Active capture {{ primary_capture.http_status }}</span>
+                {% else %}
+                  <span class="status-pill down">No active response</span>
+                {% endif %}
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <div class="note-box">
+          <strong>Receiving-entity value.</strong>
+          This report is intended to shorten review time for blocking, intermediary takedown, network coordination, or brand
+          protection outreach by combining screenshots, hashes, attribution clues, and legal triage into one shareable package.
+        </div>
+      </div>
     </section>
 
     <section class="section-card" id="section-a">
-      <h2>A - Executive Summary</h2>
-      <p class="summary-text">{{ report.ai_analysis.illegal_activity_description }}</p>
+      <p class="section-kicker">A. Executive Assessment</p>
+      <h2>Operational summary</h2>
+      <p class="section-intro">
+        Concise statement of the observed activity, the suspected misuse pattern, and the main enforcement relevance.
+      </p>
       <div class="grid-2">
-        <div class="legal-box">
-          <strong>Fraud mechanism</strong>
-          <p>{{ report.ai_analysis.fraud_mechanism or 'N/A' }}</p>
-          <strong>Victim profile</strong>
-          <p>{{ report.ai_analysis.victim_profile or 'N/A' }}</p>
+        <div class="legal-panel">
+          <table class="report-table">
+            <tbody>
+              <tr><th>Fraud mechanism</th><td>{{ report.ai_analysis.fraud_mechanism or 'Not assigned' }}</td></tr>
+              <tr><th>Victim profile</th><td>{{ report.ai_analysis.victim_profile or 'Not assigned' }}</td></tr>
+              <tr><th>Recommended action</th><td>{{ report.ai_analysis.recommended_action or 'Retain for review' }}</td></tr>
+              <tr><th>Priority score</th><td>{{ report.ai_analysis.priority_score }}</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div class="legal-box">
-          <strong>Attribution summary</strong>
-          <p>
-            {% if report.network_attribution.primary_holder %}
-              The primary resolved infrastructure maps to APNIC allocation holder
-              <strong>{{ report.network_attribution.primary_holder }}</strong>
-              {% if report.network_attribution.primary_economy_name %}
-                in {{ report.network_attribution.primary_economy_name }}
-              {% endif %}.
-            {% else %}
-              No APNIC allocation holder was identified for the resolved addresses captured during this run.
-            {% endif %}
-          </p>
-          <p>
-            <strong>Detected payment rails:</strong>
-            {% if report.payment_methods %}
-              {{ report.payment_methods | map(attribute='method') | join(', ') }}
-            {% else %}
-              No explicit payment method indicators were extracted from the captured page content.
-            {% endif %}
-          </p>
-          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
-          <p class="analysis-note">
-            Payment indicators are heuristic observations from rendered content, frame content, and network traffic.
-            They support investigative triage and evidence preservation, but do not independently confirm processor affiliation.
-          </p>
+        <div class="note-box">
+          <strong>Assessment narrative.</strong><br>
+          {{ report.ai_analysis.illegal_activity_description }}
+          <br><br>
+          {% if report.payment_methods %}
+            <strong>Detected payment rails:</strong> {{ report.payment_methods | map(attribute='method') | join(', ') }}.
+          {% else %}
+            <strong>Detected payment rails:</strong> No explicit payment or deposit indicators were extracted during this run.
+          {% endif %}
         </div>
       </div>
     </section>
 
     <section class="section-card" id="section-b">
-      <h2>B - Threat Intel Verdicts</h2>
-      <div class="intel-grid">
-        <div class="intel-card {% if report.threat_intel.vt_malicious > 0 %}alert{% elif report.threat_intel.vt_suspicious > 0 %}warn{% else %}safe{% endif %}">
-          <span class="label">VirusTotal</span>
-          <strong>{{ report.threat_intel.vt_malicious }}/{{ report.threat_intel.vt_total }}</strong>
-          <span>Malicious engines flagged</span>
+      <p class="section-kicker">B. Evidence Capture</p>
+      <h2>Rendered website evidence</h2>
+      <p class="section-intro">
+        Screenshots are captured from controlled desktop and mobile browser profiles and hashed to support downstream integrity checks.
+      </p>
+      {% if capture_cards | selectattr('cloaking_suspected') | list %}
+        <div class="note-box" style="margin-bottom: 16px;">
+          <strong>Cloaking note.</strong> Desktop and mobile views differed materially, which may indicate profile-based content variation.
         </div>
-        <div class="intel-card {% if report.threat_intel.urlscan_verdict == 'malicious' %}alert{% elif report.threat_intel.urlscan_verdict %}warn{% else %}safe{% endif %}">
-          <span class="label">URLScan</span>
-          <strong>{{ report.threat_intel.urlscan_verdict or 'N/A' }}</strong>
-          <span>Score: {{ report.threat_intel.urlscan_score if report.threat_intel.urlscan_score is not none else 'N/A' }}</span>
-        </div>
-        <div class="intel-card {% if report.threat_intel.urlhaus_listed %}alert{% else %}safe{% endif %}">
-          <span class="label">URLhaus</span>
-          <strong>{{ 'Listed' if report.threat_intel.urlhaus_listed else 'Not listed' }}</strong>
-          <span>{{ report.threat_intel.urlhaus_threat or 'No malware tag returned' }}</span>
-        </div>
-        <div class="intel-card {% if report.threat_intel.gsb_threats %}alert{% else %}safe{% endif %}">
-          <span class="label">Google Safe Browsing</span>
-          <strong>{{ report.threat_intel.gsb_threats|join(', ') if report.threat_intel.gsb_threats else 'Clean' }}</strong>
-          <span>Blocklist presence</span>
-        </div>
-        <div class="intel-card {% if report.threat_intel.otx_pulse_count > 0 %}warn{% else %}safe{% endif %}">
-          <span class="label">AlienVault OTX</span>
-          <strong>{{ report.threat_intel.otx_pulse_count }}</strong>
-          <span>Threat pulses</span>
-        </div>
-        <div class="intel-card {% if report.threat_intel.phishtank_verified %}alert{% else %}safe{% endif %}">
-          <span class="label">PhishTank</span>
-          <strong>{{ 'Verified' if report.threat_intel.phishtank_verified else 'Unverified' }}</strong>
-          <span>Community phishing consensus</span>
-        </div>
-        <div class="intel-card {% if report.threat_intel.abuseipdb_score and report.threat_intel.abuseipdb_score >= 50 %}warn{% else %}safe{% endif %}">
-          <span class="label">AbuseIPDB</span>
-          <strong>{{ report.threat_intel.abuseipdb_score if report.threat_intel.abuseipdb_score is not none else 'N/A' }}</strong>
-          <span>{{ report.threat_intel.abuseipdb_isp or 'ISP unavailable' }}</span>
-        </div>
+      {% endif %}
+      <div class="capture-grid">
+        {% for card in capture_cards %}
+          <article class="evidence-card">
+            <div class="evidence-head">
+              <span>{{ card.profile|replace('_', ' ')|title }}</span>
+              <span>{{ card.http_status if card.http_status is not none else 'Capture failed' }}</span>
+            </div>
+            {% if card.viewport_data_uri %}
+              <div class="evidence-frame">
+                <img src="{{ card.viewport_data_uri }}" alt="{{ card.profile }} viewport screenshot" data-lightbox="{{ card.viewport_data_uri }}">
+              </div>
+            {% endif %}
+            <div class="evidence-meta">
+              {% if card.error %}
+                <strong>Error:</strong> {{ card.error }}<br>
+              {% endif %}
+              {% if card.title %}
+                <strong>Title:</strong> {{ card.title }}<br>
+              {% endif %}
+              {% if card.timestamp %}
+                <strong>Timestamp:</strong> {{ card.timestamp }}<br>
+              {% endif %}
+              {% if card.viewport_hash %}
+                <strong>Viewport SHA-256:</strong> {{ card.viewport_hash }}<br>
+              {% endif %}
+              {% if card.full_data_uri %}
+                <div class="evidence-frame" style="margin-top: 12px;">
+                  <img src="{{ card.full_data_uri }}" alt="{{ card.profile }} full-page screenshot" data-lightbox="{{ card.full_data_uri }}">
+                </div>
+                <div style="margin-top: 12px;">
+                  <strong>Full-page SHA-256:</strong> {{ card.full_hash or 'Unavailable' }}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% else %}
+          <div class="note-box">
+            No evidence capture records were available for this domain.
+          </div>
+        {% endfor %}
       </div>
     </section>
 
     <section class="section-card" id="section-c">
-      <h2>C - Registration and DNS</h2>
+      <p class="section-kicker">C. Registration and Infrastructure</p>
+      <h2>Registration context and DNS footprint</h2>
+      <p class="section-intro">
+        Registration metadata and resolved records help identify operational recency, registrar exposure, and the basic infrastructure footprint of the target.
+      </p>
       <div class="grid-2">
         <div class="detail-panel">
           <table class="report-table">
@@ -779,24 +989,27 @@
               <tr><th>Registrar</th><td>{{ report.registration.registrar or 'Unknown' }}</td></tr>
               <tr><th>Registration date</th><td>{{ report.registration.registered or 'Unknown' }}</td></tr>
               <tr><th>Expiry date</th><td>{{ report.registration.expires or 'Unknown' }}</td></tr>
-              <tr><th>Nameservers</th><td>{{ report.registration.nameservers|join(', ') if report.registration.nameservers else 'Unknown' }}</td></tr>
               <tr><th>Registrant country</th><td>{{ report.registration.country or 'Unknown' }}</td></tr>
+              <tr><th>Nameservers</th><td>{{ report.registration.nameservers|join(', ') if report.registration.nameservers else 'Unknown' }}</td></tr>
               <tr><th>Domain age</th><td>{{ domain_age.days ~ ' days' if domain_age.days is not none else 'Unknown' }}</td></tr>
             </tbody>
           </table>
           {% if domain_age.is_new_domain %}
-            <div class="new-domain-flag">NEW DOMAIN - Registered within 30 days</div>
+            <div class="note-box" style="margin-top: 12px;">
+              <strong>New-domain indicator.</strong> Registration age appears to be under 30 days.
+            </div>
           {% endif %}
         </div>
         <div class="detail-panel">
-          <h3>DNS Records</h3>
           <table class="report-table">
             <tbody>
               {% for record_type, values in report.dns_records.items() %}
                 <tr>
                   <th>{{ record_type }}</th>
-                  <td>{{ values|join(', ') if values else 'No record returned' }}</td>
+                  <td>{{ values|join(', ') if values else 'No values returned' }}</td>
                 </tr>
+              {% else %}
+                <tr><th>DNS</th><td>No DNS records were stored for this domain.</td></tr>
               {% endfor %}
             </tbody>
           </table>
@@ -805,235 +1018,206 @@
     </section>
 
     <section class="section-card" id="section-d">
-      <h2>D - Evidence Capture</h2>
-      {% if capture_cards | selectattr('cloaking_suspected') | list %}
-        <div class="cloaking-banner">CLOAKING SUSPECTED - Desktop and mobile captures differ materially.</div>
-      {% endif %}
-      <div class="shot-grid">
-        {% for card in capture_cards %}
-          <article class="shot-card">
-            <div class="shot-head">
-              <span>{{ card.profile|replace('_', ' ')|title }}</span>
-              <span>{{ card.http_status if card.http_status is not none else 'Capture failed' }}</span>
-            </div>
-            {% if card.error %}
-              <div class="shot-meta">{{ card.error }}</div>
-            {% endif %}
-            {% if card.viewport_data_uri %}
-              <div class="shot-media">
-                <img src="{{ card.viewport_data_uri }}" alt="{{ card.profile }} viewport screenshot" data-lightbox="{{ card.viewport_data_uri }}">
-              </div>
-              <div class="shot-meta">
-                <strong>Viewport screenshot</strong><br>
-                Timestamp: {{ card.timestamp or 'N/A' }}<br>
-                SHA-256: {{ card.viewport_hash or 'N/A' }}
-              </div>
-            {% endif %}
-            {% if card.full_data_uri %}
-              <div class="shot-media">
-                <img src="{{ card.full_data_uri }}" alt="{{ card.profile }} full-page screenshot" data-lightbox="{{ card.full_data_uri }}">
-              </div>
-              <div class="shot-meta">
-                <strong>Full-page screenshot</strong><br>
-                Timestamp: {{ card.timestamp or 'N/A' }}<br>
-                SHA-256: {{ card.full_hash or 'N/A' }}
-              </div>
-            {% endif %}
-          </article>
-        {% endfor %}
+      <p class="section-kicker">D. Threat Intelligence Findings</p>
+      <h2>External-source verdicts</h2>
+      <p class="section-intro">
+        These source verdicts provide independent context. They should be interpreted together with the capture evidence rather than as a stand-alone conclusion.
+      </p>
+      <div class="grid-3">
+        <div class="detail-panel"><strong>VirusTotal</strong><br>{{ report.threat_intel.vt_malicious }}/{{ report.threat_intel.vt_total }} malicious engines flagged</div>
+        <div class="detail-panel"><strong>URLScan</strong><br>{{ report.threat_intel.urlscan_verdict or 'No verdict' }}{% if report.threat_intel.urlscan_score is not none %} · score {{ report.threat_intel.urlscan_score }}{% endif %}</div>
+        <div class="detail-panel"><strong>URLhaus</strong><br>{{ 'Listed' if report.threat_intel.urlhaus_listed else 'Not listed' }}{% if report.threat_intel.urlhaus_threat %} · {{ report.threat_intel.urlhaus_threat }}{% endif %}</div>
+        <div class="detail-panel"><strong>Google Safe Browsing</strong><br>{{ report.threat_intel.gsb_threats|join(', ') if report.threat_intel.gsb_threats else 'No blocklist threat returned' }}</div>
+        <div class="detail-panel"><strong>AlienVault OTX</strong><br>{{ report.threat_intel.otx_pulse_count }} associated pulses</div>
+        <div class="detail-panel"><strong>PhishTank / AbuseIPDB</strong><br>{{ 'Verified phishing listing' if report.threat_intel.phishtank_verified else 'No PhishTank verification' }}{% if report.threat_intel.abuseipdb_score is not none %} · Abuse score {{ report.threat_intel.abuseipdb_score }}{% endif %}</div>
       </div>
     </section>
 
     <section class="section-card" id="section-e">
-      <h2>E - Legal Analysis</h2>
+      <p class="section-kicker">E. Payment and Transaction Signals</p>
+      <h2>Observed payment-related indicators</h2>
+      <p class="section-intro">
+        Payment indicators are heuristic observations extracted from rendered content, accessible embedded frames, and network requests. They are useful for outreach and preservation, but they do not independently prove merchant-acquirer relationships.
+      </p>
+      <div class="grid-2">
+        <div class="tech-panel">
+          <ul class="key-list">
+            {% for payment in report.payment_methods %}
+              <li>
+                <strong>{{ payment.method }}</strong>
+                {% if payment.source %} from {{ payment.source }}{% endif %}
+                {% if payment.evidence %}<br><span class="muted">{{ payment.evidence }}</span>{% endif %}
+              </li>
+            {% else %}
+              <li>No payment method or deposit indicators were extracted in this run.</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="note-box">
+          <strong>Why this section matters.</strong>
+          Where present, these indicators can help receiving entities identify likely payment rails, examine intermediary exposure,
+          preserve traces before content changes, and prioritise requests to processors, wallets, or platforms connected to the observed activity.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="section-f">
+      <p class="section-kicker">F. Legal Triage</p>
+      <h2>Indicative statutory relevance</h2>
+      <p class="section-intro">
+        The following provisions are analyst-assigned triage references based on the observed evidence. They are intended to support review by legal, policy, or platform recipients and should not be treated as an executable order without further authority.
+      </p>
       <table class="report-table">
         <thead>
           <tr>
             <th>Statute</th>
             <th>Offence</th>
-            <th>Evidence</th>
+            <th>Observed basis</th>
             <th>Confidence</th>
           </tr>
         </thead>
         <tbody>
-          {% if report.ai_analysis.applicable_laws %}
-            {% for law in report.ai_analysis.applicable_laws %}
-              <tr>
-                <td>{{ law.statute or law['statute'] }}</td>
-                <td>{{ law.offence or law['offence'] }}</td>
-                <td>{{ law.evidence or law['evidence'] }}</td>
-                <td>{{ law.confidence or law['confidence'] }}</td>
-              </tr>
-            {% endfor %}
+          {% for law in report.ai_analysis.applicable_laws %}
+            <tr>
+              <td>{{ law.statute or law['statute'] }}</td>
+              <td>{{ law.offence or law['offence'] }}</td>
+              <td>{{ law.evidence or law['evidence'] }}</td>
+              <td>{{ law.confidence or law['confidence'] }}</td>
+            </tr>
           {% else %}
-            <tr><td colspan="4">No specific legal provisions were assigned by the analytical model for this capture.</td></tr>
-          {% endif %}
+            <tr><td colspan="4">No specific statutory provisions were assigned by the analytical model for the present capture.</td></tr>
+          {% endfor %}
         </tbody>
       </table>
-      <div class="legal-box" style="margin-top: 16px;">
+      <div class="note-box" style="margin-top: 16px;">
+        <strong>Legal interpretation note.</strong>
+        The narrative below is intended to make the analytical basis legible to non-specialist recipients:
+        <br><br>
         {{ report.ai_analysis.illegal_activity_description }}
       </div>
     </section>
 
-    <section class="section-card" id="section-f">
-      <h2>F - Network Attribution</h2>
-      <div class="grid-2">
-        <div class="detail-panel">
-          <h3>Resolved IP Set</h3>
-          <ul class="code-list">
-            {% for ip in report.network_attribution.resolved_ips %}
-              <li>{{ ip }}</li>
-            {% else %}
-              <li>No IPv4 or IPv6 addresses were resolved during this run.</li>
-            {% endfor %}
-          </ul>
-          <h3>Holder-linked ASN Allocations</h3>
-          <ul class="code-list">
-            {% for asn in report.network_attribution.holder_linked_asns %}
-              <li>
-                <strong>{{ asn.resource }}</strong>
-                {% if asn.holder_name %}<br>{{ asn.holder_name }}{% endif %}
-                {% if asn.economy_name or asn.cc %}<br>{{ asn.economy_name or 'Unknown economy' }}{% if asn.cc %} ({{ asn.cc }}){% endif %}{% endif %}
-              </li>
-            {% else %}
-              <li>No holder-linked ASN allocations were identified from the APNIC dataset.</li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="detail-panel">
-          <h3>Primary Allocation Holder</h3>
-          <p><strong>{{ report.network_attribution.primary_holder or 'Unavailable' }}</strong></p>
-          <p>
-            {% if report.network_attribution.primary_economy_name or report.network_attribution.primary_cc %}
-              {{ report.network_attribution.primary_economy_name or 'Unknown economy' }}
-              {% if report.network_attribution.primary_cc %}({{ report.network_attribution.primary_cc }}){% endif %}
-            {% else %}
-              No APNIC geography was matched.
-            {% endif %}
-          </p>
-        </div>
-      </div>
-      <h3>Matched APNIC Allocations</h3>
-      <table class="report-table">
-        <thead>
-          <tr>
-            <th>IP</th>
-            <th>Resource</th>
-            <th>Holder</th>
-            <th>NIR / Country</th>
-            <th>Economy</th>
-            <th>Delegation</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for allocation in report.network_attribution.matched_allocations %}
-            <tr>
-              <td>{{ allocation.ip_address }}</td>
-              <td>{{ allocation.resource }}</td>
-              <td>{{ allocation.holder_name or 'Unknown' }}</td>
-              <td>{{ allocation.nir or 'N/A' }}{% if allocation.cc %} / {{ allocation.cc }}{% endif %}</td>
-              <td>{{ allocation.economy_name or 'Unknown' }}</td>
-              <td>{{ allocation.delegation_date or 'Unknown' }}</td>
-            </tr>
-          {% else %}
-            <tr><td colspan="6">No APNIC allocation block matched the resolved IP set.</td></tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </section>
-
     <section class="section-card" id="section-g">
-      <h2>G - Technical Observations and Link Analysis</h2>
+      <p class="section-kicker">G. Attribution and Linkage</p>
+      <h2>Network attribution, linkage, and technical observations</h2>
+      <p class="section-intro">
+        APNIC enrichment provides allocation-level context for observed IP space. Holder-linked ASN entries reflect shared holder-name signals and should be read as allocation associations, not route-origin confirmation.
+      </p>
       <div class="grid-2">
-        <div class="tech-block">
+        <div class="tech-panel">
           <table class="report-table">
             <tbody>
-              <tr><th>HTTP status</th><td>{{ primary_capture.http_status if primary_capture else 'N/A' }}</td></tr>
-              <tr><th>Final URL</th><td>{{ primary_capture.final_url if primary_capture else 'N/A' }}</td></tr>
-              <tr><th>Page title</th><td>{{ primary_capture.title if primary_capture else 'N/A' }}</td></tr>
-              <tr><th>Capture quality</th><td>{{ primary_capture.capture_quality_score if primary_capture else 'N/A' }}</td></tr>
+              <tr><th>Primary allocation holder</th><td>{{ report.network_attribution.primary_holder or 'Unavailable' }}</td></tr>
+              <tr><th>Primary region</th><td>{{ report.network_attribution.primary_economy_name or report.network_attribution.primary_cc or 'Unavailable' }}</td></tr>
+              <tr><th>Resolved IP set</th><td>{{ report.network_attribution.resolved_ips|join(', ') if report.network_attribution.resolved_ips else 'No resolved IPs recorded' }}</td></tr>
+              <tr><th>Capture status</th><td>{{ primary_capture.http_status if primary_capture else 'N/A' }}</td></tr>
               <tr><th>Capture URL used</th><td>{{ primary_capture.attempted_url if primary_capture else 'N/A' }}</td></tr>
               <tr><th>Redirect chain</th><td>{{ redirect_chain|join(' → ') if redirect_chain else 'No redirects recorded' }}</td></tr>
               <tr><th>Wayback snapshot</th><td>{% if wayback_snapshot.url %}<a href="{{ wayback_snapshot.url }}">Archived copy</a>{% else %}Not available{% endif %}</td></tr>
             </tbody>
           </table>
-          <h3>Network Requests</h3>
-          <ul class="code-list">
-            <li><strong>First-party:</strong> {{ network_requests.first_party|length if network_requests.first_party is defined else 0 }}</li>
-            <li><strong>Third-party:</strong> {{ network_requests.third_party|length if network_requests.third_party is defined else 0 }}</li>
-            <li><strong>API calls:</strong> {{ network_requests.api_calls|length if network_requests.api_calls is defined else 0 }}</li>
-          </ul>
+
+          {% if report.network_attribution.holder_linked_asns %}
+            <h3 style="color: var(--text-strong); margin-bottom: 8px;">Holder-linked ASN allocations</h3>
+            <ul class="key-list">
+              {% for asn in report.network_attribution.holder_linked_asns %}
+                <li>
+                  <strong>{{ asn.resource }}</strong>
+                  {% if asn.holder_name %} · {{ asn.holder_name }}{% endif %}
+                  {% if asn.economy_name or asn.cc %}<br><span class="muted">{{ asn.economy_name or 'Unknown economy' }}{% if asn.cc %} ({{ asn.cc }}){% endif %}</span>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
-        <div class="tech-block">
-          <h3>Detected Payment Methods</h3>
-          <ul class="code-list">
-            {% for payment in report.payment_methods %}
-              <li>
-                <strong>{{ payment.method }}</strong>
-                {% if payment.source %}<br>Source: {{ payment.source }}{% endif %}
-                {% if payment.evidence %}<br>{{ payment.evidence }}{% endif %}
-              </li>
-            {% else %}
-              <li>No payment method or deposit rail indicators were extracted from the visible content and network requests.</li>
-            {% endfor %}
-          </ul>
-          <h3>Certificate Transparency (first 10)</h3>
-          <ul class="code-list">
-            {% for cert in first_ten_certs %}
-              <li><strong>{{ cert.name }}</strong><br>{{ cert.issuer }}<br>{{ cert.not_before }}</li>
-            {% else %}
-              <li>No certificate transparency records returned.</li>
-            {% endfor %}
-          </ul>
-          <h3>Linked Domains (shared infrastructure)</h3>
-          <ul class="code-list">
-            {% for linked in linked_domains %}
-              <li>{{ linked }}</li>
-            {% else %}
-              <li>No linked domains were identified in the current dataset.</li>
-            {% endfor %}
-          </ul>
-          <h3>Response Headers</h3>
-          <ul class="code-list">
-            {% for key, value in response_headers.items() %}
-              <li><strong>{{ key }}:</strong> {{ value }}</li>
-            {% else %}
-              <li>No response headers recorded.</li>
-            {% endfor %}
-          </ul>
+
+        <div class="tech-panel">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>IP</th>
+                <th>Resource</th>
+                <th>Holder</th>
+                <th>Region</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for allocation in report.network_attribution.matched_allocations %}
+                <tr>
+                  <td>{{ allocation.ip_address }}</td>
+                  <td>{{ allocation.resource }}</td>
+                  <td>{{ allocation.holder_name or 'Unknown' }}</td>
+                  <td>{{ allocation.economy_name or allocation.cc or 'Unknown' }}</td>
+                </tr>
+              {% else %}
+                <tr><td colspan="4">No APNIC allocation rows matched the resolved IP set.</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+          <div class="grid-2" style="margin-top: 16px;">
+            {% if response_headers %}
+              <div class="detail-panel">
+                <h3 style="margin-top: 0; color: var(--text-strong);">Response headers</h3>
+                <ul class="key-list">
+                  {% for key, value in response_headers.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if linked_domains %}
+              <div class="detail-panel">
+                <h3 style="margin-top: 0; color: var(--text-strong);">Linked domains</h3>
+                <ul class="key-list">
+                  {% for linked in linked_domains %}
+                    <li>{{ linked }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if first_ten_certs %}
+              <div class="detail-panel">
+                <h3 style="margin-top: 0; color: var(--text-strong);">Certificate transparency sample</h3>
+                <ul class="key-list">
+                  {% for cert in first_ten_certs %}
+                    <li><strong>{{ cert.name }}</strong>{% if cert.issuer %} · {{ cert.issuer }}{% endif %}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section-card" id="section-h">
-      <h2>H - Evidence Manifest and Recommendations</h2>
+      <p class="section-kicker">H. Coordination and Integrity</p>
+      <h2>Recommended follow-up and evidence manifest</h2>
+      <p class="section-intro">
+        Use the manifest hashes below to verify that the report package and screenshots have not changed after receipt. This is especially useful when the report is forwarded across organisations or attached to follow-up communications.
+      </p>
       <div class="grid-2">
-        <div class="legal-box">
-          <p><strong>Recommended action:</strong> {{ report.ai_analysis.recommended_action or 'N/A' }}</p>
-          <p><strong>Severity:</strong> {{ report.ai_analysis.severity }}</p>
-          <p><strong>Priority score:</strong> {{ report.ai_analysis.priority_score }}</p>
+        <div class="legal-panel">
+          <table class="report-table">
+            <tbody>
+              <tr><th>Recommended action</th><td>{{ report.ai_analysis.recommended_action or 'Retain for supervisory review' }}</td></tr>
+              <tr><th>Manifest hash</th><td>{{ report.evidence_manifest_hash or 'Unavailable' }}</td></tr>
+              <tr><th>Final URL</th><td>{{ primary_capture.final_url if primary_capture else 'Unavailable' }}</td></tr>
+              <tr><th>Capture quality score</th><td>{{ primary_capture.capture_quality_score if primary_capture else 'Unavailable' }}</td></tr>
+            </tbody>
+          </table>
           {% if pdf_generation_error %}
-            <p><strong>PDF status:</strong> {{ pdf_generation_error }}</p>
-          {% endif %}
-          {% if not is_pdf %}
-            <div class="action-stack">
-              {% if pdf_available %}
-                <a class="button primary" href="{{ pdf_report_link }}" download>Download PDF Report</a>
-              {% else %}
-                <span class="button secondary disabled" aria-disabled="true">PDF unavailable for this run</span>
-              {% endif %}
-              {% if evidence_available %}
-                <a class="button secondary" href="{{ evidence_zip_link }}" download>Download Evidence ZIP</a>
-              {% else %}
-                <span class="button secondary disabled" aria-disabled="true">Evidence ZIP unavailable</span>
-              {% endif %}
-              <a class="button secondary" href="{{ raw_json_link }}">View Raw JSON</a>
+            <div class="note-box" style="margin-top: 12px;">
+              <strong>PDF status:</strong> {{ pdf_generation_error }}
             </div>
           {% endif %}
         </div>
-        <div class="legal-box">
-          <p><strong>Manifest hash:</strong> {{ report.evidence_manifest_hash or 'N/A' }}</p>
-          <p>{{ report_disclaimer }}</p>
+        <div class="note-box">
+          <strong>Suggested receiving-entity handling.</strong>
+          Use this package to review whether the observed content, infrastructure placement, or transaction indicators warrant intermediary action,
+          platform review, network containment, or escalation to the appropriate legal and operational channel. Screenshots and hashes are included
+          to preserve an evidentiary snapshot even if the website content changes later.
         </div>
       </div>
       <table class="report-table" style="margin-top: 16px;">
@@ -1056,7 +1240,7 @@
               <td>{{ item.hash }}</td>
             </tr>
           {% else %}
-            <tr><td colspan="5">No manifest entries were generated.</td></tr>
+            <tr><td colspan="5">No manifest entries were generated for this report.</td></tr>
           {% endfor %}
         </tbody>
       </table>
@@ -1071,16 +1255,16 @@
 
     <script>
       window.closeReportLightbox = function () {
-        document.getElementById('lightbox').classList.remove('active');
+        document.getElementById("lightbox").classList.remove("active");
       };
-      document.querySelectorAll('[data-lightbox]').forEach(function (image) {
-        image.addEventListener('click', function () {
-          document.getElementById('lightbox-image').src = image.getAttribute('data-lightbox');
-          document.getElementById('lightbox').classList.add('active');
+      document.querySelectorAll("[data-lightbox]").forEach(function (image) {
+        image.addEventListener("click", function () {
+          document.getElementById("lightbox-image").src = image.getAttribute("data-lightbox");
+          document.getElementById("lightbox").classList.add("active");
         });
       });
-      document.getElementById('lightbox').addEventListener('click', function (event) {
-        if (event.target.id === 'lightbox') {
+      document.getElementById("lightbox").addEventListener("click", function (event) {
+        if (event.target.id === "lightbox") {
           window.closeReportLightbox();
         }
       });

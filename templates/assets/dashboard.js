@@ -4,7 +4,8 @@
     summary: null,
     domains: [],
     sortKey: "priority_score",
-    sortDirection: "desc"
+    sortDirection: "desc",
+    charts: []
   };
 
   function byId(id) {
@@ -18,16 +19,36 @@
     }
   }
 
-  function severityClass(severity) {
-    return String(severity || "unknown").toLowerCase();
-  }
-
   function safeArray(value) {
     return Array.isArray(value) ? value : [];
   }
 
   function safeObject(value) {
     return value && typeof value === "object" ? value : {};
+  }
+
+  function severityClass(severity) {
+    return String(severity || "unknown").toLowerCase();
+  }
+
+  function statusClass(status) {
+    return String(status || "inactive").toLowerCase();
+  }
+
+  function formatDate(value) {
+    if (!value) {
+      return "Unknown";
+    }
+    return value;
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
   async function fetchJson(path) {
@@ -61,69 +82,138 @@
     textContent("stat-categories", Object.keys(safeObject(summary.category_counts)).length);
   }
 
-  function makeChart(canvasId, config) {
+  function clearCharts() {
+    state.charts.forEach((chart) => chart.destroy());
+    state.charts = [];
+  }
+
+  function makeGradient(canvas, startColor, endColor) {
+    const context = canvas.getContext("2d");
+    const gradient = context.createLinearGradient(0, 0, 0, canvas.height || 320);
+    gradient.addColorStop(0, startColor);
+    gradient.addColorStop(1, endColor);
+    return gradient;
+  }
+
+  function makeChart(canvasId, chartConfigBuilder) {
     const canvas = byId(canvasId);
     if (!canvas || typeof window.Chart === "undefined") {
       return null;
     }
-    return new window.Chart(canvas, config);
+    const chart = new window.Chart(canvas, chartConfigBuilder(canvas));
+    state.charts.push(chart);
+    return chart;
+  }
+
+  function chartDefaults() {
+    return {
+      maintainAspectRatio: false,
+      animation: {
+        duration: 900,
+        easing: "easeOutQuart"
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: "#d5e3f3",
+            usePointStyle: true,
+            boxWidth: 10,
+            boxHeight: 10,
+            padding: 18
+          }
+        },
+        tooltip: {
+          backgroundColor: "rgba(6, 16, 28, 0.94)",
+          titleColor: "#f7fbff",
+          bodyColor: "#d4e3f2",
+          borderColor: "rgba(173, 204, 233, 0.16)",
+          borderWidth: 1,
+          padding: 12
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: "#9ab4cd" },
+          grid: { color: "rgba(173, 204, 233, 0.08)" }
+        },
+        y: {
+          ticks: { color: "#9ab4cd" },
+          grid: { color: "rgba(173, 204, 233, 0.08)" }
+        }
+      }
+    };
   }
 
   function renderCharts(summary) {
-    makeChart("severity-chart", {
-      type: "doughnut",
-      data: {
-        labels: Object.keys(safeObject(summary.severity_counts)),
-        datasets: [{
-          data: Object.values(safeObject(summary.severity_counts)),
-          backgroundColor: ["#b22222", "#cc5500", "#b8860b", "#1a6b3a", "#5a5a5a", "#607d8b"]
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { labels: { color: "#f5f5f5" } } }
-      }
-    });
-
-    makeChart("category-chart", {
-      type: "bar",
-      data: {
-        labels: Object.keys(safeObject(summary.category_counts)),
-        datasets: [{
-          label: "Domains",
-          data: Object.values(safeObject(summary.category_counts)),
-          backgroundColor: "#2e6da4"
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: { ticks: { color: "#f5f5f5" }, grid: { color: "rgba(255,255,255,0.08)" } },
-          y: { ticks: { color: "#f5f5f5" }, grid: { color: "rgba(255,255,255,0.08)" } }
-        },
-        plugins: { legend: { display: false } }
-      }
-    });
-
+    clearCharts();
+    const severityCounts = safeObject(summary.severity_counts);
+    const categoryCounts = safeObject(summary.category_counts);
     const countries = safeArray(summary.top_hosting_countries);
-    makeChart("country-chart", {
-      type: "bar",
-      data: {
-        labels: countries.map((item) => item.country),
-        datasets: [{
-          label: "Hosting Countries",
-          data: countries.map((item) => item.count),
-          backgroundColor: "#4b90c8"
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: { ticks: { color: "#f5f5f5" }, grid: { color: "rgba(255,255,255,0.08)" } },
-          y: { ticks: { color: "#f5f5f5" }, grid: { color: "rgba(255,255,255,0.08)" } }
+
+    makeChart("severity-chart", function (canvas) {
+      return {
+        type: "doughnut",
+        data: {
+          labels: Object.keys(severityCounts),
+          datasets: [{
+            data: Object.values(severityCounts),
+            backgroundColor: ["#d94f5e", "#f18a2e", "#efc148", "#33a570", "#8c97a8", "#5388c5"],
+            borderWidth: 0,
+            hoverOffset: 10
+          }]
         },
-        plugins: { legend: { display: false } }
-      }
+        options: Object.assign(chartDefaults(), {
+          cutout: "68%",
+          plugins: {
+            legend: chartDefaults().plugins.legend,
+            tooltip: chartDefaults().plugins.tooltip
+          },
+          scales: {}
+        })
+      };
+    });
+
+    makeChart("category-chart", function (canvas) {
+      return {
+        type: "bar",
+        data: {
+          labels: Object.keys(categoryCounts),
+          datasets: [{
+            data: Object.values(categoryCounts),
+            borderRadius: 999,
+            backgroundColor: makeGradient(canvas, "rgba(27, 166, 194, 0.95)", "rgba(15, 78, 168, 0.8)"),
+            borderSkipped: false
+          }]
+        },
+        options: Object.assign(chartDefaults(), {
+          indexAxis: "y",
+          plugins: {
+            legend: { display: false },
+            tooltip: chartDefaults().plugins.tooltip
+          }
+        })
+      };
+    });
+
+    makeChart("country-chart", function (canvas) {
+      return {
+        type: "bar",
+        data: {
+          labels: countries.map((item) => item.country),
+          datasets: [{
+            data: countries.map((item) => item.count),
+            borderRadius: 18,
+            backgroundColor: makeGradient(canvas, "rgba(239, 185, 26, 0.9)", "rgba(16, 135, 83, 0.78)"),
+            borderSkipped: false
+          }]
+        },
+        options: Object.assign(chartDefaults(), {
+          plugins: {
+            legend: { display: false },
+            tooltip: chartDefaults().plugins.tooltip
+          }
+        })
+      };
     });
   }
 
@@ -132,12 +222,12 @@
     if (!tbody) return;
     tbody.innerHTML = "";
     if (!brands.length) {
-      tbody.innerHTML = '<tr><td colspan="2" class="empty-state">No brand impersonation detected.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="2" class="empty-state">No brand impersonation detected in the published batch.</td></tr>';
       return;
     }
     brands.forEach((brand) => {
       const row = document.createElement("tr");
-      row.innerHTML = "<td>" + brand.brand + "</td><td>" + brand.count + "</td>";
+      row.innerHTML = "<td>" + escapeHtml(brand.brand) + "</td><td>" + escapeHtml(brand.count) + "</td>";
       tbody.appendChild(row);
     });
   }
@@ -148,17 +238,13 @@
     if (!tbody) return;
     tbody.innerHTML = "";
     if (!holders.length) {
-      if (panel) {
-        panel.hidden = true;
-      }
+      if (panel) panel.hidden = true;
       return;
     }
-    if (panel) {
-      panel.hidden = false;
-    }
+    if (panel) panel.hidden = false;
     holders.forEach((holder) => {
       const row = document.createElement("tr");
-      row.innerHTML = "<td>" + holder.holder + "</td><td>" + holder.count + "</td>";
+      row.innerHTML = "<td>" + escapeHtml(holder.holder) + "</td><td>" + escapeHtml(holder.count) + "</td>";
       tbody.appendChild(row);
     });
   }
@@ -168,19 +254,69 @@
     if (!tbody) return;
     tbody.innerHTML = "";
     if (!clusters.length) {
-      tbody.innerHTML = '<tr><td colspan="4" class="empty-state">No shared infrastructure clusters met the report threshold.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="4" class="empty-state">No shared infrastructure clusters met the publishing threshold.</td></tr>';
       return;
     }
     clusters.forEach((cluster) => {
       const row = document.createElement("tr");
       row.innerHTML = [
-        "<td>" + cluster.indicator + "</td>",
-        "<td>" + cluster.cluster_type + "</td>",
-        "<td>" + cluster.size + "</td>",
-        "<td>" + safeArray(cluster.domains).join(", ") + "</td>"
+        "<td>" + escapeHtml(cluster.indicator) + "</td>",
+        "<td>" + escapeHtml(cluster.cluster_type) + "</td>",
+        "<td>" + escapeHtml(cluster.size) + "</td>",
+        "<td>" + escapeHtml(safeArray(cluster.domains).join(", ")) + "</td>"
       ].join("");
       tbody.appendChild(row);
     });
+  }
+
+  function topEntry(entries, labelKey) {
+    const list = safeArray(entries);
+    if (!list.length) {
+      return null;
+    }
+    return list[0][labelKey];
+  }
+
+  function renderHeadlineInsights(summary) {
+    const container = byId("headline-insights");
+    if (!container) return;
+
+    const category = topEntry(
+      Object.entries(safeObject(summary.category_counts)).map(function (entry) {
+        return { label: entry[0], count: entry[1] };
+      }).sort(function (left, right) { return right.count - left.count; }),
+      "label"
+    );
+    const cluster = safeArray(summary.clusters)[0];
+    const holder = topEntry(safeArray(summary.top_allocation_holders), "holder");
+
+    const items = [
+      {
+        title: "Highest operational pressure",
+        text: "The batch currently exposes " + (summary.active_malicious || 0) + " domains assessed as active malicious infrastructure requiring review."
+      },
+      {
+        title: "Dominant threat theme",
+        text: category ? "The most common assigned category in this publication is " + category + "." : "No dominant category has emerged in the current publication."
+      },
+      {
+        title: "Strongest infrastructure cluster",
+        text: cluster ? cluster.cluster_type + " signals connect " + cluster.size + " domains through indicator " + cluster.indicator + "." : "No multi-domain cluster exceeded the current reporting threshold."
+      },
+      {
+        title: "Primary holder concentration",
+        text: holder ? "APNIC enrichment points most often to allocation holder " + holder + " in the current dataset." : "No holder concentration was strong enough to highlight in this publication."
+      }
+    ];
+
+    container.innerHTML = items.map(function (item) {
+      return [
+        '<article class="briefing-item">',
+        "<strong>" + escapeHtml(item.title) + "</strong>",
+        "<p>" + escapeHtml(item.text) + "</p>",
+        "</article>"
+      ].join("");
+    }).join("");
   }
 
   function valueForSort(row, key) {
@@ -207,7 +343,14 @@
   function filterDomains() {
     const filters = activeFilters();
     const filtered = state.domains.filter((row) => {
-      const haystack = [row.domain, row.brand_impersonated, row.registrar, row.allocation_holder, row.apnic_region, row.payment_summary].join(" ").toLowerCase();
+      const haystack = [
+        row.domain,
+        row.brand_impersonated,
+        row.registrar,
+        row.allocation_holder,
+        row.apnic_region,
+        row.payment_summary
+      ].join(" ").toLowerCase();
       if (filters.search && !haystack.includes(filters.search)) {
         return false;
       }
@@ -246,12 +389,41 @@
     const zipLink = row.evidence_available
       ? '<a href="' + row.evidence_link + '" download>ZIP</a>'
       : '<span class="muted-link">ZIP pending</span>';
+
     return [
       '<div class="actions-inline">',
       '<a href="' + row.report_link + '">Report</a>',
       pdfLink,
       '<a href="' + row.raw_json_link + '">JSON</a>',
       zipLink,
+      "</div>"
+    ].join("");
+  }
+
+  function domainCell(row) {
+    const subLines = [];
+    if (row.brand_impersonated) {
+      subLines.push("Brand: " + row.brand_impersonated);
+    }
+    if (row.payment_summary) {
+      subLines.push("Payment rails: " + row.payment_summary);
+    } else if (row.registrar && row.registrar !== "Unknown") {
+      subLines.push("Registrar: " + row.registrar);
+    }
+    return [
+      '<div class="table-domain">',
+      '<a class="domain-link" href="' + row.report_link + '">' + escapeHtml(row.domain) + "</a>",
+      subLines.length ? '<div class="table-sub">' + escapeHtml(subLines.join(" • ")) + "</div>" : "",
+      "</div>"
+    ].join("");
+  }
+
+  function holderCell(row) {
+    const sub = row.registrar && row.registrar !== "Unknown" ? row.registrar : "Registrar unavailable";
+    return [
+      '<div class="table-domain">',
+      "<span>" + escapeHtml(row.allocation_holder || "Unknown") + "</span>",
+      '<div class="table-sub">' + escapeHtml(sub) + "</div>",
       "</div>"
     ].join("");
   }
@@ -268,14 +440,14 @@
     rows.forEach((row) => {
       const tr = document.createElement("tr");
       tr.innerHTML = [
-        "<td><a href=\"" + row.report_link + "\">" + row.domain + "</a></td>",
-        "<td><span class=\"severity-pill " + severityClass(row.severity) + "\">" + row.severity + "</span></td>",
-        "<td>" + row.category + "</td>",
-        "<td>" + row.vt_score + "</td>",
-        "<td>" + (row.registered || "Unknown") + "</td>",
-        "<td>" + (row.allocation_holder || "Unknown") + "</td>",
-        "<td>" + (row.apnic_region || "Unknown") + "</td>",
-        "<td>" + row.status + "</td>",
+        "<td>" + domainCell(row) + "</td>",
+        '<td><span class="severity-pill ' + severityClass(row.severity) + '">' + escapeHtml(row.severity) + "</span></td>",
+        '<td><div class="table-domain"><span>' + escapeHtml(row.category) + '</span><div class="table-sub">Priority ' + escapeHtml(row.priority_score) + "</div></div></td>",
+        "<td>" + escapeHtml(row.vt_score) + "</td>",
+        "<td>" + escapeHtml(formatDate(row.registered)) + "</td>",
+        "<td>" + holderCell(row) + "</td>",
+        '<td><div class="table-domain"><span>' + escapeHtml(row.apnic_region || "Unknown") + '</span><div class="table-sub">' + escapeHtml(row.hosting_country || "Unknown") + "</div></div></td>",
+        '<td><span class="status-pill ' + statusClass(row.status) + '">' + escapeHtml(row.status) + "</span></td>",
         "<td>" + actionLinks(row) + "</td>"
       ].join("");
       tbody.appendChild(tr);
@@ -306,14 +478,17 @@
 
   async function init() {
     try {
-      const [summary, domains] = await Promise.all([
+      const results = await Promise.all([
         fetchJson(config.summaryJsonPath),
         fetchJson(config.domainsJsonPath)
       ]);
+      const summary = results[0];
+      const domains = results[1];
 
       state.domains = safeArray(domains);
       renderSummary(summary);
       renderCharts(summary);
+      renderHeadlineInsights(summary);
       renderBrands(safeArray(summary.top_impersonated_brands));
       renderHolders(safeArray(summary.top_allocation_holders));
       renderClusters(safeArray(summary.clusters));
