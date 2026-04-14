@@ -3,48 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>I4C Threat Analytics Dashboard - {{ batch_id }}</title>
+  <title>I4C Domain Intelligence Dashboard - {{ batch_id }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="dashboard-page">
-  <div class="dashboard-orb orb-one"></div>
-  <div class="dashboard-orb orb-two"></div>
   <div class="dashboard-shell">
-    <header class="dashboard-hero">
-      <div class="hero-copy">
+    <header class="dashboard-masthead">
+      <div class="masthead-stripe"></div>
+      <div class="masthead-top">
         <div class="brand-lockup">
           <img class="org-logo" src="{{ logo_path }}" alt="Indian Cyber Crime Coordination Centre logo">
-          <div class="brand-copy">
+          <div class="masthead-copy">
             <p class="eyebrow">Indian Cyber Crime Coordination Centre</p>
-            <h1>Threat Analytics Domain Intelligence Desk</h1>
+            <h1>Malicious Domain Intelligence Dashboard</h1>
             <p class="header-copy">
-              Investigative dashboard for batch <strong>{{ batch_id }}</strong>. This deployment consolidates passive intelligence,
-              evidence capture, legal triage, APNIC attribution, and packaged artefacts for operational review and partner sharing.
+              Published review surface for batch <strong>{{ batch_id }}</strong>, combining passive threat intelligence,
+              controlled evidence capture, APNIC attribution, legal triage, and downloadable analytical outputs.
             </p>
           </div>
         </div>
-        <div class="hero-meta">
-          <span class="meta-pill">Generated {{ generated_at_utc }}</span>
-          <span class="meta-pill">Published case set {{ total_domains }} domains</span>
-          <span class="meta-pill">Static GitHub Pages deployment</span>
-        </div>
-      </div>
-
-      <aside class="hero-command">
-        <p class="command-kicker">Case Exports</p>
-        <h2>Operational download set</h2>
-        <p class="command-copy">
-          Export the consolidated CSV for spreadsheet review or pull the evidence package to obtain raw JSON,
-          HTML/PDF reports, manifests, and screenshots outside the dashboard.
-        </p>
-        <div class="hero-actions">
+        <div class="header-actions">
           <a class="button secondary" href="{{ domains_csv_path }}" download>Download Full CSV</a>
           <a class="button primary" href="{{ all_evidence_zip_path }}" download>Download Evidence Package</a>
         </div>
-      </aside>
+      </div>
+
+      <div class="masthead-notes">
+        <span class="meta-pill">Generated {{ generated_at_utc }}</span>
+        <span class="meta-pill">Published set {{ total_domains }} domains</span>
+        <span class="meta-pill">Static GitHub Pages deployment</span>
+      </div>
     </header>
 
     <section class="stats-grid" id="summary-cards">
@@ -87,38 +78,45 @@
             <p class="panel-kicker">Executive Brief</p>
             <h2>Batch highlights</h2>
           </div>
+          <p class="panel-note">Condensed signals intended to orient supervisory review before drilling into individual domains.</p>
         </div>
         <div class="briefing-list" id="headline-insights"></div>
       </article>
 
-      <article class="panel">
+      <article class="panel panel-chart">
         <div class="panel-header">
           <div>
             <p class="panel-kicker">Severity</p>
             <h2>Distribution of assessed risk</h2>
           </div>
         </div>
-        <canvas id="severity-chart" aria-label="Severity distribution chart"></canvas>
+        <div class="chart-shell">
+          <canvas id="severity-chart" aria-label="Severity distribution chart"></canvas>
+        </div>
       </article>
 
-      <article class="panel">
+      <article class="panel panel-chart">
         <div class="panel-header">
           <div>
             <p class="panel-kicker">Threat Typology</p>
             <h2>Category concentration</h2>
           </div>
         </div>
-        <canvas id="category-chart" aria-label="Threat category chart"></canvas>
+        <div class="chart-shell">
+          <canvas id="category-chart" aria-label="Threat category chart"></canvas>
+        </div>
       </article>
 
-      <article class="panel">
+      <article class="panel panel-chart">
         <div class="panel-header">
           <div>
             <p class="panel-kicker">Hosting Geography</p>
             <h2>Top observed regions</h2>
           </div>
         </div>
-        <canvas id="country-chart" aria-label="Hosting country chart"></canvas>
+        <div class="chart-shell">
+          <canvas id="country-chart" aria-label="Hosting country chart"></canvas>
+        </div>
       </article>
 
       <article class="panel">
@@ -156,27 +154,29 @@
       <div class="panel-header">
         <div>
           <p class="panel-kicker">Shared Infrastructure</p>
-          <h2>Operational clustering</h2>
+          <h2>Infrastructure clustering</h2>
         </div>
-        <p class="panel-note">Clusters highlight repeated hosting, registrar, visual, and holder signals that may support larger campaign linkage.</p>
+        <p class="panel-note">Repeated IP, nameserver, registrar, visual-template, and holder signals that may support campaign linkage.</p>
       </div>
-      <table class="dashboard-table compact">
-        <thead>
-          <tr>
-            <th>Shared Indicator</th>
-            <th>Type</th>
-            <th>Cluster Size</th>
-            <th>Domains</th>
-          </tr>
-        </thead>
-        <tbody id="cluster-table-body"></tbody>
-      </table>
+      <div class="table-wrap">
+        <table class="dashboard-table compact">
+          <thead>
+            <tr>
+              <th>Shared Indicator</th>
+              <th>Type</th>
+              <th>Cluster Size</th>
+              <th>Domains</th>
+            </tr>
+          </thead>
+          <tbody id="cluster-table-body"></tbody>
+        </table>
+      </div>
     </section>
 
     <section class="panel domain-panel">
       <div class="panel-header">
         <div>
-          <p class="panel-kicker">Analytical Corpus</p>
+          <p class="panel-kicker">Published Corpus</p>
           <h2>Domain review table</h2>
         </div>
         <div class="mini-actions">
@@ -221,7 +221,10 @@
     <footer class="dashboard-footer">
       <div>
         <p class="footer-title">Indian Cyber Crime Coordination Centre</p>
-        <p class="footer-copy">Analyst-facing static publication of the current batch. Legal classification and clustering outputs remain subject to supervisory and partner review before operational use.</p>
+        <p class="footer-copy">
+          Public analytical publication of the current batch. Classification, attribution, and legal mapping remain subject
+          to supervisory review before operational or enforcement use.
+        </p>
       </div>
       <div class="footer-actions">
         <a class="button ghost" href="{{ domains_csv_path }}" download>Download Full CSV</a>

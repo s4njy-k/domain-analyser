@@ -109,36 +109,42 @@
     return {
       maintainAspectRatio: false,
       animation: {
-        duration: 900,
+        duration: 700,
         easing: "easeOutQuart"
       },
       plugins: {
         legend: {
           labels: {
-            color: "#d5e3f3",
+            color: "#294764",
             usePointStyle: true,
             boxWidth: 10,
             boxHeight: 10,
-            padding: 18
+            padding: 16,
+            font: {
+              family: "Manrope",
+              weight: "700"
+            }
           }
         },
         tooltip: {
-          backgroundColor: "rgba(6, 16, 28, 0.94)",
-          titleColor: "#f7fbff",
-          bodyColor: "#d4e3f2",
-          borderColor: "rgba(173, 204, 233, 0.16)",
+          backgroundColor: "rgba(255, 255, 255, 0.98)",
+          titleColor: "#102744",
+          bodyColor: "#294764",
+          borderColor: "rgba(19, 46, 78, 0.12)",
           borderWidth: 1,
           padding: 12
         }
       },
       scales: {
         x: {
-          ticks: { color: "#9ab4cd" },
-          grid: { color: "rgba(173, 204, 233, 0.08)" }
+          ticks: { color: "#647d97" },
+          grid: { color: "rgba(19, 46, 78, 0.08)" },
+          border: { display: false }
         },
         y: {
-          ticks: { color: "#9ab4cd" },
-          grid: { color: "rgba(173, 204, 233, 0.08)" }
+          ticks: { color: "#647d97" },
+          grid: { color: "rgba(19, 46, 78, 0.08)" },
+          border: { display: false }
         }
       }
     };
@@ -158,7 +164,8 @@
           datasets: [{
             data: Object.values(severityCounts),
             backgroundColor: ["#d94f5e", "#f18a2e", "#efc148", "#33a570", "#8c97a8", "#5388c5"],
-            borderWidth: 0,
+            borderWidth: 2,
+            borderColor: "#ffffff",
             hoverOffset: 10
           }]
         },
@@ -181,7 +188,7 @@
           datasets: [{
             data: Object.values(categoryCounts),
             borderRadius: 999,
-            backgroundColor: makeGradient(canvas, "rgba(27, 166, 194, 0.95)", "rgba(15, 78, 168, 0.8)"),
+            backgroundColor: makeGradient(canvas, "rgba(15, 78, 168, 0.92)", "rgba(11, 140, 161, 0.74)"),
             borderSkipped: false
           }]
         },
@@ -203,7 +210,7 @@
           datasets: [{
             data: countries.map((item) => item.count),
             borderRadius: 18,
-            backgroundColor: makeGradient(canvas, "rgba(239, 185, 26, 0.9)", "rgba(16, 135, 83, 0.78)"),
+            backgroundColor: makeGradient(canvas, "rgba(215, 163, 22, 0.9)", "rgba(28, 138, 82, 0.74)"),
             borderSkipped: false
           }]
         },
@@ -292,19 +299,19 @@
 
     const items = [
       {
-        title: "Highest operational pressure",
+        title: "Active review load",
         text: "The batch currently exposes " + (summary.active_malicious || 0) + " domains assessed as active malicious infrastructure requiring review."
       },
       {
-        title: "Dominant threat theme",
+        title: "Dominant threat pattern",
         text: category ? "The most common assigned category in this publication is " + category + "." : "No dominant category has emerged in the current publication."
       },
       {
-        title: "Strongest infrastructure cluster",
+        title: "Strongest shared infrastructure signal",
         text: cluster ? cluster.cluster_type + " signals connect " + cluster.size + " domains through indicator " + cluster.indicator + "." : "No multi-domain cluster exceeded the current reporting threshold."
       },
       {
-        title: "Primary holder concentration",
+        title: "Primary allocation-holder concentration",
         text: holder ? "APNIC enrichment points most often to allocation holder " + holder + " in the current dataset." : "No holder concentration was strong enough to highlight in this publication."
       }
     ];

@@ -6,61 +6,58 @@
   <title>{{ report.domain }} - I4C Domain Assessment Report</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <style>
     @page {
       size: A4;
-      margin: 16mm 12mm 18mm;
+      margin: 17mm 13mm 18mm;
       @top-left {
         content: "I4C / NCTAU Analytical Draft";
-        color: #49607a;
+        color: #4f667f;
         font-size: 9pt;
       }
       @top-right {
         content: "{{ report_identifier }}";
-        color: #49607a;
+        color: #4f667f;
         font-size: 9pt;
       }
       @bottom-left {
         content: "{{ report_disclaimer }}";
-        color: #6a7f92;
+        color: #71859a;
         font-size: 8pt;
       }
       @bottom-right {
         content: "Page " counter(page) " of " counter(pages);
-        color: #49607a;
+        color: #4f667f;
         font-size: 9pt;
       }
     }
 
     :root {
-      --navy-950: #07131f;
-      --navy-900: #0b1f34;
-      --navy-800: #153454;
-      --navy-700: #1f4f82;
-      --paper: #eef3f7;
+      --paper: #f3f5f7;
       --surface: #ffffff;
-      --surface-soft: #f6f9fc;
-      --surface-strong: #dfe8f2;
-      --border: rgba(24, 53, 86, 0.12);
+      --surface-soft: #f7f9fb;
+      --surface-strong: #ebeff3;
+      --border: rgba(18, 41, 68, 0.12);
+      --border-strong: rgba(18, 41, 68, 0.22);
       --text-strong: #10243d;
-      --text-main: #2a435f;
-      --text-muted: #5a7087;
+      --text-main: #28425f;
+      --text-muted: #62788f;
       --blue: #0f4ea8;
-      --teal: #1ba6c2;
-      --saffron: #efb91a;
-      --green: #108753;
-      --red: #cb2e44;
-      --critical: #d94f5e;
-      --high: #f18a2e;
-      --medium: #efc148;
-      --low: #33a570;
-      --inactive: #7c8897;
-      --shadow: 0 18px 44px rgba(10, 24, 42, 0.12);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
+      --teal: #14859a;
+      --saffron: #d39f11;
+      --green: #1d8654;
+      --red: #bf4352;
+      --critical: #bf4352;
+      --high: #d77a27;
+      --medium: #c89a12;
+      --low: #1d8654;
+      --inactive: #6f8092;
+      --shadow: 0 18px 40px rgba(16, 39, 68, 0.07);
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 8px;
     }
 
     * {
@@ -69,8 +66,8 @@
 
     body {
       margin: 0;
-      font-family: "Manrope", "Aptos", "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #e7eef5, #f1f5f9 18%, #e9eff6 100%);
+      font-family: "Source Sans 3", "Aptos", "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f2f4f6, #f8fafb 24%, #f2f5f7 100%);
       color: var(--text-main);
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -82,7 +79,7 @@
     }
 
     .report-shell {
-      max-width: 1320px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 22px;
     }
@@ -91,7 +88,7 @@
     .report-header,
     .section-card,
     .summary-grid {
-      border-radius: var(--radius-xl);
+      border-radius: var(--radius-lg);
       background: var(--surface);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
@@ -102,23 +99,20 @@
       overflow: hidden;
       min-height: calc(100vh - 44px);
       margin-bottom: 22px;
-      padding: 34px 34px 30px;
+      padding: 36px 34px 30px;
       background:
-        radial-gradient(circle at top right, rgba(239, 185, 26, 0.16), transparent 24%),
-        radial-gradient(circle at left center, rgba(27, 166, 194, 0.14), transparent 22%),
-        linear-gradient(145deg, #0a1c2f 0%, #14385c 50%, #204f81 100%);
-      color: #f7fbff;
+        linear-gradient(180deg, rgba(15, 78, 168, 0.05), rgba(15, 78, 168, 0) 110px),
+        linear-gradient(180deg, #ffffff 0%, #fafbfd 100%);
+      color: var(--text-main);
       page-break-after: always;
     }
 
-    .cover-sheet::after {
+    .cover-sheet::before {
       content: "";
       position: absolute;
-      inset: auto -140px -140px auto;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
+      inset: 0 0 auto;
+      height: 8px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 38%, var(--green) 72%, var(--saffron) 100%);
     }
 
     .cover-top,
@@ -137,7 +131,7 @@
     }
 
     .report-logo {
-      width: 174px;
+      width: 162px;
       height: auto;
       flex: 0 0 auto;
     }
@@ -148,27 +142,29 @@
       font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      color: #8db2d8;
+      color: var(--blue);
+      font-weight: 700;
     }
 
     .cover-title,
     .report-title {
-      font-family: "Fraunces", Georgia, serif;
-      line-height: 0.98;
+      font-family: "Source Serif 4", Georgia, serif;
+      line-height: 1.02;
       color: inherit;
       margin: 0;
     }
 
     .cover-title {
-      font-size: clamp(2.4rem, 4vw, 4rem);
-      max-width: 9.5ch;
+      font-size: clamp(2.3rem, 4vw, 3.7rem);
+      max-width: 11ch;
+      color: var(--text-strong);
     }
 
     .cover-intro {
       max-width: 60rem;
       margin: 18px 0 0;
-      color: rgba(247, 251, 255, 0.88);
-      line-height: 1.76;
+      color: var(--text-main);
+      line-height: 1.74;
       font-size: 1rem;
     }
 
@@ -191,9 +187,9 @@
     .meta-chip,
     .badge.category,
     .badge.neutral {
-      background: rgba(255, 255, 255, 0.12);
-      color: #f5fbff;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: var(--surface-soft);
+      color: var(--text-strong);
+      border: 1px solid var(--border);
     }
 
     .meta-chip-row {
@@ -207,8 +203,8 @@
       width: min(360px, 100%);
       padding: 18px 20px;
       border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
     }
 
     .cover-side dl,
@@ -226,8 +222,7 @@
       font-size: 0.73rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: inherit;
-      opacity: 0.76;
+      color: var(--text-muted);
     }
 
     .cover-side dd,
@@ -237,16 +232,17 @@
       font-size: 0.96rem;
       font-weight: 700;
       word-break: break-word;
+      color: var(--text-strong);
     }
 
     .cover-note {
       margin-top: 20px;
       padding: 16px 18px;
       border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #f9fbfd;
+      border: 1px solid var(--border);
       line-height: 1.72;
-      color: rgba(247, 251, 255, 0.88);
+      color: var(--text-main);
     }
 
     .report-header {
@@ -255,31 +251,33 @@
     }
 
     .report-brand {
-      padding: 24px 26px;
+      padding: 24px 26px 22px;
       background:
-        radial-gradient(circle at top right, rgba(239, 185, 26, 0.14), transparent 26%),
-        linear-gradient(140deg, #0c2138, #173a60 54%, #204f81);
-      color: #f7fbff;
+        linear-gradient(90deg, rgba(15, 78, 168, 0.04), rgba(15, 78, 168, 0) 24%),
+        #ffffff;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
     }
 
     .report-title {
-      font-size: clamp(2rem, 3vw, 2.9rem);
+      font-size: clamp(2rem, 3vw, 2.65rem);
       margin-bottom: 10px;
+      color: var(--text-strong);
     }
 
     .report-subcopy {
       margin: 0;
       max-width: 58rem;
       line-height: 1.72;
-      color: rgba(247, 251, 255, 0.88);
+      color: var(--text-main);
     }
 
     .report-meta {
       min-width: 280px;
       padding: 18px;
       border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
     }
 
     .report-meta dl {
@@ -292,7 +290,7 @@
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: rgba(255, 255, 255, 0.74);
+      color: var(--text-muted);
       margin-bottom: 4px;
     }
 
@@ -300,6 +298,7 @@
       margin: 0;
       font-weight: 700;
       word-break: break-word;
+      color: var(--text-strong);
     }
 
     .toolbar {
@@ -308,17 +307,17 @@
       justify-content: space-between;
       gap: 14px;
       padding: 16px 24px 20px;
-      background: #f7fafc;
-      border-top: 1px solid rgba(24, 53, 86, 0.08);
+      background: #fbfcfd;
+      border-top: 1px solid var(--border);
     }
 
     .toolbar-note {
       flex: 1 1 420px;
       padding: 12px 14px;
       border-radius: var(--radius-md);
-      background: #fff8e5;
-      color: #7a5203;
-      border: 1px solid rgba(239, 185, 26, 0.32);
+      background: #fffaf0;
+      color: #7d5a00;
+      border: 1px solid rgba(211, 159, 17, 0.28);
       line-height: 1.65;
     }
 
@@ -341,7 +340,7 @@
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 800;
-      transition: transform 0.18s ease, opacity 0.18s ease;
+      transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
     }
 
     .button:hover {
@@ -351,11 +350,12 @@
     .button.primary {
       background: linear-gradient(135deg, #0f4ea8, #2678d7);
       color: #f9fcff;
+      box-shadow: 0 10px 22px rgba(15, 78, 168, 0.16);
     }
 
     .button.secondary {
-      background: #f0f5fb;
-      border-color: rgba(24, 53, 86, 0.1);
+      background: #f5f8fc;
+      border-color: var(--border);
       color: var(--text-strong);
     }
 
@@ -372,7 +372,7 @@
       gap: 1px;
       overflow: hidden;
       margin-bottom: 18px;
-      background: rgba(24, 53, 86, 0.08);
+      background: var(--border);
     }
 
     .summary-grid > div {
@@ -391,7 +391,7 @@
       padding: 14px 16px;
       border-radius: var(--radius-md);
       background: var(--surface-soft);
-      border: 1px solid rgba(24, 53, 86, 0.08);
+      border: 1px solid var(--border);
     }
 
     .summary-card .label {
@@ -421,7 +421,7 @@
     .legal-panel,
     .tech-panel {
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(24, 53, 86, 0.08);
+      border: 1px solid var(--border);
       background: var(--surface-soft);
     }
 
@@ -463,7 +463,7 @@
 
     .section-card h2 {
       margin: 0 0 14px;
-      font-family: "Fraunces", Georgia, serif;
+      font-family: "Source Serif 4", Georgia, serif;
       font-size: 1.55rem;
       line-height: 1.08;
       color: var(--text-strong);
@@ -485,14 +485,14 @@
     .report-table td {
       text-align: left;
       padding: 11px 10px;
-      border-bottom: 1px solid rgba(24, 53, 86, 0.09);
+      border-bottom: 1px solid var(--border);
       vertical-align: top;
       word-break: break-word;
     }
 
     .report-table th {
       color: var(--text-strong);
-      background: #edf3f9;
+      background: #eff4f8;
       font-size: 0.76rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -531,9 +531,9 @@
 
     .badge.category,
     .badge.neutral {
-      background: rgba(24, 53, 86, 0.08);
+      background: rgba(15, 78, 168, 0.06);
       color: var(--text-strong);
-      border: 1px solid rgba(24, 53, 86, 0.08);
+      border: 1px solid var(--border);
     }
 
     .status-pill {
@@ -561,9 +561,10 @@
       gap: 8px;
       align-items: center;
       padding: 14px 16px;
-      background: linear-gradient(180deg, #e7eef6, #f5f9fc);
+      background: linear-gradient(180deg, #eef3f8, #f8fafc);
       color: var(--text-strong);
       font-weight: 800;
+      border-bottom: 1px solid var(--border);
     }
 
     .evidence-frame {
@@ -718,7 +719,7 @@
             <div>
               <p class="cover-kicker">Indian Cyber Crime Coordination Centre</p>
               <div class="classification-pill">Analytical Draft • Circulation Copy</div>
-              <h1 class="cover-title">Domain threat assessment dossier</h1>
+              <h1 class="cover-title">Malicious domain analytical report</h1>
             </div>
           </div>
           <aside class="cover-side">
@@ -743,10 +744,10 @@
           </aside>
         </div>
         <p class="cover-intro">
-          This draft report is intended to help receiving organisations quickly understand the observed website behaviour,
-          the supporting technical evidence, the likely enforcement relevance, and the infrastructure signals associated
-          with the subject domain. It is written to support review by government entities, intermediaries, and private-sector
-          partners who may need a concise but technically reliable analytical brief.
+          This analytical draft consolidates observed website behaviour, supporting technical evidence, infrastructure signals,
+          payment indicators, and preliminary statutory relevance for the subject domain. It is intended to support structured
+          review by government entities, intermediaries, and affected private-sector organisations that may need a concise and
+          technically reliable decision brief.
         </p>
         <div class="meta-chip-row">
           <span class="meta-chip">Batch {{ report.batch_id }}</span>
@@ -766,15 +767,15 @@
     <header class="report-header">
       <div class="report-brand">
         <div class="brand-lockup">
-          {% if logo_data_uri %}
-            <img class="report-logo" src="{{ logo_data_uri }}" alt="I4C logo">
-          {% endif %}
+            {% if logo_data_uri %}
+              <img class="report-logo" src="{{ logo_data_uri }}" alt="I4C logo">
+            {% endif %}
           <div>
             <p class="cover-kicker">National Cybercrime Threat Analytics Unit</p>
-            <h1 class="report-title">Cybercrime domain analytical report</h1>
+            <h1 class="report-title">Malicious domain analytical report</h1>
             <p class="report-subcopy">
               Subject domain <strong>{{ report.domain }}</strong> assessed through passive intelligence, controlled browser
-              capture, APNIC-based infrastructure enrichment, and statutory triage aligned to Indian cybercrime enforcement needs.
+              capture, APNIC-based infrastructure enrichment, and preliminary statutory mapping aligned to Indian cybercrime response.
             </p>
             <div class="meta-chip-row">
               <span class="badge severity {{ report.ai_analysis.severity|lower }}">{{ report.ai_analysis.severity }}</span>
@@ -850,7 +851,7 @@
           </article>
         </div>
         <div class="note-box">
-          <strong>How to read this report.</strong>
+          <strong>Interpretation note.</strong>
           The executive assessment states the likely operational concern. Threat-intelligence verdicts indicate what external
           sources independently flagged. Infrastructure and attribution sections explain where the domain appears to be hosted
           and which resource-holder signals were observed. The legal section is an analyst aid for review by receiving entities,
@@ -885,16 +886,16 @@
           </dl>
         </div>
         <div class="note-box">
-          <strong>Receiving-entity value.</strong>
-          This report is intended to shorten review time for blocking, intermediary takedown, network coordination, or brand
-          protection outreach by combining screenshots, hashes, attribution clues, and legal triage into one shareable package.
+          <strong>Coordination note.</strong>
+          This report is prepared to shorten review time for blocking, intermediary takedown, network coordination, or brand
+          protection outreach by consolidating screenshots, hashes, attribution clues, and legal triage into one shareable record.
         </div>
       </div>
     </section>
 
     <section class="section-card" id="section-a">
-      <p class="section-kicker">A. Executive Assessment</p>
-      <h2>Operational summary</h2>
+      <p class="section-kicker">A. Executive Findings</p>
+      <h2>Summary of observed activity</h2>
       <p class="section-intro">
         Concise statement of the observed activity, the suspected misuse pattern, and the main enforcement relevance.
       </p>
@@ -910,7 +911,7 @@
           </table>
         </div>
         <div class="note-box">
-          <strong>Assessment narrative.</strong><br>
+          <strong>Analytical narrative.</strong><br>
           {{ report.ai_analysis.illegal_activity_description }}
           <br><br>
           {% if report.payment_methods %}
@@ -923,7 +924,7 @@
     </section>
 
     <section class="section-card" id="section-b">
-      <p class="section-kicker">B. Evidence Capture</p>
+      <p class="section-kicker">B. Evidentiary Capture</p>
       <h2>Rendered website evidence</h2>
       <p class="section-intro">
         Screenshots are captured from controlled desktop and mobile browser profiles and hashed to support downstream integrity checks.
@@ -1018,7 +1019,7 @@
     </section>
 
     <section class="section-card" id="section-d">
-      <p class="section-kicker">D. Threat Intelligence Findings</p>
+      <p class="section-kicker">D. Threat Intelligence Corroboration</p>
       <h2>External-source verdicts</h2>
       <p class="section-intro">
         These source verdicts provide independent context. They should be interpreted together with the capture evidence rather than as a stand-alone conclusion.
@@ -1062,7 +1063,7 @@
     </section>
 
     <section class="section-card" id="section-f">
-      <p class="section-kicker">F. Legal Triage</p>
+      <p class="section-kicker">F. Preliminary Legal Mapping</p>
       <h2>Indicative statutory relevance</h2>
       <p class="section-intro">
         The following provisions are analyst-assigned triage references based on the observed evidence. They are intended to support review by legal, policy, or platform recipients and should not be treated as an executable order without further authority.
@@ -1099,7 +1100,7 @@
 
     <section class="section-card" id="section-g">
       <p class="section-kicker">G. Attribution and Linkage</p>
-      <h2>Network attribution, linkage, and technical observations</h2>
+      <h2>Network attribution and technical observations</h2>
       <p class="section-intro">
         APNIC enrichment provides allocation-level context for observed IP space. Holder-linked ASN entries reflect shared holder-name signals and should be read as allocation associations, not route-origin confirmation.
       </p>

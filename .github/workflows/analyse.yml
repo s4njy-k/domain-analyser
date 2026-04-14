@@ -116,8 +116,9 @@ jobs:
         uses: actions/deploy-pages@v4
         id: deployment
 
-      - name: Commit published docs snapshot back to main
+      - name: Optionally commit published docs snapshot back to main
         if: success()
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -127,4 +128,4 @@ jobs:
             exit 0
           fi
           git commit -m "Update published dashboard snapshot for ${{ github.event.inputs.batch_name }}"
-          git push origin HEAD:main
+          git push origin HEAD:main || echo "Docs snapshot push failed; Pages deployment already completed."
