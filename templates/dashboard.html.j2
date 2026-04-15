@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>I4C Domain Intelligence Dashboard - {{ batch_id }}</title>
+  <title>I4C Domain and IP Threat Intelligence Platform - {{ batch_id }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -18,17 +18,29 @@
           <img class="org-logo" src="{{ logo_path }}" alt="Indian Cyber Crime Coordination Centre logo">
           <div class="masthead-copy">
             <p class="eyebrow">Indian Cyber Crime Coordination Centre</p>
-            <h1>Malicious Domain Intelligence Dashboard</h1>
+            <h1>I4C Domain and IP Threat Intelligence Platform</h1>
             <p class="header-copy">
-              Published review surface for batch <strong>{{ batch_id }}</strong>, combining passive threat intelligence,
-              controlled evidence capture, APNIC attribution, legal triage, and downloadable analytical outputs.
+              A unified platform for detection, analysis, and sharing of intelligence on malicious domains and IP addresses.
             </p>
           </div>
         </div>
-        <div class="header-actions">
-          <a class="button secondary" href="{{ domains_csv_path }}" download>Download Full CSV</a>
-          <a class="button primary" href="{{ all_evidence_zip_path }}" download>Download Evidence Package</a>
-        </div>
+        <aside class="masthead-summary">
+          <p class="summary-kicker">Current Publication</p>
+          <dl>
+            <div>
+              <dt>Batch Identifier</dt>
+              <dd>{{ batch_id }}</dd>
+            </div>
+            <div>
+              <dt>Published Domains</dt>
+              <dd>{{ total_domains }}</dd>
+            </div>
+            <div>
+              <dt>Analytical Scope</dt>
+              <dd>Domains, hosting IPs, allocation holders, legal mapping, evidence capture</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
 
       <div class="masthead-notes">
@@ -179,10 +191,6 @@
           <p class="panel-kicker">Published Corpus</p>
           <h2>Domain review table</h2>
         </div>
-        <div class="mini-actions">
-          <a class="button ghost" href="{{ domains_csv_path }}" download>Download Full CSV</a>
-          <a class="button ghost" href="{{ all_evidence_zip_path }}" download>Download Evidence Package</a>
-        </div>
       </div>
       <div class="filter-bar">
         <input type="search" id="search-input" placeholder="Search domain, brand, registrar, holder, payment rail">
@@ -218,19 +226,6 @@
       </div>
     </section>
 
-    <footer class="dashboard-footer">
-      <div>
-        <p class="footer-title">Indian Cyber Crime Coordination Centre</p>
-        <p class="footer-copy">
-          Public analytical publication of the current batch. Classification, attribution, and legal mapping remain subject
-          to supervisory review before operational or enforcement use.
-        </p>
-      </div>
-      <div class="footer-actions">
-        <a class="button ghost" href="{{ domains_csv_path }}" download>Download Full CSV</a>
-        <a class="button primary" href="{{ all_evidence_zip_path }}" download>Download Evidence Package</a>
-      </div>
-    </footer>
   </div>
 
   <script>

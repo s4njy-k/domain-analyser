@@ -299,20 +299,20 @@
 
     const items = [
       {
-        title: "Active review load",
-        text: "The batch currently exposes " + (summary.active_malicious || 0) + " domains assessed as active malicious infrastructure requiring review."
+        title: "Active review population",
+        text: "The current publication contains " + (summary.active_malicious || 0) + " domains assessed as active malicious infrastructure requiring priority review."
       },
       {
         title: "Dominant threat pattern",
-        text: category ? "The most common assigned category in this publication is " + category + "." : "No dominant category has emerged in the current publication."
+        text: category ? "The most frequently assigned analytical category in this publication is " + category + "." : "No single threat category dominates the current publication."
       },
       {
-        title: "Strongest shared infrastructure signal",
-        text: cluster ? cluster.cluster_type + " signals connect " + cluster.size + " domains through indicator " + cluster.indicator + "." : "No multi-domain cluster exceeded the current reporting threshold."
+        title: "Lead shared-infrastructure signal",
+        text: cluster ? cluster.cluster_type + " signals connect " + cluster.size + " domains through indicator " + cluster.indicator + "." : "No multi-domain cluster exceeded the current publication threshold."
       },
       {
-        title: "Primary allocation-holder concentration",
-        text: holder ? "APNIC enrichment points most often to allocation holder " + holder + " in the current dataset." : "No holder concentration was strong enough to highlight in this publication."
+        title: "Allocation-holder concentration",
+        text: holder ? "APNIC enrichment points most frequently to allocation holder " + holder + " across the current publication." : "No allocation-holder concentration was strong enough to highlight in this publication."
       }
     ];
 

@@ -64,8 +64,7 @@ a {
 
 .dashboard-masthead,
 .panel,
-.stats-card,
-.dashboard-footer {
+.stats-card {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
@@ -75,8 +74,11 @@ a {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-xl);
-  padding: 28px 30px 24px;
-  margin-bottom: 18px;
+  padding: 30px 32px 24px;
+  margin-bottom: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.96)),
+    radial-gradient(circle at top right, rgba(15, 78, 168, 0.05), transparent 26%);
 }
 
 .masthead-stripe {
@@ -87,10 +89,10 @@ a {
 }
 
 .masthead-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.8fr);
+  gap: 26px;
+  align-items: start;
 }
 
 .brand-lockup {
@@ -108,6 +110,7 @@ a {
 
 .masthead-copy {
   min-width: 0;
+  padding-top: 4px;
 }
 
 .eyebrow,
@@ -128,14 +131,13 @@ a {
 
 .dashboard-masthead h1 {
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(2.35rem, 4vw, 4rem);
-  line-height: 1;
-  max-width: 14ch;
+  font-size: clamp(2.5rem, 4vw, 4.25rem);
+  line-height: 0.98;
+  max-width: 13ch;
 }
 
 .header-copy,
 .panel-note,
-.footer-copy,
 .stat-note {
   line-height: 1.72;
   color: var(--ink-main);
@@ -143,18 +145,50 @@ a {
 
 .header-copy {
   margin: 16px 0 0;
-  max-width: 56rem;
-  font-size: 1rem;
+  max-width: 48rem;
+  font-size: 1.06rem;
+  color: #365474;
 }
 
-.header-actions,
-.mini-actions,
-.footer-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 12px;
-  flex: 0 0 auto;
+.masthead-summary {
+  position: relative;
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f9fbfd 0%, #f3f8fc 100%);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.summary-kicker {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.masthead-summary dl {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.masthead-summary dt {
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+}
+
+.masthead-summary dd {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .button {
@@ -205,7 +239,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 20px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
 }
@@ -226,12 +260,23 @@ a {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .stats-card {
-  padding: 18px;
+  position: relative;
+  padding: 18px 18px 20px;
   border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.stats-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(15, 78, 168, 0.85), rgba(11, 140, 161, 0.65));
 }
 
 .stats-card .label {
@@ -261,20 +306,22 @@ a {
 .briefing-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 16px;
+  gap: 18px;
   align-items: start;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .panel {
-  padding: 22px;
+  padding: 24px;
   border-radius: var(--radius-lg);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .panel-feature {
   grid-column: span 4;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  background:
+    linear-gradient(180deg, rgba(15, 78, 168, 0.03), rgba(15, 78, 168, 0) 100px),
+    linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
 }
 
 .panel-chart,
@@ -288,7 +335,12 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.domain-panel .panel-header,
+.panel > .panel-header {
+  padding-bottom: 2px;
 }
 
 .panel h2 {
@@ -298,7 +350,7 @@ a {
 
 .panel-note {
   margin: 0;
-  max-width: 30rem;
+  max-width: 32rem;
   color: var(--ink-muted);
   font-size: 0.9rem;
 }
@@ -307,6 +359,10 @@ a {
   position: relative;
   height: 320px;
   max-height: 320px;
+  padding: 12px 12px 4px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fcfdff 0%, #f4f8fb 100%);
+  border: 1px solid rgba(19, 46, 78, 0.08);
 }
 
 .chart-shell canvas {
@@ -321,9 +377,9 @@ a {
 }
 
 .briefing-item {
-  padding: 16px 18px;
+  padding: 18px 18px 17px;
   border-radius: var(--radius-md);
-  background: var(--surface-tint);
+  background: linear-gradient(180deg, #f8fbfe, #f2f7fb);
   border: 1px solid var(--border);
 }
 
@@ -342,6 +398,8 @@ a {
 
 .table-wrap {
   overflow: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(19, 46, 78, 0.08);
 }
 
 .dashboard-table {
@@ -356,6 +414,10 @@ a {
   text-align: left;
   border-bottom: 1px solid rgba(19, 46, 78, 0.1);
   vertical-align: top;
+}
+
+.dashboard-table tbody tr:hover {
+  background: rgba(15, 78, 168, 0.03);
 }
 
 .dashboard-table thead th {
@@ -378,7 +440,7 @@ a {
   display: grid;
   grid-template-columns: minmax(260px, 1.6fr) repeat(4, minmax(160px, 1fr));
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .filter-bar input,
@@ -524,39 +586,13 @@ a {
   padding: 20px 12px;
 }
 
-.dashboard-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 22px 24px;
-  border-radius: var(--radius-lg);
-}
-
-.footer-title {
-  margin: 0 0 8px;
-  color: var(--ink-strong);
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.footer-copy {
-  margin: 0;
-  max-width: 52rem;
-  color: var(--ink-muted);
-}
-
 @media (max-width: 1220px) {
   .stats-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .masthead-top {
-    flex-direction: column;
-  }
-
-  .header-actions {
-    justify-content: flex-start;
+    grid-template-columns: 1fr;
   }
 
   .briefing-grid > .panel {
@@ -576,7 +612,6 @@ a {
 
   .dashboard-masthead,
   .panel,
-  .dashboard-footer,
   .stats-card {
     border-radius: 20px;
   }
@@ -587,6 +622,10 @@ a {
 
   .org-logo {
     width: min(260px, 100%);
+  }
+
+  .masthead-summary {
+    width: 100%;
   }
 
   .stats-grid,
@@ -601,17 +640,6 @@ a {
 
   .filter-bar {
     grid-template-columns: 1fr;
-  }
-
-  .dashboard-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-actions,
-  .mini-actions,
-  .header-actions {
-    justify-content: flex-start;
   }
 
   .chart-shell {
